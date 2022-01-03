@@ -1,4 +1,7 @@
-include: package:flutter_lints/flutter.yaml
+include: package:lint/analysis_options.yaml
 
-linter:
-  rules:
+analyzer:
+  errors:
+    missing_required_param: error
+    missing_return: error
+    must_be_immutable: error
