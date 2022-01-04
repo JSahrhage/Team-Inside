@@ -10,7 +10,38 @@ class SignInForm extends StatelessWidget {
         state.authFailureOrSuccessOption.fold(
           () {},
           (either) => either.fold(
-            (failure) {},
+            (failure) {
+              showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return AlertDialog(
+                    title: const Text(
+                      "Failure",
+                      textAlign: TextAlign.center,
+                    ),
+                    titleTextStyle: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                      fontSize: 20,
+                    ),
+                    backgroundColor: Colors.redAccent,
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                    ),
+                    content: Text(
+                      failure.map(
+                        cancelledByUser: (_) => 'Cancelled',
+                        serverError: (_) => 'Server error',
+                        emailAlreadyInUse: (_) => 'Email already in use',
+                        invalidEmailAndPasswordCombination: (_) =>
+                            'Invalid email and password combination',
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  );
+                },
+              );
+            },
             (_) {
               // TODO: Navigate
             },

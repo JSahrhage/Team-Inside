@@ -18,13 +18,13 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$ValueFailureTearOff {
   const _$ValueFailureTearOff();
 
-  InvalidEmail<T> invalidEmail<T>({required String failedValue}) {
+  InvalidEmail<T> invalidEmail<T>({required T failedValue}) {
     return InvalidEmail<T>(
       failedValue: failedValue,
     );
   }
 
-  UnsecurePassword<T> unsecurePassword<T>({required String failedValue}) {
+  UnsecurePassword<T> unsecurePassword<T>({required T failedValue}) {
     return UnsecurePassword<T>(
       failedValue: failedValue,
     );
@@ -36,24 +36,24 @@ const $ValueFailure = _$ValueFailureTearOff();
 
 /// @nodoc
 mixin _$ValueFailure<T> {
-  String get failedValue => throw _privateConstructorUsedError;
+  T get failedValue => throw _privateConstructorUsedError;
 
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String failedValue) invalidEmail,
-    required TResult Function(String failedValue) unsecurePassword,
+    required TResult Function(T failedValue) invalidEmail,
+    required TResult Function(T failedValue) unsecurePassword,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String failedValue)? invalidEmail,
-    TResult Function(String failedValue)? unsecurePassword,
+    TResult Function(T failedValue)? invalidEmail,
+    TResult Function(T failedValue)? unsecurePassword,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String failedValue)? invalidEmail,
-    TResult Function(String failedValue)? unsecurePassword,
+    TResult Function(T failedValue)? invalidEmail,
+    TResult Function(T failedValue)? unsecurePassword,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -87,7 +87,7 @@ abstract class $ValueFailureCopyWith<T, $Res> {
   factory $ValueFailureCopyWith(
           ValueFailure<T> value, $Res Function(ValueFailure<T>) then) =
       _$ValueFailureCopyWithImpl<T, $Res>;
-  $Res call({String failedValue});
+  $Res call({T failedValue});
 }
 
 /// @nodoc
@@ -107,7 +107,7 @@ class _$ValueFailureCopyWithImpl<T, $Res>
       failedValue: failedValue == freezed
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
-              as String,
+              as T,
     ));
   }
 }
@@ -119,7 +119,7 @@ abstract class $InvalidEmailCopyWith<T, $Res>
           InvalidEmail<T> value, $Res Function(InvalidEmail<T>) then) =
       _$InvalidEmailCopyWithImpl<T, $Res>;
   @override
-  $Res call({String failedValue});
+  $Res call({T failedValue});
 }
 
 /// @nodoc
@@ -141,7 +141,7 @@ class _$InvalidEmailCopyWithImpl<T, $Res>
       failedValue: failedValue == freezed
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
-              as String,
+              as T,
     ));
   }
 }
@@ -152,7 +152,7 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
   const _$InvalidEmail({required this.failedValue});
 
   @override
-  final String failedValue;
+  final T failedValue;
 
   @override
   String toString() {
@@ -180,8 +180,8 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String failedValue) invalidEmail,
-    required TResult Function(String failedValue) unsecurePassword,
+    required TResult Function(T failedValue) invalidEmail,
+    required TResult Function(T failedValue) unsecurePassword,
   }) {
     return invalidEmail(failedValue);
   }
@@ -189,8 +189,8 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String failedValue)? invalidEmail,
-    TResult Function(String failedValue)? unsecurePassword,
+    TResult Function(T failedValue)? invalidEmail,
+    TResult Function(T failedValue)? unsecurePassword,
   }) {
     return invalidEmail?.call(failedValue);
   }
@@ -198,8 +198,8 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String failedValue)? invalidEmail,
-    TResult Function(String failedValue)? unsecurePassword,
+    TResult Function(T failedValue)? invalidEmail,
+    TResult Function(T failedValue)? unsecurePassword,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -241,10 +241,10 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
 }
 
 abstract class InvalidEmail<T> implements ValueFailure<T> {
-  const factory InvalidEmail({required String failedValue}) = _$InvalidEmail<T>;
+  const factory InvalidEmail({required T failedValue}) = _$InvalidEmail<T>;
 
   @override
-  String get failedValue;
+  T get failedValue;
   @override
   @JsonKey(ignore: true)
   $InvalidEmailCopyWith<T, InvalidEmail<T>> get copyWith =>
@@ -258,7 +258,7 @@ abstract class $UnsecurePasswordCopyWith<T, $Res>
           UnsecurePassword<T> value, $Res Function(UnsecurePassword<T>) then) =
       _$UnsecurePasswordCopyWithImpl<T, $Res>;
   @override
-  $Res call({String failedValue});
+  $Res call({T failedValue});
 }
 
 /// @nodoc
@@ -280,7 +280,7 @@ class _$UnsecurePasswordCopyWithImpl<T, $Res>
       failedValue: failedValue == freezed
           ? _value.failedValue
           : failedValue // ignore: cast_nullable_to_non_nullable
-              as String,
+              as T,
     ));
   }
 }
@@ -291,7 +291,7 @@ class _$UnsecurePassword<T> implements UnsecurePassword<T> {
   const _$UnsecurePassword({required this.failedValue});
 
   @override
-  final String failedValue;
+  final T failedValue;
 
   @override
   String toString() {
@@ -319,8 +319,8 @@ class _$UnsecurePassword<T> implements UnsecurePassword<T> {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String failedValue) invalidEmail,
-    required TResult Function(String failedValue) unsecurePassword,
+    required TResult Function(T failedValue) invalidEmail,
+    required TResult Function(T failedValue) unsecurePassword,
   }) {
     return unsecurePassword(failedValue);
   }
@@ -328,8 +328,8 @@ class _$UnsecurePassword<T> implements UnsecurePassword<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String failedValue)? invalidEmail,
-    TResult Function(String failedValue)? unsecurePassword,
+    TResult Function(T failedValue)? invalidEmail,
+    TResult Function(T failedValue)? unsecurePassword,
   }) {
     return unsecurePassword?.call(failedValue);
   }
@@ -337,8 +337,8 @@ class _$UnsecurePassword<T> implements UnsecurePassword<T> {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String failedValue)? invalidEmail,
-    TResult Function(String failedValue)? unsecurePassword,
+    TResult Function(T failedValue)? invalidEmail,
+    TResult Function(T failedValue)? unsecurePassword,
     required TResult orElse(),
   }) {
     if (unsecurePassword != null) {
@@ -380,11 +380,11 @@ class _$UnsecurePassword<T> implements UnsecurePassword<T> {
 }
 
 abstract class UnsecurePassword<T> implements ValueFailure<T> {
-  const factory UnsecurePassword({required String failedValue}) =
+  const factory UnsecurePassword({required T failedValue}) =
       _$UnsecurePassword<T>;
 
   @override
-  String get failedValue;
+  T get failedValue;
   @override
   @JsonKey(ignore: true)
   $UnsecurePasswordCopyWith<T, UnsecurePassword<T>> get copyWith =>

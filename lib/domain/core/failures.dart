@@ -4,10 +4,12 @@ part 'failures.freezed.dart';
 
 @freezed
 class ValueFailure<T> with _$ValueFailure<T> {
+  // AuthFailure
   const factory ValueFailure.invalidEmail({
-    required String failedValue,
+    required T failedValue,
   }) = InvalidEmail<T>;
+  // AuthFailure
   const factory ValueFailure.unsecurePassword({
-    required String failedValue,
+    required T failedValue,
   }) = UnsecurePassword<T>;
 }
