@@ -55,57 +55,82 @@ class SignInForm extends StatelessWidget {
         );
       },
       builder: (context, state) {
+        final double _width = MediaQuery.of(context).size.width;
+        AutovalidateMode _autovalidateMode;
+        if (state.showErrorMessages) {
+          _autovalidateMode = AutovalidateMode.onUserInteraction;
+        } else {
+          _autovalidateMode = AutovalidateMode.disabled;
+        }
         return Form(
-          autovalidateMode: AutovalidateMode.onUserInteraction,
+          autovalidateMode: _autovalidateMode,
           child: ListView(
             children: [
-              Text(
-                AppLocalizations.of(context)!.translate('failure')!,
-                textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 130),
+              const SizedBox(height: 16),
+              Image.asset(
+                'assets/images/logo.png',
+                width: _width,
               ),
-              const SizedBox(height: 8),
-              TextFormField(
-                decoration: const InputDecoration(
-                  prefixIcon: Icon(Icons.email),
-                  labelText: 'Email',
-                ),
-                autocorrect: false,
-                onChanged: (value) => context.read<SignInFormBloc>().add(
-                      SignInFormEvent.emailAddressChanged(value),
+              const SizedBox(height: 32),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8),
                     ),
-                validator: (_) => context
-                    .read<SignInFormBloc>()
-                    .state
-                    .emailAddress
-                    .value
-                    .fold(
-                      (f) => f.maybeMap(
-                        invalidEmail: (_) => 'Invalid Email',
-                        orElse: () => null,
+                    labelText: AppLocalizations.of(context)!.translate(
+                      'email',
+                    ),
+                  ),
+                  autocorrect: false,
+                  onChanged: (value) => context.read<SignInFormBloc>().add(
+                        SignInFormEvent.emailAddressChanged(value),
                       ),
-                      (_) => null,
-                    ),
+                  validator: (_) => context
+                      .read<SignInFormBloc>()
+                      .state
+                      .emailAddress
+                      .value
+                      .fold(
+                        (f) => f.maybeMap(
+                          invalidEmail: (_) => 'Invalid Email',
+                          orElse: () => null,
+                        ),
+                        (_) => null,
+                      ),
+                ),
               ),
               const SizedBox(height: 8),
-              TextFormField(
-                decoration: const InputDecoration(
-                  prefixIcon: Icon(Icons.lock),
-                  labelText: 'Password',
-                ),
-                autocorrect: false,
-                obscureText: true,
-                onChanged: (value) => context
-                    .read<SignInFormBloc>()
-                    .add(SignInFormEvent.passwordChanged(value)),
-                validator: (_) =>
-                    context.read<SignInFormBloc>().state.password.value.fold(
-                          (f) => f.maybeMap(
-                            unsecurePassword: (_) => 'Unsecure Password',
-                            orElse: () => null,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: const Color.fromARGB(255, 18, 18, 18),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    hintStyle: const TextStyle(),
+                    labelText: AppLocalizations.of(context)!.translate(
+                      'password',
+                    ),
+                    suffixIcon: const Icon(Icons.visibility),
+                  ),
+                  autocorrect: false,
+                  obscureText: true,
+                  onChanged: (value) => context
+                      .read<SignInFormBloc>()
+                      .add(SignInFormEvent.passwordChanged(value)),
+                  validator: (_) =>
+                      context.read<SignInFormBloc>().state.password.value.fold(
+                            (f) => f.maybeMap(
+                              unsecurePassword: (_) => 'Unsecure Password',
+                              orElse: () => null,
+                            ),
+                            (_) => null,
                           ),
-                          (_) => null,
-                        ),
+                ),
               ),
               const SizedBox(height: 8),
               Row(
@@ -124,10 +149,7 @@ class SignInForm extends StatelessWidget {
                   Expanded(
                     child: TextButton(
                       onPressed: () {
-                        context.read<SignInFormBloc>().add(
-                              const SignInFormEvent
-                                  .registerWithEmailAndPasswordPressed(),
-                            );
+                        // TODO: Navigate
                       },
                       child: const Text('REGISTER'),
                     ),

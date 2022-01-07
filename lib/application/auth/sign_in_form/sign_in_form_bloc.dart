@@ -34,18 +34,18 @@ class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
         );
       },
     );
-    on<RegisterWithEmailAndPasswordPressed>(
-      (event, emit) async {
-        await _performActionOnAuthFacadeWithEmailAndPassword(
-          _authFacade.registerWithEmailAndPassword,
-          emit,
-        );
-      },
-    );
     on<SignInWithEmailAndPasswordPressed>(
       (event, emit) async {
         await _performActionOnAuthFacadeWithEmailAndPassword(
           _authFacade.signInWithEmailAndPassword,
+          emit,
+        );
+      },
+    );
+    on<RegisterWithEmailAndPasswordPressed>(
+      (event, emit) async {
+        await _performActionOnAuthFacadeWithEmailAndPassword(
+          _authFacade.registerWithEmailAndPassword,
           emit,
         );
       },

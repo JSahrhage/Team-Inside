@@ -16,6 +16,7 @@ class ThemeCubit extends Cubit<ThemeData> {
       foregroundColor: Colors.black,
     ),
     brightness: Brightness.dark,
+    scaffoldBackgroundColor: Colors.black,
   );
 
   void toggleTheme() {

@@ -3,5 +3,7 @@
     "cancelled_by_user": "Vorgang abgebrochen.",
     "server_error": "Server Fehler aufgetreten.",
     "email_already_in_use": "E-Mail-Adresse bereits vergeben.",
-    "invalid_email_and_password_combination": "E-Mail-Adresse und Passwort stimmen nicht überein."
+    "invalid_email_and_password_combination": "E-Mail-Adresse und Passwort stimmen nicht überein.",
+    "email": "E-Mail-Adresse",
+    "password": "Passwort"
 }

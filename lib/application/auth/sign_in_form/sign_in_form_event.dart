@@ -6,8 +6,8 @@ class SignInFormEvent with _$SignInFormEvent {
       EmailAddressChanged;
   const factory SignInFormEvent.passwordChanged(String password) =
       PasswordChanged;
-  const factory SignInFormEvent.registerWithEmailAndPasswordPressed() =
-      RegisterWithEmailAndPasswordPressed;
   const factory SignInFormEvent.signInWithEmailAndPasswordPressed() =
       SignInWithEmailAndPasswordPressed;
+  const factory SignInFormEvent.registerWithEmailAndPasswordPressed() =
+      RegisterWithEmailAndPasswordPressed;
 }

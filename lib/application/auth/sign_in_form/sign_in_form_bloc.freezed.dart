@@ -30,12 +30,12 @@ class _$SignInFormEventTearOff {
     );
   }
 
-  RegisterWithEmailAndPasswordPressed registerWithEmailAndPasswordPressed() {
-    return const RegisterWithEmailAndPasswordPressed();
-  }
-
   SignInWithEmailAndPasswordPressed signInWithEmailAndPasswordPressed() {
     return const SignInWithEmailAndPasswordPressed();
+  }
+
+  RegisterWithEmailAndPasswordPressed registerWithEmailAndPasswordPressed() {
+    return const RegisterWithEmailAndPasswordPressed();
   }
 }
 
@@ -48,24 +48,24 @@ mixin _$SignInFormEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(String emailAddress) emailAddressChanged,
     required TResult Function(String password) passwordChanged,
-    required TResult Function() registerWithEmailAndPasswordPressed,
     required TResult Function() signInWithEmailAndPasswordPressed,
+    required TResult Function() registerWithEmailAndPasswordPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String emailAddress)? emailAddressChanged,
     TResult Function(String password)? passwordChanged,
-    TResult Function()? registerWithEmailAndPasswordPressed,
     TResult Function()? signInWithEmailAndPasswordPressed,
+    TResult Function()? registerWithEmailAndPasswordPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String emailAddress)? emailAddressChanged,
     TResult Function(String password)? passwordChanged,
-    TResult Function()? registerWithEmailAndPasswordPressed,
     TResult Function()? signInWithEmailAndPasswordPressed,
+    TResult Function()? registerWithEmailAndPasswordPressed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -73,30 +73,30 @@ mixin _$SignInFormEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(EmailAddressChanged value) emailAddressChanged,
     required TResult Function(PasswordChanged value) passwordChanged,
-    required TResult Function(RegisterWithEmailAndPasswordPressed value)
-        registerWithEmailAndPasswordPressed,
     required TResult Function(SignInWithEmailAndPasswordPressed value)
         signInWithEmailAndPasswordPressed,
+    required TResult Function(RegisterWithEmailAndPasswordPressed value)
+        registerWithEmailAndPasswordPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(EmailAddressChanged value)? emailAddressChanged,
     TResult Function(PasswordChanged value)? passwordChanged,
-    TResult Function(RegisterWithEmailAndPasswordPressed value)?
-        registerWithEmailAndPasswordPressed,
     TResult Function(SignInWithEmailAndPasswordPressed value)?
         signInWithEmailAndPasswordPressed,
+    TResult Function(RegisterWithEmailAndPasswordPressed value)?
+        registerWithEmailAndPasswordPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailAddressChanged value)? emailAddressChanged,
     TResult Function(PasswordChanged value)? passwordChanged,
-    TResult Function(RegisterWithEmailAndPasswordPressed value)?
-        registerWithEmailAndPasswordPressed,
     TResult Function(SignInWithEmailAndPasswordPressed value)?
         signInWithEmailAndPasswordPressed,
+    TResult Function(RegisterWithEmailAndPasswordPressed value)?
+        registerWithEmailAndPasswordPressed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -187,8 +187,8 @@ class _$EmailAddressChanged implements EmailAddressChanged {
   TResult when<TResult extends Object?>({
     required TResult Function(String emailAddress) emailAddressChanged,
     required TResult Function(String password) passwordChanged,
-    required TResult Function() registerWithEmailAndPasswordPressed,
     required TResult Function() signInWithEmailAndPasswordPressed,
+    required TResult Function() registerWithEmailAndPasswordPressed,
   }) {
     return emailAddressChanged(emailAddress);
   }
@@ -198,8 +198,8 @@ class _$EmailAddressChanged implements EmailAddressChanged {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String emailAddress)? emailAddressChanged,
     TResult Function(String password)? passwordChanged,
-    TResult Function()? registerWithEmailAndPasswordPressed,
     TResult Function()? signInWithEmailAndPasswordPressed,
+    TResult Function()? registerWithEmailAndPasswordPressed,
   }) {
     return emailAddressChanged?.call(emailAddress);
   }
@@ -209,8 +209,8 @@ class _$EmailAddressChanged implements EmailAddressChanged {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String emailAddress)? emailAddressChanged,
     TResult Function(String password)? passwordChanged,
-    TResult Function()? registerWithEmailAndPasswordPressed,
     TResult Function()? signInWithEmailAndPasswordPressed,
+    TResult Function()? registerWithEmailAndPasswordPressed,
     required TResult orElse(),
   }) {
     if (emailAddressChanged != null) {
@@ -224,10 +224,10 @@ class _$EmailAddressChanged implements EmailAddressChanged {
   TResult map<TResult extends Object?>({
     required TResult Function(EmailAddressChanged value) emailAddressChanged,
     required TResult Function(PasswordChanged value) passwordChanged,
-    required TResult Function(RegisterWithEmailAndPasswordPressed value)
-        registerWithEmailAndPasswordPressed,
     required TResult Function(SignInWithEmailAndPasswordPressed value)
         signInWithEmailAndPasswordPressed,
+    required TResult Function(RegisterWithEmailAndPasswordPressed value)
+        registerWithEmailAndPasswordPressed,
   }) {
     return emailAddressChanged(this);
   }
@@ -237,10 +237,10 @@ class _$EmailAddressChanged implements EmailAddressChanged {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(EmailAddressChanged value)? emailAddressChanged,
     TResult Function(PasswordChanged value)? passwordChanged,
-    TResult Function(RegisterWithEmailAndPasswordPressed value)?
-        registerWithEmailAndPasswordPressed,
     TResult Function(SignInWithEmailAndPasswordPressed value)?
         signInWithEmailAndPasswordPressed,
+    TResult Function(RegisterWithEmailAndPasswordPressed value)?
+        registerWithEmailAndPasswordPressed,
   }) {
     return emailAddressChanged?.call(this);
   }
@@ -250,10 +250,10 @@ class _$EmailAddressChanged implements EmailAddressChanged {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailAddressChanged value)? emailAddressChanged,
     TResult Function(PasswordChanged value)? passwordChanged,
-    TResult Function(RegisterWithEmailAndPasswordPressed value)?
-        registerWithEmailAndPasswordPressed,
     TResult Function(SignInWithEmailAndPasswordPressed value)?
         signInWithEmailAndPasswordPressed,
+    TResult Function(RegisterWithEmailAndPasswordPressed value)?
+        registerWithEmailAndPasswordPressed,
     required TResult orElse(),
   }) {
     if (emailAddressChanged != null) {
@@ -340,8 +340,8 @@ class _$PasswordChanged implements PasswordChanged {
   TResult when<TResult extends Object?>({
     required TResult Function(String emailAddress) emailAddressChanged,
     required TResult Function(String password) passwordChanged,
-    required TResult Function() registerWithEmailAndPasswordPressed,
     required TResult Function() signInWithEmailAndPasswordPressed,
+    required TResult Function() registerWithEmailAndPasswordPressed,
   }) {
     return passwordChanged(password);
   }
@@ -351,8 +351,8 @@ class _$PasswordChanged implements PasswordChanged {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String emailAddress)? emailAddressChanged,
     TResult Function(String password)? passwordChanged,
-    TResult Function()? registerWithEmailAndPasswordPressed,
     TResult Function()? signInWithEmailAndPasswordPressed,
+    TResult Function()? registerWithEmailAndPasswordPressed,
   }) {
     return passwordChanged?.call(password);
   }
@@ -362,8 +362,8 @@ class _$PasswordChanged implements PasswordChanged {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String emailAddress)? emailAddressChanged,
     TResult Function(String password)? passwordChanged,
-    TResult Function()? registerWithEmailAndPasswordPressed,
     TResult Function()? signInWithEmailAndPasswordPressed,
+    TResult Function()? registerWithEmailAndPasswordPressed,
     required TResult orElse(),
   }) {
     if (passwordChanged != null) {
@@ -377,10 +377,10 @@ class _$PasswordChanged implements PasswordChanged {
   TResult map<TResult extends Object?>({
     required TResult Function(EmailAddressChanged value) emailAddressChanged,
     required TResult Function(PasswordChanged value) passwordChanged,
-    required TResult Function(RegisterWithEmailAndPasswordPressed value)
-        registerWithEmailAndPasswordPressed,
     required TResult Function(SignInWithEmailAndPasswordPressed value)
         signInWithEmailAndPasswordPressed,
+    required TResult Function(RegisterWithEmailAndPasswordPressed value)
+        registerWithEmailAndPasswordPressed,
   }) {
     return passwordChanged(this);
   }
@@ -390,10 +390,10 @@ class _$PasswordChanged implements PasswordChanged {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(EmailAddressChanged value)? emailAddressChanged,
     TResult Function(PasswordChanged value)? passwordChanged,
-    TResult Function(RegisterWithEmailAndPasswordPressed value)?
-        registerWithEmailAndPasswordPressed,
     TResult Function(SignInWithEmailAndPasswordPressed value)?
         signInWithEmailAndPasswordPressed,
+    TResult Function(RegisterWithEmailAndPasswordPressed value)?
+        registerWithEmailAndPasswordPressed,
   }) {
     return passwordChanged?.call(this);
   }
@@ -403,10 +403,10 @@ class _$PasswordChanged implements PasswordChanged {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailAddressChanged value)? emailAddressChanged,
     TResult Function(PasswordChanged value)? passwordChanged,
-    TResult Function(RegisterWithEmailAndPasswordPressed value)?
-        registerWithEmailAndPasswordPressed,
     TResult Function(SignInWithEmailAndPasswordPressed value)?
         signInWithEmailAndPasswordPressed,
+    TResult Function(RegisterWithEmailAndPasswordPressed value)?
+        registerWithEmailAndPasswordPressed,
     required TResult orElse(),
   }) {
     if (passwordChanged != null) {
@@ -423,135 +423,6 @@ abstract class PasswordChanged implements SignInFormEvent {
   @JsonKey(ignore: true)
   $PasswordChangedCopyWith<PasswordChanged> get copyWith =>
       throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $RegisterWithEmailAndPasswordPressedCopyWith<$Res> {
-  factory $RegisterWithEmailAndPasswordPressedCopyWith(
-          RegisterWithEmailAndPasswordPressed value,
-          $Res Function(RegisterWithEmailAndPasswordPressed) then) =
-      _$RegisterWithEmailAndPasswordPressedCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class _$RegisterWithEmailAndPasswordPressedCopyWithImpl<$Res>
-    extends _$SignInFormEventCopyWithImpl<$Res>
-    implements $RegisterWithEmailAndPasswordPressedCopyWith<$Res> {
-  _$RegisterWithEmailAndPasswordPressedCopyWithImpl(
-      RegisterWithEmailAndPasswordPressed _value,
-      $Res Function(RegisterWithEmailAndPasswordPressed) _then)
-      : super(_value, (v) => _then(v as RegisterWithEmailAndPasswordPressed));
-
-  @override
-  RegisterWithEmailAndPasswordPressed get _value =>
-      super._value as RegisterWithEmailAndPasswordPressed;
-}
-
-/// @nodoc
-
-class _$RegisterWithEmailAndPasswordPressed
-    implements RegisterWithEmailAndPasswordPressed {
-  const _$RegisterWithEmailAndPasswordPressed();
-
-  @override
-  String toString() {
-    return 'SignInFormEvent.registerWithEmailAndPasswordPressed()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is RegisterWithEmailAndPasswordPressed);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String emailAddress) emailAddressChanged,
-    required TResult Function(String password) passwordChanged,
-    required TResult Function() registerWithEmailAndPasswordPressed,
-    required TResult Function() signInWithEmailAndPasswordPressed,
-  }) {
-    return registerWithEmailAndPasswordPressed();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String emailAddress)? emailAddressChanged,
-    TResult Function(String password)? passwordChanged,
-    TResult Function()? registerWithEmailAndPasswordPressed,
-    TResult Function()? signInWithEmailAndPasswordPressed,
-  }) {
-    return registerWithEmailAndPasswordPressed?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String emailAddress)? emailAddressChanged,
-    TResult Function(String password)? passwordChanged,
-    TResult Function()? registerWithEmailAndPasswordPressed,
-    TResult Function()? signInWithEmailAndPasswordPressed,
-    required TResult orElse(),
-  }) {
-    if (registerWithEmailAndPasswordPressed != null) {
-      return registerWithEmailAndPasswordPressed();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(EmailAddressChanged value) emailAddressChanged,
-    required TResult Function(PasswordChanged value) passwordChanged,
-    required TResult Function(RegisterWithEmailAndPasswordPressed value)
-        registerWithEmailAndPasswordPressed,
-    required TResult Function(SignInWithEmailAndPasswordPressed value)
-        signInWithEmailAndPasswordPressed,
-  }) {
-    return registerWithEmailAndPasswordPressed(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(EmailAddressChanged value)? emailAddressChanged,
-    TResult Function(PasswordChanged value)? passwordChanged,
-    TResult Function(RegisterWithEmailAndPasswordPressed value)?
-        registerWithEmailAndPasswordPressed,
-    TResult Function(SignInWithEmailAndPasswordPressed value)?
-        signInWithEmailAndPasswordPressed,
-  }) {
-    return registerWithEmailAndPasswordPressed?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmailAddressChanged value)? emailAddressChanged,
-    TResult Function(PasswordChanged value)? passwordChanged,
-    TResult Function(RegisterWithEmailAndPasswordPressed value)?
-        registerWithEmailAndPasswordPressed,
-    TResult Function(SignInWithEmailAndPasswordPressed value)?
-        signInWithEmailAndPasswordPressed,
-    required TResult orElse(),
-  }) {
-    if (registerWithEmailAndPasswordPressed != null) {
-      return registerWithEmailAndPasswordPressed(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class RegisterWithEmailAndPasswordPressed implements SignInFormEvent {
-  const factory RegisterWithEmailAndPasswordPressed() =
-      _$RegisterWithEmailAndPasswordPressed;
 }
 
 /// @nodoc
@@ -602,8 +473,8 @@ class _$SignInWithEmailAndPasswordPressed
   TResult when<TResult extends Object?>({
     required TResult Function(String emailAddress) emailAddressChanged,
     required TResult Function(String password) passwordChanged,
-    required TResult Function() registerWithEmailAndPasswordPressed,
     required TResult Function() signInWithEmailAndPasswordPressed,
+    required TResult Function() registerWithEmailAndPasswordPressed,
   }) {
     return signInWithEmailAndPasswordPressed();
   }
@@ -613,8 +484,8 @@ class _$SignInWithEmailAndPasswordPressed
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String emailAddress)? emailAddressChanged,
     TResult Function(String password)? passwordChanged,
-    TResult Function()? registerWithEmailAndPasswordPressed,
     TResult Function()? signInWithEmailAndPasswordPressed,
+    TResult Function()? registerWithEmailAndPasswordPressed,
   }) {
     return signInWithEmailAndPasswordPressed?.call();
   }
@@ -624,8 +495,8 @@ class _$SignInWithEmailAndPasswordPressed
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String emailAddress)? emailAddressChanged,
     TResult Function(String password)? passwordChanged,
-    TResult Function()? registerWithEmailAndPasswordPressed,
     TResult Function()? signInWithEmailAndPasswordPressed,
+    TResult Function()? registerWithEmailAndPasswordPressed,
     required TResult orElse(),
   }) {
     if (signInWithEmailAndPasswordPressed != null) {
@@ -639,10 +510,10 @@ class _$SignInWithEmailAndPasswordPressed
   TResult map<TResult extends Object?>({
     required TResult Function(EmailAddressChanged value) emailAddressChanged,
     required TResult Function(PasswordChanged value) passwordChanged,
-    required TResult Function(RegisterWithEmailAndPasswordPressed value)
-        registerWithEmailAndPasswordPressed,
     required TResult Function(SignInWithEmailAndPasswordPressed value)
         signInWithEmailAndPasswordPressed,
+    required TResult Function(RegisterWithEmailAndPasswordPressed value)
+        registerWithEmailAndPasswordPressed,
   }) {
     return signInWithEmailAndPasswordPressed(this);
   }
@@ -652,10 +523,10 @@ class _$SignInWithEmailAndPasswordPressed
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(EmailAddressChanged value)? emailAddressChanged,
     TResult Function(PasswordChanged value)? passwordChanged,
-    TResult Function(RegisterWithEmailAndPasswordPressed value)?
-        registerWithEmailAndPasswordPressed,
     TResult Function(SignInWithEmailAndPasswordPressed value)?
         signInWithEmailAndPasswordPressed,
+    TResult Function(RegisterWithEmailAndPasswordPressed value)?
+        registerWithEmailAndPasswordPressed,
   }) {
     return signInWithEmailAndPasswordPressed?.call(this);
   }
@@ -665,10 +536,10 @@ class _$SignInWithEmailAndPasswordPressed
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailAddressChanged value)? emailAddressChanged,
     TResult Function(PasswordChanged value)? passwordChanged,
-    TResult Function(RegisterWithEmailAndPasswordPressed value)?
-        registerWithEmailAndPasswordPressed,
     TResult Function(SignInWithEmailAndPasswordPressed value)?
         signInWithEmailAndPasswordPressed,
+    TResult Function(RegisterWithEmailAndPasswordPressed value)?
+        registerWithEmailAndPasswordPressed,
     required TResult orElse(),
   }) {
     if (signInWithEmailAndPasswordPressed != null) {
@@ -681,6 +552,135 @@ class _$SignInWithEmailAndPasswordPressed
 abstract class SignInWithEmailAndPasswordPressed implements SignInFormEvent {
   const factory SignInWithEmailAndPasswordPressed() =
       _$SignInWithEmailAndPasswordPressed;
+}
+
+/// @nodoc
+abstract class $RegisterWithEmailAndPasswordPressedCopyWith<$Res> {
+  factory $RegisterWithEmailAndPasswordPressedCopyWith(
+          RegisterWithEmailAndPasswordPressed value,
+          $Res Function(RegisterWithEmailAndPasswordPressed) then) =
+      _$RegisterWithEmailAndPasswordPressedCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$RegisterWithEmailAndPasswordPressedCopyWithImpl<$Res>
+    extends _$SignInFormEventCopyWithImpl<$Res>
+    implements $RegisterWithEmailAndPasswordPressedCopyWith<$Res> {
+  _$RegisterWithEmailAndPasswordPressedCopyWithImpl(
+      RegisterWithEmailAndPasswordPressed _value,
+      $Res Function(RegisterWithEmailAndPasswordPressed) _then)
+      : super(_value, (v) => _then(v as RegisterWithEmailAndPasswordPressed));
+
+  @override
+  RegisterWithEmailAndPasswordPressed get _value =>
+      super._value as RegisterWithEmailAndPasswordPressed;
+}
+
+/// @nodoc
+
+class _$RegisterWithEmailAndPasswordPressed
+    implements RegisterWithEmailAndPasswordPressed {
+  const _$RegisterWithEmailAndPasswordPressed();
+
+  @override
+  String toString() {
+    return 'SignInFormEvent.registerWithEmailAndPasswordPressed()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is RegisterWithEmailAndPasswordPressed);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String emailAddress) emailAddressChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function() signInWithEmailAndPasswordPressed,
+    required TResult Function() registerWithEmailAndPasswordPressed,
+  }) {
+    return registerWithEmailAndPasswordPressed();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String emailAddress)? emailAddressChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function()? signInWithEmailAndPasswordPressed,
+    TResult Function()? registerWithEmailAndPasswordPressed,
+  }) {
+    return registerWithEmailAndPasswordPressed?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String emailAddress)? emailAddressChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function()? signInWithEmailAndPasswordPressed,
+    TResult Function()? registerWithEmailAndPasswordPressed,
+    required TResult orElse(),
+  }) {
+    if (registerWithEmailAndPasswordPressed != null) {
+      return registerWithEmailAndPasswordPressed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailAddressChanged value) emailAddressChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(SignInWithEmailAndPasswordPressed value)
+        signInWithEmailAndPasswordPressed,
+    required TResult Function(RegisterWithEmailAndPasswordPressed value)
+        registerWithEmailAndPasswordPressed,
+  }) {
+    return registerWithEmailAndPasswordPressed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(EmailAddressChanged value)? emailAddressChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(SignInWithEmailAndPasswordPressed value)?
+        signInWithEmailAndPasswordPressed,
+    TResult Function(RegisterWithEmailAndPasswordPressed value)?
+        registerWithEmailAndPasswordPressed,
+  }) {
+    return registerWithEmailAndPasswordPressed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailAddressChanged value)? emailAddressChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(SignInWithEmailAndPasswordPressed value)?
+        signInWithEmailAndPasswordPressed,
+    TResult Function(RegisterWithEmailAndPasswordPressed value)?
+        registerWithEmailAndPasswordPressed,
+    required TResult orElse(),
+  }) {
+    if (registerWithEmailAndPasswordPressed != null) {
+      return registerWithEmailAndPasswordPressed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class RegisterWithEmailAndPasswordPressed implements SignInFormEvent {
+  const factory RegisterWithEmailAndPasswordPressed() =
+      _$RegisterWithEmailAndPasswordPressed;
 }
 
 /// @nodoc
