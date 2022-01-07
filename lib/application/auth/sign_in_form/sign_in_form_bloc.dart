@@ -50,23 +50,6 @@ class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
         );
       },
     );
-    on<SignInWithGooglePressed>(
-      (event, emit) async {
-        emit(
-          state.copyWith(
-            isSubmitting: true,
-            authFailureOrSuccessOption: none(),
-          ),
-        );
-        final failureOrSucess = await _authFacade.signInWithGoogle();
-        emit(
-          state.copyWith(
-            isSubmitting: false,
-            authFailureOrSuccessOption: some(failureOrSucess),
-          ),
-        );
-      },
-    );
   }
 
   Future<void> _performActionOnAuthFacadeWithEmailAndPassword(

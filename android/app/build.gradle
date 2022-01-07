@@ -29,6 +29,10 @@ apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion flutter.compileSdkVersion
 
+    defaultConfig {
+        
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -44,7 +48,8 @@ android {
 
     defaultConfig {
         applicationId "com.jansa.teaminside"
-        minSdkVersion flutter.minSdkVersion
+        multiDexEnabled true
+        minSdkVersion 19
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
@@ -66,4 +71,5 @@ flutter {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation platform('com.google.firebase:firebase-bom:29.0.3')
+    implementation 'com.android.support:multidex:2.0.1'
 }
