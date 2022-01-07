@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:team_inside/application/localization/localizations_delegate.dart';
+import 'package:team_inside/application/localization/app_localizations_delegate.dart';
 
 class AppLocalizations {
   final Locale locale;

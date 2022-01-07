@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team_inside/application/auth/sign_in_form/sign_in_form_bloc.dart';
-import 'package:team_inside/application/theme/theme_cubit.dart';
+import 'package:team_inside/application/localization/app_localizations.dart';
 
 class SignInForm extends StatelessWidget {
   @override
@@ -16,8 +16,8 @@ class SignInForm extends StatelessWidget {
                 context: context,
                 builder: (BuildContext context) {
                   return AlertDialog(
-                    title: const Text(
-                      "Failure",
+                    title: Text(
+                      AppLocalizations.of(context)!.translate('failure')!,
                       textAlign: TextAlign.center,
                     ),
                     titleTextStyle: const TextStyle(
@@ -31,11 +31,16 @@ class SignInForm extends StatelessWidget {
                     ),
                     content: Text(
                       failure.map(
-                        cancelledByUser: (_) => 'Cancelled',
-                        serverError: (_) => 'Server error',
-                        emailAlreadyInUse: (_) => 'Email already in use',
+                        cancelledByUser: (_) => AppLocalizations.of(context)!
+                            .translate('cancelled_by_user')!,
+                        serverError: (_) => AppLocalizations.of(context)!
+                            .translate('server_error')!,
+                        emailAlreadyInUse: (_) => AppLocalizations.of(context)!
+                            .translate('email_already_in_use')!,
                         invalidEmailAndPasswordCombination: (_) =>
-                            'Invalid email and password combination',
+                            AppLocalizations.of(context)!.translate(
+                          'invalid_email_and_password_combination',
+                        )!,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -54,10 +59,10 @@ class SignInForm extends StatelessWidget {
           autovalidateMode: AutovalidateMode.onUserInteraction,
           child: ListView(
             children: [
-              const Text(
-                '📝',
+              Text(
+                AppLocalizations.of(context)!.translate('failure')!,
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 130),
+                style: const TextStyle(fontSize: 130),
               ),
               const SizedBox(height: 8),
               TextFormField(

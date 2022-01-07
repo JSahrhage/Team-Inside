@@ -1,4 +1,7 @@
 {
-
-
+    "failure": "Failure",
+    "cancelled_by_user": "Cancelled by user.",
+    "server_error": "Server error.",
+    "email_already_in_use": "E-Mail already in use.",
+    "invalid_email_and_password_combination": "Invalid e-mail and password combination."
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:team_inside/application/localization/localizations.dart';
+import 'package:team_inside/application/localization/app_localizations.dart';
 
 // ignore: avoid_classes_with_only_static_members
 class AppLocalizationsSetup {
