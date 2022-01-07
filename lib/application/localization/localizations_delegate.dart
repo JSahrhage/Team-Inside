@@ -1,0 +1,21 @@
+import 'package:flutter/material.dart' show Locale, LocalizationsDelegate;
+import 'package:team_inside/application/localization/localizations.dart';
+
+class AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
+  const AppLocalizationsDelegate();
+
+  @override
+  bool isSupported(Locale locale) {
+    return ['en', 'de'].contains(locale.languageCode);
+  }
+
+  @override
+  Future<AppLocalizations> load(Locale locale) async {
+    final AppLocalizations appLocalizations = AppLocalizations(locale);
+    await appLocalizations.load();
+    return appLocalizations;
+  }
+
+  @override
+  bool shouldReload(LocalizationsDelegate<AppLocalizations> old) => false;
+}
