@@ -5,18 +5,22 @@ class ThemeCubit extends Cubit<ThemeData> {
   ThemeCubit() : super(_darkTheme);
 
   static final _lightTheme = ThemeData(
+    brightness: Brightness.light,
+    scaffoldBackgroundColor: Colors.white,
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
       foregroundColor: Colors.white,
     ),
-    brightness: Brightness.light,
   );
 
   static final _darkTheme = ThemeData(
+    brightness: Brightness.dark,
+    scaffoldBackgroundColor: Colors.black,
+    primaryColor: const Color.fromARGB(255, 0, 153, 255),
+    hintColor: const Color.fromARGB(128, 170, 170, 170),
+    shadowColor: const Color.fromARGB(255, 18, 18, 18),
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
       foregroundColor: Colors.black,
     ),
-    brightness: Brightness.dark,
-    scaffoldBackgroundColor: Colors.black,
   );
 
   void toggleTheme() {

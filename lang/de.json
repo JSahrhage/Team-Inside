@@ -5,5 +5,8 @@
     "email_already_in_use": "E-Mail-Adresse bereits vergeben.",
     "invalid_email_and_password_combination": "E-Mail-Adresse und Passwort stimmen nicht überein.",
     "email": "E-Mail-Adresse",
-    "password": "Passwort"
+    "password": "Passwort",
+    "password_forgotten": "Passwort vergessen?",
+    "sign_in": "Anmelden",
+    "register": "Registrieren"
 }

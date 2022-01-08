@@ -7,10 +7,18 @@ import 'package:team_inside/presentation/auth/sign_in/sign_in_form.dart';
 class SignInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: BlocProvider(
-        create: (context) => getIt<SignInFormBloc>(),
-        child: SignInForm(),
+    return GestureDetector(
+      onTap: () {
+        final FocusScopeNode currentFocus = FocusScope.of(context);
+        if (!currentFocus.hasPrimaryFocus) {
+          currentFocus.unfocus();
+        }
+      },
+      child: Scaffold(
+        body: BlocProvider(
+          create: (context) => getIt<SignInFormBloc>(),
+          child: SignInForm(),
+        ),
       ),
     );
   }

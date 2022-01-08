@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team_inside/application/auth/sign_in_form/sign_in_form_bloc.dart';
@@ -6,6 +7,7 @@ import 'package:team_inside/application/localization/app_localizations.dart';
 class SignInForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    const double _fieldHeight = 48;
     return BlocConsumer<SignInFormBloc, SignInFormState>(
       listener: (context, state) {
         state.authFailureOrSuccessOption.fold(
@@ -55,7 +57,6 @@ class SignInForm extends StatelessWidget {
         );
       },
       builder: (context, state) {
-        final double _width = MediaQuery.of(context).size.width;
         AutovalidateMode _autovalidateMode;
         if (state.showErrorMessages) {
           _autovalidateMode = AutovalidateMode.onUserInteraction;
@@ -66,95 +67,145 @@ class SignInForm extends StatelessWidget {
           autovalidateMode: _autovalidateMode,
           child: ListView(
             children: [
-              const SizedBox(height: 16),
-              Image.asset(
-                'assets/images/logo.png',
-                width: _width,
+              const SizedBox(height: 64),
+              SizedBox(
+                height: MediaQuery.of(context).size.height / 4,
+                child: Image.asset(
+                  'assets/images/logo_small.png',
+                ),
               ),
               const SizedBox(height: 32),
               Padding(
                 padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    labelText: AppLocalizations.of(context)!.translate(
-                      'email',
-                    ),
-                  ),
-                  autocorrect: false,
-                  onChanged: (value) => context.read<SignInFormBloc>().add(
-                        SignInFormEvent.emailAddressChanged(value),
+                child: SizedBox(
+                  height: _fieldHeight,
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Theme.of(context).shadowColor,
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        borderRadius: BorderRadius.circular(8),
                       ),
-                  validator: (_) => context
-                      .read<SignInFormBloc>()
-                      .state
-                      .emailAddress
-                      .value
-                      .fold(
-                        (f) => f.maybeMap(
-                          invalidEmail: (_) => 'Invalid Email',
-                          orElse: () => null,
+                      labelStyle: TextStyle(
+                        color: Theme.of(context).hintColor,
+                        fontSize: 14,
+                      ),
+                      labelText: AppLocalizations.of(context)!.translate(
+                        'email',
+                      ),
+                    ),
+                    autocorrect: false,
+                    onChanged: (value) => context.read<SignInFormBloc>().add(
+                          SignInFormEvent.emailAddressChanged(value),
                         ),
-                        (_) => null,
-                      ),
+                    validator: (_) => context
+                        .read<SignInFormBloc>()
+                        .state
+                        .emailAddress
+                        .value
+                        .fold(
+                          (f) => f.maybeMap(
+                            invalidEmail: (_) => 'Invalid Email',
+                            orElse: () => null,
+                          ),
+                          (_) => null,
+                        ),
+                  ),
                 ),
               ),
               const SizedBox(height: 8),
               Padding(
                 padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: const Color.fromARGB(255, 18, 18, 18),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8),
+                child: SizedBox(
+                  height: _fieldHeight,
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Theme.of(context).shadowColor,
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      labelStyle: TextStyle(
+                        color: Theme.of(context).hintColor,
+                        fontSize: 14,
+                      ),
+                      labelText: AppLocalizations.of(context)!.translate(
+                        'password',
+                      ),
+                      suffixIcon: const Icon(Icons.visibility),
                     ),
-                    hintStyle: const TextStyle(),
-                    labelText: AppLocalizations.of(context)!.translate(
-                      'password',
-                    ),
-                    suffixIcon: const Icon(Icons.visibility),
-                  ),
-                  autocorrect: false,
-                  obscureText: true,
-                  onChanged: (value) => context
-                      .read<SignInFormBloc>()
-                      .add(SignInFormEvent.passwordChanged(value)),
-                  validator: (_) =>
-                      context.read<SignInFormBloc>().state.password.value.fold(
-                            (f) => f.maybeMap(
-                              unsecurePassword: (_) => 'Unsecure Password',
-                              orElse: () => null,
-                            ),
-                            (_) => null,
+                    autocorrect: false,
+                    obscureText: true,
+                    onChanged: (value) => context
+                        .read<SignInFormBloc>()
+                        .add(SignInFormEvent.passwordChanged(value)),
+                    validator: (_) => context
+                        .read<SignInFormBloc>()
+                        .state
+                        .password
+                        .value
+                        .fold(
+                          (f) => f.maybeMap(
+                            unsecurePassword: (_) => 'Unsecure Password',
+                            orElse: () => null,
                           ),
+                          (_) => null,
+                        ),
+                  ),
                 ),
               ),
-              const SizedBox(height: 8),
-              Row(
-                children: [
-                  Expanded(
-                    child: TextButton(
-                      onPressed: () {
-                        context.read<SignInFormBloc>().add(
-                              const SignInFormEvent
-                                  .signInWithEmailAndPasswordPressed(),
-                            );
+              const SizedBox(height: 16),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 16, 0),
+                child: RichText(
+                  textAlign: TextAlign.end,
+                  textScaleFactor: 0.8,
+                  text: TextSpan(
+                    text: AppLocalizations.of(context)!.translate(
+                      'password_forgotten',
+                    ),
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.primary,
+                    ),
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        // TODO: Implement PasswordForgotten
                       },
-                      child: const Text('SIGN IN'),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 24),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+                child: SizedBox(
+                  height: _fieldHeight,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      context.read<SignInFormBloc>().add(
+                            const SignInFormEvent
+                                .signInWithEmailAndPasswordPressed(),
+                          );
+                    },
+                    child: Text(
+                      AppLocalizations.of(context)!.translate(
+                        'sign_in',
+                      )!,
                     ),
                   ),
-                  Expanded(
-                    child: TextButton(
-                      onPressed: () {
-                        // TODO: Navigate
-                      },
-                      child: const Text('REGISTER'),
-                    ),
-                  ),
-                ],
+                ),
+              ),
+              const SizedBox(height: 24),
+              TextButton(
+                onPressed: () {
+                  // TODO: Navigate
+                },
+                child: Text(
+                  AppLocalizations.of(context)!.translate(
+                    'register',
+                  )!,
+                ),
               ),
             ],
           ),
