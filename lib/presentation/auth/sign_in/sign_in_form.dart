@@ -57,158 +57,137 @@ class SignInForm extends StatelessWidget {
         );
       },
       builder: (context, state) {
-        AutovalidateMode _autovalidateMode;
-        if (state.showErrorMessages) {
-          _autovalidateMode = AutovalidateMode.onUserInteraction;
-        } else {
-          _autovalidateMode = AutovalidateMode.disabled;
-        }
-        return Form(
-          autovalidateMode: _autovalidateMode,
-          child: ListView(
-            children: [
-              const SizedBox(height: 64),
-              SizedBox(
-                height: MediaQuery.of(context).size.height / 4,
-                child: Image.asset(
-                  'assets/images/logo_small.png',
-                ),
+        return ListView(
+          children: [
+            const SizedBox(height: 64),
+            SizedBox(
+              height: MediaQuery.of(context).size.height / 4,
+              child: Image.asset(
+                'assets/images/logo_small.png',
               ),
-              const SizedBox(height: 32),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-                child: SizedBox(
-                  height: _fieldHeight,
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Theme.of(context).shadowColor,
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide.none,
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      labelStyle: TextStyle(
-                        color: Theme.of(context).hintColor,
-                        fontSize: 14,
-                      ),
-                      labelText: AppLocalizations.of(context)!.translate(
-                        'email',
-                      ),
+            ),
+            const SizedBox(height: 32),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+              child: SizedBox(
+                height: _fieldHeight,
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Theme.of(context).shadowColor,
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide.none,
+                      borderRadius: BorderRadius.circular(8),
                     ),
-                    autocorrect: false,
-                    onChanged: (value) => context.read<SignInFormBloc>().add(
-                          SignInFormEvent.emailAddressChanged(value),
-                        ),
-                    validator: (_) => context
-                        .read<SignInFormBloc>()
-                        .state
-                        .emailAddress
-                        .value
-                        .fold(
-                          (f) => f.maybeMap(
-                            invalidEmail: (_) => 'Invalid Email',
-                            orElse: () => null,
-                          ),
-                          (_) => null,
-                        ),
+                    labelStyle: TextStyle(
+                      color: Theme.of(context).hintColor,
+                      fontSize: 14,
+                    ),
+                    labelText: AppLocalizations.of(context)!.translate(
+                      'email',
+                    ),
                   ),
+                  autocorrect: false,
                 ),
               ),
-              const SizedBox(height: 8),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-                child: SizedBox(
-                  height: _fieldHeight,
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Theme.of(context).shadowColor,
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide.none,
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      labelStyle: TextStyle(
-                        color: Theme.of(context).hintColor,
-                        fontSize: 14,
-                      ),
-                      labelText: AppLocalizations.of(context)!.translate(
-                        'password',
-                      ),
-                      suffixIcon: const Icon(Icons.visibility),
-                    ),
-                    autocorrect: false,
-                    obscureText: true,
-                    onChanged: (value) => context
-                        .read<SignInFormBloc>()
-                        .add(SignInFormEvent.passwordChanged(value)),
-                    validator: (_) => context
-                        .read<SignInFormBloc>()
-                        .state
-                        .password
-                        .value
-                        .fold(
-                          (f) => f.maybeMap(
-                            unsecurePassword: (_) => 'Unsecure Password',
-                            orElse: () => null,
-                          ),
-                          (_) => null,
+            ),
+            const SizedBox(height: 8),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+              child: SizedBox(
+                height: _fieldHeight,
+                child: Stack(
+                  alignment: Alignment.centerRight,
+                  children: [
+                    TextFormField(
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Theme.of(context).shadowColor,
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(8),
                         ),
-                  ),
-                ),
-              ),
-              const SizedBox(height: 16),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 0, 16, 0),
-                child: RichText(
-                  textAlign: TextAlign.end,
-                  textScaleFactor: 0.8,
-                  text: TextSpan(
-                    text: AppLocalizations.of(context)!.translate(
-                      'password_forgotten',
+                        labelStyle: TextStyle(
+                          color: Theme.of(context).hintColor,
+                          fontSize: 14,
+                        ),
+                        labelText: AppLocalizations.of(context)!.translate(
+                          'password',
+                        ),
+                      ),
+                      autocorrect: false,
+                      obscureText: !state.isPasswordVisible,
                     ),
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.primary,
-                    ),
-                    recognizer: TapGestureRecognizer()
-                      ..onTap = () {
-                        // TODO: Implement PasswordForgotten
+                    IconButton(
+                      icon: (state.isPasswordVisible)
+                          ? const Icon(Icons.visibility)
+                          : const Icon(Icons.visibility_off),
+                      color: (state.isPasswordVisible)
+                          ? Theme.of(context).primaryColor
+                          : Theme.of(context).hintColor,
+                      onPressed: () {
+                        context.read<SignInFormBloc>().add(
+                              const SignInFormEvent
+                                  .passwordVisibilityIconPressed(),
+                            );
                       },
-                  ),
-                ),
-              ),
-              const SizedBox(height: 24),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-                child: SizedBox(
-                  height: _fieldHeight,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      context.read<SignInFormBloc>().add(
-                            const SignInFormEvent
-                                .signInWithEmailAndPasswordPressed(),
-                          );
-                    },
-                    child: Text(
-                      AppLocalizations.of(context)!.translate(
-                        'sign_in',
-                      )!,
                     ),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(height: 16),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 0, 16, 0),
+              child: RichText(
+                textAlign: TextAlign.end,
+                textScaleFactor: 0.8,
+                text: TextSpan(
+                  text: AppLocalizations.of(context)!.translate(
+                    'password_forgotten',
+                  ),
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                  recognizer: TapGestureRecognizer()
+                    ..onTap = () {
+                      // TODO: Implement PasswordForgotten
+                    },
+                ),
+              ),
+            ),
+            const SizedBox(height: 24),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+              child: SizedBox(
+                height: _fieldHeight,
+                child: ElevatedButton(
+                  onPressed: () {
+                    context.read<SignInFormBloc>().add(
+                          const SignInFormEvent
+                              .signInWithEmailAndPasswordPressed(),
+                        );
+                  },
+                  child: Text(
+                    AppLocalizations.of(context)!.translate(
+                      'sign_in',
+                    )!,
                   ),
                 ),
               ),
-              const SizedBox(height: 24),
-              TextButton(
-                onPressed: () {
-                  // TODO: Navigate
-                },
-                child: Text(
-                  AppLocalizations.of(context)!.translate(
-                    'register',
-                  )!,
-                ),
+            ),
+            const SizedBox(height: 24),
+            TextButton(
+              onPressed: () {
+                // TODO: Navigate
+              },
+              child: Text(
+                AppLocalizations.of(context)!.translate(
+                  'register',
+                )!,
               ),
-            ],
-          ),
+            ),
+          ],
         );
       },
     );

@@ -1,0 +1,28 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "lib\\domain\\auth/auth_failure.freezed.dart": true,
+        "**/auth_failure.freezed.dart": true,
+        "auth_failure.freezed.dart": true,
+        "lib\\domain\\auth/app_user.freezed.dart": true,
+        "app_user.freezed.dart": true,
+        "lib\\application\\auth\\sign_in_form/sign_in_form_bloc.freezed.dart": true,
+        "sign_in_form_bloc.freezed.dart": true,
+        "lib\\application\\auth/auth_bloc.freezed.dart": true,
+        "auth_bloc.freezed.dart": true,
+        "lib\\application\\auth\\registration/registration_bloc.freezed.dart": true,
+        "registration_bloc.freezed.dart": true,
+        "lib\\domain\\core/failures.freezed.dart": true,
+        "**/failures.freezed.dart": true,
+        "failures.freezed.dart": true,
+        "lib\\presentation\\routes/router.gr.dart": true,
+        "**/router.gr.dart": true,
+        "router.gr.dart": true
+    },
+    "explorerExclude.backup": null
+}

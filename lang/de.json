@@ -8,5 +8,7 @@
     "password": "Passwort",
     "password_forgotten": "Passwort vergessen?",
     "sign_in": "Anmelden",
-    "register": "Registrieren"
+    "register": "Registrieren",
+    "invalid_email": "Ungültige E-Mail-Adresse",
+    "unsecure_password": "Unsicheres Passwort"
 }
