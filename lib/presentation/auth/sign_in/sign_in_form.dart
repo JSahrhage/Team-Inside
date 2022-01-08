@@ -87,6 +87,9 @@ class SignInForm extends StatelessWidget {
                       'email',
                     ),
                   ),
+                  onChanged: (value) => context
+                      .read<SignInFormBloc>()
+                      .add(SignInFormEvent.emailChanged(value)),
                   autocorrect: false,
                 ),
               ),
@@ -115,14 +118,17 @@ class SignInForm extends StatelessWidget {
                           'password',
                         ),
                       ),
+                      onChanged: (value) => context
+                          .read<SignInFormBloc>()
+                          .add(SignInFormEvent.passwordChanged(value)),
                       autocorrect: false,
                       obscureText: !state.isPasswordVisible,
                     ),
                     IconButton(
-                      icon: (state.isPasswordVisible)
+                      icon: state.isPasswordVisible
                           ? const Icon(Icons.visibility)
                           : const Icon(Icons.visibility_off),
-                      color: (state.isPasswordVisible)
+                      color: state.isPasswordVisible
                           ? Theme.of(context).primaryColor
                           : Theme.of(context).hintColor,
                       onPressed: () {
@@ -168,11 +174,13 @@ class SignInForm extends StatelessWidget {
                               .signInWithEmailAndPasswordPressed(),
                         );
                   },
-                  child: Text(
-                    AppLocalizations.of(context)!.translate(
-                      'sign_in',
-                    )!,
-                  ),
+                  child: state.isSubmitting
+                      ? const CircularProgressIndicator()
+                      : Text(
+                          AppLocalizations.of(context)!.translate(
+                            'sign_in',
+                          )!,
+                        ),
                 ),
               ),
             ),

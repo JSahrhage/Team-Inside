@@ -14,17 +14,35 @@ part 'sign_in_form_state.dart';
 class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
   final IAuthFacade _authFacade;
   SignInFormBloc(this._authFacade) : super(SignInFormState.initial()) {
+    on<EmailChanged>(
+      (event, emit) {
+        emit(
+          state.copyWith(
+            emailAddress: EmailAddress(event.email),
+            authFailureOrSuccessOption: none(),
+          ),
+        );
+      },
+    );
+    on<PasswordChanged>(
+      (event, emit) {
+        emit(
+          state.copyWith(
+            password: Password(event.password),
+            authFailureOrSuccessOption: none(),
+          ),
+        );
+      },
+    );
     on<PasswordVisibilityIconPressed>(
       (event, emit) {
         emit(
           state.copyWith(
             isPasswordVisible: !state.isPasswordVisible,
+            authFailureOrSuccessOption: none(),
           ),
         );
       },
-    );
-    on<PasswordForgottenPressed>(
-      (event, emit) {},
     );
     on<SignInWithEmailAndPasswordPressed>(
       (event, emit) async {
@@ -42,7 +60,7 @@ class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
             ),
           );
 
-          failureOrSuccess = await _authFacade.registerWithEmailAndPassword(
+          failureOrSuccess = await _authFacade.signInWithEmailAndPassword(
             emailAddress: state.emailAddress,
             password: state.password,
           );
@@ -56,9 +74,6 @@ class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
           ),
         );
       },
-    );
-    on<RegisterWithEmailAndPasswordPressed>(
-      (event, emit) {},
     );
   }
 }

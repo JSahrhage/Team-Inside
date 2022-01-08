@@ -7,7 +7,8 @@ class SignInFormState with _$SignInFormState {
     required Password password,
     required bool isSubmitting,
     required bool isPasswordVisible,
-    required bool stateFlipper,
+    required bool
+        stateFlipper, // Required to fire change state when .copyWith is called
     required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption,
   }) = _SignInFormState;
 
