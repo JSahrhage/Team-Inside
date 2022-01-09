@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:team_inside/application/auth/sign_in_form/sign_in_form_bloc.dart';
+import 'package:team_inside/application/auth/sign_in/sign_in_bloc.dart';
 import 'package:team_inside/application/localization/app_localizations.dart';
 
 class SignInEmailTextFormField extends StatelessWidget {
@@ -31,9 +31,8 @@ class SignInEmailTextFormField extends StatelessWidget {
               'email',
             ),
           ),
-          onChanged: (value) => context
-              .read<SignInFormBloc>()
-              .add(SignInFormEvent.emailChanged(value)),
+          onChanged: (value) =>
+              context.read<SignInBloc>().add(SignInEvent.emailChanged(value)),
           autocorrect: false,
         ),
       ),

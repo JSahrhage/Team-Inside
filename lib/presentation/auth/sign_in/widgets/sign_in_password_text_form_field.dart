@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:team_inside/application/auth/sign_in_form/sign_in_form_bloc.dart';
+import 'package:team_inside/application/auth/sign_in/sign_in_bloc.dart';
 import 'package:team_inside/application/localization/app_localizations.dart';
 
 class SignInPasswordTextFormField extends StatelessWidget {
@@ -39,8 +39,8 @@ class SignInPasswordTextFormField extends StatelessWidget {
                 ),
               ),
               onChanged: (value) => context
-                  .read<SignInFormBloc>()
-                  .add(SignInFormEvent.passwordChanged(value)),
+                  .read<SignInBloc>()
+                  .add(SignInEvent.passwordChanged(value)),
               autocorrect: false,
               obscureText: !isPasswordVisible,
             ),
@@ -52,8 +52,8 @@ class SignInPasswordTextFormField extends StatelessWidget {
                   ? Theme.of(context).primaryColor
                   : Theme.of(context).hintColor,
               onPressed: () {
-                context.read<SignInFormBloc>().add(
-                      const SignInFormEvent.passwordVisibilityIconPressed(),
+                context.read<SignInBloc>().add(
+                      const SignInEvent.passwordVisibilityIconPressed(),
                     );
               },
             ),

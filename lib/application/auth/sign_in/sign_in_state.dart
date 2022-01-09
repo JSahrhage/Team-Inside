@@ -1,8 +1,8 @@
-part of 'sign_in_form_bloc.dart';
+part of 'sign_in_bloc.dart';
 
 @freezed
-class SignInFormState with _$SignInFormState {
-  const factory SignInFormState({
+class SignInState with _$SignInState {
+  const factory SignInState({
     required EmailAddress emailAddress,
     required Password password,
     required bool isSubmitting,
@@ -10,9 +10,9 @@ class SignInFormState with _$SignInFormState {
     required bool
         stateFlipper, // Required to fire change state when .copyWith is called
     required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption,
-  }) = _SignInFormState;
+  }) = _SignInState;
 
-  factory SignInFormState.initial() => SignInFormState(
+  factory SignInState.initial() => SignInState(
         emailAddress: EmailAddress(''),
         password: Password(''),
         isSubmitting: false,

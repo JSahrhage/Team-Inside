@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:team_inside/application/auth/sign_in_form/sign_in_form_bloc.dart';
+import 'package:team_inside/application/auth/sign_in/sign_in_bloc.dart';
 import 'package:team_inside/presentation/auth/sign_in/widgets/sign_in_email_text_form_field.dart';
 import 'package:team_inside/presentation/auth/sign_in/widgets/sign_in_failure_alert_dialog.dart';
 import 'package:team_inside/presentation/auth/sign_in/widgets/sign_in_logo.dart';
@@ -13,7 +13,7 @@ class SignInForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const double _fieldHeight = 48;
-    return BlocConsumer<SignInFormBloc, SignInFormState>(
+    return BlocConsumer<SignInBloc, SignInState>(
       listener: (context, state) {
         state.authFailureOrSuccessOption.fold(
           () {},

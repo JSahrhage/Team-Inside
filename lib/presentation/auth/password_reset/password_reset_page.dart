@@ -4,7 +4,7 @@ import 'package:team_inside/application/auth/sign_in/sign_in_bloc.dart';
 import 'package:team_inside/injection.dart';
 import 'package:team_inside/presentation/auth/sign_in/sign_in_form.dart';
 
-class SignInPage extends StatelessWidget {
+class PasswordResetPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
