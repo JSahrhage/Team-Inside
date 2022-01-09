@@ -1,5 +1,6 @@
 {
     "failure": "Failure",
+    "success": "Success",
     "cancelled_by_user": "Cancelled by user.",
     "server_error": "Server error.",
     "email_already_in_use": "E-Mail already in use.",
@@ -8,5 +9,10 @@
     "password": "Password",
     "password_forgotten": "Password forgotten?",
     "sign_in": "Sign in",
-    "register": "Register"
+    "register": "Register",
+    "invalid_email": "Invalid e-mail",
+    "unsecure_password": "Unsecure password",
+    "user_not_found": "User not found.",
+    "send_reset_email": "Send reset e-mail",
+    "reset_email_send": "Reset e-mail was send."
 }

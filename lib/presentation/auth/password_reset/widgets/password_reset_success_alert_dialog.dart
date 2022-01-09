@@ -1,0 +1,30 @@
+import 'package:flutter/material.dart';
+import 'package:team_inside/application/localization/app_localizations.dart';
+
+class PasswordResetSuccessAlertDialog extends StatelessWidget {
+  const PasswordResetSuccessAlertDialog({
+    Key? key,
+  }) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      title: Text(
+        AppLocalizations.of(context)!.translate('success')!,
+        textAlign: TextAlign.center,
+      ),
+      titleTextStyle: TextStyle(
+        fontWeight: FontWeight.bold,
+        color: Theme.of(context).colorScheme.onError,
+        fontSize: 20,
+      ),
+      backgroundColor: Theme.of(context).indicatorColor,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(20)),
+      ),
+      content: Text(
+        AppLocalizations.of(context)!.translate('reset_email_send')!,
+        textAlign: TextAlign.center,
+      ),
+    );
+  }
+}

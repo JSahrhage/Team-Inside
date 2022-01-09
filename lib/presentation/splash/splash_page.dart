@@ -21,8 +21,9 @@ class SplashPage extends StatelessWidget {
           ),
         );
       },
-      child: const Scaffold(
-        body: Center(
+      child: Scaffold(
+        backgroundColor: Theme.of(context).colorScheme.background,
+        body: const Center(
           child: CircularProgressIndicator(),
         ),
       ),

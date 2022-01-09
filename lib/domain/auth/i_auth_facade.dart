@@ -13,5 +13,8 @@ abstract class IAuthFacade {
     required EmailAddress emailAddress,
     required Password password,
   });
+  Future<Either<AuthFailure, Unit>> sendPasswordResetEmail({
+    required EmailAddress emailAddress,
+  });
   Future<void> signOut();
 }

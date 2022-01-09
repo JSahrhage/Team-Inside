@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get_it/get_it.dart';
 import 'package:team_inside/application/auth/auth_bloc.dart';
+import 'package:team_inside/application/auth/password_reset/password_reset_bloc.dart';
 import 'package:team_inside/application/auth/sign_in/sign_in_bloc.dart';
 import 'package:team_inside/domain/auth/i_auth_facade.dart';
 import 'package:team_inside/infrastructure/auth/firebase_auth_facade.dart';
@@ -19,13 +20,18 @@ void $initGetIt(
       g<FirebaseAuth>(),
     ),
   );
+  g.registerFactory<AuthBloc>(
+    () => AuthBloc(
+      g<IAuthFacade>(),
+    ),
+  );
   g.registerFactory<SignInBloc>(
     () => SignInBloc(
       g<IAuthFacade>(),
     ),
   );
-  g.registerFactory<AuthBloc>(
-    () => AuthBloc(
+  g.registerFactory<PasswordResetBloc>(
+    () => PasswordResetBloc(
       g<IAuthFacade>(),
     ),
   );

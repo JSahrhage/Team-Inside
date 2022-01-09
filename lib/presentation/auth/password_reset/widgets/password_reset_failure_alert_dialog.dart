@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:team_inside/application/localization/app_localizations.dart';
 import 'package:team_inside/domain/auth/auth_failure.dart';
 
-class SignInFailureAlertDialog extends StatelessWidget {
-  const SignInFailureAlertDialog({
+class PasswordResetFailureAlertDialog extends StatelessWidget {
+  const PasswordResetFailureAlertDialog({
     Key? key,
     required this.failure,
   }) : super(key: key);

@@ -21,6 +21,7 @@ class ThemeCubit extends Cubit<ThemeData> {
       onSurface: Color.fromARGB(255, 131, 5, 200),
     ),
     hintColor: const Color.fromARGB(128, 170, 170, 170),
+    indicatorColor: Colors.greenAccent, // Used for Success-AlertDialog
   );
 
   static final _darkTheme = ThemeData(
@@ -40,6 +41,7 @@ class ThemeCubit extends Cubit<ThemeData> {
       onSurface: Color.fromARGB(255, 131, 5, 200),
     ),
     hintColor: const Color.fromARGB(128, 170, 170, 170),
+    indicatorColor: Colors.greenAccent, // Used for Success-AlertDialog
   );
 
   void toggleTheme() {
