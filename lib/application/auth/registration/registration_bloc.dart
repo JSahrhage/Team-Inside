@@ -6,7 +6,7 @@ part 'registration_state.dart';
 part 'registration_bloc.freezed.dart';
 
 class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
-  RegistrationBloc() : super(const _Initial()) {
+  RegistrationBloc() : super(const Initial()) {
     on<RegistrationEvent>((event, emit) {
       // TODO: implement event handler
     });
