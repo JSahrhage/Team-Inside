@@ -23,9 +23,11 @@ class SignInPasswordTextFormField extends StatelessWidget {
           alignment: Alignment.centerRight,
           children: [
             TextFormField(
+              style:
+                  TextStyle(color: Theme.of(context).colorScheme.onBackground),
               decoration: InputDecoration(
                 filled: true,
-                fillColor: Theme.of(context).shadowColor,
+                fillColor: Theme.of(context).colorScheme.secondaryVariant,
                 border: OutlineInputBorder(
                   borderSide: BorderSide.none,
                   borderRadius: BorderRadius.circular(8),
@@ -49,8 +51,8 @@ class SignInPasswordTextFormField extends StatelessWidget {
                   ? const Icon(Icons.visibility)
                   : const Icon(Icons.visibility_off),
               color: isPasswordVisible
-                  ? Theme.of(context).primaryColor
-                  : Theme.of(context).hintColor,
+                  ? Theme.of(context).colorScheme.primary
+                  : Theme.of(context).colorScheme.onSecondary,
               onPressed: () {
                 context.read<SignInBloc>().add(
                       const SignInEvent.passwordVisibilityIconPressed(),

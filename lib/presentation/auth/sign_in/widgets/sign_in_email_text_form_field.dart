@@ -16,9 +16,10 @@ class SignInEmailTextFormField extends StatelessWidget {
       child: SizedBox(
         height: fieldHeight,
         child: TextFormField(
+          style: TextStyle(color: Theme.of(context).colorScheme.onBackground),
           decoration: InputDecoration(
             filled: true,
-            fillColor: Theme.of(context).shadowColor,
+            fillColor: Theme.of(context).colorScheme.secondaryVariant,
             border: OutlineInputBorder(
               borderSide: BorderSide.none,
               borderRadius: BorderRadius.circular(8),

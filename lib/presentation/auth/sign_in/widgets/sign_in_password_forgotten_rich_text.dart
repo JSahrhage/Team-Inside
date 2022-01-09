@@ -1,6 +1,8 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:team_inside/application/localization/app_localizations.dart';
+import 'package:team_inside/presentation/routes/router.gr.dart';
 
 class SignInPasswordForgottenRichText extends StatelessWidget {
   const SignInPasswordForgottenRichText({Key? key}) : super(key: key);
@@ -8,7 +10,7 @@ class SignInPasswordForgottenRichText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(0, 0, 16, 0),
+      padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
       child: RichText(
         textAlign: TextAlign.end,
         textScaleFactor: 0.8,
@@ -21,7 +23,9 @@ class SignInPasswordForgottenRichText extends StatelessWidget {
           ),
           recognizer: TapGestureRecognizer()
             ..onTap = () {
-              // TODO: Implement PasswordForgotten
+              context.router.replace(
+                const PasswordResetPageRoute(),
+              );
             },
         ),
       ),

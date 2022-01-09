@@ -15,6 +15,7 @@ class SignInPage extends StatelessWidget {
         }
       },
       child: Scaffold(
+        backgroundColor: Theme.of(context).colorScheme.background,
         body: BlocProvider(
           create: (context) => getIt<SignInBloc>(),
           child: SignInForm(),

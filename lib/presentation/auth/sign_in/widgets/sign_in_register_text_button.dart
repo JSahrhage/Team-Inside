@@ -23,6 +23,7 @@ class SignInRegisterTextButton extends StatelessWidget {
             AppLocalizations.of(context)!.translate(
               'register',
             )!,
+            style: TextStyle(color: Theme.of(context).colorScheme.primary),
           ),
         ),
       ),

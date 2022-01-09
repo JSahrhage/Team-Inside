@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:team_inside/application/auth/sign_in/sign_in_bloc.dart';
-import 'package:team_inside/injection.dart';
-import 'package:team_inside/presentation/auth/sign_in/sign_in_form.dart';
+import 'package:team_inside/application/auth/password_reset/password_reset_bloc.dart';
+import 'package:team_inside/presentation/auth/password_reset/password_reset_form.dart';
 
 class PasswordResetPage extends StatelessWidget {
   @override
@@ -15,9 +14,10 @@ class PasswordResetPage extends StatelessWidget {
         }
       },
       child: Scaffold(
+        backgroundColor: Theme.of(context).colorScheme.background,
         body: BlocProvider(
-          create: (context) => getIt<SignInBloc>(),
-          child: SignInForm(),
+          create: (context) => PasswordResetBloc(),
+          child: PasswordResetForm(),
         ),
       ),
     );
