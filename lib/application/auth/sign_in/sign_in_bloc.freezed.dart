@@ -710,7 +710,7 @@ mixin _$SignInState {
   bool get isSubmitting => throw _privateConstructorUsedError;
   bool get isPasswordVisible => throw _privateConstructorUsedError;
   bool get stateFlipper =>
-      throw _privateConstructorUsedError; // Required to fire change state when .copyWith is called
+      throw _privateConstructorUsedError; // Required to fire stateChange when .copyWith is called
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption =>
       throw _privateConstructorUsedError;
 
@@ -864,7 +864,7 @@ class _$_SignInState implements _SignInState {
   final bool isPasswordVisible;
   @override
   final bool stateFlipper;
-  @override // Required to fire change state when .copyWith is called
+  @override // Required to fire stateChange when .copyWith is called
   final Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption;
 
   @override
@@ -926,7 +926,7 @@ abstract class _SignInState implements SignInState {
   bool get isPasswordVisible;
   @override
   bool get stateFlipper;
-  @override // Required to fire change state when .copyWith is called
+  @override // Required to fire stateChange when .copyWith is called
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption;
   @override
   @JsonKey(ignore: true)

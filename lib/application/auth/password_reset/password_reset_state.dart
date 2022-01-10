@@ -6,7 +6,7 @@ class PasswordResetState with _$PasswordResetState {
     required EmailAddress emailAddress,
     required bool isSubmitting,
     required bool
-        stateFlipper, // Required to fire change state when .copyWith is called
+        stateFlipper, // Required to fire stateChange when .copyWith is called
     required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption,
   }) = _PasswordResetState;
 

@@ -370,7 +370,7 @@ mixin _$PasswordResetState {
   EmailAddress get emailAddress => throw _privateConstructorUsedError;
   bool get isSubmitting => throw _privateConstructorUsedError;
   bool get stateFlipper =>
-      throw _privateConstructorUsedError; // Required to fire change state when .copyWith is called
+      throw _privateConstructorUsedError; // Required to fire stateChange when .copyWith is called
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption =>
       throw _privateConstructorUsedError;
 
@@ -496,7 +496,7 @@ class _$_PasswordResetState implements _PasswordResetState {
   final bool isSubmitting;
   @override
   final bool stateFlipper;
-  @override // Required to fire change state when .copyWith is called
+  @override // Required to fire stateChange when .copyWith is called
   final Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption;
 
   @override
@@ -547,7 +547,7 @@ abstract class _PasswordResetState implements PasswordResetState {
   bool get isSubmitting;
   @override
   bool get stateFlipper;
-  @override // Required to fire change state when .copyWith is called
+  @override // Required to fire stateChange when .copyWith is called
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption;
   @override
   @JsonKey(ignore: true)
