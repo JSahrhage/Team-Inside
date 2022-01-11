@@ -13,7 +13,15 @@ part 'registration_bloc.freezed.dart';
 @injectable
 class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
   final IAuthFacade _authFacade;
-  RegistrationBloc(this._authFacade) : super(RegistrationState.initial()) {
+  RegistrationBloc(this._authFacade)
+      : super(
+          RegistrationState.initial(
+            emailAddress: EmailAddress(''),
+            password: Password(''),
+            confirmationPassword: Password(''),
+            stateFlipper: false,
+          ),
+        ) {
     on<RegistrationEvent>((event, emit) {
       // TODO: implement event handler
     });

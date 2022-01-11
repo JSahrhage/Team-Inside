@@ -18,8 +18,51 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$RegistrationEventTearOff {
   const _$RegistrationEventTearOff();
 
-  Started started() {
-    return const Started();
+  EmailChanged emailChanged(String email) {
+    return EmailChanged(
+      email,
+    );
+  }
+
+  PasswordChanged passwordChanged(String password) {
+    return PasswordChanged(
+      password,
+    );
+  }
+
+  ConfirmationPasswordChanged confirmationPasswordChanged(
+      String confirmationPassword) {
+    return ConfirmationPasswordChanged(
+      confirmationPassword,
+    );
+  }
+
+  UsernameChanged usernameChanged(String username) {
+    return UsernameChanged(
+      username,
+    );
+  }
+
+  PasswordVisibilityIconPressed passwordVisibilityIconPressed() {
+    return const PasswordVisibilityIconPressed();
+  }
+
+  ConfirmationPasswordVisibilityIconPressed
+      confirmationPasswordVisibilityIconPressed() {
+    return const ConfirmationPasswordVisibilityIconPressed();
+  }
+
+  ProceedFromEmailInsertionPagePressed proceedFromEmailInsertionPagePressed() {
+    return const ProceedFromEmailInsertionPagePressed();
+  }
+
+  ProceedFromPasswordInsertionPagePressed
+      proceedFromPasswordInsertionPagePressed() {
+    return const ProceedFromPasswordInsertionPagePressed();
+  }
+
+  RegisterPressed registerPressed() {
+    return const RegisterPressed();
   }
 }
 
@@ -30,33 +73,97 @@ const $RegistrationEvent = _$RegistrationEventTearOff();
 mixin _$RegistrationEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String confirmationPassword)
+        confirmationPasswordChanged,
+    required TResult Function(String username) usernameChanged,
+    required TResult Function() passwordVisibilityIconPressed,
+    required TResult Function() confirmationPasswordVisibilityIconPressed,
+    required TResult Function() proceedFromEmailInsertionPagePressed,
+    required TResult Function() proceedFromPasswordInsertionPagePressed,
+    required TResult Function() registerPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmationPassword)? confirmationPasswordChanged,
+    TResult Function(String username)? usernameChanged,
+    TResult Function()? passwordVisibilityIconPressed,
+    TResult Function()? confirmationPasswordVisibilityIconPressed,
+    TResult Function()? proceedFromEmailInsertionPagePressed,
+    TResult Function()? proceedFromPasswordInsertionPagePressed,
+    TResult Function()? registerPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmationPassword)? confirmationPasswordChanged,
+    TResult Function(String username)? usernameChanged,
+    TResult Function()? passwordVisibilityIconPressed,
+    TResult Function()? confirmationPasswordVisibilityIconPressed,
+    TResult Function()? proceedFromEmailInsertionPagePressed,
+    TResult Function()? proceedFromPasswordInsertionPagePressed,
+    TResult Function()? registerPressed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Started value) started,
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(ConfirmationPasswordChanged value)
+        confirmationPasswordChanged,
+    required TResult Function(UsernameChanged value) usernameChanged,
+    required TResult Function(PasswordVisibilityIconPressed value)
+        passwordVisibilityIconPressed,
+    required TResult Function(ConfirmationPasswordVisibilityIconPressed value)
+        confirmationPasswordVisibilityIconPressed,
+    required TResult Function(ProceedFromEmailInsertionPagePressed value)
+        proceedFromEmailInsertionPagePressed,
+    required TResult Function(ProceedFromPasswordInsertionPagePressed value)
+        proceedFromPasswordInsertionPagePressed,
+    required TResult Function(RegisterPressed value) registerPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Started value)? started,
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(ConfirmationPasswordChanged value)?
+        confirmationPasswordChanged,
+    TResult Function(UsernameChanged value)? usernameChanged,
+    TResult Function(PasswordVisibilityIconPressed value)?
+        passwordVisibilityIconPressed,
+    TResult Function(ConfirmationPasswordVisibilityIconPressed value)?
+        confirmationPasswordVisibilityIconPressed,
+    TResult Function(ProceedFromEmailInsertionPagePressed value)?
+        proceedFromEmailInsertionPagePressed,
+    TResult Function(ProceedFromPasswordInsertionPagePressed value)?
+        proceedFromPasswordInsertionPagePressed,
+    TResult Function(RegisterPressed value)? registerPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Started value)? started,
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(ConfirmationPasswordChanged value)?
+        confirmationPasswordChanged,
+    TResult Function(UsernameChanged value)? usernameChanged,
+    TResult Function(PasswordVisibilityIconPressed value)?
+        passwordVisibilityIconPressed,
+    TResult Function(ConfirmationPasswordVisibilityIconPressed value)?
+        confirmationPasswordVisibilityIconPressed,
+    TResult Function(ProceedFromEmailInsertionPagePressed value)?
+        proceedFromEmailInsertionPagePressed,
+    TResult Function(ProceedFromPasswordInsertionPagePressed value)?
+        proceedFromPasswordInsertionPagePressed,
+    TResult Function(RegisterPressed value)? registerPressed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -80,35 +187,815 @@ class _$RegistrationEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $StartedCopyWith<$Res> {
-  factory $StartedCopyWith(Started value, $Res Function(Started) then) =
-      _$StartedCopyWithImpl<$Res>;
+abstract class $EmailChangedCopyWith<$Res> {
+  factory $EmailChangedCopyWith(
+          EmailChanged value, $Res Function(EmailChanged) then) =
+      _$EmailChangedCopyWithImpl<$Res>;
+  $Res call({String email});
 }
 
 /// @nodoc
-class _$StartedCopyWithImpl<$Res> extends _$RegistrationEventCopyWithImpl<$Res>
-    implements $StartedCopyWith<$Res> {
-  _$StartedCopyWithImpl(Started _value, $Res Function(Started) _then)
-      : super(_value, (v) => _then(v as Started));
+class _$EmailChangedCopyWithImpl<$Res>
+    extends _$RegistrationEventCopyWithImpl<$Res>
+    implements $EmailChangedCopyWith<$Res> {
+  _$EmailChangedCopyWithImpl(
+      EmailChanged _value, $Res Function(EmailChanged) _then)
+      : super(_value, (v) => _then(v as EmailChanged));
 
   @override
-  Started get _value => super._value as Started;
+  EmailChanged get _value => super._value as EmailChanged;
+
+  @override
+  $Res call({
+    Object? email = freezed,
+  }) {
+    return _then(EmailChanged(
+      email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$Started implements Started {
-  const _$Started();
+class _$EmailChanged implements EmailChanged {
+  const _$EmailChanged(this.email);
+
+  @override
+  final String email;
 
   @override
   String toString() {
-    return 'RegistrationEvent.started()';
+    return 'RegistrationEvent.emailChanged(email: $email)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is Started);
+        (other.runtimeType == runtimeType &&
+            other is EmailChanged &&
+            const DeepCollectionEquality().equals(other.email, email));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(email));
+
+  @JsonKey(ignore: true)
+  @override
+  $EmailChangedCopyWith<EmailChanged> get copyWith =>
+      _$EmailChangedCopyWithImpl<EmailChanged>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String confirmationPassword)
+        confirmationPasswordChanged,
+    required TResult Function(String username) usernameChanged,
+    required TResult Function() passwordVisibilityIconPressed,
+    required TResult Function() confirmationPasswordVisibilityIconPressed,
+    required TResult Function() proceedFromEmailInsertionPagePressed,
+    required TResult Function() proceedFromPasswordInsertionPagePressed,
+    required TResult Function() registerPressed,
+  }) {
+    return emailChanged(email);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmationPassword)? confirmationPasswordChanged,
+    TResult Function(String username)? usernameChanged,
+    TResult Function()? passwordVisibilityIconPressed,
+    TResult Function()? confirmationPasswordVisibilityIconPressed,
+    TResult Function()? proceedFromEmailInsertionPagePressed,
+    TResult Function()? proceedFromPasswordInsertionPagePressed,
+    TResult Function()? registerPressed,
+  }) {
+    return emailChanged?.call(email);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmationPassword)? confirmationPasswordChanged,
+    TResult Function(String username)? usernameChanged,
+    TResult Function()? passwordVisibilityIconPressed,
+    TResult Function()? confirmationPasswordVisibilityIconPressed,
+    TResult Function()? proceedFromEmailInsertionPagePressed,
+    TResult Function()? proceedFromPasswordInsertionPagePressed,
+    TResult Function()? registerPressed,
+    required TResult orElse(),
+  }) {
+    if (emailChanged != null) {
+      return emailChanged(email);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(ConfirmationPasswordChanged value)
+        confirmationPasswordChanged,
+    required TResult Function(UsernameChanged value) usernameChanged,
+    required TResult Function(PasswordVisibilityIconPressed value)
+        passwordVisibilityIconPressed,
+    required TResult Function(ConfirmationPasswordVisibilityIconPressed value)
+        confirmationPasswordVisibilityIconPressed,
+    required TResult Function(ProceedFromEmailInsertionPagePressed value)
+        proceedFromEmailInsertionPagePressed,
+    required TResult Function(ProceedFromPasswordInsertionPagePressed value)
+        proceedFromPasswordInsertionPagePressed,
+    required TResult Function(RegisterPressed value) registerPressed,
+  }) {
+    return emailChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(ConfirmationPasswordChanged value)?
+        confirmationPasswordChanged,
+    TResult Function(UsernameChanged value)? usernameChanged,
+    TResult Function(PasswordVisibilityIconPressed value)?
+        passwordVisibilityIconPressed,
+    TResult Function(ConfirmationPasswordVisibilityIconPressed value)?
+        confirmationPasswordVisibilityIconPressed,
+    TResult Function(ProceedFromEmailInsertionPagePressed value)?
+        proceedFromEmailInsertionPagePressed,
+    TResult Function(ProceedFromPasswordInsertionPagePressed value)?
+        proceedFromPasswordInsertionPagePressed,
+    TResult Function(RegisterPressed value)? registerPressed,
+  }) {
+    return emailChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(ConfirmationPasswordChanged value)?
+        confirmationPasswordChanged,
+    TResult Function(UsernameChanged value)? usernameChanged,
+    TResult Function(PasswordVisibilityIconPressed value)?
+        passwordVisibilityIconPressed,
+    TResult Function(ConfirmationPasswordVisibilityIconPressed value)?
+        confirmationPasswordVisibilityIconPressed,
+    TResult Function(ProceedFromEmailInsertionPagePressed value)?
+        proceedFromEmailInsertionPagePressed,
+    TResult Function(ProceedFromPasswordInsertionPagePressed value)?
+        proceedFromPasswordInsertionPagePressed,
+    TResult Function(RegisterPressed value)? registerPressed,
+    required TResult orElse(),
+  }) {
+    if (emailChanged != null) {
+      return emailChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EmailChanged implements RegistrationEvent {
+  const factory EmailChanged(String email) = _$EmailChanged;
+
+  String get email;
+  @JsonKey(ignore: true)
+  $EmailChangedCopyWith<EmailChanged> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $PasswordChangedCopyWith<$Res> {
+  factory $PasswordChangedCopyWith(
+          PasswordChanged value, $Res Function(PasswordChanged) then) =
+      _$PasswordChangedCopyWithImpl<$Res>;
+  $Res call({String password});
+}
+
+/// @nodoc
+class _$PasswordChangedCopyWithImpl<$Res>
+    extends _$RegistrationEventCopyWithImpl<$Res>
+    implements $PasswordChangedCopyWith<$Res> {
+  _$PasswordChangedCopyWithImpl(
+      PasswordChanged _value, $Res Function(PasswordChanged) _then)
+      : super(_value, (v) => _then(v as PasswordChanged));
+
+  @override
+  PasswordChanged get _value => super._value as PasswordChanged;
+
+  @override
+  $Res call({
+    Object? password = freezed,
+  }) {
+    return _then(PasswordChanged(
+      password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PasswordChanged implements PasswordChanged {
+  const _$PasswordChanged(this.password);
+
+  @override
+  final String password;
+
+  @override
+  String toString() {
+    return 'RegistrationEvent.passwordChanged(password: $password)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is PasswordChanged &&
+            const DeepCollectionEquality().equals(other.password, password));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(password));
+
+  @JsonKey(ignore: true)
+  @override
+  $PasswordChangedCopyWith<PasswordChanged> get copyWith =>
+      _$PasswordChangedCopyWithImpl<PasswordChanged>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String confirmationPassword)
+        confirmationPasswordChanged,
+    required TResult Function(String username) usernameChanged,
+    required TResult Function() passwordVisibilityIconPressed,
+    required TResult Function() confirmationPasswordVisibilityIconPressed,
+    required TResult Function() proceedFromEmailInsertionPagePressed,
+    required TResult Function() proceedFromPasswordInsertionPagePressed,
+    required TResult Function() registerPressed,
+  }) {
+    return passwordChanged(password);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmationPassword)? confirmationPasswordChanged,
+    TResult Function(String username)? usernameChanged,
+    TResult Function()? passwordVisibilityIconPressed,
+    TResult Function()? confirmationPasswordVisibilityIconPressed,
+    TResult Function()? proceedFromEmailInsertionPagePressed,
+    TResult Function()? proceedFromPasswordInsertionPagePressed,
+    TResult Function()? registerPressed,
+  }) {
+    return passwordChanged?.call(password);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmationPassword)? confirmationPasswordChanged,
+    TResult Function(String username)? usernameChanged,
+    TResult Function()? passwordVisibilityIconPressed,
+    TResult Function()? confirmationPasswordVisibilityIconPressed,
+    TResult Function()? proceedFromEmailInsertionPagePressed,
+    TResult Function()? proceedFromPasswordInsertionPagePressed,
+    TResult Function()? registerPressed,
+    required TResult orElse(),
+  }) {
+    if (passwordChanged != null) {
+      return passwordChanged(password);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(ConfirmationPasswordChanged value)
+        confirmationPasswordChanged,
+    required TResult Function(UsernameChanged value) usernameChanged,
+    required TResult Function(PasswordVisibilityIconPressed value)
+        passwordVisibilityIconPressed,
+    required TResult Function(ConfirmationPasswordVisibilityIconPressed value)
+        confirmationPasswordVisibilityIconPressed,
+    required TResult Function(ProceedFromEmailInsertionPagePressed value)
+        proceedFromEmailInsertionPagePressed,
+    required TResult Function(ProceedFromPasswordInsertionPagePressed value)
+        proceedFromPasswordInsertionPagePressed,
+    required TResult Function(RegisterPressed value) registerPressed,
+  }) {
+    return passwordChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(ConfirmationPasswordChanged value)?
+        confirmationPasswordChanged,
+    TResult Function(UsernameChanged value)? usernameChanged,
+    TResult Function(PasswordVisibilityIconPressed value)?
+        passwordVisibilityIconPressed,
+    TResult Function(ConfirmationPasswordVisibilityIconPressed value)?
+        confirmationPasswordVisibilityIconPressed,
+    TResult Function(ProceedFromEmailInsertionPagePressed value)?
+        proceedFromEmailInsertionPagePressed,
+    TResult Function(ProceedFromPasswordInsertionPagePressed value)?
+        proceedFromPasswordInsertionPagePressed,
+    TResult Function(RegisterPressed value)? registerPressed,
+  }) {
+    return passwordChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(ConfirmationPasswordChanged value)?
+        confirmationPasswordChanged,
+    TResult Function(UsernameChanged value)? usernameChanged,
+    TResult Function(PasswordVisibilityIconPressed value)?
+        passwordVisibilityIconPressed,
+    TResult Function(ConfirmationPasswordVisibilityIconPressed value)?
+        confirmationPasswordVisibilityIconPressed,
+    TResult Function(ProceedFromEmailInsertionPagePressed value)?
+        proceedFromEmailInsertionPagePressed,
+    TResult Function(ProceedFromPasswordInsertionPagePressed value)?
+        proceedFromPasswordInsertionPagePressed,
+    TResult Function(RegisterPressed value)? registerPressed,
+    required TResult orElse(),
+  }) {
+    if (passwordChanged != null) {
+      return passwordChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PasswordChanged implements RegistrationEvent {
+  const factory PasswordChanged(String password) = _$PasswordChanged;
+
+  String get password;
+  @JsonKey(ignore: true)
+  $PasswordChangedCopyWith<PasswordChanged> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ConfirmationPasswordChangedCopyWith<$Res> {
+  factory $ConfirmationPasswordChangedCopyWith(
+          ConfirmationPasswordChanged value,
+          $Res Function(ConfirmationPasswordChanged) then) =
+      _$ConfirmationPasswordChangedCopyWithImpl<$Res>;
+  $Res call({String confirmationPassword});
+}
+
+/// @nodoc
+class _$ConfirmationPasswordChangedCopyWithImpl<$Res>
+    extends _$RegistrationEventCopyWithImpl<$Res>
+    implements $ConfirmationPasswordChangedCopyWith<$Res> {
+  _$ConfirmationPasswordChangedCopyWithImpl(ConfirmationPasswordChanged _value,
+      $Res Function(ConfirmationPasswordChanged) _then)
+      : super(_value, (v) => _then(v as ConfirmationPasswordChanged));
+
+  @override
+  ConfirmationPasswordChanged get _value =>
+      super._value as ConfirmationPasswordChanged;
+
+  @override
+  $Res call({
+    Object? confirmationPassword = freezed,
+  }) {
+    return _then(ConfirmationPasswordChanged(
+      confirmationPassword == freezed
+          ? _value.confirmationPassword
+          : confirmationPassword // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ConfirmationPasswordChanged implements ConfirmationPasswordChanged {
+  const _$ConfirmationPasswordChanged(this.confirmationPassword);
+
+  @override
+  final String confirmationPassword;
+
+  @override
+  String toString() {
+    return 'RegistrationEvent.confirmationPasswordChanged(confirmationPassword: $confirmationPassword)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is ConfirmationPasswordChanged &&
+            const DeepCollectionEquality()
+                .equals(other.confirmationPassword, confirmationPassword));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(confirmationPassword));
+
+  @JsonKey(ignore: true)
+  @override
+  $ConfirmationPasswordChangedCopyWith<ConfirmationPasswordChanged>
+      get copyWith => _$ConfirmationPasswordChangedCopyWithImpl<
+          ConfirmationPasswordChanged>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String confirmationPassword)
+        confirmationPasswordChanged,
+    required TResult Function(String username) usernameChanged,
+    required TResult Function() passwordVisibilityIconPressed,
+    required TResult Function() confirmationPasswordVisibilityIconPressed,
+    required TResult Function() proceedFromEmailInsertionPagePressed,
+    required TResult Function() proceedFromPasswordInsertionPagePressed,
+    required TResult Function() registerPressed,
+  }) {
+    return confirmationPasswordChanged(confirmationPassword);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmationPassword)? confirmationPasswordChanged,
+    TResult Function(String username)? usernameChanged,
+    TResult Function()? passwordVisibilityIconPressed,
+    TResult Function()? confirmationPasswordVisibilityIconPressed,
+    TResult Function()? proceedFromEmailInsertionPagePressed,
+    TResult Function()? proceedFromPasswordInsertionPagePressed,
+    TResult Function()? registerPressed,
+  }) {
+    return confirmationPasswordChanged?.call(confirmationPassword);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmationPassword)? confirmationPasswordChanged,
+    TResult Function(String username)? usernameChanged,
+    TResult Function()? passwordVisibilityIconPressed,
+    TResult Function()? confirmationPasswordVisibilityIconPressed,
+    TResult Function()? proceedFromEmailInsertionPagePressed,
+    TResult Function()? proceedFromPasswordInsertionPagePressed,
+    TResult Function()? registerPressed,
+    required TResult orElse(),
+  }) {
+    if (confirmationPasswordChanged != null) {
+      return confirmationPasswordChanged(confirmationPassword);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(ConfirmationPasswordChanged value)
+        confirmationPasswordChanged,
+    required TResult Function(UsernameChanged value) usernameChanged,
+    required TResult Function(PasswordVisibilityIconPressed value)
+        passwordVisibilityIconPressed,
+    required TResult Function(ConfirmationPasswordVisibilityIconPressed value)
+        confirmationPasswordVisibilityIconPressed,
+    required TResult Function(ProceedFromEmailInsertionPagePressed value)
+        proceedFromEmailInsertionPagePressed,
+    required TResult Function(ProceedFromPasswordInsertionPagePressed value)
+        proceedFromPasswordInsertionPagePressed,
+    required TResult Function(RegisterPressed value) registerPressed,
+  }) {
+    return confirmationPasswordChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(ConfirmationPasswordChanged value)?
+        confirmationPasswordChanged,
+    TResult Function(UsernameChanged value)? usernameChanged,
+    TResult Function(PasswordVisibilityIconPressed value)?
+        passwordVisibilityIconPressed,
+    TResult Function(ConfirmationPasswordVisibilityIconPressed value)?
+        confirmationPasswordVisibilityIconPressed,
+    TResult Function(ProceedFromEmailInsertionPagePressed value)?
+        proceedFromEmailInsertionPagePressed,
+    TResult Function(ProceedFromPasswordInsertionPagePressed value)?
+        proceedFromPasswordInsertionPagePressed,
+    TResult Function(RegisterPressed value)? registerPressed,
+  }) {
+    return confirmationPasswordChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(ConfirmationPasswordChanged value)?
+        confirmationPasswordChanged,
+    TResult Function(UsernameChanged value)? usernameChanged,
+    TResult Function(PasswordVisibilityIconPressed value)?
+        passwordVisibilityIconPressed,
+    TResult Function(ConfirmationPasswordVisibilityIconPressed value)?
+        confirmationPasswordVisibilityIconPressed,
+    TResult Function(ProceedFromEmailInsertionPagePressed value)?
+        proceedFromEmailInsertionPagePressed,
+    TResult Function(ProceedFromPasswordInsertionPagePressed value)?
+        proceedFromPasswordInsertionPagePressed,
+    TResult Function(RegisterPressed value)? registerPressed,
+    required TResult orElse(),
+  }) {
+    if (confirmationPasswordChanged != null) {
+      return confirmationPasswordChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ConfirmationPasswordChanged implements RegistrationEvent {
+  const factory ConfirmationPasswordChanged(String confirmationPassword) =
+      _$ConfirmationPasswordChanged;
+
+  String get confirmationPassword;
+  @JsonKey(ignore: true)
+  $ConfirmationPasswordChangedCopyWith<ConfirmationPasswordChanged>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $UsernameChangedCopyWith<$Res> {
+  factory $UsernameChangedCopyWith(
+          UsernameChanged value, $Res Function(UsernameChanged) then) =
+      _$UsernameChangedCopyWithImpl<$Res>;
+  $Res call({String username});
+}
+
+/// @nodoc
+class _$UsernameChangedCopyWithImpl<$Res>
+    extends _$RegistrationEventCopyWithImpl<$Res>
+    implements $UsernameChangedCopyWith<$Res> {
+  _$UsernameChangedCopyWithImpl(
+      UsernameChanged _value, $Res Function(UsernameChanged) _then)
+      : super(_value, (v) => _then(v as UsernameChanged));
+
+  @override
+  UsernameChanged get _value => super._value as UsernameChanged;
+
+  @override
+  $Res call({
+    Object? username = freezed,
+  }) {
+    return _then(UsernameChanged(
+      username == freezed
+          ? _value.username
+          : username // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UsernameChanged implements UsernameChanged {
+  const _$UsernameChanged(this.username);
+
+  @override
+  final String username;
+
+  @override
+  String toString() {
+    return 'RegistrationEvent.usernameChanged(username: $username)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is UsernameChanged &&
+            const DeepCollectionEquality().equals(other.username, username));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(username));
+
+  @JsonKey(ignore: true)
+  @override
+  $UsernameChangedCopyWith<UsernameChanged> get copyWith =>
+      _$UsernameChangedCopyWithImpl<UsernameChanged>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String confirmationPassword)
+        confirmationPasswordChanged,
+    required TResult Function(String username) usernameChanged,
+    required TResult Function() passwordVisibilityIconPressed,
+    required TResult Function() confirmationPasswordVisibilityIconPressed,
+    required TResult Function() proceedFromEmailInsertionPagePressed,
+    required TResult Function() proceedFromPasswordInsertionPagePressed,
+    required TResult Function() registerPressed,
+  }) {
+    return usernameChanged(username);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmationPassword)? confirmationPasswordChanged,
+    TResult Function(String username)? usernameChanged,
+    TResult Function()? passwordVisibilityIconPressed,
+    TResult Function()? confirmationPasswordVisibilityIconPressed,
+    TResult Function()? proceedFromEmailInsertionPagePressed,
+    TResult Function()? proceedFromPasswordInsertionPagePressed,
+    TResult Function()? registerPressed,
+  }) {
+    return usernameChanged?.call(username);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmationPassword)? confirmationPasswordChanged,
+    TResult Function(String username)? usernameChanged,
+    TResult Function()? passwordVisibilityIconPressed,
+    TResult Function()? confirmationPasswordVisibilityIconPressed,
+    TResult Function()? proceedFromEmailInsertionPagePressed,
+    TResult Function()? proceedFromPasswordInsertionPagePressed,
+    TResult Function()? registerPressed,
+    required TResult orElse(),
+  }) {
+    if (usernameChanged != null) {
+      return usernameChanged(username);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(ConfirmationPasswordChanged value)
+        confirmationPasswordChanged,
+    required TResult Function(UsernameChanged value) usernameChanged,
+    required TResult Function(PasswordVisibilityIconPressed value)
+        passwordVisibilityIconPressed,
+    required TResult Function(ConfirmationPasswordVisibilityIconPressed value)
+        confirmationPasswordVisibilityIconPressed,
+    required TResult Function(ProceedFromEmailInsertionPagePressed value)
+        proceedFromEmailInsertionPagePressed,
+    required TResult Function(ProceedFromPasswordInsertionPagePressed value)
+        proceedFromPasswordInsertionPagePressed,
+    required TResult Function(RegisterPressed value) registerPressed,
+  }) {
+    return usernameChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(ConfirmationPasswordChanged value)?
+        confirmationPasswordChanged,
+    TResult Function(UsernameChanged value)? usernameChanged,
+    TResult Function(PasswordVisibilityIconPressed value)?
+        passwordVisibilityIconPressed,
+    TResult Function(ConfirmationPasswordVisibilityIconPressed value)?
+        confirmationPasswordVisibilityIconPressed,
+    TResult Function(ProceedFromEmailInsertionPagePressed value)?
+        proceedFromEmailInsertionPagePressed,
+    TResult Function(ProceedFromPasswordInsertionPagePressed value)?
+        proceedFromPasswordInsertionPagePressed,
+    TResult Function(RegisterPressed value)? registerPressed,
+  }) {
+    return usernameChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(ConfirmationPasswordChanged value)?
+        confirmationPasswordChanged,
+    TResult Function(UsernameChanged value)? usernameChanged,
+    TResult Function(PasswordVisibilityIconPressed value)?
+        passwordVisibilityIconPressed,
+    TResult Function(ConfirmationPasswordVisibilityIconPressed value)?
+        confirmationPasswordVisibilityIconPressed,
+    TResult Function(ProceedFromEmailInsertionPagePressed value)?
+        proceedFromEmailInsertionPagePressed,
+    TResult Function(ProceedFromPasswordInsertionPagePressed value)?
+        proceedFromPasswordInsertionPagePressed,
+    TResult Function(RegisterPressed value)? registerPressed,
+    required TResult orElse(),
+  }) {
+    if (usernameChanged != null) {
+      return usernameChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UsernameChanged implements RegistrationEvent {
+  const factory UsernameChanged(String username) = _$UsernameChanged;
+
+  String get username;
+  @JsonKey(ignore: true)
+  $UsernameChangedCopyWith<UsernameChanged> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $PasswordVisibilityIconPressedCopyWith<$Res> {
+  factory $PasswordVisibilityIconPressedCopyWith(
+          PasswordVisibilityIconPressed value,
+          $Res Function(PasswordVisibilityIconPressed) then) =
+      _$PasswordVisibilityIconPressedCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$PasswordVisibilityIconPressedCopyWithImpl<$Res>
+    extends _$RegistrationEventCopyWithImpl<$Res>
+    implements $PasswordVisibilityIconPressedCopyWith<$Res> {
+  _$PasswordVisibilityIconPressedCopyWithImpl(
+      PasswordVisibilityIconPressed _value,
+      $Res Function(PasswordVisibilityIconPressed) _then)
+      : super(_value, (v) => _then(v as PasswordVisibilityIconPressed));
+
+  @override
+  PasswordVisibilityIconPressed get _value =>
+      super._value as PasswordVisibilityIconPressed;
+}
+
+/// @nodoc
+
+class _$PasswordVisibilityIconPressed implements PasswordVisibilityIconPressed {
+  const _$PasswordVisibilityIconPressed();
+
+  @override
+  String toString() {
+    return 'RegistrationEvent.passwordVisibilityIconPressed()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is PasswordVisibilityIconPressed);
   }
 
   @override
@@ -117,27 +1004,52 @@ class _$Started implements Started {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String confirmationPassword)
+        confirmationPasswordChanged,
+    required TResult Function(String username) usernameChanged,
+    required TResult Function() passwordVisibilityIconPressed,
+    required TResult Function() confirmationPasswordVisibilityIconPressed,
+    required TResult Function() proceedFromEmailInsertionPagePressed,
+    required TResult Function() proceedFromPasswordInsertionPagePressed,
+    required TResult Function() registerPressed,
   }) {
-    return started();
+    return passwordVisibilityIconPressed();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmationPassword)? confirmationPasswordChanged,
+    TResult Function(String username)? usernameChanged,
+    TResult Function()? passwordVisibilityIconPressed,
+    TResult Function()? confirmationPasswordVisibilityIconPressed,
+    TResult Function()? proceedFromEmailInsertionPagePressed,
+    TResult Function()? proceedFromPasswordInsertionPagePressed,
+    TResult Function()? registerPressed,
   }) {
-    return started?.call();
+    return passwordVisibilityIconPressed?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmationPassword)? confirmationPasswordChanged,
+    TResult Function(String username)? usernameChanged,
+    TResult Function()? passwordVisibilityIconPressed,
+    TResult Function()? confirmationPasswordVisibilityIconPressed,
+    TResult Function()? proceedFromEmailInsertionPagePressed,
+    TResult Function()? proceedFromPasswordInsertionPagePressed,
+    TResult Function()? registerPressed,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started();
+    if (passwordVisibilityIconPressed != null) {
+      return passwordVisibilityIconPressed();
     }
     return orElse();
   }
@@ -145,48 +1057,802 @@ class _$Started implements Started {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Started value) started,
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(ConfirmationPasswordChanged value)
+        confirmationPasswordChanged,
+    required TResult Function(UsernameChanged value) usernameChanged,
+    required TResult Function(PasswordVisibilityIconPressed value)
+        passwordVisibilityIconPressed,
+    required TResult Function(ConfirmationPasswordVisibilityIconPressed value)
+        confirmationPasswordVisibilityIconPressed,
+    required TResult Function(ProceedFromEmailInsertionPagePressed value)
+        proceedFromEmailInsertionPagePressed,
+    required TResult Function(ProceedFromPasswordInsertionPagePressed value)
+        proceedFromPasswordInsertionPagePressed,
+    required TResult Function(RegisterPressed value) registerPressed,
   }) {
-    return started(this);
+    return passwordVisibilityIconPressed(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Started value)? started,
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(ConfirmationPasswordChanged value)?
+        confirmationPasswordChanged,
+    TResult Function(UsernameChanged value)? usernameChanged,
+    TResult Function(PasswordVisibilityIconPressed value)?
+        passwordVisibilityIconPressed,
+    TResult Function(ConfirmationPasswordVisibilityIconPressed value)?
+        confirmationPasswordVisibilityIconPressed,
+    TResult Function(ProceedFromEmailInsertionPagePressed value)?
+        proceedFromEmailInsertionPagePressed,
+    TResult Function(ProceedFromPasswordInsertionPagePressed value)?
+        proceedFromPasswordInsertionPagePressed,
+    TResult Function(RegisterPressed value)? registerPressed,
   }) {
-    return started?.call(this);
+    return passwordVisibilityIconPressed?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Started value)? started,
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(ConfirmationPasswordChanged value)?
+        confirmationPasswordChanged,
+    TResult Function(UsernameChanged value)? usernameChanged,
+    TResult Function(PasswordVisibilityIconPressed value)?
+        passwordVisibilityIconPressed,
+    TResult Function(ConfirmationPasswordVisibilityIconPressed value)?
+        confirmationPasswordVisibilityIconPressed,
+    TResult Function(ProceedFromEmailInsertionPagePressed value)?
+        proceedFromEmailInsertionPagePressed,
+    TResult Function(ProceedFromPasswordInsertionPagePressed value)?
+        proceedFromPasswordInsertionPagePressed,
+    TResult Function(RegisterPressed value)? registerPressed,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started(this);
+    if (passwordVisibilityIconPressed != null) {
+      return passwordVisibilityIconPressed(this);
     }
     return orElse();
   }
 }
 
-abstract class Started implements RegistrationEvent {
-  const factory Started() = _$Started;
+abstract class PasswordVisibilityIconPressed implements RegistrationEvent {
+  const factory PasswordVisibilityIconPressed() =
+      _$PasswordVisibilityIconPressed;
+}
+
+/// @nodoc
+abstract class $ConfirmationPasswordVisibilityIconPressedCopyWith<$Res> {
+  factory $ConfirmationPasswordVisibilityIconPressedCopyWith(
+          ConfirmationPasswordVisibilityIconPressed value,
+          $Res Function(ConfirmationPasswordVisibilityIconPressed) then) =
+      _$ConfirmationPasswordVisibilityIconPressedCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$ConfirmationPasswordVisibilityIconPressedCopyWithImpl<$Res>
+    extends _$RegistrationEventCopyWithImpl<$Res>
+    implements $ConfirmationPasswordVisibilityIconPressedCopyWith<$Res> {
+  _$ConfirmationPasswordVisibilityIconPressedCopyWithImpl(
+      ConfirmationPasswordVisibilityIconPressed _value,
+      $Res Function(ConfirmationPasswordVisibilityIconPressed) _then)
+      : super(_value,
+            (v) => _then(v as ConfirmationPasswordVisibilityIconPressed));
+
+  @override
+  ConfirmationPasswordVisibilityIconPressed get _value =>
+      super._value as ConfirmationPasswordVisibilityIconPressed;
+}
+
+/// @nodoc
+
+class _$ConfirmationPasswordVisibilityIconPressed
+    implements ConfirmationPasswordVisibilityIconPressed {
+  const _$ConfirmationPasswordVisibilityIconPressed();
+
+  @override
+  String toString() {
+    return 'RegistrationEvent.confirmationPasswordVisibilityIconPressed()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is ConfirmationPasswordVisibilityIconPressed);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String confirmationPassword)
+        confirmationPasswordChanged,
+    required TResult Function(String username) usernameChanged,
+    required TResult Function() passwordVisibilityIconPressed,
+    required TResult Function() confirmationPasswordVisibilityIconPressed,
+    required TResult Function() proceedFromEmailInsertionPagePressed,
+    required TResult Function() proceedFromPasswordInsertionPagePressed,
+    required TResult Function() registerPressed,
+  }) {
+    return confirmationPasswordVisibilityIconPressed();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmationPassword)? confirmationPasswordChanged,
+    TResult Function(String username)? usernameChanged,
+    TResult Function()? passwordVisibilityIconPressed,
+    TResult Function()? confirmationPasswordVisibilityIconPressed,
+    TResult Function()? proceedFromEmailInsertionPagePressed,
+    TResult Function()? proceedFromPasswordInsertionPagePressed,
+    TResult Function()? registerPressed,
+  }) {
+    return confirmationPasswordVisibilityIconPressed?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmationPassword)? confirmationPasswordChanged,
+    TResult Function(String username)? usernameChanged,
+    TResult Function()? passwordVisibilityIconPressed,
+    TResult Function()? confirmationPasswordVisibilityIconPressed,
+    TResult Function()? proceedFromEmailInsertionPagePressed,
+    TResult Function()? proceedFromPasswordInsertionPagePressed,
+    TResult Function()? registerPressed,
+    required TResult orElse(),
+  }) {
+    if (confirmationPasswordVisibilityIconPressed != null) {
+      return confirmationPasswordVisibilityIconPressed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(ConfirmationPasswordChanged value)
+        confirmationPasswordChanged,
+    required TResult Function(UsernameChanged value) usernameChanged,
+    required TResult Function(PasswordVisibilityIconPressed value)
+        passwordVisibilityIconPressed,
+    required TResult Function(ConfirmationPasswordVisibilityIconPressed value)
+        confirmationPasswordVisibilityIconPressed,
+    required TResult Function(ProceedFromEmailInsertionPagePressed value)
+        proceedFromEmailInsertionPagePressed,
+    required TResult Function(ProceedFromPasswordInsertionPagePressed value)
+        proceedFromPasswordInsertionPagePressed,
+    required TResult Function(RegisterPressed value) registerPressed,
+  }) {
+    return confirmationPasswordVisibilityIconPressed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(ConfirmationPasswordChanged value)?
+        confirmationPasswordChanged,
+    TResult Function(UsernameChanged value)? usernameChanged,
+    TResult Function(PasswordVisibilityIconPressed value)?
+        passwordVisibilityIconPressed,
+    TResult Function(ConfirmationPasswordVisibilityIconPressed value)?
+        confirmationPasswordVisibilityIconPressed,
+    TResult Function(ProceedFromEmailInsertionPagePressed value)?
+        proceedFromEmailInsertionPagePressed,
+    TResult Function(ProceedFromPasswordInsertionPagePressed value)?
+        proceedFromPasswordInsertionPagePressed,
+    TResult Function(RegisterPressed value)? registerPressed,
+  }) {
+    return confirmationPasswordVisibilityIconPressed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(ConfirmationPasswordChanged value)?
+        confirmationPasswordChanged,
+    TResult Function(UsernameChanged value)? usernameChanged,
+    TResult Function(PasswordVisibilityIconPressed value)?
+        passwordVisibilityIconPressed,
+    TResult Function(ConfirmationPasswordVisibilityIconPressed value)?
+        confirmationPasswordVisibilityIconPressed,
+    TResult Function(ProceedFromEmailInsertionPagePressed value)?
+        proceedFromEmailInsertionPagePressed,
+    TResult Function(ProceedFromPasswordInsertionPagePressed value)?
+        proceedFromPasswordInsertionPagePressed,
+    TResult Function(RegisterPressed value)? registerPressed,
+    required TResult orElse(),
+  }) {
+    if (confirmationPasswordVisibilityIconPressed != null) {
+      return confirmationPasswordVisibilityIconPressed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ConfirmationPasswordVisibilityIconPressed
+    implements RegistrationEvent {
+  const factory ConfirmationPasswordVisibilityIconPressed() =
+      _$ConfirmationPasswordVisibilityIconPressed;
+}
+
+/// @nodoc
+abstract class $ProceedFromEmailInsertionPagePressedCopyWith<$Res> {
+  factory $ProceedFromEmailInsertionPagePressedCopyWith(
+          ProceedFromEmailInsertionPagePressed value,
+          $Res Function(ProceedFromEmailInsertionPagePressed) then) =
+      _$ProceedFromEmailInsertionPagePressedCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$ProceedFromEmailInsertionPagePressedCopyWithImpl<$Res>
+    extends _$RegistrationEventCopyWithImpl<$Res>
+    implements $ProceedFromEmailInsertionPagePressedCopyWith<$Res> {
+  _$ProceedFromEmailInsertionPagePressedCopyWithImpl(
+      ProceedFromEmailInsertionPagePressed _value,
+      $Res Function(ProceedFromEmailInsertionPagePressed) _then)
+      : super(_value, (v) => _then(v as ProceedFromEmailInsertionPagePressed));
+
+  @override
+  ProceedFromEmailInsertionPagePressed get _value =>
+      super._value as ProceedFromEmailInsertionPagePressed;
+}
+
+/// @nodoc
+
+class _$ProceedFromEmailInsertionPagePressed
+    implements ProceedFromEmailInsertionPagePressed {
+  const _$ProceedFromEmailInsertionPagePressed();
+
+  @override
+  String toString() {
+    return 'RegistrationEvent.proceedFromEmailInsertionPagePressed()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is ProceedFromEmailInsertionPagePressed);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String confirmationPassword)
+        confirmationPasswordChanged,
+    required TResult Function(String username) usernameChanged,
+    required TResult Function() passwordVisibilityIconPressed,
+    required TResult Function() confirmationPasswordVisibilityIconPressed,
+    required TResult Function() proceedFromEmailInsertionPagePressed,
+    required TResult Function() proceedFromPasswordInsertionPagePressed,
+    required TResult Function() registerPressed,
+  }) {
+    return proceedFromEmailInsertionPagePressed();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmationPassword)? confirmationPasswordChanged,
+    TResult Function(String username)? usernameChanged,
+    TResult Function()? passwordVisibilityIconPressed,
+    TResult Function()? confirmationPasswordVisibilityIconPressed,
+    TResult Function()? proceedFromEmailInsertionPagePressed,
+    TResult Function()? proceedFromPasswordInsertionPagePressed,
+    TResult Function()? registerPressed,
+  }) {
+    return proceedFromEmailInsertionPagePressed?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmationPassword)? confirmationPasswordChanged,
+    TResult Function(String username)? usernameChanged,
+    TResult Function()? passwordVisibilityIconPressed,
+    TResult Function()? confirmationPasswordVisibilityIconPressed,
+    TResult Function()? proceedFromEmailInsertionPagePressed,
+    TResult Function()? proceedFromPasswordInsertionPagePressed,
+    TResult Function()? registerPressed,
+    required TResult orElse(),
+  }) {
+    if (proceedFromEmailInsertionPagePressed != null) {
+      return proceedFromEmailInsertionPagePressed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(ConfirmationPasswordChanged value)
+        confirmationPasswordChanged,
+    required TResult Function(UsernameChanged value) usernameChanged,
+    required TResult Function(PasswordVisibilityIconPressed value)
+        passwordVisibilityIconPressed,
+    required TResult Function(ConfirmationPasswordVisibilityIconPressed value)
+        confirmationPasswordVisibilityIconPressed,
+    required TResult Function(ProceedFromEmailInsertionPagePressed value)
+        proceedFromEmailInsertionPagePressed,
+    required TResult Function(ProceedFromPasswordInsertionPagePressed value)
+        proceedFromPasswordInsertionPagePressed,
+    required TResult Function(RegisterPressed value) registerPressed,
+  }) {
+    return proceedFromEmailInsertionPagePressed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(ConfirmationPasswordChanged value)?
+        confirmationPasswordChanged,
+    TResult Function(UsernameChanged value)? usernameChanged,
+    TResult Function(PasswordVisibilityIconPressed value)?
+        passwordVisibilityIconPressed,
+    TResult Function(ConfirmationPasswordVisibilityIconPressed value)?
+        confirmationPasswordVisibilityIconPressed,
+    TResult Function(ProceedFromEmailInsertionPagePressed value)?
+        proceedFromEmailInsertionPagePressed,
+    TResult Function(ProceedFromPasswordInsertionPagePressed value)?
+        proceedFromPasswordInsertionPagePressed,
+    TResult Function(RegisterPressed value)? registerPressed,
+  }) {
+    return proceedFromEmailInsertionPagePressed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(ConfirmationPasswordChanged value)?
+        confirmationPasswordChanged,
+    TResult Function(UsernameChanged value)? usernameChanged,
+    TResult Function(PasswordVisibilityIconPressed value)?
+        passwordVisibilityIconPressed,
+    TResult Function(ConfirmationPasswordVisibilityIconPressed value)?
+        confirmationPasswordVisibilityIconPressed,
+    TResult Function(ProceedFromEmailInsertionPagePressed value)?
+        proceedFromEmailInsertionPagePressed,
+    TResult Function(ProceedFromPasswordInsertionPagePressed value)?
+        proceedFromPasswordInsertionPagePressed,
+    TResult Function(RegisterPressed value)? registerPressed,
+    required TResult orElse(),
+  }) {
+    if (proceedFromEmailInsertionPagePressed != null) {
+      return proceedFromEmailInsertionPagePressed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProceedFromEmailInsertionPagePressed
+    implements RegistrationEvent {
+  const factory ProceedFromEmailInsertionPagePressed() =
+      _$ProceedFromEmailInsertionPagePressed;
+}
+
+/// @nodoc
+abstract class $ProceedFromPasswordInsertionPagePressedCopyWith<$Res> {
+  factory $ProceedFromPasswordInsertionPagePressedCopyWith(
+          ProceedFromPasswordInsertionPagePressed value,
+          $Res Function(ProceedFromPasswordInsertionPagePressed) then) =
+      _$ProceedFromPasswordInsertionPagePressedCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$ProceedFromPasswordInsertionPagePressedCopyWithImpl<$Res>
+    extends _$RegistrationEventCopyWithImpl<$Res>
+    implements $ProceedFromPasswordInsertionPagePressedCopyWith<$Res> {
+  _$ProceedFromPasswordInsertionPagePressedCopyWithImpl(
+      ProceedFromPasswordInsertionPagePressed _value,
+      $Res Function(ProceedFromPasswordInsertionPagePressed) _then)
+      : super(
+            _value, (v) => _then(v as ProceedFromPasswordInsertionPagePressed));
+
+  @override
+  ProceedFromPasswordInsertionPagePressed get _value =>
+      super._value as ProceedFromPasswordInsertionPagePressed;
+}
+
+/// @nodoc
+
+class _$ProceedFromPasswordInsertionPagePressed
+    implements ProceedFromPasswordInsertionPagePressed {
+  const _$ProceedFromPasswordInsertionPagePressed();
+
+  @override
+  String toString() {
+    return 'RegistrationEvent.proceedFromPasswordInsertionPagePressed()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is ProceedFromPasswordInsertionPagePressed);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String confirmationPassword)
+        confirmationPasswordChanged,
+    required TResult Function(String username) usernameChanged,
+    required TResult Function() passwordVisibilityIconPressed,
+    required TResult Function() confirmationPasswordVisibilityIconPressed,
+    required TResult Function() proceedFromEmailInsertionPagePressed,
+    required TResult Function() proceedFromPasswordInsertionPagePressed,
+    required TResult Function() registerPressed,
+  }) {
+    return proceedFromPasswordInsertionPagePressed();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmationPassword)? confirmationPasswordChanged,
+    TResult Function(String username)? usernameChanged,
+    TResult Function()? passwordVisibilityIconPressed,
+    TResult Function()? confirmationPasswordVisibilityIconPressed,
+    TResult Function()? proceedFromEmailInsertionPagePressed,
+    TResult Function()? proceedFromPasswordInsertionPagePressed,
+    TResult Function()? registerPressed,
+  }) {
+    return proceedFromPasswordInsertionPagePressed?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmationPassword)? confirmationPasswordChanged,
+    TResult Function(String username)? usernameChanged,
+    TResult Function()? passwordVisibilityIconPressed,
+    TResult Function()? confirmationPasswordVisibilityIconPressed,
+    TResult Function()? proceedFromEmailInsertionPagePressed,
+    TResult Function()? proceedFromPasswordInsertionPagePressed,
+    TResult Function()? registerPressed,
+    required TResult orElse(),
+  }) {
+    if (proceedFromPasswordInsertionPagePressed != null) {
+      return proceedFromPasswordInsertionPagePressed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(ConfirmationPasswordChanged value)
+        confirmationPasswordChanged,
+    required TResult Function(UsernameChanged value) usernameChanged,
+    required TResult Function(PasswordVisibilityIconPressed value)
+        passwordVisibilityIconPressed,
+    required TResult Function(ConfirmationPasswordVisibilityIconPressed value)
+        confirmationPasswordVisibilityIconPressed,
+    required TResult Function(ProceedFromEmailInsertionPagePressed value)
+        proceedFromEmailInsertionPagePressed,
+    required TResult Function(ProceedFromPasswordInsertionPagePressed value)
+        proceedFromPasswordInsertionPagePressed,
+    required TResult Function(RegisterPressed value) registerPressed,
+  }) {
+    return proceedFromPasswordInsertionPagePressed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(ConfirmationPasswordChanged value)?
+        confirmationPasswordChanged,
+    TResult Function(UsernameChanged value)? usernameChanged,
+    TResult Function(PasswordVisibilityIconPressed value)?
+        passwordVisibilityIconPressed,
+    TResult Function(ConfirmationPasswordVisibilityIconPressed value)?
+        confirmationPasswordVisibilityIconPressed,
+    TResult Function(ProceedFromEmailInsertionPagePressed value)?
+        proceedFromEmailInsertionPagePressed,
+    TResult Function(ProceedFromPasswordInsertionPagePressed value)?
+        proceedFromPasswordInsertionPagePressed,
+    TResult Function(RegisterPressed value)? registerPressed,
+  }) {
+    return proceedFromPasswordInsertionPagePressed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(ConfirmationPasswordChanged value)?
+        confirmationPasswordChanged,
+    TResult Function(UsernameChanged value)? usernameChanged,
+    TResult Function(PasswordVisibilityIconPressed value)?
+        passwordVisibilityIconPressed,
+    TResult Function(ConfirmationPasswordVisibilityIconPressed value)?
+        confirmationPasswordVisibilityIconPressed,
+    TResult Function(ProceedFromEmailInsertionPagePressed value)?
+        proceedFromEmailInsertionPagePressed,
+    TResult Function(ProceedFromPasswordInsertionPagePressed value)?
+        proceedFromPasswordInsertionPagePressed,
+    TResult Function(RegisterPressed value)? registerPressed,
+    required TResult orElse(),
+  }) {
+    if (proceedFromPasswordInsertionPagePressed != null) {
+      return proceedFromPasswordInsertionPagePressed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProceedFromPasswordInsertionPagePressed
+    implements RegistrationEvent {
+  const factory ProceedFromPasswordInsertionPagePressed() =
+      _$ProceedFromPasswordInsertionPagePressed;
+}
+
+/// @nodoc
+abstract class $RegisterPressedCopyWith<$Res> {
+  factory $RegisterPressedCopyWith(
+          RegisterPressed value, $Res Function(RegisterPressed) then) =
+      _$RegisterPressedCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$RegisterPressedCopyWithImpl<$Res>
+    extends _$RegistrationEventCopyWithImpl<$Res>
+    implements $RegisterPressedCopyWith<$Res> {
+  _$RegisterPressedCopyWithImpl(
+      RegisterPressed _value, $Res Function(RegisterPressed) _then)
+      : super(_value, (v) => _then(v as RegisterPressed));
+
+  @override
+  RegisterPressed get _value => super._value as RegisterPressed;
+}
+
+/// @nodoc
+
+class _$RegisterPressed implements RegisterPressed {
+  const _$RegisterPressed();
+
+  @override
+  String toString() {
+    return 'RegistrationEvent.registerPressed()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is RegisterPressed);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String confirmationPassword)
+        confirmationPasswordChanged,
+    required TResult Function(String username) usernameChanged,
+    required TResult Function() passwordVisibilityIconPressed,
+    required TResult Function() confirmationPasswordVisibilityIconPressed,
+    required TResult Function() proceedFromEmailInsertionPagePressed,
+    required TResult Function() proceedFromPasswordInsertionPagePressed,
+    required TResult Function() registerPressed,
+  }) {
+    return registerPressed();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmationPassword)? confirmationPasswordChanged,
+    TResult Function(String username)? usernameChanged,
+    TResult Function()? passwordVisibilityIconPressed,
+    TResult Function()? confirmationPasswordVisibilityIconPressed,
+    TResult Function()? proceedFromEmailInsertionPagePressed,
+    TResult Function()? proceedFromPasswordInsertionPagePressed,
+    TResult Function()? registerPressed,
+  }) {
+    return registerPressed?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmationPassword)? confirmationPasswordChanged,
+    TResult Function(String username)? usernameChanged,
+    TResult Function()? passwordVisibilityIconPressed,
+    TResult Function()? confirmationPasswordVisibilityIconPressed,
+    TResult Function()? proceedFromEmailInsertionPagePressed,
+    TResult Function()? proceedFromPasswordInsertionPagePressed,
+    TResult Function()? registerPressed,
+    required TResult orElse(),
+  }) {
+    if (registerPressed != null) {
+      return registerPressed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(ConfirmationPasswordChanged value)
+        confirmationPasswordChanged,
+    required TResult Function(UsernameChanged value) usernameChanged,
+    required TResult Function(PasswordVisibilityIconPressed value)
+        passwordVisibilityIconPressed,
+    required TResult Function(ConfirmationPasswordVisibilityIconPressed value)
+        confirmationPasswordVisibilityIconPressed,
+    required TResult Function(ProceedFromEmailInsertionPagePressed value)
+        proceedFromEmailInsertionPagePressed,
+    required TResult Function(ProceedFromPasswordInsertionPagePressed value)
+        proceedFromPasswordInsertionPagePressed,
+    required TResult Function(RegisterPressed value) registerPressed,
+  }) {
+    return registerPressed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(ConfirmationPasswordChanged value)?
+        confirmationPasswordChanged,
+    TResult Function(UsernameChanged value)? usernameChanged,
+    TResult Function(PasswordVisibilityIconPressed value)?
+        passwordVisibilityIconPressed,
+    TResult Function(ConfirmationPasswordVisibilityIconPressed value)?
+        confirmationPasswordVisibilityIconPressed,
+    TResult Function(ProceedFromEmailInsertionPagePressed value)?
+        proceedFromEmailInsertionPagePressed,
+    TResult Function(ProceedFromPasswordInsertionPagePressed value)?
+        proceedFromPasswordInsertionPagePressed,
+    TResult Function(RegisterPressed value)? registerPressed,
+  }) {
+    return registerPressed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(ConfirmationPasswordChanged value)?
+        confirmationPasswordChanged,
+    TResult Function(UsernameChanged value)? usernameChanged,
+    TResult Function(PasswordVisibilityIconPressed value)?
+        passwordVisibilityIconPressed,
+    TResult Function(ConfirmationPasswordVisibilityIconPressed value)?
+        confirmationPasswordVisibilityIconPressed,
+    TResult Function(ProceedFromEmailInsertionPagePressed value)?
+        proceedFromEmailInsertionPagePressed,
+    TResult Function(ProceedFromPasswordInsertionPagePressed value)?
+        proceedFromPasswordInsertionPagePressed,
+    TResult Function(RegisterPressed value)? registerPressed,
+    required TResult orElse(),
+  }) {
+    if (registerPressed != null) {
+      return registerPressed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class RegisterPressed implements RegistrationEvent {
+  const factory RegisterPressed() = _$RegisterPressed;
 }
 
 /// @nodoc
 class _$RegistrationStateTearOff {
   const _$RegistrationStateTearOff();
 
-  _RegistrationState call(
+  Initial initial(
+      {required EmailAddress emailAddress,
+      required Password password,
+      required Password confirmationPassword,
+      required bool stateFlipper}) {
+    return Initial(
+      emailAddress: emailAddress,
+      password: password,
+      confirmationPassword: confirmationPassword,
+      stateFlipper: stateFlipper,
+    );
+  }
+
+  InsertEmail insertEmail(
+      {required EmailAddress emailAddress,
+      required Password password,
+      required Password confirmationPassword,
+      required bool stateFlipper}) {
+    return InsertEmail(
+      emailAddress: emailAddress,
+      password: password,
+      confirmationPassword: confirmationPassword,
+      stateFlipper: stateFlipper,
+    );
+  }
+
+  InsertPassword insertPassword(
+      {required EmailAddress emailAddress,
+      required Password password,
+      required Password confirmationPassword,
+      required bool stateFlipper}) {
+    return InsertPassword(
+      emailAddress: emailAddress,
+      password: password,
+      confirmationPassword: confirmationPassword,
+      stateFlipper: stateFlipper,
+    );
+  }
+
+  InsertUsername insertUsername(
       {required EmailAddress emailAddress,
       required Password password,
       required Password confirmationPassword,
       required bool isSubmitting,
       required bool stateFlipper,
       required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption}) {
-    return _RegistrationState(
+    return InsertUsername(
       emailAddress: emailAddress,
       password: password,
       confirmationPassword: confirmationPassword,
@@ -205,10 +1871,96 @@ mixin _$RegistrationState {
   EmailAddress get emailAddress => throw _privateConstructorUsedError;
   Password get password => throw _privateConstructorUsedError;
   Password get confirmationPassword => throw _privateConstructorUsedError;
-  bool get isSubmitting => throw _privateConstructorUsedError;
-  bool get stateFlipper =>
-      throw _privateConstructorUsedError; // Required to fire stateChange when .copyWith is called
-  Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption =>
+  bool get stateFlipper => throw _privateConstructorUsedError;
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)
+        initial,
+    required TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)
+        insertEmail,
+    required TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)
+        insertPassword,
+    required TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool isSubmitting,
+            bool stateFlipper,
+            Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)
+        insertUsername,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        initial,
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        insertEmail,
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        insertPassword,
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool isSubmitting,
+            bool stateFlipper,
+            Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
+        insertUsername,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        initial,
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        insertEmail,
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        insertPassword,
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool isSubmitting,
+            bool stateFlipper,
+            Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
+        insertUsername,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(InsertEmail value) insertEmail,
+    required TResult Function(InsertPassword value) insertPassword,
+    required TResult Function(InsertUsername value) insertUsername,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(InsertEmail value)? insertEmail,
+    TResult Function(InsertPassword value)? insertPassword,
+    TResult Function(InsertUsername value)? insertUsername,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(InsertEmail value)? insertEmail,
+    TResult Function(InsertPassword value)? insertPassword,
+    TResult Function(InsertUsername value)? insertUsername,
+    required TResult orElse(),
+  }) =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -225,9 +1977,7 @@ abstract class $RegistrationStateCopyWith<$Res> {
       {EmailAddress emailAddress,
       Password password,
       Password confirmationPassword,
-      bool isSubmitting,
-      bool stateFlipper,
-      Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption});
+      bool stateFlipper});
 }
 
 /// @nodoc
@@ -244,9 +1994,7 @@ class _$RegistrationStateCopyWithImpl<$Res>
     Object? emailAddress = freezed,
     Object? password = freezed,
     Object? confirmationPassword = freezed,
-    Object? isSubmitting = freezed,
     Object? stateFlipper = freezed,
-    Object? authFailureOrSuccessOption = freezed,
   }) {
     return _then(_value.copyWith(
       emailAddress: emailAddress == freezed
@@ -261,28 +2009,738 @@ class _$RegistrationStateCopyWithImpl<$Res>
           ? _value.confirmationPassword
           : confirmationPassword // ignore: cast_nullable_to_non_nullable
               as Password,
-      isSubmitting: isSubmitting == freezed
-          ? _value.isSubmitting
-          : isSubmitting // ignore: cast_nullable_to_non_nullable
-              as bool,
       stateFlipper: stateFlipper == freezed
           ? _value.stateFlipper
           : stateFlipper // ignore: cast_nullable_to_non_nullable
               as bool,
-      authFailureOrSuccessOption: authFailureOrSuccessOption == freezed
-          ? _value.authFailureOrSuccessOption
-          : authFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
-              as Option<Either<AuthFailure, Unit>>,
     ));
   }
 }
 
 /// @nodoc
-abstract class _$RegistrationStateCopyWith<$Res>
+abstract class $InitialCopyWith<$Res>
     implements $RegistrationStateCopyWith<$Res> {
-  factory _$RegistrationStateCopyWith(
-          _RegistrationState value, $Res Function(_RegistrationState) then) =
-      __$RegistrationStateCopyWithImpl<$Res>;
+  factory $InitialCopyWith(Initial value, $Res Function(Initial) then) =
+      _$InitialCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {EmailAddress emailAddress,
+      Password password,
+      Password confirmationPassword,
+      bool stateFlipper});
+}
+
+/// @nodoc
+class _$InitialCopyWithImpl<$Res> extends _$RegistrationStateCopyWithImpl<$Res>
+    implements $InitialCopyWith<$Res> {
+  _$InitialCopyWithImpl(Initial _value, $Res Function(Initial) _then)
+      : super(_value, (v) => _then(v as Initial));
+
+  @override
+  Initial get _value => super._value as Initial;
+
+  @override
+  $Res call({
+    Object? emailAddress = freezed,
+    Object? password = freezed,
+    Object? confirmationPassword = freezed,
+    Object? stateFlipper = freezed,
+  }) {
+    return _then(Initial(
+      emailAddress: emailAddress == freezed
+          ? _value.emailAddress
+          : emailAddress // ignore: cast_nullable_to_non_nullable
+              as EmailAddress,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as Password,
+      confirmationPassword: confirmationPassword == freezed
+          ? _value.confirmationPassword
+          : confirmationPassword // ignore: cast_nullable_to_non_nullable
+              as Password,
+      stateFlipper: stateFlipper == freezed
+          ? _value.stateFlipper
+          : stateFlipper // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$Initial implements Initial {
+  const _$Initial(
+      {required this.emailAddress,
+      required this.password,
+      required this.confirmationPassword,
+      required this.stateFlipper});
+
+  @override
+  final EmailAddress emailAddress;
+  @override
+  final Password password;
+  @override
+  final Password confirmationPassword;
+  @override
+  final bool stateFlipper;
+
+  @override
+  String toString() {
+    return 'RegistrationState.initial(emailAddress: $emailAddress, password: $password, confirmationPassword: $confirmationPassword, stateFlipper: $stateFlipper)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Initial &&
+            const DeepCollectionEquality()
+                .equals(other.emailAddress, emailAddress) &&
+            const DeepCollectionEquality().equals(other.password, password) &&
+            const DeepCollectionEquality()
+                .equals(other.confirmationPassword, confirmationPassword) &&
+            const DeepCollectionEquality()
+                .equals(other.stateFlipper, stateFlipper));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(emailAddress),
+      const DeepCollectionEquality().hash(password),
+      const DeepCollectionEquality().hash(confirmationPassword),
+      const DeepCollectionEquality().hash(stateFlipper));
+
+  @JsonKey(ignore: true)
+  @override
+  $InitialCopyWith<Initial> get copyWith =>
+      _$InitialCopyWithImpl<Initial>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)
+        initial,
+    required TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)
+        insertEmail,
+    required TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)
+        insertPassword,
+    required TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool isSubmitting,
+            bool stateFlipper,
+            Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)
+        insertUsername,
+  }) {
+    return initial(emailAddress, password, confirmationPassword, stateFlipper);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        initial,
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        insertEmail,
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        insertPassword,
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool isSubmitting,
+            bool stateFlipper,
+            Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
+        insertUsername,
+  }) {
+    return initial?.call(
+        emailAddress, password, confirmationPassword, stateFlipper);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        initial,
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        insertEmail,
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        insertPassword,
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool isSubmitting,
+            bool stateFlipper,
+            Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
+        insertUsername,
+    required TResult orElse(),
+  }) {
+    if (initial != null) {
+      return initial(
+          emailAddress, password, confirmationPassword, stateFlipper);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(InsertEmail value) insertEmail,
+    required TResult Function(InsertPassword value) insertPassword,
+    required TResult Function(InsertUsername value) insertUsername,
+  }) {
+    return initial(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(InsertEmail value)? insertEmail,
+    TResult Function(InsertPassword value)? insertPassword,
+    TResult Function(InsertUsername value)? insertUsername,
+  }) {
+    return initial?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(InsertEmail value)? insertEmail,
+    TResult Function(InsertPassword value)? insertPassword,
+    TResult Function(InsertUsername value)? insertUsername,
+    required TResult orElse(),
+  }) {
+    if (initial != null) {
+      return initial(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Initial implements RegistrationState {
+  const factory Initial(
+      {required EmailAddress emailAddress,
+      required Password password,
+      required Password confirmationPassword,
+      required bool stateFlipper}) = _$Initial;
+
+  @override
+  EmailAddress get emailAddress;
+  @override
+  Password get password;
+  @override
+  Password get confirmationPassword;
+  @override
+  bool get stateFlipper;
+  @override
+  @JsonKey(ignore: true)
+  $InitialCopyWith<Initial> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $InsertEmailCopyWith<$Res>
+    implements $RegistrationStateCopyWith<$Res> {
+  factory $InsertEmailCopyWith(
+          InsertEmail value, $Res Function(InsertEmail) then) =
+      _$InsertEmailCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {EmailAddress emailAddress,
+      Password password,
+      Password confirmationPassword,
+      bool stateFlipper});
+}
+
+/// @nodoc
+class _$InsertEmailCopyWithImpl<$Res>
+    extends _$RegistrationStateCopyWithImpl<$Res>
+    implements $InsertEmailCopyWith<$Res> {
+  _$InsertEmailCopyWithImpl(
+      InsertEmail _value, $Res Function(InsertEmail) _then)
+      : super(_value, (v) => _then(v as InsertEmail));
+
+  @override
+  InsertEmail get _value => super._value as InsertEmail;
+
+  @override
+  $Res call({
+    Object? emailAddress = freezed,
+    Object? password = freezed,
+    Object? confirmationPassword = freezed,
+    Object? stateFlipper = freezed,
+  }) {
+    return _then(InsertEmail(
+      emailAddress: emailAddress == freezed
+          ? _value.emailAddress
+          : emailAddress // ignore: cast_nullable_to_non_nullable
+              as EmailAddress,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as Password,
+      confirmationPassword: confirmationPassword == freezed
+          ? _value.confirmationPassword
+          : confirmationPassword // ignore: cast_nullable_to_non_nullable
+              as Password,
+      stateFlipper: stateFlipper == freezed
+          ? _value.stateFlipper
+          : stateFlipper // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$InsertEmail implements InsertEmail {
+  const _$InsertEmail(
+      {required this.emailAddress,
+      required this.password,
+      required this.confirmationPassword,
+      required this.stateFlipper});
+
+  @override
+  final EmailAddress emailAddress;
+  @override
+  final Password password;
+  @override
+  final Password confirmationPassword;
+  @override
+  final bool stateFlipper;
+
+  @override
+  String toString() {
+    return 'RegistrationState.insertEmail(emailAddress: $emailAddress, password: $password, confirmationPassword: $confirmationPassword, stateFlipper: $stateFlipper)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is InsertEmail &&
+            const DeepCollectionEquality()
+                .equals(other.emailAddress, emailAddress) &&
+            const DeepCollectionEquality().equals(other.password, password) &&
+            const DeepCollectionEquality()
+                .equals(other.confirmationPassword, confirmationPassword) &&
+            const DeepCollectionEquality()
+                .equals(other.stateFlipper, stateFlipper));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(emailAddress),
+      const DeepCollectionEquality().hash(password),
+      const DeepCollectionEquality().hash(confirmationPassword),
+      const DeepCollectionEquality().hash(stateFlipper));
+
+  @JsonKey(ignore: true)
+  @override
+  $InsertEmailCopyWith<InsertEmail> get copyWith =>
+      _$InsertEmailCopyWithImpl<InsertEmail>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)
+        initial,
+    required TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)
+        insertEmail,
+    required TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)
+        insertPassword,
+    required TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool isSubmitting,
+            bool stateFlipper,
+            Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)
+        insertUsername,
+  }) {
+    return insertEmail(
+        emailAddress, password, confirmationPassword, stateFlipper);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        initial,
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        insertEmail,
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        insertPassword,
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool isSubmitting,
+            bool stateFlipper,
+            Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
+        insertUsername,
+  }) {
+    return insertEmail?.call(
+        emailAddress, password, confirmationPassword, stateFlipper);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        initial,
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        insertEmail,
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        insertPassword,
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool isSubmitting,
+            bool stateFlipper,
+            Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
+        insertUsername,
+    required TResult orElse(),
+  }) {
+    if (insertEmail != null) {
+      return insertEmail(
+          emailAddress, password, confirmationPassword, stateFlipper);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(InsertEmail value) insertEmail,
+    required TResult Function(InsertPassword value) insertPassword,
+    required TResult Function(InsertUsername value) insertUsername,
+  }) {
+    return insertEmail(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(InsertEmail value)? insertEmail,
+    TResult Function(InsertPassword value)? insertPassword,
+    TResult Function(InsertUsername value)? insertUsername,
+  }) {
+    return insertEmail?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(InsertEmail value)? insertEmail,
+    TResult Function(InsertPassword value)? insertPassword,
+    TResult Function(InsertUsername value)? insertUsername,
+    required TResult orElse(),
+  }) {
+    if (insertEmail != null) {
+      return insertEmail(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class InsertEmail implements RegistrationState {
+  const factory InsertEmail(
+      {required EmailAddress emailAddress,
+      required Password password,
+      required Password confirmationPassword,
+      required bool stateFlipper}) = _$InsertEmail;
+
+  @override
+  EmailAddress get emailAddress;
+  @override
+  Password get password;
+  @override
+  Password get confirmationPassword;
+  @override
+  bool get stateFlipper;
+  @override
+  @JsonKey(ignore: true)
+  $InsertEmailCopyWith<InsertEmail> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $InsertPasswordCopyWith<$Res>
+    implements $RegistrationStateCopyWith<$Res> {
+  factory $InsertPasswordCopyWith(
+          InsertPassword value, $Res Function(InsertPassword) then) =
+      _$InsertPasswordCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {EmailAddress emailAddress,
+      Password password,
+      Password confirmationPassword,
+      bool stateFlipper});
+}
+
+/// @nodoc
+class _$InsertPasswordCopyWithImpl<$Res>
+    extends _$RegistrationStateCopyWithImpl<$Res>
+    implements $InsertPasswordCopyWith<$Res> {
+  _$InsertPasswordCopyWithImpl(
+      InsertPassword _value, $Res Function(InsertPassword) _then)
+      : super(_value, (v) => _then(v as InsertPassword));
+
+  @override
+  InsertPassword get _value => super._value as InsertPassword;
+
+  @override
+  $Res call({
+    Object? emailAddress = freezed,
+    Object? password = freezed,
+    Object? confirmationPassword = freezed,
+    Object? stateFlipper = freezed,
+  }) {
+    return _then(InsertPassword(
+      emailAddress: emailAddress == freezed
+          ? _value.emailAddress
+          : emailAddress // ignore: cast_nullable_to_non_nullable
+              as EmailAddress,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as Password,
+      confirmationPassword: confirmationPassword == freezed
+          ? _value.confirmationPassword
+          : confirmationPassword // ignore: cast_nullable_to_non_nullable
+              as Password,
+      stateFlipper: stateFlipper == freezed
+          ? _value.stateFlipper
+          : stateFlipper // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$InsertPassword implements InsertPassword {
+  const _$InsertPassword(
+      {required this.emailAddress,
+      required this.password,
+      required this.confirmationPassword,
+      required this.stateFlipper});
+
+  @override
+  final EmailAddress emailAddress;
+  @override
+  final Password password;
+  @override
+  final Password confirmationPassword;
+  @override
+  final bool stateFlipper;
+
+  @override
+  String toString() {
+    return 'RegistrationState.insertPassword(emailAddress: $emailAddress, password: $password, confirmationPassword: $confirmationPassword, stateFlipper: $stateFlipper)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is InsertPassword &&
+            const DeepCollectionEquality()
+                .equals(other.emailAddress, emailAddress) &&
+            const DeepCollectionEquality().equals(other.password, password) &&
+            const DeepCollectionEquality()
+                .equals(other.confirmationPassword, confirmationPassword) &&
+            const DeepCollectionEquality()
+                .equals(other.stateFlipper, stateFlipper));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(emailAddress),
+      const DeepCollectionEquality().hash(password),
+      const DeepCollectionEquality().hash(confirmationPassword),
+      const DeepCollectionEquality().hash(stateFlipper));
+
+  @JsonKey(ignore: true)
+  @override
+  $InsertPasswordCopyWith<InsertPassword> get copyWith =>
+      _$InsertPasswordCopyWithImpl<InsertPassword>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)
+        initial,
+    required TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)
+        insertEmail,
+    required TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)
+        insertPassword,
+    required TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool isSubmitting,
+            bool stateFlipper,
+            Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)
+        insertUsername,
+  }) {
+    return insertPassword(
+        emailAddress, password, confirmationPassword, stateFlipper);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        initial,
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        insertEmail,
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        insertPassword,
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool isSubmitting,
+            bool stateFlipper,
+            Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
+        insertUsername,
+  }) {
+    return insertPassword?.call(
+        emailAddress, password, confirmationPassword, stateFlipper);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        initial,
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        insertEmail,
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        insertPassword,
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool isSubmitting,
+            bool stateFlipper,
+            Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
+        insertUsername,
+    required TResult orElse(),
+  }) {
+    if (insertPassword != null) {
+      return insertPassword(
+          emailAddress, password, confirmationPassword, stateFlipper);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(InsertEmail value) insertEmail,
+    required TResult Function(InsertPassword value) insertPassword,
+    required TResult Function(InsertUsername value) insertUsername,
+  }) {
+    return insertPassword(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(InsertEmail value)? insertEmail,
+    TResult Function(InsertPassword value)? insertPassword,
+    TResult Function(InsertUsername value)? insertUsername,
+  }) {
+    return insertPassword?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(InsertEmail value)? insertEmail,
+    TResult Function(InsertPassword value)? insertPassword,
+    TResult Function(InsertUsername value)? insertUsername,
+    required TResult orElse(),
+  }) {
+    if (insertPassword != null) {
+      return insertPassword(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class InsertPassword implements RegistrationState {
+  const factory InsertPassword(
+      {required EmailAddress emailAddress,
+      required Password password,
+      required Password confirmationPassword,
+      required bool stateFlipper}) = _$InsertPassword;
+
+  @override
+  EmailAddress get emailAddress;
+  @override
+  Password get password;
+  @override
+  Password get confirmationPassword;
+  @override
+  bool get stateFlipper;
+  @override
+  @JsonKey(ignore: true)
+  $InsertPasswordCopyWith<InsertPassword> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $InsertUsernameCopyWith<$Res>
+    implements $RegistrationStateCopyWith<$Res> {
+  factory $InsertUsernameCopyWith(
+          InsertUsername value, $Res Function(InsertUsername) then) =
+      _$InsertUsernameCopyWithImpl<$Res>;
   @override
   $Res call(
       {EmailAddress emailAddress,
@@ -294,15 +2752,15 @@ abstract class _$RegistrationStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$RegistrationStateCopyWithImpl<$Res>
+class _$InsertUsernameCopyWithImpl<$Res>
     extends _$RegistrationStateCopyWithImpl<$Res>
-    implements _$RegistrationStateCopyWith<$Res> {
-  __$RegistrationStateCopyWithImpl(
-      _RegistrationState _value, $Res Function(_RegistrationState) _then)
-      : super(_value, (v) => _then(v as _RegistrationState));
+    implements $InsertUsernameCopyWith<$Res> {
+  _$InsertUsernameCopyWithImpl(
+      InsertUsername _value, $Res Function(InsertUsername) _then)
+      : super(_value, (v) => _then(v as InsertUsername));
 
   @override
-  _RegistrationState get _value => super._value as _RegistrationState;
+  InsertUsername get _value => super._value as InsertUsername;
 
   @override
   $Res call({
@@ -313,7 +2771,7 @@ class __$RegistrationStateCopyWithImpl<$Res>
     Object? stateFlipper = freezed,
     Object? authFailureOrSuccessOption = freezed,
   }) {
-    return _then(_RegistrationState(
+    return _then(InsertUsername(
       emailAddress: emailAddress == freezed
           ? _value.emailAddress
           : emailAddress // ignore: cast_nullable_to_non_nullable
@@ -344,8 +2802,8 @@ class __$RegistrationStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_RegistrationState implements _RegistrationState {
-  const _$_RegistrationState(
+class _$InsertUsername implements InsertUsername {
+  const _$InsertUsername(
       {required this.emailAddress,
       required this.password,
       required this.confirmationPassword,
@@ -368,14 +2826,14 @@ class _$_RegistrationState implements _RegistrationState {
 
   @override
   String toString() {
-    return 'RegistrationState(emailAddress: $emailAddress, password: $password, confirmationPassword: $confirmationPassword, isSubmitting: $isSubmitting, stateFlipper: $stateFlipper, authFailureOrSuccessOption: $authFailureOrSuccessOption)';
+    return 'RegistrationState.insertUsername(emailAddress: $emailAddress, password: $password, confirmationPassword: $confirmationPassword, isSubmitting: $isSubmitting, stateFlipper: $stateFlipper, authFailureOrSuccessOption: $authFailureOrSuccessOption)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _RegistrationState &&
+            other is InsertUsername &&
             const DeepCollectionEquality()
                 .equals(other.emailAddress, emailAddress) &&
             const DeepCollectionEquality().equals(other.password, password) &&
@@ -401,19 +2859,135 @@ class _$_RegistrationState implements _RegistrationState {
 
   @JsonKey(ignore: true)
   @override
-  _$RegistrationStateCopyWith<_RegistrationState> get copyWith =>
-      __$RegistrationStateCopyWithImpl<_RegistrationState>(this, _$identity);
+  $InsertUsernameCopyWith<InsertUsername> get copyWith =>
+      _$InsertUsernameCopyWithImpl<InsertUsername>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)
+        initial,
+    required TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)
+        insertEmail,
+    required TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)
+        insertPassword,
+    required TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool isSubmitting,
+            bool stateFlipper,
+            Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)
+        insertUsername,
+  }) {
+    return insertUsername(emailAddress, password, confirmationPassword,
+        isSubmitting, stateFlipper, authFailureOrSuccessOption);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        initial,
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        insertEmail,
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        insertPassword,
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool isSubmitting,
+            bool stateFlipper,
+            Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
+        insertUsername,
+  }) {
+    return insertUsername?.call(emailAddress, password, confirmationPassword,
+        isSubmitting, stateFlipper, authFailureOrSuccessOption);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        initial,
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        insertEmail,
+    TResult Function(EmailAddress emailAddress, Password password,
+            Password confirmationPassword, bool stateFlipper)?
+        insertPassword,
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool isSubmitting,
+            bool stateFlipper,
+            Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
+        insertUsername,
+    required TResult orElse(),
+  }) {
+    if (insertUsername != null) {
+      return insertUsername(emailAddress, password, confirmationPassword,
+          isSubmitting, stateFlipper, authFailureOrSuccessOption);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(InsertEmail value) insertEmail,
+    required TResult Function(InsertPassword value) insertPassword,
+    required TResult Function(InsertUsername value) insertUsername,
+  }) {
+    return insertUsername(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(InsertEmail value)? insertEmail,
+    TResult Function(InsertPassword value)? insertPassword,
+    TResult Function(InsertUsername value)? insertUsername,
+  }) {
+    return insertUsername?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(InsertEmail value)? insertEmail,
+    TResult Function(InsertPassword value)? insertPassword,
+    TResult Function(InsertUsername value)? insertUsername,
+    required TResult orElse(),
+  }) {
+    if (insertUsername != null) {
+      return insertUsername(this);
+    }
+    return orElse();
+  }
 }
 
-abstract class _RegistrationState implements RegistrationState {
-  const factory _RegistrationState(
+abstract class InsertUsername implements RegistrationState {
+  const factory InsertUsername(
       {required EmailAddress emailAddress,
       required Password password,
       required Password confirmationPassword,
       required bool isSubmitting,
       required bool stateFlipper,
       required Option<Either<AuthFailure, Unit>>
-          authFailureOrSuccessOption}) = _$_RegistrationState;
+          authFailureOrSuccessOption}) = _$InsertUsername;
 
   @override
   EmailAddress get emailAddress;
@@ -421,14 +2995,13 @@ abstract class _RegistrationState implements RegistrationState {
   Password get password;
   @override
   Password get confirmationPassword;
-  @override
   bool get isSubmitting;
   @override
-  bool get stateFlipper;
-  @override // Required to fire stateChange when .copyWith is called
+  bool
+      get stateFlipper; // Required to fire stateChange when .copyWith is called
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption;
   @override
   @JsonKey(ignore: true)
-  _$RegistrationStateCopyWith<_RegistrationState> get copyWith =>
+  $InsertUsernameCopyWith<InsertUsername> get copyWith =>
       throw _privateConstructorUsedError;
 }
