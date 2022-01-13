@@ -24,9 +24,8 @@ class UserRepository implements IUserRepository {
     } on FirebaseException catch (e) {
       if (e.message!.contains('PERMISSION_DENIED')) {
         return left(const UserFailure.insufficientPermission());
-      } else {
-        return left(const UserFailure.unexpected());
       }
+      return left(const UserFailure.unexpected());
     }
   }
 
@@ -44,9 +43,8 @@ class UserRepository implements IUserRepository {
         return left(const UserFailure.insufficientPermission());
       } else if (e.message!.contains('NOT_FOUND')) {
         return left(const UserFailure.unableToUpdate());
-      } else {
-        return left(const UserFailure.unexpected());
       }
+      return left(const UserFailure.unexpected());
     }
   }
 
@@ -63,9 +61,8 @@ class UserRepository implements IUserRepository {
         return left(const UserFailure.insufficientPermission());
       } else if (e.message!.contains('NOT_FOUND')) {
         return left(const UserFailure.unableToUpdate());
-      } else {
-        return left(const UserFailure.unexpected());
       }
+      return left(const UserFailure.unexpected());
     }
   }
 }

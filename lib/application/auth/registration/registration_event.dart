@@ -22,10 +22,16 @@ class RegistrationEvent with _$RegistrationEvent {
       ReturnFromPasswordInsertationPagePressed;
   const factory RegistrationEvent.returnFromUsernameInsertionPagePressed() =
       ReturnFromUsernameInsertationPagePressed;
-  // Proceeding
+  // ProceedingPressed
   const factory RegistrationEvent.proceedFromEmailInsertionPagePressed() =
       ProceedFromEmailInsertionPagePressed;
   const factory RegistrationEvent.proceedFromPasswordInsertionPagePressed() =
       ProceedFromPasswordInsertionPagePressed;
   const factory RegistrationEvent.registerPressed() = RegisterPressed;
+  // ProceedingValidated
+  const factory RegistrationEvent.emailInsertionProceedingValidated() =
+      EmailInsertionProceedingValidated;
+  const factory RegistrationEvent.passwordInsertionProceedingValidated() =
+      PasswordInsertionProceedingValidated;
+  const factory RegistrationEvent.registerValidated() = RegisterValidated;
 }

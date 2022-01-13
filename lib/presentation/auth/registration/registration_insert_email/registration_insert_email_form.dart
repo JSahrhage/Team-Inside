@@ -10,6 +10,9 @@ class RegistrationInsertEmailForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<RegistrationBloc, RegistrationState>(
       listener: (context, state) {
+        if (state.isValidationRequested) {
+          return;
+        }
         (state as InsertEmail).valueFailureOrValidityOption.fold(
               () {},
               (either) => either.fold(

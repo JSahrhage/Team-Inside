@@ -23,6 +23,7 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
             username: Username(''),
             isPasswordVisible: false,
             isConfirmationPasswordVisible: false,
+            isValidationRequested: false,
             stateFlipper: false,
             valueFailureOrValidityOption: none(),
           ),
@@ -103,6 +104,7 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
             username: state.username,
             isPasswordVisible: state.isPasswordVisible,
             isConfirmationPasswordVisible: state.isConfirmationPasswordVisible,
+            isValidationRequested: false,
             stateFlipper: false,
             valueFailureOrValidityOption: none(),
           ),
@@ -119,14 +121,43 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
             username: state.username,
             isPasswordVisible: state.isPasswordVisible,
             isConfirmationPasswordVisible: state.isConfirmationPasswordVisible,
+            isValidationRequested: false,
             stateFlipper: false,
             valueFailureOrValidityOption: none(),
           ),
         );
       },
     );
-    // Proceeding
+    // ProceedingPressed
     on<ProceedFromEmailInsertionPagePressed>(
+      (event, emit) {
+        emit(
+          state.copyWith(
+            isValidationRequested: false,
+          ),
+        );
+      },
+    );
+    on<ProceedFromPasswordInsertionPagePressed>(
+      (event, emit) {
+        emit(
+          state.copyWith(
+            isValidationRequested: false,
+          ),
+        );
+      },
+    );
+    on<RegisterPressed>(
+      (event, emit) {
+        emit(
+          state.copyWith(
+            isValidationRequested: false,
+          ),
+        );
+      },
+    );
+    // ProceedingValidated
+    on<EmailInsertionProceedingValidated>(
       (event, emit) {
         emit(
           RegistrationState.insertPassword(
@@ -136,13 +167,14 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
             username: state.username,
             isPasswordVisible: state.isPasswordVisible,
             isConfirmationPasswordVisible: state.isConfirmationPasswordVisible,
+            isValidationRequested: false,
             stateFlipper: false,
             valueFailureOrValidityOption: none(),
           ),
         );
       },
     );
-    on<ProceedFromPasswordInsertionPagePressed>(
+    on<PasswordInsertionProceedingValidated>(
       (event, emit) {
         emit(
           RegistrationState.insertUsername(
@@ -152,6 +184,7 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
             username: state.username,
             isPasswordVisible: state.isPasswordVisible,
             isConfirmationPasswordVisible: state.isConfirmationPasswordVisible,
+            isValidationRequested: false,
             isSubmitting: false,
             stateFlipper: false,
             valueFailureOrValidityOption: none(),
@@ -160,7 +193,7 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
         );
       },
     );
-    on<RegisterPressed>(
+    on<RegisterValidated>(
       (event, emit) {
         // TODO: implement event handler
       },

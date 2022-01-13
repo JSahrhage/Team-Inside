@@ -17,9 +17,8 @@ class RegistrationFormHandler extends StatelessWidget {
           return RegistrationInsertPasswordForm();
         } else if (state is InsertUsername) {
           return RegistrationInsertUsernameForm();
-        } else {
-          return SplashPage();
         }
+        return SplashPage();
       },
     );
   }

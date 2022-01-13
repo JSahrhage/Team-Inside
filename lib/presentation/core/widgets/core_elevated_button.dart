@@ -24,17 +24,16 @@ class CoreElevatedButton extends StatelessWidget {
           )!,
         ),
       );
-    } else {
-      return ElevatedButton(
-        onPressed: callback,
-        child: isSubmitting!
-            ? const CircularProgressIndicator()
-            : Text(
-                AppLocalizations.of(context)!.translate(
-                  text,
-                )!,
-              ),
-      );
     }
+    return ElevatedButton(
+      onPressed: callback,
+      child: isSubmitting!
+          ? const CircularProgressIndicator()
+          : Text(
+              AppLocalizations.of(context)!.translate(
+                text,
+              )!,
+            ),
+    );
   }
 }
