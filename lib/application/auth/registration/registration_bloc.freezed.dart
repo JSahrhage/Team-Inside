@@ -1823,12 +1823,15 @@ class _$RegistrationStateTearOff {
       {required EmailAddress emailAddress,
       required Password password,
       required Password confirmationPassword,
-      required bool stateFlipper}) {
+      required bool stateFlipper,
+      required Option<Either<ValueFailure, Unit>>
+          valueFailureOrValidityOption}) {
     return InsertEmail(
       emailAddress: emailAddress,
       password: password,
       confirmationPassword: confirmationPassword,
       stateFlipper: stateFlipper,
+      valueFailureOrValidityOption: valueFailureOrValidityOption,
     );
   }
 
@@ -1836,12 +1839,15 @@ class _$RegistrationStateTearOff {
       {required EmailAddress emailAddress,
       required Password password,
       required Password confirmationPassword,
-      required bool stateFlipper}) {
+      required bool stateFlipper,
+      required Option<Either<ValueFailure, Unit>>
+          valueFailureOrValidityOption}) {
     return InsertPassword(
       emailAddress: emailAddress,
       password: password,
       confirmationPassword: confirmationPassword,
       stateFlipper: stateFlipper,
+      valueFailureOrValidityOption: valueFailureOrValidityOption,
     );
   }
 
@@ -1851,6 +1857,7 @@ class _$RegistrationStateTearOff {
       required Password confirmationPassword,
       required bool isSubmitting,
       required bool stateFlipper,
+      required Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption,
       required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption}) {
     return InsertUsername(
       emailAddress: emailAddress,
@@ -1858,6 +1865,7 @@ class _$RegistrationStateTearOff {
       confirmationPassword: confirmationPassword,
       isSubmitting: isSubmitting,
       stateFlipper: stateFlipper,
+      valueFailureOrValidityOption: valueFailureOrValidityOption,
       authFailureOrSuccessOption: authFailureOrSuccessOption,
     );
   }
@@ -1878,11 +1886,19 @@ mixin _$RegistrationState {
     required TResult Function(EmailAddress emailAddress, Password password,
             Password confirmationPassword, bool stateFlipper)
         initial,
-    required TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)
+    required TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)
         insertEmail,
-    required TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)
+    required TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)
         insertPassword,
     required TResult Function(
             EmailAddress emailAddress,
@@ -1890,6 +1906,7 @@ mixin _$RegistrationState {
             Password confirmationPassword,
             bool isSubmitting,
             bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)
         insertUsername,
   }) =>
@@ -1899,11 +1916,19 @@ mixin _$RegistrationState {
     TResult Function(EmailAddress emailAddress, Password password,
             Password confirmationPassword, bool stateFlipper)?
         initial,
-    TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)?
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)?
         insertEmail,
-    TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)?
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)?
         insertPassword,
     TResult Function(
             EmailAddress emailAddress,
@@ -1911,6 +1936,7 @@ mixin _$RegistrationState {
             Password confirmationPassword,
             bool isSubmitting,
             bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
         insertUsername,
   }) =>
@@ -1920,11 +1946,19 @@ mixin _$RegistrationState {
     TResult Function(EmailAddress emailAddress, Password password,
             Password confirmationPassword, bool stateFlipper)?
         initial,
-    TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)?
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)?
         insertEmail,
-    TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)?
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)?
         insertPassword,
     TResult Function(
             EmailAddress emailAddress,
@@ -1932,6 +1966,7 @@ mixin _$RegistrationState {
             Password confirmationPassword,
             bool isSubmitting,
             bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
         insertUsername,
     required TResult orElse(),
@@ -2123,11 +2158,19 @@ class _$Initial implements Initial {
     required TResult Function(EmailAddress emailAddress, Password password,
             Password confirmationPassword, bool stateFlipper)
         initial,
-    required TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)
+    required TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)
         insertEmail,
-    required TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)
+    required TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)
         insertPassword,
     required TResult Function(
             EmailAddress emailAddress,
@@ -2135,6 +2178,7 @@ class _$Initial implements Initial {
             Password confirmationPassword,
             bool isSubmitting,
             bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)
         insertUsername,
   }) {
@@ -2147,11 +2191,19 @@ class _$Initial implements Initial {
     TResult Function(EmailAddress emailAddress, Password password,
             Password confirmationPassword, bool stateFlipper)?
         initial,
-    TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)?
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)?
         insertEmail,
-    TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)?
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)?
         insertPassword,
     TResult Function(
             EmailAddress emailAddress,
@@ -2159,6 +2211,7 @@ class _$Initial implements Initial {
             Password confirmationPassword,
             bool isSubmitting,
             bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
         insertUsername,
   }) {
@@ -2172,11 +2225,19 @@ class _$Initial implements Initial {
     TResult Function(EmailAddress emailAddress, Password password,
             Password confirmationPassword, bool stateFlipper)?
         initial,
-    TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)?
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)?
         insertEmail,
-    TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)?
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)?
         insertPassword,
     TResult Function(
             EmailAddress emailAddress,
@@ -2184,6 +2245,7 @@ class _$Initial implements Initial {
             Password confirmationPassword,
             bool isSubmitting,
             bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
         insertUsername,
     required TResult orElse(),
@@ -2264,7 +2326,8 @@ abstract class $InsertEmailCopyWith<$Res>
       {EmailAddress emailAddress,
       Password password,
       Password confirmationPassword,
-      bool stateFlipper});
+      bool stateFlipper,
+      Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption});
 }
 
 /// @nodoc
@@ -2284,6 +2347,7 @@ class _$InsertEmailCopyWithImpl<$Res>
     Object? password = freezed,
     Object? confirmationPassword = freezed,
     Object? stateFlipper = freezed,
+    Object? valueFailureOrValidityOption = freezed,
   }) {
     return _then(InsertEmail(
       emailAddress: emailAddress == freezed
@@ -2302,6 +2366,10 @@ class _$InsertEmailCopyWithImpl<$Res>
           ? _value.stateFlipper
           : stateFlipper // ignore: cast_nullable_to_non_nullable
               as bool,
+      valueFailureOrValidityOption: valueFailureOrValidityOption == freezed
+          ? _value.valueFailureOrValidityOption
+          : valueFailureOrValidityOption // ignore: cast_nullable_to_non_nullable
+              as Option<Either<ValueFailure, Unit>>,
     ));
   }
 }
@@ -2313,7 +2381,8 @@ class _$InsertEmail implements InsertEmail {
       {required this.emailAddress,
       required this.password,
       required this.confirmationPassword,
-      required this.stateFlipper});
+      required this.stateFlipper,
+      required this.valueFailureOrValidityOption});
 
   @override
   final EmailAddress emailAddress;
@@ -2323,10 +2392,12 @@ class _$InsertEmail implements InsertEmail {
   final Password confirmationPassword;
   @override
   final bool stateFlipper;
+  @override // Required to fire stateChange when .copyWith is called
+  final Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption;
 
   @override
   String toString() {
-    return 'RegistrationState.insertEmail(emailAddress: $emailAddress, password: $password, confirmationPassword: $confirmationPassword, stateFlipper: $stateFlipper)';
+    return 'RegistrationState.insertEmail(emailAddress: $emailAddress, password: $password, confirmationPassword: $confirmationPassword, stateFlipper: $stateFlipper, valueFailureOrValidityOption: $valueFailureOrValidityOption)';
   }
 
   @override
@@ -2340,7 +2411,10 @@ class _$InsertEmail implements InsertEmail {
             const DeepCollectionEquality()
                 .equals(other.confirmationPassword, confirmationPassword) &&
             const DeepCollectionEquality()
-                .equals(other.stateFlipper, stateFlipper));
+                .equals(other.stateFlipper, stateFlipper) &&
+            const DeepCollectionEquality().equals(
+                other.valueFailureOrValidityOption,
+                valueFailureOrValidityOption));
   }
 
   @override
@@ -2349,7 +2423,8 @@ class _$InsertEmail implements InsertEmail {
       const DeepCollectionEquality().hash(emailAddress),
       const DeepCollectionEquality().hash(password),
       const DeepCollectionEquality().hash(confirmationPassword),
-      const DeepCollectionEquality().hash(stateFlipper));
+      const DeepCollectionEquality().hash(stateFlipper),
+      const DeepCollectionEquality().hash(valueFailureOrValidityOption));
 
   @JsonKey(ignore: true)
   @override
@@ -2362,11 +2437,19 @@ class _$InsertEmail implements InsertEmail {
     required TResult Function(EmailAddress emailAddress, Password password,
             Password confirmationPassword, bool stateFlipper)
         initial,
-    required TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)
+    required TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)
         insertEmail,
-    required TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)
+    required TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)
         insertPassword,
     required TResult Function(
             EmailAddress emailAddress,
@@ -2374,11 +2457,12 @@ class _$InsertEmail implements InsertEmail {
             Password confirmationPassword,
             bool isSubmitting,
             bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)
         insertUsername,
   }) {
-    return insertEmail(
-        emailAddress, password, confirmationPassword, stateFlipper);
+    return insertEmail(emailAddress, password, confirmationPassword,
+        stateFlipper, valueFailureOrValidityOption);
   }
 
   @override
@@ -2387,11 +2471,19 @@ class _$InsertEmail implements InsertEmail {
     TResult Function(EmailAddress emailAddress, Password password,
             Password confirmationPassword, bool stateFlipper)?
         initial,
-    TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)?
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)?
         insertEmail,
-    TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)?
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)?
         insertPassword,
     TResult Function(
             EmailAddress emailAddress,
@@ -2399,11 +2491,12 @@ class _$InsertEmail implements InsertEmail {
             Password confirmationPassword,
             bool isSubmitting,
             bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
         insertUsername,
   }) {
-    return insertEmail?.call(
-        emailAddress, password, confirmationPassword, stateFlipper);
+    return insertEmail?.call(emailAddress, password, confirmationPassword,
+        stateFlipper, valueFailureOrValidityOption);
   }
 
   @override
@@ -2412,11 +2505,19 @@ class _$InsertEmail implements InsertEmail {
     TResult Function(EmailAddress emailAddress, Password password,
             Password confirmationPassword, bool stateFlipper)?
         initial,
-    TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)?
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)?
         insertEmail,
-    TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)?
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)?
         insertPassword,
     TResult Function(
             EmailAddress emailAddress,
@@ -2424,13 +2525,14 @@ class _$InsertEmail implements InsertEmail {
             Password confirmationPassword,
             bool isSubmitting,
             bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
         insertUsername,
     required TResult orElse(),
   }) {
     if (insertEmail != null) {
-      return insertEmail(
-          emailAddress, password, confirmationPassword, stateFlipper);
+      return insertEmail(emailAddress, password, confirmationPassword,
+          stateFlipper, valueFailureOrValidityOption);
     }
     return orElse();
   }
@@ -2478,7 +2580,9 @@ abstract class InsertEmail implements RegistrationState {
       {required EmailAddress emailAddress,
       required Password password,
       required Password confirmationPassword,
-      required bool stateFlipper}) = _$InsertEmail;
+      required bool stateFlipper,
+      required Option<Either<ValueFailure, Unit>>
+          valueFailureOrValidityOption}) = _$InsertEmail;
 
   @override
   EmailAddress get emailAddress;
@@ -2487,7 +2591,9 @@ abstract class InsertEmail implements RegistrationState {
   @override
   Password get confirmationPassword;
   @override
-  bool get stateFlipper;
+  bool
+      get stateFlipper; // Required to fire stateChange when .copyWith is called
+  Option<Either<ValueFailure, Unit>> get valueFailureOrValidityOption;
   @override
   @JsonKey(ignore: true)
   $InsertEmailCopyWith<InsertEmail> get copyWith =>
@@ -2505,7 +2611,8 @@ abstract class $InsertPasswordCopyWith<$Res>
       {EmailAddress emailAddress,
       Password password,
       Password confirmationPassword,
-      bool stateFlipper});
+      bool stateFlipper,
+      Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption});
 }
 
 /// @nodoc
@@ -2525,6 +2632,7 @@ class _$InsertPasswordCopyWithImpl<$Res>
     Object? password = freezed,
     Object? confirmationPassword = freezed,
     Object? stateFlipper = freezed,
+    Object? valueFailureOrValidityOption = freezed,
   }) {
     return _then(InsertPassword(
       emailAddress: emailAddress == freezed
@@ -2543,6 +2651,10 @@ class _$InsertPasswordCopyWithImpl<$Res>
           ? _value.stateFlipper
           : stateFlipper // ignore: cast_nullable_to_non_nullable
               as bool,
+      valueFailureOrValidityOption: valueFailureOrValidityOption == freezed
+          ? _value.valueFailureOrValidityOption
+          : valueFailureOrValidityOption // ignore: cast_nullable_to_non_nullable
+              as Option<Either<ValueFailure, Unit>>,
     ));
   }
 }
@@ -2554,7 +2666,8 @@ class _$InsertPassword implements InsertPassword {
       {required this.emailAddress,
       required this.password,
       required this.confirmationPassword,
-      required this.stateFlipper});
+      required this.stateFlipper,
+      required this.valueFailureOrValidityOption});
 
   @override
   final EmailAddress emailAddress;
@@ -2564,10 +2677,12 @@ class _$InsertPassword implements InsertPassword {
   final Password confirmationPassword;
   @override
   final bool stateFlipper;
+  @override // Required to fire stateChange when .copyWith is called
+  final Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption;
 
   @override
   String toString() {
-    return 'RegistrationState.insertPassword(emailAddress: $emailAddress, password: $password, confirmationPassword: $confirmationPassword, stateFlipper: $stateFlipper)';
+    return 'RegistrationState.insertPassword(emailAddress: $emailAddress, password: $password, confirmationPassword: $confirmationPassword, stateFlipper: $stateFlipper, valueFailureOrValidityOption: $valueFailureOrValidityOption)';
   }
 
   @override
@@ -2581,7 +2696,10 @@ class _$InsertPassword implements InsertPassword {
             const DeepCollectionEquality()
                 .equals(other.confirmationPassword, confirmationPassword) &&
             const DeepCollectionEquality()
-                .equals(other.stateFlipper, stateFlipper));
+                .equals(other.stateFlipper, stateFlipper) &&
+            const DeepCollectionEquality().equals(
+                other.valueFailureOrValidityOption,
+                valueFailureOrValidityOption));
   }
 
   @override
@@ -2590,7 +2708,8 @@ class _$InsertPassword implements InsertPassword {
       const DeepCollectionEquality().hash(emailAddress),
       const DeepCollectionEquality().hash(password),
       const DeepCollectionEquality().hash(confirmationPassword),
-      const DeepCollectionEquality().hash(stateFlipper));
+      const DeepCollectionEquality().hash(stateFlipper),
+      const DeepCollectionEquality().hash(valueFailureOrValidityOption));
 
   @JsonKey(ignore: true)
   @override
@@ -2603,11 +2722,19 @@ class _$InsertPassword implements InsertPassword {
     required TResult Function(EmailAddress emailAddress, Password password,
             Password confirmationPassword, bool stateFlipper)
         initial,
-    required TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)
+    required TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)
         insertEmail,
-    required TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)
+    required TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)
         insertPassword,
     required TResult Function(
             EmailAddress emailAddress,
@@ -2615,11 +2742,12 @@ class _$InsertPassword implements InsertPassword {
             Password confirmationPassword,
             bool isSubmitting,
             bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)
         insertUsername,
   }) {
-    return insertPassword(
-        emailAddress, password, confirmationPassword, stateFlipper);
+    return insertPassword(emailAddress, password, confirmationPassword,
+        stateFlipper, valueFailureOrValidityOption);
   }
 
   @override
@@ -2628,11 +2756,19 @@ class _$InsertPassword implements InsertPassword {
     TResult Function(EmailAddress emailAddress, Password password,
             Password confirmationPassword, bool stateFlipper)?
         initial,
-    TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)?
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)?
         insertEmail,
-    TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)?
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)?
         insertPassword,
     TResult Function(
             EmailAddress emailAddress,
@@ -2640,11 +2776,12 @@ class _$InsertPassword implements InsertPassword {
             Password confirmationPassword,
             bool isSubmitting,
             bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
         insertUsername,
   }) {
-    return insertPassword?.call(
-        emailAddress, password, confirmationPassword, stateFlipper);
+    return insertPassword?.call(emailAddress, password, confirmationPassword,
+        stateFlipper, valueFailureOrValidityOption);
   }
 
   @override
@@ -2653,11 +2790,19 @@ class _$InsertPassword implements InsertPassword {
     TResult Function(EmailAddress emailAddress, Password password,
             Password confirmationPassword, bool stateFlipper)?
         initial,
-    TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)?
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)?
         insertEmail,
-    TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)?
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)?
         insertPassword,
     TResult Function(
             EmailAddress emailAddress,
@@ -2665,13 +2810,14 @@ class _$InsertPassword implements InsertPassword {
             Password confirmationPassword,
             bool isSubmitting,
             bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
         insertUsername,
     required TResult orElse(),
   }) {
     if (insertPassword != null) {
-      return insertPassword(
-          emailAddress, password, confirmationPassword, stateFlipper);
+      return insertPassword(emailAddress, password, confirmationPassword,
+          stateFlipper, valueFailureOrValidityOption);
     }
     return orElse();
   }
@@ -2719,7 +2865,9 @@ abstract class InsertPassword implements RegistrationState {
       {required EmailAddress emailAddress,
       required Password password,
       required Password confirmationPassword,
-      required bool stateFlipper}) = _$InsertPassword;
+      required bool stateFlipper,
+      required Option<Either<ValueFailure, Unit>>
+          valueFailureOrValidityOption}) = _$InsertPassword;
 
   @override
   EmailAddress get emailAddress;
@@ -2728,7 +2876,9 @@ abstract class InsertPassword implements RegistrationState {
   @override
   Password get confirmationPassword;
   @override
-  bool get stateFlipper;
+  bool
+      get stateFlipper; // Required to fire stateChange when .copyWith is called
+  Option<Either<ValueFailure, Unit>> get valueFailureOrValidityOption;
   @override
   @JsonKey(ignore: true)
   $InsertPasswordCopyWith<InsertPassword> get copyWith =>
@@ -2748,6 +2898,7 @@ abstract class $InsertUsernameCopyWith<$Res>
       Password confirmationPassword,
       bool isSubmitting,
       bool stateFlipper,
+      Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption,
       Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption});
 }
 
@@ -2769,6 +2920,7 @@ class _$InsertUsernameCopyWithImpl<$Res>
     Object? confirmationPassword = freezed,
     Object? isSubmitting = freezed,
     Object? stateFlipper = freezed,
+    Object? valueFailureOrValidityOption = freezed,
     Object? authFailureOrSuccessOption = freezed,
   }) {
     return _then(InsertUsername(
@@ -2792,6 +2944,10 @@ class _$InsertUsernameCopyWithImpl<$Res>
           ? _value.stateFlipper
           : stateFlipper // ignore: cast_nullable_to_non_nullable
               as bool,
+      valueFailureOrValidityOption: valueFailureOrValidityOption == freezed
+          ? _value.valueFailureOrValidityOption
+          : valueFailureOrValidityOption // ignore: cast_nullable_to_non_nullable
+              as Option<Either<ValueFailure, Unit>>,
       authFailureOrSuccessOption: authFailureOrSuccessOption == freezed
           ? _value.authFailureOrSuccessOption
           : authFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
@@ -2809,6 +2965,7 @@ class _$InsertUsername implements InsertUsername {
       required this.confirmationPassword,
       required this.isSubmitting,
       required this.stateFlipper,
+      required this.valueFailureOrValidityOption,
       required this.authFailureOrSuccessOption});
 
   @override
@@ -2821,12 +2978,14 @@ class _$InsertUsername implements InsertUsername {
   final bool isSubmitting;
   @override
   final bool stateFlipper;
-  @override // Required to fire stateChange when .copyWith is called
+  @override // Required to fire stateChange when .copyWith is called#
+  final Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption;
+  @override
   final Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption;
 
   @override
   String toString() {
-    return 'RegistrationState.insertUsername(emailAddress: $emailAddress, password: $password, confirmationPassword: $confirmationPassword, isSubmitting: $isSubmitting, stateFlipper: $stateFlipper, authFailureOrSuccessOption: $authFailureOrSuccessOption)';
+    return 'RegistrationState.insertUsername(emailAddress: $emailAddress, password: $password, confirmationPassword: $confirmationPassword, isSubmitting: $isSubmitting, stateFlipper: $stateFlipper, valueFailureOrValidityOption: $valueFailureOrValidityOption, authFailureOrSuccessOption: $authFailureOrSuccessOption)';
   }
 
   @override
@@ -2844,6 +3003,9 @@ class _$InsertUsername implements InsertUsername {
             const DeepCollectionEquality()
                 .equals(other.stateFlipper, stateFlipper) &&
             const DeepCollectionEquality().equals(
+                other.valueFailureOrValidityOption,
+                valueFailureOrValidityOption) &&
+            const DeepCollectionEquality().equals(
                 other.authFailureOrSuccessOption, authFailureOrSuccessOption));
   }
 
@@ -2855,6 +3017,7 @@ class _$InsertUsername implements InsertUsername {
       const DeepCollectionEquality().hash(confirmationPassword),
       const DeepCollectionEquality().hash(isSubmitting),
       const DeepCollectionEquality().hash(stateFlipper),
+      const DeepCollectionEquality().hash(valueFailureOrValidityOption),
       const DeepCollectionEquality().hash(authFailureOrSuccessOption));
 
   @JsonKey(ignore: true)
@@ -2868,11 +3031,19 @@ class _$InsertUsername implements InsertUsername {
     required TResult Function(EmailAddress emailAddress, Password password,
             Password confirmationPassword, bool stateFlipper)
         initial,
-    required TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)
+    required TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)
         insertEmail,
-    required TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)
+    required TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)
         insertPassword,
     required TResult Function(
             EmailAddress emailAddress,
@@ -2880,11 +3051,18 @@ class _$InsertUsername implements InsertUsername {
             Password confirmationPassword,
             bool isSubmitting,
             bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)
         insertUsername,
   }) {
-    return insertUsername(emailAddress, password, confirmationPassword,
-        isSubmitting, stateFlipper, authFailureOrSuccessOption);
+    return insertUsername(
+        emailAddress,
+        password,
+        confirmationPassword,
+        isSubmitting,
+        stateFlipper,
+        valueFailureOrValidityOption,
+        authFailureOrSuccessOption);
   }
 
   @override
@@ -2893,11 +3071,19 @@ class _$InsertUsername implements InsertUsername {
     TResult Function(EmailAddress emailAddress, Password password,
             Password confirmationPassword, bool stateFlipper)?
         initial,
-    TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)?
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)?
         insertEmail,
-    TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)?
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)?
         insertPassword,
     TResult Function(
             EmailAddress emailAddress,
@@ -2905,11 +3091,18 @@ class _$InsertUsername implements InsertUsername {
             Password confirmationPassword,
             bool isSubmitting,
             bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
         insertUsername,
   }) {
-    return insertUsername?.call(emailAddress, password, confirmationPassword,
-        isSubmitting, stateFlipper, authFailureOrSuccessOption);
+    return insertUsername?.call(
+        emailAddress,
+        password,
+        confirmationPassword,
+        isSubmitting,
+        stateFlipper,
+        valueFailureOrValidityOption,
+        authFailureOrSuccessOption);
   }
 
   @override
@@ -2918,11 +3111,19 @@ class _$InsertUsername implements InsertUsername {
     TResult Function(EmailAddress emailAddress, Password password,
             Password confirmationPassword, bool stateFlipper)?
         initial,
-    TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)?
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)?
         insertEmail,
-    TResult Function(EmailAddress emailAddress, Password password,
-            Password confirmationPassword, bool stateFlipper)?
+    TResult Function(
+            EmailAddress emailAddress,
+            Password password,
+            Password confirmationPassword,
+            bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption)?
         insertPassword,
     TResult Function(
             EmailAddress emailAddress,
@@ -2930,13 +3131,20 @@ class _$InsertUsername implements InsertUsername {
             Password confirmationPassword,
             bool isSubmitting,
             bool stateFlipper,
+            Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
         insertUsername,
     required TResult orElse(),
   }) {
     if (insertUsername != null) {
-      return insertUsername(emailAddress, password, confirmationPassword,
-          isSubmitting, stateFlipper, authFailureOrSuccessOption);
+      return insertUsername(
+          emailAddress,
+          password,
+          confirmationPassword,
+          isSubmitting,
+          stateFlipper,
+          valueFailureOrValidityOption,
+          authFailureOrSuccessOption);
     }
     return orElse();
   }
@@ -2986,6 +3194,7 @@ abstract class InsertUsername implements RegistrationState {
       required Password confirmationPassword,
       required bool isSubmitting,
       required bool stateFlipper,
+      required Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption,
       required Option<Either<AuthFailure, Unit>>
           authFailureOrSuccessOption}) = _$InsertUsername;
 
@@ -2998,7 +3207,8 @@ abstract class InsertUsername implements RegistrationState {
   bool get isSubmitting;
   @override
   bool
-      get stateFlipper; // Required to fire stateChange when .copyWith is called
+      get stateFlipper; // Required to fire stateChange when .copyWith is called#
+  Option<Either<ValueFailure, Unit>> get valueFailureOrValidityOption;
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption;
   @override
   @JsonKey(ignore: true)

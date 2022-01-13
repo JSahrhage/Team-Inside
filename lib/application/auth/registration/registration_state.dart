@@ -16,6 +16,7 @@ class RegistrationState with _$RegistrationState {
     required Password confirmationPassword,
     required bool
         stateFlipper, // Required to fire stateChange when .copyWith is called
+    required Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption,
   }) = InsertEmail;
 
   const factory RegistrationState.insertPassword({
@@ -24,6 +25,7 @@ class RegistrationState with _$RegistrationState {
     required Password confirmationPassword,
     required bool
         stateFlipper, // Required to fire stateChange when .copyWith is called
+    required Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption,
   }) = InsertPassword;
 
   const factory RegistrationState.insertUsername({
@@ -32,7 +34,8 @@ class RegistrationState with _$RegistrationState {
     required Password confirmationPassword,
     required bool isSubmitting,
     required bool
-        stateFlipper, // Required to fire stateChange when .copyWith is called
+        stateFlipper, // Required to fire stateChange when .copyWith is called#
+    required Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption,
     required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption,
   }) = InsertUsername;
 }

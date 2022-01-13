@@ -9,7 +9,7 @@ part 'user_dto.freezed.dart';
 part 'user_dto.g.dart';
 
 @freezed
-abstract class UserDTO implements _$UserDTO {
+class UserDTO with _$UserDTO {
   const factory UserDTO({
     required String id,
     required String username,
