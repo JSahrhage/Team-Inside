@@ -1,30 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team_inside/application/auth/registration/registration_bloc.dart';
+import 'package:team_inside/presentation/auth/registration/registration_insert_email/registration_insert_email_form.dart';
+import 'package:team_inside/presentation/auth/registration/registration_insert_password/registration_insert_password_form.dart';
+import 'package:team_inside/presentation/auth/registration/registration_insert_username/registration_insert_username_form.dart';
 import 'package:team_inside/presentation/splash/splash_page.dart';
 
 class RegistrationFormHandler extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    const double _fieldHeight = 48;
     return BlocBuilder<RegistrationBloc, RegistrationState>(
       builder: (context, state) {
-        switch (RegistrationState) {
-          case Initial:
-            return SplashPage();
-          case InsertEmail:
-            // do something else
-            break;
-          case InsertPassword:
-            // do something else
-            break;
-          case InsertUsername:
-            // do something else
-            break;
-          default:
-            return SplashPage();
+        if (state is InsertEmail) {
+          return RegistrationInsertEmailForm();
+        } else if (state is InsertPassword) {
+          return RegistrationInsertPasswordForm();
+        } else if (state is InsertUsername) {
+          return RegistrationInsertUsernameForm();
+        } else {
+          return SplashPage();
         }
-        return Container();
       },
     );
   }

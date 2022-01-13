@@ -4,15 +4,14 @@ import 'package:team_inside/application/auth/sign_in/sign_in_bloc.dart';
 import 'package:team_inside/presentation/auth/sign_in/widgets/sign_in_email_text_form_field.dart';
 import 'package:team_inside/presentation/auth/sign_in/widgets/sign_in_failure_alert_dialog.dart';
 import 'package:team_inside/presentation/auth/sign_in/widgets/sign_in_logo.dart';
-import 'package:team_inside/presentation/auth/sign_in/widgets/sign_in_password_forgotten_rich_text.dart';
+import 'package:team_inside/presentation/auth/sign_in/widgets/sign_in_password_forgotten_text.dart';
 import 'package:team_inside/presentation/auth/sign_in/widgets/sign_in_password_text_form_field.dart';
 import 'package:team_inside/presentation/auth/sign_in/widgets/sign_in_register_text_button.dart';
-import 'package:team_inside/presentation/auth/sign_in/widgets/sign_in_sign_in_elevated_button.dart';
+import 'package:team_inside/presentation/auth/sign_in/widgets/sign_in_sign_in_button.dart';
 
 class SignInForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    const double _fieldHeight = 48;
     return BlocConsumer<SignInBloc, SignInState>(
       listener: (context, state) {
         state.authFailureOrSuccessOption.fold(
@@ -38,21 +37,19 @@ class SignInForm extends StatelessWidget {
             const SizedBox(height: 64),
             const SignInLogo(),
             const SizedBox(height: 32),
-            const SignInEmailTextFormField(fieldHeight: _fieldHeight),
+            const SignInEmailTextFormField(),
             const SizedBox(height: 8),
             SignInPasswordTextFormField(
-              fieldHeight: _fieldHeight,
               isPasswordVisible: state.isPasswordVisible,
             ),
             const SizedBox(height: 16),
-            const SignInPasswordForgottenRichText(),
+            const SignInPasswordForgottenText(),
             const SizedBox(height: 24),
-            SignInSignInElevatedButton(
-              fieldHeight: _fieldHeight,
+            SignInSignInButton(
               isSubmitting: state.isSubmitting,
             ),
             const SizedBox(height: 24),
-            const SignInRegisterTextButton(fieldHeight: _fieldHeight),
+            const SignInRegisterTextButton(),
           ],
         );
       },

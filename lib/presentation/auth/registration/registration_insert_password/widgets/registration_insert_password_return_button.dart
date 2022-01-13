@@ -1,9 +1,9 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:team_inside/presentation/routes/router.gr.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:team_inside/application/auth/registration/registration_bloc.dart';
 
-class PasswordResetReturnIconButton extends StatelessWidget {
-  const PasswordResetReturnIconButton({
+class RegistrationInsertPasswordReturnButton extends StatelessWidget {
+  const RegistrationInsertPasswordReturnButton({
     Key? key,
     required this.height,
   }) : super(key: key);
@@ -24,9 +24,10 @@ class PasswordResetReturnIconButton extends StatelessWidget {
               color: Theme.of(context).colorScheme.onBackground,
             ),
             onPressed: () {
-              context.router.replace(
-                const SignInPageRoute(),
-              );
+              context.read<RegistrationBloc>().add(
+                    const RegistrationEvent
+                        .returnFromPasswordInsertionPagePressed(),
+                  );
             },
           ),
         ),

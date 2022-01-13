@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:team_inside/application/localization/app_localizations.dart';
 import 'package:team_inside/presentation/routes/router.gr.dart';
 
-class SignInPasswordForgottenRichText extends StatelessWidget {
-  const SignInPasswordForgottenRichText({Key? key}) : super(key: key);
+class SignInPasswordForgottenText extends StatelessWidget {
+  const SignInPasswordForgottenText({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

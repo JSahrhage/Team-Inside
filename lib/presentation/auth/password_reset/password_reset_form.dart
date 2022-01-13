@@ -5,13 +5,12 @@ import 'package:team_inside/presentation/auth/password_reset/widgets/password_re
 import 'package:team_inside/presentation/auth/password_reset/widgets/password_reset_failure_alert_dialog.dart';
 import 'package:team_inside/presentation/auth/password_reset/widgets/password_reset_logo.dart';
 import 'package:team_inside/presentation/auth/password_reset/widgets/password_reset_reset_password_elevated_button.dart';
-import 'package:team_inside/presentation/auth/password_reset/widgets/password_reset_return_icon_button.dart';
+import 'package:team_inside/presentation/auth/password_reset/widgets/password_reset_return_button.dart';
 import 'package:team_inside/presentation/auth/password_reset/widgets/password_reset_success_alert_dialog.dart';
 
 class PasswordResetForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    const double _fieldHeight = 48;
     return BlocConsumer<PasswordResetBloc, PasswordResetState>(
       listener: (context, state) {
         state.authFailureOrSuccessOption.fold(
@@ -39,13 +38,12 @@ class PasswordResetForm extends StatelessWidget {
       builder: (context, state) {
         return ListView(
           children: [
-            const PasswordResetReturnIconButton(height: 64),
+            const PasswordResetReturnButton(height: 64),
             const PasswordResetLogo(),
             const SizedBox(height: 32),
-            const PasswordResetEmailTextFormField(fieldHeight: _fieldHeight),
+            const PasswordResetEmailTextFormField(),
             const SizedBox(height: 16),
             PasswordResetResetPasswordElevatedButton(
-              fieldHeight: _fieldHeight,
               isSubmitting: state.isSubmitting,
             )
           ],

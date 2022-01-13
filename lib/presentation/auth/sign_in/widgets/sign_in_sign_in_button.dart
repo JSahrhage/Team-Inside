@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:team_inside/application/auth/password_reset/password_reset_bloc.dart';
+import 'package:team_inside/application/auth/sign_in/sign_in_bloc.dart';
 import 'package:team_inside/presentation/core/widgets/core_elevated_button.dart';
 import 'package:team_inside/presentation/core/widgets/core_sized_padding_box.dart';
 
-class PasswordResetResetPasswordElevatedButton extends StatelessWidget {
-  const PasswordResetResetPasswordElevatedButton({
+class SignInSignInButton extends StatelessWidget {
+  const SignInSignInButton({
     Key? key,
     required this.isSubmitting,
   }) : super(key: key);
@@ -17,11 +17,12 @@ class PasswordResetResetPasswordElevatedButton extends StatelessWidget {
     return CoreSizedPaddingBox(
       child: CoreElevatedButton(
         callback: () {
-          context.read<PasswordResetBloc>().add(
-                const PasswordResetEvent.sendPasswordResetEmailPressed(),
+          context.read<SignInBloc>().add(
+                const SignInEvent.signInWithEmailAndPasswordPressed(),
               );
         },
-        text: 'send_reset_email',
+        text: 'sign_in',
+        isSubmitting: isSubmitting,
       ),
     );
   }

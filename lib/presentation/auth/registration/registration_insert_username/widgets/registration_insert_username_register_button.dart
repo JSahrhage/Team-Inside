@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:team_inside/application/auth/sign_in/sign_in_bloc.dart';
+import 'package:team_inside/application/auth/registration/registration_bloc.dart';
 import 'package:team_inside/application/localization/app_localizations.dart';
 
-class SignInSignInElevatedButton extends StatelessWidget {
-  const SignInSignInElevatedButton({
+class RegistrationInsertUsernameRegisterButton extends StatelessWidget {
+  const RegistrationInsertUsernameRegisterButton({
     Key? key,
     required this.fieldHeight,
     required this.isSubmitting,
@@ -21,15 +21,15 @@ class SignInSignInElevatedButton extends StatelessWidget {
         height: fieldHeight,
         child: ElevatedButton(
           onPressed: () {
-            context.read<SignInBloc>().add(
-                  const SignInEvent.signInWithEmailAndPasswordPressed(),
+            context.read<RegistrationBloc>().add(
+                  const RegistrationEvent.registerPressed(),
                 );
           },
           child: isSubmitting
               ? const CircularProgressIndicator()
               : Text(
                   AppLocalizations.of(context)!.translate(
-                    'sign_in',
+                    'register',
                   )!,
                 ),
         ),

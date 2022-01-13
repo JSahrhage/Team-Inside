@@ -4,9 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team_inside/application/auth/auth_bloc.dart';
 import 'package:team_inside/application/localization/app_localizations_setup.dart';
 import 'package:team_inside/application/localization/locale_cubit.dart';
-import 'package:team_inside/application/theme/theme_cubit.dart';
 import 'package:team_inside/injection.dart';
 import 'package:team_inside/presentation/routes/router.gr.dart' as app_router;
+import 'package:team_inside/presentation/theme/theme_cubit.dart';
 
 class AppWidget extends StatelessWidget {
   @override
