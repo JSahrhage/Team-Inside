@@ -23,6 +23,7 @@ void $initGetIt(
   g.registerLazySingleton<IAuthFacade>(
     () => FirebaseAuthFacade(
       g<FirebaseAuth>(),
+      g<FirebaseFirestore>(),
     ),
   );
   g.registerFactory<AuthBloc>(

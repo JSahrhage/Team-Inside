@@ -24,11 +24,5 @@ Either<ValueFailure<String>, String> validatePassword(String input) {
 
 // AuthValidator
 Either<ValueFailure<String>, String> validateUsername(String input) {
-  const _usernameRegex =
-      r"""/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u""";
-  if (RegExp(_usernameRegex).hasMatch(input)) {
-    return right(input);
-  } else {
-    return left(ValueFailure.invalidUsername(failedValue: input));
-  }
+  return right(input);
 }
