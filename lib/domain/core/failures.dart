@@ -13,6 +13,10 @@ class ValueFailure<T> with _$ValueFailure<T> {
     required T failedValue,
   }) = UnsecurePassword<T>;
   // AuthFailure
+  const factory ValueFailure.notMatchingPasswords({
+    required T failedValue,
+  }) = NotMatchingPasswords<T>;
+  // AuthFailure
   const factory ValueFailure.invalidUsername({
     required T failedValue,
   }) = InvalidUsername<T>;

@@ -9,7 +9,6 @@ class RegistrationState with _$RegistrationState {
     required Username username,
     required bool isPasswordVisible,
     required bool isConfirmationPasswordVisible,
-    required bool isValidationRequested,
     required bool
         stateFlipper, // Required to fire stateChange when .copyWith is called
     required Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption,
@@ -22,7 +21,6 @@ class RegistrationState with _$RegistrationState {
     required Username username,
     required bool isPasswordVisible,
     required bool isConfirmationPasswordVisible,
-    required bool isValidationRequested,
     required bool
         stateFlipper, // Required to fire stateChange when .copyWith is called
     required Option<Either<ValueFailure, Unit>> valueFailureOrValidityOption,
@@ -35,7 +33,6 @@ class RegistrationState with _$RegistrationState {
     required Username username,
     required bool isPasswordVisible,
     required bool isConfirmationPasswordVisible,
-    required bool isValidationRequested,
     required bool isSubmitting,
     required bool
         stateFlipper, // Required to fire stateChange when .copyWith is called#

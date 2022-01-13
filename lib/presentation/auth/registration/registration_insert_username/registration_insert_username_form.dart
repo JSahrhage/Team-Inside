@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team_inside/application/auth/registration/registration_bloc.dart';
+import 'package:team_inside/presentation/auth/registration/registration_insert_username/widgets/registration_insert_username_auth_failure_alert_dialog.dart';
 import 'package:team_inside/presentation/auth/registration/registration_insert_username/widgets/registration_insert_username_logo.dart';
 import 'package:team_inside/presentation/auth/registration/registration_insert_username/widgets/registration_insert_username_register_button.dart';
 import 'package:team_inside/presentation/auth/registration/registration_insert_username/widgets/registration_insert_username_return_button.dart';
+import 'package:team_inside/presentation/auth/registration/registration_insert_username/widgets/registration_insert_username_value_failure_alert_dialog.dart';
 
 class RegistrationInsertUsernameForm extends StatelessWidget {
   @override
@@ -14,17 +16,31 @@ class RegistrationInsertUsernameForm extends StatelessWidget {
               () {},
               (either) => either.fold(
                 (failure) {
-                  // TODO: Show FailureDialog
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return RegistrationInsertUsernameValueFailureAlertDialog(
+                        failure: failure,
+                      );
+                    },
+                  );
                 },
                 (_) {
                   state.authFailureOrSuccessOption.fold(
                     () {},
                     (either) => either.fold(
                       (failure) => {
-                        // TODO: Show FailureDialog
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return RegistrationInsertUsernameAuthFailureAlertDialog(
+                              failure: failure,
+                            );
+                          },
+                        ),
                       },
                       (_) => {
-                        // TODO: Navigate
+                        // TODO: Register and Navigate
                       },
                     ),
                   );

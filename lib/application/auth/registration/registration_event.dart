@@ -2,16 +2,6 @@ part of 'registration_bloc.dart';
 
 @freezed
 class RegistrationEvent with _$RegistrationEvent {
-  // ValueChanging
-  const factory RegistrationEvent.emailChanged(String email) = EmailChanged;
-  const factory RegistrationEvent.passwordChanged(String password) =
-      PasswordChanged;
-  const factory RegistrationEvent.confirmationPasswordChanged(
-    String confirmationPassword,
-  ) = ConfirmationPasswordChanged;
-  const factory RegistrationEvent.usernameChanged(
-    String username,
-  ) = UsernameChanged;
   // PasswordVisibilityChanging
   const factory RegistrationEvent.passwordVisibilityIconPressed() =
       PasswordVisibilityIconPressed;
@@ -23,11 +13,15 @@ class RegistrationEvent with _$RegistrationEvent {
   const factory RegistrationEvent.returnFromUsernameInsertionPagePressed() =
       ReturnFromUsernameInsertationPagePressed;
   // ProceedingPressed
-  const factory RegistrationEvent.proceedFromEmailInsertionPagePressed() =
-      ProceedFromEmailInsertionPagePressed;
-  const factory RegistrationEvent.proceedFromPasswordInsertionPagePressed() =
-      ProceedFromPasswordInsertionPagePressed;
-  const factory RegistrationEvent.registerPressed() = RegisterPressed;
+  const factory RegistrationEvent.proceedFromEmailInsertionPagePressed(
+    String email,
+  ) = ProceedFromEmailInsertionPagePressed;
+  const factory RegistrationEvent.proceedFromPasswordInsertionPagePressed(
+    String password,
+    String confirmationPassword,
+  ) = ProceedFromPasswordInsertionPagePressed;
+  const factory RegistrationEvent.registerPressed(String username) =
+      RegisterPressed;
   // ProceedingValidated
   const factory RegistrationEvent.emailInsertionProceedingValidated() =
       EmailInsertionProceedingValidated;
