@@ -12,41 +12,41 @@ class RegistrationInsertUsernameForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<RegistrationBloc, RegistrationState>(
       listener: (context, state) {
-        (state as InsertUsername).valueFailureOrValidityOption.fold(
-              () {},
-              (either) => either.fold(
-                (failure) {
-                  showDialog(
-                    context: context,
-                    builder: (BuildContext context) {
-                      return RegistrationInsertUsernameValueFailureAlertDialog(
-                        failure: failure,
-                      );
-                    },
-                  );
-                },
-                (_) {
-                  state.authFailureOrSuccessOption.fold(
-                    () {},
-                    (either) => either.fold(
-                      (failure) => {
-                        showDialog(
-                          context: context,
-                          builder: (BuildContext context) {
-                            return RegistrationInsertUsernameAuthFailureAlertDialog(
-                              failure: failure,
-                            );
-                          },
-                        ),
-                      },
-                      (_) => {
-                        // TODO: Register and Navigate
-                      },
-                    ),
-                  );
-                },
-              ),
+        if (!state.isValidationRequested) {
+          return;
+        }
+        state.valueFailureOrValidityOption.fold(
+          (failure) {
+            showDialog(
+              context: context,
+              builder: (BuildContext context) {
+                return RegistrationInsertUsernameValueFailureAlertDialog(
+                  failure: failure,
+                );
+              },
             );
+          },
+          (_) {
+            (state as InsertUsername).authFailureOrSuccessOption.fold(
+                  () {},
+                  (either) => either.fold(
+                    (failure) => {
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return RegistrationInsertUsernameAuthFailureAlertDialog(
+                            failure: failure,
+                          );
+                        },
+                      ),
+                    },
+                    (_) => {
+                      // TODO: Register and Navigate
+                    },
+                  ),
+                );
+          },
+        );
       },
       builder: (context, state) {
         return ListView(

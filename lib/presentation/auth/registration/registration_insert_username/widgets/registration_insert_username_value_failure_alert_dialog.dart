@@ -17,6 +17,7 @@ class RegistrationInsertUsernameValueFailureAlertDialog
       invalidEmail: (_) => 'invalid_email',
       unsecurePassword: (_) => 'unsecure_password',
       invalidUsername: (_) => 'invalid_username',
+      notMatchingPasswords: (_) => 'not_matching_passwords',
     );
 
     return CoreFailureAlertDialog(text: failureStr);

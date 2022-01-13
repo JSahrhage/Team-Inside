@@ -13,8 +13,7 @@ class RegistrationInsertPasswordContinueButton extends StatelessWidget {
       child: CoreElevatedButton(
         callback: () {
           context.read<RegistrationBloc>().add(
-                const RegistrationEvent
-                    .proceedFromPasswordInsertionPagePressed(),
+                const RegistrationEvent.requestValidation(),
               );
         },
         text: 'continue',

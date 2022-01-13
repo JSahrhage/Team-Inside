@@ -13,7 +13,7 @@ class RegistrationInsertEmailContinueButton extends StatelessWidget {
       child: CoreElevatedButton(
         callback: () {
           context.read<RegistrationBloc>().add(
-                const RegistrationEvent.proceedFromEmailInsertionPagePressed(),
+                const RegistrationEvent.requestValidation(),
               );
         },
         text: 'continue',

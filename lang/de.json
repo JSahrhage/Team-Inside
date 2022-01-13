@@ -13,6 +13,7 @@
     "invalid_email": "Ungültige E-Mail-Adresse",
     "unsecure_password": "Unsicheres Passwort",
     "invalid_username": "Ungültiger Anzeigename",
+    "not_matching_passwords": "Die Passwörter stimmen nicht überein.",
     "user_not_found": "E-Mail-Adresse ist nicht registiert.",
     "send_reset_email": "Sende E-Mail zur Zurücksetzung",
     "reset_email_send": "E-Mail zur Zurücksetzung wurde versendet.",

@@ -13,6 +13,7 @@
     "invalid_email": "Invalid e-mail",
     "unsecure_password": "Unsecure password",
     "invalid_username": "Invalid username",
+    "not_matching_passwords": "Passwords do not match.",
     "user_not_found": "User not found.",
     "send_reset_email": "Send reset e-mail",
     "reset_email_send": "Reset e-mail was send.",

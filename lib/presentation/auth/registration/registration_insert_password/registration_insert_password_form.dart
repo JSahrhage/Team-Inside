@@ -10,31 +10,28 @@ class RegistrationInsertPasswordForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<RegistrationBloc, RegistrationState>(
-      listenWhen: (previous, current) {
-        return current.isValidationRequested;
-      },
       listener: (context, state) {
-        (state as InsertPassword).valueFailureOrValidityOption.fold(
-              () {},
-              (either) => either.fold(
-                (failure) {
-                  showDialog(
-                    context: context,
-                    builder: (BuildContext context) {
-                      return RegistrationInsertPasswordFailureAlertDialog(
-                        failure: failure,
-                      );
-                    },
-                  );
-                },
-                (_) {
-                  context.read<RegistrationBloc>().add(
-                        const RegistrationEvent
-                            .passwordInsertionProceedingValidated(),
-                      );
-                },
-              ),
+        if (!state.isValidationRequested) {
+          return;
+        }
+        state.valueFailureOrValidityOption.fold(
+          (failure) {
+            showDialog(
+              context: context,
+              builder: (BuildContext context) {
+                return RegistrationInsertPasswordFailureAlertDialog(
+                  failure: failure,
+                );
+              },
             );
+          },
+          (_) {
+            context.read<RegistrationBloc>().add(
+                  const RegistrationEvent
+                      .passwordInsertionProceedingValidated(),
+                );
+          },
+        );
       },
       builder: (context, state) {
         return ListView(

@@ -23,14 +23,63 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
             username: Username(''),
             isPasswordVisible: false,
             isConfirmationPasswordVisible: false,
+            isValidationRequested: true,
             stateFlipper: false,
-            valueFailureOrValidityOption: some(
-              left(
-                const ValueFailure.invalidEmail(failedValue: 'Initial'),
-              ),
+            valueFailureOrValidityOption: left(
+              const ValueFailure.invalidEmail(failedValue: 'Initial'),
             ),
           ),
         ) {
+    // ValueChanging
+    on<EmailChanged>(
+      (event, emit) {
+        emit(
+          state.copyWith(
+            emailAddress: EmailAddress(event.email),
+            isValidationRequested: false,
+            valueFailureOrValidityOption:
+                EmailAddress(event.email).failureOrUnit,
+          ),
+        );
+      },
+    );
+    on<PasswordChanged>(
+      (event, emit) {
+        emit(
+          state.copyWith(
+            password: Password(event.password),
+            isValidationRequested: false,
+            valueFailureOrValidityOption:
+                Password(event.password).failureOrUnit,
+          ),
+        );
+      },
+    );
+    on<ConfirmationPasswordChanged>(
+      (event, emit) {
+        emit(
+          state.copyWith(
+            confirmationPassword: Password(event.confirmationPassword),
+            isValidationRequested: false,
+            valueFailureOrValidityOption:
+                Password(event.confirmationPassword).failureOrUnit,
+          ),
+        );
+      },
+    );
+    on<UsernameChanged>(
+      (event, emit) {
+        emit(
+          (state as InsertUsername).copyWith(
+            username: Username(event.username),
+            isValidationRequested: false,
+            valueFailureOrValidityOption:
+                Username(event.username).failureOrUnit,
+            authFailureOrSuccessOption: none(),
+          ),
+        );
+      },
+    );
     // PasswordVisibilityChanging
     on<PasswordVisibilityIconPressed>(
       (event, emit) {
@@ -61,8 +110,11 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
             username: state.username,
             isPasswordVisible: state.isPasswordVisible,
             isConfirmationPasswordVisible: state.isConfirmationPasswordVisible,
+            isValidationRequested: false,
             stateFlipper: false,
-            valueFailureOrValidityOption: none(),
+            valueFailureOrValidityOption: left(
+              const ValueFailure.invalidEmail(failedValue: 'Initial'),
+            ),
           ),
         );
       },
@@ -77,48 +129,23 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
             username: state.username,
             isPasswordVisible: state.isPasswordVisible,
             isConfirmationPasswordVisible: state.isConfirmationPasswordVisible,
+            isValidationRequested: false,
             stateFlipper: false,
-            valueFailureOrValidityOption: none(),
+            valueFailureOrValidityOption: left(
+              const ValueFailure.unsecurePassword(failedValue: 'Initial'),
+            ),
           ),
         );
       },
     );
-    // ProceedingPressed
-    on<ProceedFromEmailInsertionPagePressed>(
+    // RequestValidation
+    on<RequestValidation>(
       (event, emit) {
         emit(
           state.copyWith(
-            emailAddress: EmailAddress(event.email),
-            valueFailureOrValidityOption:
-                optionOf(EmailAddress(event.email).failureOrUnit),
+            isValidationRequested: true,
+            stateFlipper: !state.stateFlipper,
           ),
-        );
-      },
-    );
-    on<ProceedFromPasswordInsertionPagePressed>(
-      (event, emit) {
-        if (event.password != event.confirmationPassword) {
-          emit(
-            state.copyWith(
-              password: Password(event.password),
-              confirmationPassword: Password(event.password),
-              valueFailureOrValidityOption: some(
-                left(
-                  ValueFailure.notMatchingPasswords(
-                    failedValue:
-                        'password: ${event.password}, confirmationPassword: ${event.confirmationPassword}',
-                  ),
-                ),
-              ),
-            ),
-          );
-        }
-      },
-    );
-    on<RegisterPressed>(
-      (event, emit) {
-        emit(
-          state.copyWith(),
         );
       },
     );
@@ -133,11 +160,10 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
             username: state.username,
             isPasswordVisible: state.isPasswordVisible,
             isConfirmationPasswordVisible: state.isConfirmationPasswordVisible,
+            isValidationRequested: false,
             stateFlipper: false,
-            valueFailureOrValidityOption: some(
-              left(
-                const ValueFailure.unsecurePassword(failedValue: 'Initial'),
-              ),
+            valueFailureOrValidityOption: left(
+              const ValueFailure.unsecurePassword(failedValue: 'Initial'),
             ),
           ),
         );
@@ -153,12 +179,11 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
             username: state.username,
             isPasswordVisible: state.isPasswordVisible,
             isConfirmationPasswordVisible: state.isConfirmationPasswordVisible,
+            isValidationRequested: false,
             isSubmitting: false,
             stateFlipper: false,
-            valueFailureOrValidityOption: some(
-              left(
-                const ValueFailure.invalidUsername(failedValue: 'Initial'),
-              ),
+            valueFailureOrValidityOption: left(
+              const ValueFailure.invalidUsername(failedValue: 'Initial'),
             ),
             authFailureOrSuccessOption: none(),
           ),

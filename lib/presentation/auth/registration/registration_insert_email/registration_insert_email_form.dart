@@ -11,25 +11,25 @@ class RegistrationInsertEmailForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<RegistrationBloc, RegistrationState>(
       listener: (context, state) {
+        if (!state.isValidationRequested) {
+          return;
+        }
         state.valueFailureOrValidityOption.fold(
-          () {},
-          (either) => either.fold(
-            (failure) {
-              showDialog(
-                context: context,
-                builder: (BuildContext context) {
-                  return RegistrationInsertEmailFailureAlertDialog(
-                    failure: failure,
-                  );
-                },
-              );
-            },
-            (_) {
-              context.read<RegistrationBloc>().add(
-                    const RegistrationEvent.emailInsertionProceedingValidated(),
-                  );
-            },
-          ),
+          (failure) {
+            showDialog(
+              context: context,
+              builder: (BuildContext context) {
+                return RegistrationInsertEmailFailureAlertDialog(
+                  failure: failure,
+                );
+              },
+            );
+          },
+          (_) {
+            context.read<RegistrationBloc>().add(
+                  const RegistrationEvent.emailInsertionProceedingValidated(),
+                );
+          },
         );
       },
       builder: (context, state) {
