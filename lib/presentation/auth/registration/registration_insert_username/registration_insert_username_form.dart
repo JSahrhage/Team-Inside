@@ -8,7 +8,6 @@ import 'package:team_inside/presentation/auth/registration/registration_insert_u
 class RegistrationInsertUsernameForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    const double _fieldHeight = 48;
     return BlocConsumer<RegistrationBloc, RegistrationState>(
       listener: (context, state) {
         (state as InsertUsername).valueFailureOrValidityOption.fold(
@@ -39,7 +38,6 @@ class RegistrationInsertUsernameForm extends StatelessWidget {
             const RegistrationInsertUsernameReturnButton(height: 64),
             const RegistrationInsertUsernameLogo(),
             RegistrationInsertUsernameRegisterButton(
-              fieldHeight: _fieldHeight,
               isSubmitting: (state as InsertUsername).isSubmitting,
             ),
           ],

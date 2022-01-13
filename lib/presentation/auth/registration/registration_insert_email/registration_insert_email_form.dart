@@ -8,7 +8,6 @@ import 'package:team_inside/presentation/auth/registration/registration_insert_e
 class RegistrationInsertEmailForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    const double _fieldHeight = 48;
     return BlocConsumer<RegistrationBloc, RegistrationState>(
       listener: (context, state) {
         (state as InsertEmail).valueFailureOrValidityOption.fold(
@@ -28,7 +27,7 @@ class RegistrationInsertEmailForm extends StatelessWidget {
           children: const [
             RegistrationInsertEmailReturnButton(height: 64),
             RegistrationInsertEmailLogo(),
-            RegistrationInsertEmailContinueButton(fieldHeight: _fieldHeight),
+            RegistrationInsertEmailContinueButton(),
           ],
         );
       },

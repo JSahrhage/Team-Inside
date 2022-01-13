@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:team_inside/presentation/core/widgets/core_sized_padding_box.dart';
 import 'package:team_inside/presentation/routes/router.gr.dart';
 
 class RegistrationInsertEmailReturnButton extends StatelessWidget {
@@ -12,23 +13,20 @@ class RegistrationInsertEmailReturnButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-      child: SizedBox(
-        height: height,
-        child: Align(
-          alignment: Alignment.centerLeft,
-          child: IconButton(
-            icon: Icon(
-              Icons.arrow_back_ios,
-              color: Theme.of(context).colorScheme.onBackground,
-            ),
-            onPressed: () {
-              context.router.replace(
-                const SignInPageRoute(),
-              );
-            },
+    return CoreSizedPaddingBox(
+      height: height,
+      child: Align(
+        alignment: Alignment.centerLeft,
+        child: IconButton(
+          icon: Icon(
+            Icons.arrow_back_ios,
+            color: Theme.of(context).colorScheme.onBackground,
           ),
+          onPressed: () {
+            context.router.replace(
+              const SignInPageRoute(),
+            );
+          },
         ),
       ),
     );

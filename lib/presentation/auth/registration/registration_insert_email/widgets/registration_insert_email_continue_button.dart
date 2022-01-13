@@ -1,35 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team_inside/application/auth/registration/registration_bloc.dart';
-import 'package:team_inside/application/localization/app_localizations.dart';
+import 'package:team_inside/presentation/core/widgets/core_elevated_button.dart';
+import 'package:team_inside/presentation/core/widgets/core_sized_padding_box.dart';
 
 class RegistrationInsertEmailContinueButton extends StatelessWidget {
-  const RegistrationInsertEmailContinueButton({
-    Key? key,
-    required this.fieldHeight,
-  }) : super(key: key);
-
-  final double fieldHeight;
+  const RegistrationInsertEmailContinueButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-      child: SizedBox(
-        height: fieldHeight,
-        child: ElevatedButton(
-          onPressed: () {
-            context.read<RegistrationBloc>().add(
-                  const RegistrationEvent
-                      .proceedFromEmailInsertionPagePressed(),
-                );
-          },
-          child: Text(
-            AppLocalizations.of(context)!.translate(
-              'continue',
-            )!,
-          ),
-        ),
+    return CoreSizedPaddingBox(
+      child: CoreElevatedButton(
+        callback: () {
+          context.read<RegistrationBloc>().add(
+                const RegistrationEvent.proceedFromEmailInsertionPagePressed(),
+              );
+        },
+        text: 'continue',
       ),
     );
   }

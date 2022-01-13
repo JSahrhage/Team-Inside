@@ -8,7 +8,6 @@ import 'package:team_inside/presentation/auth/registration/registration_insert_p
 class RegistrationInsertPasswordForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    const double _fieldHeight = 48;
     return BlocConsumer<RegistrationBloc, RegistrationState>(
       listener: (context, state) {
         (state as InsertPassword).valueFailureOrValidityOption.fold(
@@ -28,7 +27,7 @@ class RegistrationInsertPasswordForm extends StatelessWidget {
           children: const [
             RegistrationInsertPasswordReturnButton(height: 64),
             RegistrationInsertPasswordLogo(),
-            RegistrationInsertPasswordContinueButton(fieldHeight: _fieldHeight),
+            RegistrationInsertPasswordContinueButton(),
           ],
         );
       },

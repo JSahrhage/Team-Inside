@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team_inside/application/auth/registration/registration_bloc.dart';
+import 'package:team_inside/presentation/core/widgets/core_return_button.dart';
+import 'package:team_inside/presentation/core/widgets/core_sized_padding_box.dart';
 
 class RegistrationInsertUsernameReturnButton extends StatelessWidget {
   const RegistrationInsertUsernameReturnButton({
@@ -12,25 +14,15 @@ class RegistrationInsertUsernameReturnButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-      child: SizedBox(
-        height: height,
-        child: Align(
-          alignment: Alignment.centerLeft,
-          child: IconButton(
-            icon: Icon(
-              Icons.arrow_back_ios,
-              color: Theme.of(context).colorScheme.onBackground,
-            ),
-            onPressed: () {
-              context.read<RegistrationBloc>().add(
-                    const RegistrationEvent
-                        .returnFromUsernameInsertionPagePressed(),
-                  );
-            },
-          ),
-        ),
+    return CoreSizedPaddingBox(
+      height: height,
+      child: CoreReturnButton(
+        callback: () {
+          context.read<RegistrationBloc>().add(
+                const RegistrationEvent
+                    .returnFromUsernameInsertionPagePressed(),
+              );
+        },
       ),
     );
   }
