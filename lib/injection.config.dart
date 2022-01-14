@@ -5,6 +5,7 @@ import 'package:team_inside/application/auth/auth_bloc.dart';
 import 'package:team_inside/application/auth/password_reset/password_reset_bloc.dart';
 import 'package:team_inside/application/auth/registration/registration_bloc.dart';
 import 'package:team_inside/application/auth/sign_in/sign_in_bloc.dart';
+import 'package:team_inside/application/teams_framework/teams_framework_bloc.dart';
 import 'package:team_inside/domain/auth/i_auth_facade.dart';
 import 'package:team_inside/infrastructure/auth/firebase_auth_facade.dart';
 import 'package:team_inside/infrastructure/core/firebase_injectable_module.dart';
@@ -43,6 +44,11 @@ void $initGetIt(
   );
   g.registerFactory<PasswordResetBloc>(
     () => PasswordResetBloc(
+      g<IAuthFacade>(),
+    ),
+  );
+  g.registerFactory<TeamsFrameworkBloc>(
+    () => TeamsFrameworkBloc(
       g<IAuthFacade>(),
     ),
   );

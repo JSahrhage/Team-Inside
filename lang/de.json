@@ -22,5 +22,6 @@
     "continue": "Weiter",
     "insert_email": "E-Mail-Adresse eingeben",
     "insert_password": "Passwort eingeben",
-    "insert_username": "Anzeigename eingeben"
+    "insert_username": "Anzeigename eingeben",
+    "sign_out": "Ausloggen"
 }

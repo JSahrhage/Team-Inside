@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:team_inside/application/teams_framework/teams_framework_bloc.dart';
+import 'package:team_inside/injection.dart';
+import 'package:team_inside/presentation/teams_framework/teams_framework_form.dart';
 
 class TeamsFrameworkPage extends StatelessWidget {
   @override
@@ -12,8 +16,9 @@ class TeamsFrameworkPage extends StatelessWidget {
       },
       child: Scaffold(
         backgroundColor: Theme.of(context).colorScheme.background,
-        body: Container(
-          color: Colors.red,
+        body: BlocProvider(
+          create: (context) => getIt<TeamsFrameworkBloc>(),
+          child: TeamsFrameworkForm(),
         ),
       ),
     );
