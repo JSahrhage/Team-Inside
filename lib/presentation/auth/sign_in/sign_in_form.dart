@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team_inside/application/auth/sign_in/sign_in_bloc.dart';
@@ -8,6 +9,7 @@ import 'package:team_inside/presentation/auth/sign_in/widgets/sign_in_password_f
 import 'package:team_inside/presentation/auth/sign_in/widgets/sign_in_password_text_form_field.dart';
 import 'package:team_inside/presentation/auth/sign_in/widgets/sign_in_register_text_button.dart';
 import 'package:team_inside/presentation/auth/sign_in/widgets/sign_in_sign_in_button.dart';
+import 'package:team_inside/presentation/routes/router.gr.dart';
 
 class SignInForm extends StatelessWidget {
   @override
@@ -26,7 +28,9 @@ class SignInForm extends StatelessWidget {
               );
             },
             (_) {
-              // TODO: Navigate
+              context.router.replace(
+                const TeamsFrameworkPageRoute(),
+              );
             },
           ),
         );

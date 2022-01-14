@@ -13,7 +13,7 @@ class SplashPage extends StatelessWidget {
           initial: (_) {},
           authenticated: (_) {
             context.router.replace(
-              const SignInPageRoute(), // TODO: Set to MainWidget
+              const TeamsFrameworkPageRoute(),
             );
           },
           unauthenticated: (_) => context.router.replace(

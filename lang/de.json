@@ -7,9 +7,11 @@
     "invalid_email_and_password_combination": "E-Mail-Adresse und Passwort stimmen nicht überein.",
     "email": "E-Mail-Adresse",
     "password": "Passwort",
+    "username": "Anzeigename",
     "password_forgotten": "Passwort vergessen?",
     "sign_in": "Anmelden",
     "register": "Registrieren",
+    "empty_value": "Kein eingetragener Wert",
     "invalid_email": "Ungültige E-Mail-Adresse",
     "unsecure_password": "Unsicheres Passwort",
     "invalid_username": "Ungültiger Anzeigename",
@@ -17,5 +19,8 @@
     "user_not_found": "E-Mail-Adresse ist nicht registiert.",
     "send_reset_email": "Sende E-Mail zur Zurücksetzung",
     "reset_email_send": "E-Mail zur Zurücksetzung wurde versendet.",
-    "continue": "Weiter"
+    "continue": "Weiter",
+    "insert_email": "E-Mail-Adresse eingeben",
+    "insert_password": "Passwort eingeben",
+    "insert_username": "Anzeigename eingeben"
 }

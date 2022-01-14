@@ -3,6 +3,7 @@ import 'package:team_inside/presentation/auth/password_reset/password_reset_page
 import 'package:team_inside/presentation/auth/registration/registration_page.dart';
 import 'package:team_inside/presentation/auth/sign_in/sign_in_page.dart';
 import 'package:team_inside/presentation/splash/splash_page.dart';
+import 'package:team_inside/presentation/teams_framework/teams_framework_page.dart';
 
 @MaterialAutoRouter(
   routes: <AutoRoute>[
@@ -10,6 +11,7 @@ import 'package:team_inside/presentation/splash/splash_page.dart';
     AutoRoute(page: SignInPage),
     AutoRoute(page: RegistrationPage),
     AutoRoute(page: PasswordResetPage),
+    AutoRoute(page: TeamsFrameworkPage),
   ],
 )
 class $Router {}

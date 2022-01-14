@@ -13,6 +13,7 @@ class RegistrationInsertPasswordFailureAlertDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final String failureStr = failure.map(
+      emptyValue: (_) => 'empty_value',
       invalidEmail: (_) => 'invalid_email',
       unsecurePassword: (_) => 'unsecure_password',
       invalidUsername: (_) => 'invalid_username',

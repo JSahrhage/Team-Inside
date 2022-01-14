@@ -7,9 +7,11 @@
     "invalid_email_and_password_combination": "Invalid e-mail and password combination.",
     "email": "E-Mail-Address",
     "password": "Password",
+    "username": "Username",
     "password_forgotten": "Password forgotten?",
     "sign_in": "Sign in",
     "register": "Register",
+    "empty_value": "Empty value",
     "invalid_email": "Invalid e-mail",
     "unsecure_password": "Unsecure password",
     "invalid_username": "Invalid username",
@@ -17,5 +19,8 @@
     "user_not_found": "User not found.",
     "send_reset_email": "Send reset e-mail",
     "reset_email_send": "Reset e-mail was send.",
-    "continue": "Continue"
+    "continue": "Continue",
+    "insert_email": "Insert E-Mail-Address",
+    "insert_password": "Insert Password",
+    "insert_username": "Insert Username"
 }

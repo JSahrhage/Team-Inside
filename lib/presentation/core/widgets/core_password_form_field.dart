@@ -7,11 +7,13 @@ class CorePasswordFormField extends StatelessWidget {
     required this.formFieldCallback,
     required this.iconButtonCallback,
     required this.isPasswordVisible,
+    this.initialValue,
   }) : super(key: key);
 
   final void Function(String) formFieldCallback;
   final VoidCallback iconButtonCallback;
   final bool isPasswordVisible;
+  final String? initialValue;
 
   @override
   Widget build(BuildContext context) {
@@ -36,6 +38,7 @@ class CorePasswordFormField extends StatelessWidget {
             ),
           ),
           onChanged: (value) => formFieldCallback(value),
+          initialValue: initialValue ?? '',
           autocorrect: false,
           obscureText: !isPasswordVisible,
         ),

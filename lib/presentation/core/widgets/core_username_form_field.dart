@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:team_inside/application/localization/app_localizations.dart';
 
-class CoreEmailFormField extends StatelessWidget {
-  const CoreEmailFormField({
+class CoreUsernameFormField extends StatelessWidget {
+  const CoreUsernameFormField({
     Key? key,
     required this.callback,
     this.initialValue,
@@ -27,7 +27,7 @@ class CoreEmailFormField extends StatelessWidget {
           fontSize: 14,
         ),
         labelText: AppLocalizations.of(context)!.translate(
-          'email',
+          'username',
         ),
       ),
       onChanged: (value) => callback(value),
