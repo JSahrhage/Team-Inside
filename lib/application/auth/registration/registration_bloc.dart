@@ -23,9 +23,8 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
             username: Username(''),
             isPasswordVisible: false,
             isConfirmationPasswordVisible: false,
-            isValidationRequested: true,
-            stateFlipper: false,
-            valueFailureOrValidityOption: left(
+            isNavigationRequested: false,
+            valueFailureOrSuccess: left(
               const ValueFailure.emptyValue(failedValue: ''),
             ),
           ),
@@ -36,9 +35,7 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
         emit(
           state.copyWith(
             emailAddress: EmailAddress(event.email),
-            isValidationRequested: false,
-            valueFailureOrValidityOption:
-                EmailAddress(event.email).failureOrUnit,
+            valueFailureOrSuccess: EmailAddress(event.email).failureOrUnit,
           ),
         );
       },
@@ -48,57 +45,46 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
         final String password = event.password;
         final String confirmationPassword =
             state.confirmationPassword.value.getOrElse(() => '');
+        Either<ValueFailure, Unit> valueFailureOrSuccess = left(
+          ValueFailure.notMatchingPasswords(
+            firstFailedValue: password,
+            secondFailedValue: confirmationPassword,
+          ),
+        );
+
         if (password == confirmationPassword) {
-          emit(
-            state.copyWith(
-              password: Password(event.password),
-              isValidationRequested: false,
-              valueFailureOrValidityOption: Password(password).failureOrUnit,
-            ),
-          );
-        } else {
-          emit(
-            state.copyWith(
-              password: Password(event.password),
-              isValidationRequested: false,
-              valueFailureOrValidityOption: left(
-                ValueFailure.notMatchingPasswords(
-                  firstFailedValue: password,
-                  secondFailedValue: confirmationPassword,
-                ),
-              ),
-            ),
-          );
+          valueFailureOrSuccess = Password(password).failureOrUnit;
         }
+
+        emit(
+          state.copyWith(
+            password: Password(event.password),
+            valueFailureOrSuccess: valueFailureOrSuccess,
+          ),
+        );
       },
     );
     on<ConfirmationPasswordChanged>(
       (event, emit) {
         final String password = state.password.value.getOrElse(() => '');
         final String confirmationPassword = event.confirmationPassword;
+        Either<ValueFailure, Unit> valueFailureOrSuccess = left(
+          ValueFailure.notMatchingPasswords(
+            firstFailedValue: password,
+            secondFailedValue: confirmationPassword,
+          ),
+        );
+
         if (password == confirmationPassword) {
-          emit(
-            state.copyWith(
-              confirmationPassword: Password(confirmationPassword),
-              isValidationRequested: false,
-              valueFailureOrValidityOption:
-                  Password(confirmationPassword).failureOrUnit,
-            ),
-          );
-        } else {
-          emit(
-            state.copyWith(
-              confirmationPassword: Password(confirmationPassword),
-              isValidationRequested: false,
-              valueFailureOrValidityOption: left(
-                ValueFailure.notMatchingPasswords(
-                  firstFailedValue: password,
-                  secondFailedValue: confirmationPassword,
-                ),
-              ),
-            ),
-          );
+          valueFailureOrSuccess = Password(confirmationPassword).failureOrUnit;
         }
+
+        emit(
+          state.copyWith(
+            confirmationPassword: Password(confirmationPassword),
+            valueFailureOrSuccess: valueFailureOrSuccess,
+          ),
+        );
       },
     );
     on<UsernameChanged>(
@@ -106,10 +92,7 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
         emit(
           (state as InsertUsername).copyWith(
             username: Username(event.username),
-            isValidationRequested: false,
-            valueFailureOrValidityOption:
-                Username(event.username).failureOrUnit,
-            authFailureOrSuccessOption: none(),
+            valueFailureOrSuccess: Username(event.username).failureOrUnit,
           ),
         );
       },
@@ -120,7 +103,6 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
         emit(
           state.copyWith(
             isPasswordVisible: !state.isPasswordVisible,
-            isValidationRequested: false,
           ),
         );
       },
@@ -130,7 +112,6 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
         emit(
           state.copyWith(
             isConfirmationPasswordVisible: !state.isConfirmationPasswordVisible,
-            isValidationRequested: false,
           ),
         );
       },
@@ -146,9 +127,8 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
             username: state.username,
             isPasswordVisible: state.isPasswordVisible,
             isConfirmationPasswordVisible: state.isConfirmationPasswordVisible,
-            isValidationRequested: false,
-            stateFlipper: false,
-            valueFailureOrValidityOption: right(unit),
+            isNavigationRequested: false,
+            valueFailureOrSuccess: right(unit),
           ),
         );
       },
@@ -163,20 +143,28 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
             username: state.username,
             isPasswordVisible: state.isPasswordVisible,
             isConfirmationPasswordVisible: state.isConfirmationPasswordVisible,
-            isValidationRequested: false,
-            stateFlipper: false,
-            valueFailureOrValidityOption: right(unit),
+            isNavigationRequested: false,
+            valueFailureOrSuccess: right(unit),
           ),
         );
       },
     );
-    // RequestValidation
-    on<ValidationRequested>(
+    // ProceedingRequested
+    on<ProceedingRequested>(
       (event, emit) {
         emit(
           state.copyWith(
-            isValidationRequested: true,
-            stateFlipper: !state.stateFlipper,
+            isNavigationRequested: true,
+          ),
+        );
+      },
+    );
+    // ProceedingRequested
+    on<ProceedingRequestEvaluated>(
+      (event, emit) {
+        emit(
+          state.copyWith(
+            isNavigationRequested: false,
           ),
         );
       },
@@ -192,11 +180,8 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
             username: state.username,
             isPasswordVisible: state.isPasswordVisible,
             isConfirmationPasswordVisible: state.isConfirmationPasswordVisible,
-            isValidationRequested: false,
-            stateFlipper: false,
-            valueFailureOrValidityOption: left(
-              const ValueFailure.emptyValue(failedValue: ''),
-            ),
+            isNavigationRequested: false,
+            valueFailureOrSuccess: state.password.failureOrUnit,
           ),
         );
       },
@@ -211,12 +196,9 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
             username: state.username,
             isPasswordVisible: state.isPasswordVisible,
             isConfirmationPasswordVisible: state.isConfirmationPasswordVisible,
-            isValidationRequested: false,
+            isNavigationRequested: false,
             isSubmitting: false,
-            stateFlipper: false,
-            valueFailureOrValidityOption: left(
-              const ValueFailure.emptyValue(failedValue: ''),
-            ),
+            valueFailureOrSuccess: state.username.failureOrUnit,
             authFailureOrSuccessOption: none(),
           ),
         );

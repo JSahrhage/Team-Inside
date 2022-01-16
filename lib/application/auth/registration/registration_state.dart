@@ -9,10 +9,8 @@ class RegistrationState with _$RegistrationState {
     required Username username,
     required bool isPasswordVisible,
     required bool isConfirmationPasswordVisible,
-    required bool isValidationRequested,
-    required bool
-        stateFlipper, // Required to fire stateChange when .copyWith is called
-    required Either<ValueFailure, Unit> valueFailureOrValidityOption,
+    required bool isNavigationRequested,
+    required Either<ValueFailure, Unit> valueFailureOrSuccess,
   }) = InsertEmail;
 
   const factory RegistrationState.insertPassword({
@@ -22,10 +20,8 @@ class RegistrationState with _$RegistrationState {
     required Username username,
     required bool isPasswordVisible,
     required bool isConfirmationPasswordVisible,
-    required bool isValidationRequested,
-    required bool
-        stateFlipper, // Required to fire stateChange when .copyWith is called
-    required Either<ValueFailure, Unit> valueFailureOrValidityOption,
+    required bool isNavigationRequested,
+    required Either<ValueFailure, Unit> valueFailureOrSuccess,
   }) = InsertPassword;
 
   const factory RegistrationState.insertUsername({
@@ -35,11 +31,9 @@ class RegistrationState with _$RegistrationState {
     required Username username,
     required bool isPasswordVisible,
     required bool isConfirmationPasswordVisible,
-    required bool isValidationRequested,
+    required bool isNavigationRequested,
     required bool isSubmitting,
-    required bool
-        stateFlipper, // Required to fire stateChange when .copyWith is called#
-    required Either<ValueFailure, Unit> valueFailureOrValidityOption,
+    required Either<ValueFailure, Unit> valueFailureOrSuccess,
     required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption,
   }) = InsertUsername;
 }

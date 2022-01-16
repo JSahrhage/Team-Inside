@@ -22,8 +22,10 @@ class RegistrationEvent with _$RegistrationEvent {
       ReturnFromPasswordInsertationPagePressed;
   const factory RegistrationEvent.returnFromUsernameInsertionPagePressed() =
       ReturnFromUsernameInsertationPagePressed;
-  // RequestValidation
-  const factory RegistrationEvent.validationRequested() = ValidationRequested;
+  // ProceedingRequested
+  const factory RegistrationEvent.proceedingRequested() = ProceedingRequested;
+  const factory RegistrationEvent.proceedingRequestEvaluated() =
+      ProceedingRequestEvaluated;
   // ProceedingValidated
   const factory RegistrationEvent.emailInsertionProceedingValidated() =
       EmailInsertionProceedingValidated;

@@ -62,8 +62,12 @@ class _$RegistrationEventTearOff {
     return const ReturnFromUsernameInsertationPagePressed();
   }
 
-  ValidationRequested validationRequested() {
-    return const ValidationRequested();
+  ProceedingRequested proceedingRequested() {
+    return const ProceedingRequested();
+  }
+
+  ProceedingRequestEvaluated proceedingRequestEvaluated() {
+    return const ProceedingRequestEvaluated();
   }
 
   EmailInsertionProceedingValidated emailInsertionProceedingValidated() {
@@ -95,7 +99,8 @@ mixin _$RegistrationEvent {
     required TResult Function() confirmationPasswordVisibilityIconPressed,
     required TResult Function() returnFromPasswordInsertionPagePressed,
     required TResult Function() returnFromUsernameInsertionPagePressed,
-    required TResult Function() validationRequested,
+    required TResult Function() proceedingRequested,
+    required TResult Function() proceedingRequestEvaluated,
     required TResult Function() emailInsertionProceedingValidated,
     required TResult Function() passwordInsertionProceedingValidated,
     required TResult Function() registerValidated,
@@ -111,7 +116,8 @@ mixin _$RegistrationEvent {
     TResult Function()? confirmationPasswordVisibilityIconPressed,
     TResult Function()? returnFromPasswordInsertionPagePressed,
     TResult Function()? returnFromUsernameInsertionPagePressed,
-    TResult Function()? validationRequested,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
     TResult Function()? emailInsertionProceedingValidated,
     TResult Function()? passwordInsertionProceedingValidated,
     TResult Function()? registerValidated,
@@ -127,7 +133,8 @@ mixin _$RegistrationEvent {
     TResult Function()? confirmationPasswordVisibilityIconPressed,
     TResult Function()? returnFromPasswordInsertionPagePressed,
     TResult Function()? returnFromUsernameInsertionPagePressed,
-    TResult Function()? validationRequested,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
     TResult Function()? emailInsertionProceedingValidated,
     TResult Function()? passwordInsertionProceedingValidated,
     TResult Function()? registerValidated,
@@ -149,7 +156,9 @@ mixin _$RegistrationEvent {
         returnFromPasswordInsertionPagePressed,
     required TResult Function(ReturnFromUsernameInsertationPagePressed value)
         returnFromUsernameInsertionPagePressed,
-    required TResult Function(ValidationRequested value) validationRequested,
+    required TResult Function(ProceedingRequested value) proceedingRequested,
+    required TResult Function(ProceedingRequestEvaluated value)
+        proceedingRequestEvaluated,
     required TResult Function(EmailInsertionProceedingValidated value)
         emailInsertionProceedingValidated,
     required TResult Function(PasswordInsertionProceedingValidated value)
@@ -172,7 +181,9 @@ mixin _$RegistrationEvent {
         returnFromPasswordInsertionPagePressed,
     TResult Function(ReturnFromUsernameInsertationPagePressed value)?
         returnFromUsernameInsertionPagePressed,
-    TResult Function(ValidationRequested value)? validationRequested,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
     TResult Function(EmailInsertionProceedingValidated value)?
         emailInsertionProceedingValidated,
     TResult Function(PasswordInsertionProceedingValidated value)?
@@ -195,7 +206,9 @@ mixin _$RegistrationEvent {
         returnFromPasswordInsertionPagePressed,
     TResult Function(ReturnFromUsernameInsertationPagePressed value)?
         returnFromUsernameInsertionPagePressed,
-    TResult Function(ValidationRequested value)? validationRequested,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
     TResult Function(EmailInsertionProceedingValidated value)?
         emailInsertionProceedingValidated,
     TResult Function(PasswordInsertionProceedingValidated value)?
@@ -297,7 +310,8 @@ class _$EmailChanged implements EmailChanged {
     required TResult Function() confirmationPasswordVisibilityIconPressed,
     required TResult Function() returnFromPasswordInsertionPagePressed,
     required TResult Function() returnFromUsernameInsertionPagePressed,
-    required TResult Function() validationRequested,
+    required TResult Function() proceedingRequested,
+    required TResult Function() proceedingRequestEvaluated,
     required TResult Function() emailInsertionProceedingValidated,
     required TResult Function() passwordInsertionProceedingValidated,
     required TResult Function() registerValidated,
@@ -316,7 +330,8 @@ class _$EmailChanged implements EmailChanged {
     TResult Function()? confirmationPasswordVisibilityIconPressed,
     TResult Function()? returnFromPasswordInsertionPagePressed,
     TResult Function()? returnFromUsernameInsertionPagePressed,
-    TResult Function()? validationRequested,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
     TResult Function()? emailInsertionProceedingValidated,
     TResult Function()? passwordInsertionProceedingValidated,
     TResult Function()? registerValidated,
@@ -335,7 +350,8 @@ class _$EmailChanged implements EmailChanged {
     TResult Function()? confirmationPasswordVisibilityIconPressed,
     TResult Function()? returnFromPasswordInsertionPagePressed,
     TResult Function()? returnFromUsernameInsertionPagePressed,
-    TResult Function()? validationRequested,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
     TResult Function()? emailInsertionProceedingValidated,
     TResult Function()? passwordInsertionProceedingValidated,
     TResult Function()? registerValidated,
@@ -363,7 +379,9 @@ class _$EmailChanged implements EmailChanged {
         returnFromPasswordInsertionPagePressed,
     required TResult Function(ReturnFromUsernameInsertationPagePressed value)
         returnFromUsernameInsertionPagePressed,
-    required TResult Function(ValidationRequested value) validationRequested,
+    required TResult Function(ProceedingRequested value) proceedingRequested,
+    required TResult Function(ProceedingRequestEvaluated value)
+        proceedingRequestEvaluated,
     required TResult Function(EmailInsertionProceedingValidated value)
         emailInsertionProceedingValidated,
     required TResult Function(PasswordInsertionProceedingValidated value)
@@ -389,7 +407,9 @@ class _$EmailChanged implements EmailChanged {
         returnFromPasswordInsertionPagePressed,
     TResult Function(ReturnFromUsernameInsertationPagePressed value)?
         returnFromUsernameInsertionPagePressed,
-    TResult Function(ValidationRequested value)? validationRequested,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
     TResult Function(EmailInsertionProceedingValidated value)?
         emailInsertionProceedingValidated,
     TResult Function(PasswordInsertionProceedingValidated value)?
@@ -415,7 +435,9 @@ class _$EmailChanged implements EmailChanged {
         returnFromPasswordInsertionPagePressed,
     TResult Function(ReturnFromUsernameInsertationPagePressed value)?
         returnFromUsernameInsertionPagePressed,
-    TResult Function(ValidationRequested value)? validationRequested,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
     TResult Function(EmailInsertionProceedingValidated value)?
         emailInsertionProceedingValidated,
     TResult Function(PasswordInsertionProceedingValidated value)?
@@ -513,7 +535,8 @@ class _$PasswordChanged implements PasswordChanged {
     required TResult Function() confirmationPasswordVisibilityIconPressed,
     required TResult Function() returnFromPasswordInsertionPagePressed,
     required TResult Function() returnFromUsernameInsertionPagePressed,
-    required TResult Function() validationRequested,
+    required TResult Function() proceedingRequested,
+    required TResult Function() proceedingRequestEvaluated,
     required TResult Function() emailInsertionProceedingValidated,
     required TResult Function() passwordInsertionProceedingValidated,
     required TResult Function() registerValidated,
@@ -532,7 +555,8 @@ class _$PasswordChanged implements PasswordChanged {
     TResult Function()? confirmationPasswordVisibilityIconPressed,
     TResult Function()? returnFromPasswordInsertionPagePressed,
     TResult Function()? returnFromUsernameInsertionPagePressed,
-    TResult Function()? validationRequested,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
     TResult Function()? emailInsertionProceedingValidated,
     TResult Function()? passwordInsertionProceedingValidated,
     TResult Function()? registerValidated,
@@ -551,7 +575,8 @@ class _$PasswordChanged implements PasswordChanged {
     TResult Function()? confirmationPasswordVisibilityIconPressed,
     TResult Function()? returnFromPasswordInsertionPagePressed,
     TResult Function()? returnFromUsernameInsertionPagePressed,
-    TResult Function()? validationRequested,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
     TResult Function()? emailInsertionProceedingValidated,
     TResult Function()? passwordInsertionProceedingValidated,
     TResult Function()? registerValidated,
@@ -579,7 +604,9 @@ class _$PasswordChanged implements PasswordChanged {
         returnFromPasswordInsertionPagePressed,
     required TResult Function(ReturnFromUsernameInsertationPagePressed value)
         returnFromUsernameInsertionPagePressed,
-    required TResult Function(ValidationRequested value) validationRequested,
+    required TResult Function(ProceedingRequested value) proceedingRequested,
+    required TResult Function(ProceedingRequestEvaluated value)
+        proceedingRequestEvaluated,
     required TResult Function(EmailInsertionProceedingValidated value)
         emailInsertionProceedingValidated,
     required TResult Function(PasswordInsertionProceedingValidated value)
@@ -605,7 +632,9 @@ class _$PasswordChanged implements PasswordChanged {
         returnFromPasswordInsertionPagePressed,
     TResult Function(ReturnFromUsernameInsertationPagePressed value)?
         returnFromUsernameInsertionPagePressed,
-    TResult Function(ValidationRequested value)? validationRequested,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
     TResult Function(EmailInsertionProceedingValidated value)?
         emailInsertionProceedingValidated,
     TResult Function(PasswordInsertionProceedingValidated value)?
@@ -631,7 +660,9 @@ class _$PasswordChanged implements PasswordChanged {
         returnFromPasswordInsertionPagePressed,
     TResult Function(ReturnFromUsernameInsertationPagePressed value)?
         returnFromUsernameInsertionPagePressed,
-    TResult Function(ValidationRequested value)? validationRequested,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
     TResult Function(EmailInsertionProceedingValidated value)?
         emailInsertionProceedingValidated,
     TResult Function(PasswordInsertionProceedingValidated value)?
@@ -733,7 +764,8 @@ class _$ConfirmationPasswordChanged implements ConfirmationPasswordChanged {
     required TResult Function() confirmationPasswordVisibilityIconPressed,
     required TResult Function() returnFromPasswordInsertionPagePressed,
     required TResult Function() returnFromUsernameInsertionPagePressed,
-    required TResult Function() validationRequested,
+    required TResult Function() proceedingRequested,
+    required TResult Function() proceedingRequestEvaluated,
     required TResult Function() emailInsertionProceedingValidated,
     required TResult Function() passwordInsertionProceedingValidated,
     required TResult Function() registerValidated,
@@ -752,7 +784,8 @@ class _$ConfirmationPasswordChanged implements ConfirmationPasswordChanged {
     TResult Function()? confirmationPasswordVisibilityIconPressed,
     TResult Function()? returnFromPasswordInsertionPagePressed,
     TResult Function()? returnFromUsernameInsertionPagePressed,
-    TResult Function()? validationRequested,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
     TResult Function()? emailInsertionProceedingValidated,
     TResult Function()? passwordInsertionProceedingValidated,
     TResult Function()? registerValidated,
@@ -771,7 +804,8 @@ class _$ConfirmationPasswordChanged implements ConfirmationPasswordChanged {
     TResult Function()? confirmationPasswordVisibilityIconPressed,
     TResult Function()? returnFromPasswordInsertionPagePressed,
     TResult Function()? returnFromUsernameInsertionPagePressed,
-    TResult Function()? validationRequested,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
     TResult Function()? emailInsertionProceedingValidated,
     TResult Function()? passwordInsertionProceedingValidated,
     TResult Function()? registerValidated,
@@ -799,7 +833,9 @@ class _$ConfirmationPasswordChanged implements ConfirmationPasswordChanged {
         returnFromPasswordInsertionPagePressed,
     required TResult Function(ReturnFromUsernameInsertationPagePressed value)
         returnFromUsernameInsertionPagePressed,
-    required TResult Function(ValidationRequested value) validationRequested,
+    required TResult Function(ProceedingRequested value) proceedingRequested,
+    required TResult Function(ProceedingRequestEvaluated value)
+        proceedingRequestEvaluated,
     required TResult Function(EmailInsertionProceedingValidated value)
         emailInsertionProceedingValidated,
     required TResult Function(PasswordInsertionProceedingValidated value)
@@ -825,7 +861,9 @@ class _$ConfirmationPasswordChanged implements ConfirmationPasswordChanged {
         returnFromPasswordInsertionPagePressed,
     TResult Function(ReturnFromUsernameInsertationPagePressed value)?
         returnFromUsernameInsertionPagePressed,
-    TResult Function(ValidationRequested value)? validationRequested,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
     TResult Function(EmailInsertionProceedingValidated value)?
         emailInsertionProceedingValidated,
     TResult Function(PasswordInsertionProceedingValidated value)?
@@ -851,7 +889,9 @@ class _$ConfirmationPasswordChanged implements ConfirmationPasswordChanged {
         returnFromPasswordInsertionPagePressed,
     TResult Function(ReturnFromUsernameInsertationPagePressed value)?
         returnFromUsernameInsertionPagePressed,
-    TResult Function(ValidationRequested value)? validationRequested,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
     TResult Function(EmailInsertionProceedingValidated value)?
         emailInsertionProceedingValidated,
     TResult Function(PasswordInsertionProceedingValidated value)?
@@ -950,7 +990,8 @@ class _$UsernameChanged implements UsernameChanged {
     required TResult Function() confirmationPasswordVisibilityIconPressed,
     required TResult Function() returnFromPasswordInsertionPagePressed,
     required TResult Function() returnFromUsernameInsertionPagePressed,
-    required TResult Function() validationRequested,
+    required TResult Function() proceedingRequested,
+    required TResult Function() proceedingRequestEvaluated,
     required TResult Function() emailInsertionProceedingValidated,
     required TResult Function() passwordInsertionProceedingValidated,
     required TResult Function() registerValidated,
@@ -969,7 +1010,8 @@ class _$UsernameChanged implements UsernameChanged {
     TResult Function()? confirmationPasswordVisibilityIconPressed,
     TResult Function()? returnFromPasswordInsertionPagePressed,
     TResult Function()? returnFromUsernameInsertionPagePressed,
-    TResult Function()? validationRequested,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
     TResult Function()? emailInsertionProceedingValidated,
     TResult Function()? passwordInsertionProceedingValidated,
     TResult Function()? registerValidated,
@@ -988,7 +1030,8 @@ class _$UsernameChanged implements UsernameChanged {
     TResult Function()? confirmationPasswordVisibilityIconPressed,
     TResult Function()? returnFromPasswordInsertionPagePressed,
     TResult Function()? returnFromUsernameInsertionPagePressed,
-    TResult Function()? validationRequested,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
     TResult Function()? emailInsertionProceedingValidated,
     TResult Function()? passwordInsertionProceedingValidated,
     TResult Function()? registerValidated,
@@ -1016,7 +1059,9 @@ class _$UsernameChanged implements UsernameChanged {
         returnFromPasswordInsertionPagePressed,
     required TResult Function(ReturnFromUsernameInsertationPagePressed value)
         returnFromUsernameInsertionPagePressed,
-    required TResult Function(ValidationRequested value) validationRequested,
+    required TResult Function(ProceedingRequested value) proceedingRequested,
+    required TResult Function(ProceedingRequestEvaluated value)
+        proceedingRequestEvaluated,
     required TResult Function(EmailInsertionProceedingValidated value)
         emailInsertionProceedingValidated,
     required TResult Function(PasswordInsertionProceedingValidated value)
@@ -1042,7 +1087,9 @@ class _$UsernameChanged implements UsernameChanged {
         returnFromPasswordInsertionPagePressed,
     TResult Function(ReturnFromUsernameInsertationPagePressed value)?
         returnFromUsernameInsertionPagePressed,
-    TResult Function(ValidationRequested value)? validationRequested,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
     TResult Function(EmailInsertionProceedingValidated value)?
         emailInsertionProceedingValidated,
     TResult Function(PasswordInsertionProceedingValidated value)?
@@ -1068,7 +1115,9 @@ class _$UsernameChanged implements UsernameChanged {
         returnFromPasswordInsertionPagePressed,
     TResult Function(ReturnFromUsernameInsertationPagePressed value)?
         returnFromUsernameInsertionPagePressed,
-    TResult Function(ValidationRequested value)? validationRequested,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
     TResult Function(EmailInsertionProceedingValidated value)?
         emailInsertionProceedingValidated,
     TResult Function(PasswordInsertionProceedingValidated value)?
@@ -1146,7 +1195,8 @@ class _$PasswordVisibilityIconPressed implements PasswordVisibilityIconPressed {
     required TResult Function() confirmationPasswordVisibilityIconPressed,
     required TResult Function() returnFromPasswordInsertionPagePressed,
     required TResult Function() returnFromUsernameInsertionPagePressed,
-    required TResult Function() validationRequested,
+    required TResult Function() proceedingRequested,
+    required TResult Function() proceedingRequestEvaluated,
     required TResult Function() emailInsertionProceedingValidated,
     required TResult Function() passwordInsertionProceedingValidated,
     required TResult Function() registerValidated,
@@ -1165,7 +1215,8 @@ class _$PasswordVisibilityIconPressed implements PasswordVisibilityIconPressed {
     TResult Function()? confirmationPasswordVisibilityIconPressed,
     TResult Function()? returnFromPasswordInsertionPagePressed,
     TResult Function()? returnFromUsernameInsertionPagePressed,
-    TResult Function()? validationRequested,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
     TResult Function()? emailInsertionProceedingValidated,
     TResult Function()? passwordInsertionProceedingValidated,
     TResult Function()? registerValidated,
@@ -1184,7 +1235,8 @@ class _$PasswordVisibilityIconPressed implements PasswordVisibilityIconPressed {
     TResult Function()? confirmationPasswordVisibilityIconPressed,
     TResult Function()? returnFromPasswordInsertionPagePressed,
     TResult Function()? returnFromUsernameInsertionPagePressed,
-    TResult Function()? validationRequested,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
     TResult Function()? emailInsertionProceedingValidated,
     TResult Function()? passwordInsertionProceedingValidated,
     TResult Function()? registerValidated,
@@ -1212,7 +1264,9 @@ class _$PasswordVisibilityIconPressed implements PasswordVisibilityIconPressed {
         returnFromPasswordInsertionPagePressed,
     required TResult Function(ReturnFromUsernameInsertationPagePressed value)
         returnFromUsernameInsertionPagePressed,
-    required TResult Function(ValidationRequested value) validationRequested,
+    required TResult Function(ProceedingRequested value) proceedingRequested,
+    required TResult Function(ProceedingRequestEvaluated value)
+        proceedingRequestEvaluated,
     required TResult Function(EmailInsertionProceedingValidated value)
         emailInsertionProceedingValidated,
     required TResult Function(PasswordInsertionProceedingValidated value)
@@ -1238,7 +1292,9 @@ class _$PasswordVisibilityIconPressed implements PasswordVisibilityIconPressed {
         returnFromPasswordInsertionPagePressed,
     TResult Function(ReturnFromUsernameInsertationPagePressed value)?
         returnFromUsernameInsertionPagePressed,
-    TResult Function(ValidationRequested value)? validationRequested,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
     TResult Function(EmailInsertionProceedingValidated value)?
         emailInsertionProceedingValidated,
     TResult Function(PasswordInsertionProceedingValidated value)?
@@ -1264,7 +1320,9 @@ class _$PasswordVisibilityIconPressed implements PasswordVisibilityIconPressed {
         returnFromPasswordInsertionPagePressed,
     TResult Function(ReturnFromUsernameInsertationPagePressed value)?
         returnFromUsernameInsertionPagePressed,
-    TResult Function(ValidationRequested value)? validationRequested,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
     TResult Function(EmailInsertionProceedingValidated value)?
         emailInsertionProceedingValidated,
     TResult Function(PasswordInsertionProceedingValidated value)?
@@ -1340,7 +1398,8 @@ class _$ConfirmationPasswordVisibilityIconPressed
     required TResult Function() confirmationPasswordVisibilityIconPressed,
     required TResult Function() returnFromPasswordInsertionPagePressed,
     required TResult Function() returnFromUsernameInsertionPagePressed,
-    required TResult Function() validationRequested,
+    required TResult Function() proceedingRequested,
+    required TResult Function() proceedingRequestEvaluated,
     required TResult Function() emailInsertionProceedingValidated,
     required TResult Function() passwordInsertionProceedingValidated,
     required TResult Function() registerValidated,
@@ -1359,7 +1418,8 @@ class _$ConfirmationPasswordVisibilityIconPressed
     TResult Function()? confirmationPasswordVisibilityIconPressed,
     TResult Function()? returnFromPasswordInsertionPagePressed,
     TResult Function()? returnFromUsernameInsertionPagePressed,
-    TResult Function()? validationRequested,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
     TResult Function()? emailInsertionProceedingValidated,
     TResult Function()? passwordInsertionProceedingValidated,
     TResult Function()? registerValidated,
@@ -1378,7 +1438,8 @@ class _$ConfirmationPasswordVisibilityIconPressed
     TResult Function()? confirmationPasswordVisibilityIconPressed,
     TResult Function()? returnFromPasswordInsertionPagePressed,
     TResult Function()? returnFromUsernameInsertionPagePressed,
-    TResult Function()? validationRequested,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
     TResult Function()? emailInsertionProceedingValidated,
     TResult Function()? passwordInsertionProceedingValidated,
     TResult Function()? registerValidated,
@@ -1406,7 +1467,9 @@ class _$ConfirmationPasswordVisibilityIconPressed
         returnFromPasswordInsertionPagePressed,
     required TResult Function(ReturnFromUsernameInsertationPagePressed value)
         returnFromUsernameInsertionPagePressed,
-    required TResult Function(ValidationRequested value) validationRequested,
+    required TResult Function(ProceedingRequested value) proceedingRequested,
+    required TResult Function(ProceedingRequestEvaluated value)
+        proceedingRequestEvaluated,
     required TResult Function(EmailInsertionProceedingValidated value)
         emailInsertionProceedingValidated,
     required TResult Function(PasswordInsertionProceedingValidated value)
@@ -1432,7 +1495,9 @@ class _$ConfirmationPasswordVisibilityIconPressed
         returnFromPasswordInsertionPagePressed,
     TResult Function(ReturnFromUsernameInsertationPagePressed value)?
         returnFromUsernameInsertionPagePressed,
-    TResult Function(ValidationRequested value)? validationRequested,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
     TResult Function(EmailInsertionProceedingValidated value)?
         emailInsertionProceedingValidated,
     TResult Function(PasswordInsertionProceedingValidated value)?
@@ -1458,7 +1523,9 @@ class _$ConfirmationPasswordVisibilityIconPressed
         returnFromPasswordInsertionPagePressed,
     TResult Function(ReturnFromUsernameInsertationPagePressed value)?
         returnFromUsernameInsertionPagePressed,
-    TResult Function(ValidationRequested value)? validationRequested,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
     TResult Function(EmailInsertionProceedingValidated value)?
         emailInsertionProceedingValidated,
     TResult Function(PasswordInsertionProceedingValidated value)?
@@ -1535,7 +1602,8 @@ class _$ReturnFromPasswordInsertationPagePressed
     required TResult Function() confirmationPasswordVisibilityIconPressed,
     required TResult Function() returnFromPasswordInsertionPagePressed,
     required TResult Function() returnFromUsernameInsertionPagePressed,
-    required TResult Function() validationRequested,
+    required TResult Function() proceedingRequested,
+    required TResult Function() proceedingRequestEvaluated,
     required TResult Function() emailInsertionProceedingValidated,
     required TResult Function() passwordInsertionProceedingValidated,
     required TResult Function() registerValidated,
@@ -1554,7 +1622,8 @@ class _$ReturnFromPasswordInsertationPagePressed
     TResult Function()? confirmationPasswordVisibilityIconPressed,
     TResult Function()? returnFromPasswordInsertionPagePressed,
     TResult Function()? returnFromUsernameInsertionPagePressed,
-    TResult Function()? validationRequested,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
     TResult Function()? emailInsertionProceedingValidated,
     TResult Function()? passwordInsertionProceedingValidated,
     TResult Function()? registerValidated,
@@ -1573,7 +1642,8 @@ class _$ReturnFromPasswordInsertationPagePressed
     TResult Function()? confirmationPasswordVisibilityIconPressed,
     TResult Function()? returnFromPasswordInsertionPagePressed,
     TResult Function()? returnFromUsernameInsertionPagePressed,
-    TResult Function()? validationRequested,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
     TResult Function()? emailInsertionProceedingValidated,
     TResult Function()? passwordInsertionProceedingValidated,
     TResult Function()? registerValidated,
@@ -1601,7 +1671,9 @@ class _$ReturnFromPasswordInsertationPagePressed
         returnFromPasswordInsertionPagePressed,
     required TResult Function(ReturnFromUsernameInsertationPagePressed value)
         returnFromUsernameInsertionPagePressed,
-    required TResult Function(ValidationRequested value) validationRequested,
+    required TResult Function(ProceedingRequested value) proceedingRequested,
+    required TResult Function(ProceedingRequestEvaluated value)
+        proceedingRequestEvaluated,
     required TResult Function(EmailInsertionProceedingValidated value)
         emailInsertionProceedingValidated,
     required TResult Function(PasswordInsertionProceedingValidated value)
@@ -1627,7 +1699,9 @@ class _$ReturnFromPasswordInsertationPagePressed
         returnFromPasswordInsertionPagePressed,
     TResult Function(ReturnFromUsernameInsertationPagePressed value)?
         returnFromUsernameInsertionPagePressed,
-    TResult Function(ValidationRequested value)? validationRequested,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
     TResult Function(EmailInsertionProceedingValidated value)?
         emailInsertionProceedingValidated,
     TResult Function(PasswordInsertionProceedingValidated value)?
@@ -1653,7 +1727,9 @@ class _$ReturnFromPasswordInsertationPagePressed
         returnFromPasswordInsertionPagePressed,
     TResult Function(ReturnFromUsernameInsertationPagePressed value)?
         returnFromUsernameInsertionPagePressed,
-    TResult Function(ValidationRequested value)? validationRequested,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
     TResult Function(EmailInsertionProceedingValidated value)?
         emailInsertionProceedingValidated,
     TResult Function(PasswordInsertionProceedingValidated value)?
@@ -1730,7 +1806,8 @@ class _$ReturnFromUsernameInsertationPagePressed
     required TResult Function() confirmationPasswordVisibilityIconPressed,
     required TResult Function() returnFromPasswordInsertionPagePressed,
     required TResult Function() returnFromUsernameInsertionPagePressed,
-    required TResult Function() validationRequested,
+    required TResult Function() proceedingRequested,
+    required TResult Function() proceedingRequestEvaluated,
     required TResult Function() emailInsertionProceedingValidated,
     required TResult Function() passwordInsertionProceedingValidated,
     required TResult Function() registerValidated,
@@ -1749,7 +1826,8 @@ class _$ReturnFromUsernameInsertationPagePressed
     TResult Function()? confirmationPasswordVisibilityIconPressed,
     TResult Function()? returnFromPasswordInsertionPagePressed,
     TResult Function()? returnFromUsernameInsertionPagePressed,
-    TResult Function()? validationRequested,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
     TResult Function()? emailInsertionProceedingValidated,
     TResult Function()? passwordInsertionProceedingValidated,
     TResult Function()? registerValidated,
@@ -1768,7 +1846,8 @@ class _$ReturnFromUsernameInsertationPagePressed
     TResult Function()? confirmationPasswordVisibilityIconPressed,
     TResult Function()? returnFromPasswordInsertionPagePressed,
     TResult Function()? returnFromUsernameInsertionPagePressed,
-    TResult Function()? validationRequested,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
     TResult Function()? emailInsertionProceedingValidated,
     TResult Function()? passwordInsertionProceedingValidated,
     TResult Function()? registerValidated,
@@ -1796,7 +1875,9 @@ class _$ReturnFromUsernameInsertationPagePressed
         returnFromPasswordInsertionPagePressed,
     required TResult Function(ReturnFromUsernameInsertationPagePressed value)
         returnFromUsernameInsertionPagePressed,
-    required TResult Function(ValidationRequested value) validationRequested,
+    required TResult Function(ProceedingRequested value) proceedingRequested,
+    required TResult Function(ProceedingRequestEvaluated value)
+        proceedingRequestEvaluated,
     required TResult Function(EmailInsertionProceedingValidated value)
         emailInsertionProceedingValidated,
     required TResult Function(PasswordInsertionProceedingValidated value)
@@ -1822,7 +1903,9 @@ class _$ReturnFromUsernameInsertationPagePressed
         returnFromPasswordInsertionPagePressed,
     TResult Function(ReturnFromUsernameInsertationPagePressed value)?
         returnFromUsernameInsertionPagePressed,
-    TResult Function(ValidationRequested value)? validationRequested,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
     TResult Function(EmailInsertionProceedingValidated value)?
         emailInsertionProceedingValidated,
     TResult Function(PasswordInsertionProceedingValidated value)?
@@ -1848,7 +1931,9 @@ class _$ReturnFromUsernameInsertationPagePressed
         returnFromPasswordInsertionPagePressed,
     TResult Function(ReturnFromUsernameInsertationPagePressed value)?
         returnFromUsernameInsertionPagePressed,
-    TResult Function(ValidationRequested value)? validationRequested,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
     TResult Function(EmailInsertionProceedingValidated value)?
         emailInsertionProceedingValidated,
     TResult Function(PasswordInsertionProceedingValidated value)?
@@ -1870,38 +1955,38 @@ abstract class ReturnFromUsernameInsertationPagePressed
 }
 
 /// @nodoc
-abstract class $ValidationRequestedCopyWith<$Res> {
-  factory $ValidationRequestedCopyWith(
-          ValidationRequested value, $Res Function(ValidationRequested) then) =
-      _$ValidationRequestedCopyWithImpl<$Res>;
+abstract class $ProceedingRequestedCopyWith<$Res> {
+  factory $ProceedingRequestedCopyWith(
+          ProceedingRequested value, $Res Function(ProceedingRequested) then) =
+      _$ProceedingRequestedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$ValidationRequestedCopyWithImpl<$Res>
+class _$ProceedingRequestedCopyWithImpl<$Res>
     extends _$RegistrationEventCopyWithImpl<$Res>
-    implements $ValidationRequestedCopyWith<$Res> {
-  _$ValidationRequestedCopyWithImpl(
-      ValidationRequested _value, $Res Function(ValidationRequested) _then)
-      : super(_value, (v) => _then(v as ValidationRequested));
+    implements $ProceedingRequestedCopyWith<$Res> {
+  _$ProceedingRequestedCopyWithImpl(
+      ProceedingRequested _value, $Res Function(ProceedingRequested) _then)
+      : super(_value, (v) => _then(v as ProceedingRequested));
 
   @override
-  ValidationRequested get _value => super._value as ValidationRequested;
+  ProceedingRequested get _value => super._value as ProceedingRequested;
 }
 
 /// @nodoc
 
-class _$ValidationRequested implements ValidationRequested {
-  const _$ValidationRequested();
+class _$ProceedingRequested implements ProceedingRequested {
+  const _$ProceedingRequested();
 
   @override
   String toString() {
-    return 'RegistrationEvent.validationRequested()';
+    return 'RegistrationEvent.proceedingRequested()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is ValidationRequested);
+        (other.runtimeType == runtimeType && other is ProceedingRequested);
   }
 
   @override
@@ -1919,12 +2004,13 @@ class _$ValidationRequested implements ValidationRequested {
     required TResult Function() confirmationPasswordVisibilityIconPressed,
     required TResult Function() returnFromPasswordInsertionPagePressed,
     required TResult Function() returnFromUsernameInsertionPagePressed,
-    required TResult Function() validationRequested,
+    required TResult Function() proceedingRequested,
+    required TResult Function() proceedingRequestEvaluated,
     required TResult Function() emailInsertionProceedingValidated,
     required TResult Function() passwordInsertionProceedingValidated,
     required TResult Function() registerValidated,
   }) {
-    return validationRequested();
+    return proceedingRequested();
   }
 
   @override
@@ -1938,12 +2024,13 @@ class _$ValidationRequested implements ValidationRequested {
     TResult Function()? confirmationPasswordVisibilityIconPressed,
     TResult Function()? returnFromPasswordInsertionPagePressed,
     TResult Function()? returnFromUsernameInsertionPagePressed,
-    TResult Function()? validationRequested,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
     TResult Function()? emailInsertionProceedingValidated,
     TResult Function()? passwordInsertionProceedingValidated,
     TResult Function()? registerValidated,
   }) {
-    return validationRequested?.call();
+    return proceedingRequested?.call();
   }
 
   @override
@@ -1957,14 +2044,15 @@ class _$ValidationRequested implements ValidationRequested {
     TResult Function()? confirmationPasswordVisibilityIconPressed,
     TResult Function()? returnFromPasswordInsertionPagePressed,
     TResult Function()? returnFromUsernameInsertionPagePressed,
-    TResult Function()? validationRequested,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
     TResult Function()? emailInsertionProceedingValidated,
     TResult Function()? passwordInsertionProceedingValidated,
     TResult Function()? registerValidated,
     required TResult orElse(),
   }) {
-    if (validationRequested != null) {
-      return validationRequested();
+    if (proceedingRequested != null) {
+      return proceedingRequested();
     }
     return orElse();
   }
@@ -1985,14 +2073,16 @@ class _$ValidationRequested implements ValidationRequested {
         returnFromPasswordInsertionPagePressed,
     required TResult Function(ReturnFromUsernameInsertationPagePressed value)
         returnFromUsernameInsertionPagePressed,
-    required TResult Function(ValidationRequested value) validationRequested,
+    required TResult Function(ProceedingRequested value) proceedingRequested,
+    required TResult Function(ProceedingRequestEvaluated value)
+        proceedingRequestEvaluated,
     required TResult Function(EmailInsertionProceedingValidated value)
         emailInsertionProceedingValidated,
     required TResult Function(PasswordInsertionProceedingValidated value)
         passwordInsertionProceedingValidated,
     required TResult Function(RegisterValidated value) registerValidated,
   }) {
-    return validationRequested(this);
+    return proceedingRequested(this);
   }
 
   @override
@@ -2011,14 +2101,16 @@ class _$ValidationRequested implements ValidationRequested {
         returnFromPasswordInsertionPagePressed,
     TResult Function(ReturnFromUsernameInsertationPagePressed value)?
         returnFromUsernameInsertionPagePressed,
-    TResult Function(ValidationRequested value)? validationRequested,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
     TResult Function(EmailInsertionProceedingValidated value)?
         emailInsertionProceedingValidated,
     TResult Function(PasswordInsertionProceedingValidated value)?
         passwordInsertionProceedingValidated,
     TResult Function(RegisterValidated value)? registerValidated,
   }) {
-    return validationRequested?.call(this);
+    return proceedingRequested?.call(this);
   }
 
   @override
@@ -2037,7 +2129,9 @@ class _$ValidationRequested implements ValidationRequested {
         returnFromPasswordInsertionPagePressed,
     TResult Function(ReturnFromUsernameInsertationPagePressed value)?
         returnFromUsernameInsertionPagePressed,
-    TResult Function(ValidationRequested value)? validationRequested,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
     TResult Function(EmailInsertionProceedingValidated value)?
         emailInsertionProceedingValidated,
     TResult Function(PasswordInsertionProceedingValidated value)?
@@ -2045,15 +2139,213 @@ class _$ValidationRequested implements ValidationRequested {
     TResult Function(RegisterValidated value)? registerValidated,
     required TResult orElse(),
   }) {
-    if (validationRequested != null) {
-      return validationRequested(this);
+    if (proceedingRequested != null) {
+      return proceedingRequested(this);
     }
     return orElse();
   }
 }
 
-abstract class ValidationRequested implements RegistrationEvent {
-  const factory ValidationRequested() = _$ValidationRequested;
+abstract class ProceedingRequested implements RegistrationEvent {
+  const factory ProceedingRequested() = _$ProceedingRequested;
+}
+
+/// @nodoc
+abstract class $ProceedingRequestEvaluatedCopyWith<$Res> {
+  factory $ProceedingRequestEvaluatedCopyWith(ProceedingRequestEvaluated value,
+          $Res Function(ProceedingRequestEvaluated) then) =
+      _$ProceedingRequestEvaluatedCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$ProceedingRequestEvaluatedCopyWithImpl<$Res>
+    extends _$RegistrationEventCopyWithImpl<$Res>
+    implements $ProceedingRequestEvaluatedCopyWith<$Res> {
+  _$ProceedingRequestEvaluatedCopyWithImpl(ProceedingRequestEvaluated _value,
+      $Res Function(ProceedingRequestEvaluated) _then)
+      : super(_value, (v) => _then(v as ProceedingRequestEvaluated));
+
+  @override
+  ProceedingRequestEvaluated get _value =>
+      super._value as ProceedingRequestEvaluated;
+}
+
+/// @nodoc
+
+class _$ProceedingRequestEvaluated implements ProceedingRequestEvaluated {
+  const _$ProceedingRequestEvaluated();
+
+  @override
+  String toString() {
+    return 'RegistrationEvent.proceedingRequestEvaluated()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is ProceedingRequestEvaluated);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function(String confirmationPassword)
+        confirmationPasswordChanged,
+    required TResult Function(String username) usernameChanged,
+    required TResult Function() passwordVisibilityIconPressed,
+    required TResult Function() confirmationPasswordVisibilityIconPressed,
+    required TResult Function() returnFromPasswordInsertionPagePressed,
+    required TResult Function() returnFromUsernameInsertionPagePressed,
+    required TResult Function() proceedingRequested,
+    required TResult Function() proceedingRequestEvaluated,
+    required TResult Function() emailInsertionProceedingValidated,
+    required TResult Function() passwordInsertionProceedingValidated,
+    required TResult Function() registerValidated,
+  }) {
+    return proceedingRequestEvaluated();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmationPassword)? confirmationPasswordChanged,
+    TResult Function(String username)? usernameChanged,
+    TResult Function()? passwordVisibilityIconPressed,
+    TResult Function()? confirmationPasswordVisibilityIconPressed,
+    TResult Function()? returnFromPasswordInsertionPagePressed,
+    TResult Function()? returnFromUsernameInsertionPagePressed,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
+    TResult Function()? emailInsertionProceedingValidated,
+    TResult Function()? passwordInsertionProceedingValidated,
+    TResult Function()? registerValidated,
+  }) {
+    return proceedingRequestEvaluated?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function(String confirmationPassword)? confirmationPasswordChanged,
+    TResult Function(String username)? usernameChanged,
+    TResult Function()? passwordVisibilityIconPressed,
+    TResult Function()? confirmationPasswordVisibilityIconPressed,
+    TResult Function()? returnFromPasswordInsertionPagePressed,
+    TResult Function()? returnFromUsernameInsertionPagePressed,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
+    TResult Function()? emailInsertionProceedingValidated,
+    TResult Function()? passwordInsertionProceedingValidated,
+    TResult Function()? registerValidated,
+    required TResult orElse(),
+  }) {
+    if (proceedingRequestEvaluated != null) {
+      return proceedingRequestEvaluated();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(ConfirmationPasswordChanged value)
+        confirmationPasswordChanged,
+    required TResult Function(UsernameChanged value) usernameChanged,
+    required TResult Function(PasswordVisibilityIconPressed value)
+        passwordVisibilityIconPressed,
+    required TResult Function(ConfirmationPasswordVisibilityIconPressed value)
+        confirmationPasswordVisibilityIconPressed,
+    required TResult Function(ReturnFromPasswordInsertationPagePressed value)
+        returnFromPasswordInsertionPagePressed,
+    required TResult Function(ReturnFromUsernameInsertationPagePressed value)
+        returnFromUsernameInsertionPagePressed,
+    required TResult Function(ProceedingRequested value) proceedingRequested,
+    required TResult Function(ProceedingRequestEvaluated value)
+        proceedingRequestEvaluated,
+    required TResult Function(EmailInsertionProceedingValidated value)
+        emailInsertionProceedingValidated,
+    required TResult Function(PasswordInsertionProceedingValidated value)
+        passwordInsertionProceedingValidated,
+    required TResult Function(RegisterValidated value) registerValidated,
+  }) {
+    return proceedingRequestEvaluated(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(ConfirmationPasswordChanged value)?
+        confirmationPasswordChanged,
+    TResult Function(UsernameChanged value)? usernameChanged,
+    TResult Function(PasswordVisibilityIconPressed value)?
+        passwordVisibilityIconPressed,
+    TResult Function(ConfirmationPasswordVisibilityIconPressed value)?
+        confirmationPasswordVisibilityIconPressed,
+    TResult Function(ReturnFromPasswordInsertationPagePressed value)?
+        returnFromPasswordInsertionPagePressed,
+    TResult Function(ReturnFromUsernameInsertationPagePressed value)?
+        returnFromUsernameInsertionPagePressed,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
+    TResult Function(EmailInsertionProceedingValidated value)?
+        emailInsertionProceedingValidated,
+    TResult Function(PasswordInsertionProceedingValidated value)?
+        passwordInsertionProceedingValidated,
+    TResult Function(RegisterValidated value)? registerValidated,
+  }) {
+    return proceedingRequestEvaluated?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(ConfirmationPasswordChanged value)?
+        confirmationPasswordChanged,
+    TResult Function(UsernameChanged value)? usernameChanged,
+    TResult Function(PasswordVisibilityIconPressed value)?
+        passwordVisibilityIconPressed,
+    TResult Function(ConfirmationPasswordVisibilityIconPressed value)?
+        confirmationPasswordVisibilityIconPressed,
+    TResult Function(ReturnFromPasswordInsertationPagePressed value)?
+        returnFromPasswordInsertionPagePressed,
+    TResult Function(ReturnFromUsernameInsertationPagePressed value)?
+        returnFromUsernameInsertionPagePressed,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
+    TResult Function(EmailInsertionProceedingValidated value)?
+        emailInsertionProceedingValidated,
+    TResult Function(PasswordInsertionProceedingValidated value)?
+        passwordInsertionProceedingValidated,
+    TResult Function(RegisterValidated value)? registerValidated,
+    required TResult orElse(),
+  }) {
+    if (proceedingRequestEvaluated != null) {
+      return proceedingRequestEvaluated(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProceedingRequestEvaluated implements RegistrationEvent {
+  const factory ProceedingRequestEvaluated() = _$ProceedingRequestEvaluated;
 }
 
 /// @nodoc
@@ -2111,7 +2403,8 @@ class _$EmailInsertionProceedingValidated
     required TResult Function() confirmationPasswordVisibilityIconPressed,
     required TResult Function() returnFromPasswordInsertionPagePressed,
     required TResult Function() returnFromUsernameInsertionPagePressed,
-    required TResult Function() validationRequested,
+    required TResult Function() proceedingRequested,
+    required TResult Function() proceedingRequestEvaluated,
     required TResult Function() emailInsertionProceedingValidated,
     required TResult Function() passwordInsertionProceedingValidated,
     required TResult Function() registerValidated,
@@ -2130,7 +2423,8 @@ class _$EmailInsertionProceedingValidated
     TResult Function()? confirmationPasswordVisibilityIconPressed,
     TResult Function()? returnFromPasswordInsertionPagePressed,
     TResult Function()? returnFromUsernameInsertionPagePressed,
-    TResult Function()? validationRequested,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
     TResult Function()? emailInsertionProceedingValidated,
     TResult Function()? passwordInsertionProceedingValidated,
     TResult Function()? registerValidated,
@@ -2149,7 +2443,8 @@ class _$EmailInsertionProceedingValidated
     TResult Function()? confirmationPasswordVisibilityIconPressed,
     TResult Function()? returnFromPasswordInsertionPagePressed,
     TResult Function()? returnFromUsernameInsertionPagePressed,
-    TResult Function()? validationRequested,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
     TResult Function()? emailInsertionProceedingValidated,
     TResult Function()? passwordInsertionProceedingValidated,
     TResult Function()? registerValidated,
@@ -2177,7 +2472,9 @@ class _$EmailInsertionProceedingValidated
         returnFromPasswordInsertionPagePressed,
     required TResult Function(ReturnFromUsernameInsertationPagePressed value)
         returnFromUsernameInsertionPagePressed,
-    required TResult Function(ValidationRequested value) validationRequested,
+    required TResult Function(ProceedingRequested value) proceedingRequested,
+    required TResult Function(ProceedingRequestEvaluated value)
+        proceedingRequestEvaluated,
     required TResult Function(EmailInsertionProceedingValidated value)
         emailInsertionProceedingValidated,
     required TResult Function(PasswordInsertionProceedingValidated value)
@@ -2203,7 +2500,9 @@ class _$EmailInsertionProceedingValidated
         returnFromPasswordInsertionPagePressed,
     TResult Function(ReturnFromUsernameInsertationPagePressed value)?
         returnFromUsernameInsertionPagePressed,
-    TResult Function(ValidationRequested value)? validationRequested,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
     TResult Function(EmailInsertionProceedingValidated value)?
         emailInsertionProceedingValidated,
     TResult Function(PasswordInsertionProceedingValidated value)?
@@ -2229,7 +2528,9 @@ class _$EmailInsertionProceedingValidated
         returnFromPasswordInsertionPagePressed,
     TResult Function(ReturnFromUsernameInsertationPagePressed value)?
         returnFromUsernameInsertionPagePressed,
-    TResult Function(ValidationRequested value)? validationRequested,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
     TResult Function(EmailInsertionProceedingValidated value)?
         emailInsertionProceedingValidated,
     TResult Function(PasswordInsertionProceedingValidated value)?
@@ -2304,7 +2605,8 @@ class _$PasswordInsertionProceedingValidated
     required TResult Function() confirmationPasswordVisibilityIconPressed,
     required TResult Function() returnFromPasswordInsertionPagePressed,
     required TResult Function() returnFromUsernameInsertionPagePressed,
-    required TResult Function() validationRequested,
+    required TResult Function() proceedingRequested,
+    required TResult Function() proceedingRequestEvaluated,
     required TResult Function() emailInsertionProceedingValidated,
     required TResult Function() passwordInsertionProceedingValidated,
     required TResult Function() registerValidated,
@@ -2323,7 +2625,8 @@ class _$PasswordInsertionProceedingValidated
     TResult Function()? confirmationPasswordVisibilityIconPressed,
     TResult Function()? returnFromPasswordInsertionPagePressed,
     TResult Function()? returnFromUsernameInsertionPagePressed,
-    TResult Function()? validationRequested,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
     TResult Function()? emailInsertionProceedingValidated,
     TResult Function()? passwordInsertionProceedingValidated,
     TResult Function()? registerValidated,
@@ -2342,7 +2645,8 @@ class _$PasswordInsertionProceedingValidated
     TResult Function()? confirmationPasswordVisibilityIconPressed,
     TResult Function()? returnFromPasswordInsertionPagePressed,
     TResult Function()? returnFromUsernameInsertionPagePressed,
-    TResult Function()? validationRequested,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
     TResult Function()? emailInsertionProceedingValidated,
     TResult Function()? passwordInsertionProceedingValidated,
     TResult Function()? registerValidated,
@@ -2370,7 +2674,9 @@ class _$PasswordInsertionProceedingValidated
         returnFromPasswordInsertionPagePressed,
     required TResult Function(ReturnFromUsernameInsertationPagePressed value)
         returnFromUsernameInsertionPagePressed,
-    required TResult Function(ValidationRequested value) validationRequested,
+    required TResult Function(ProceedingRequested value) proceedingRequested,
+    required TResult Function(ProceedingRequestEvaluated value)
+        proceedingRequestEvaluated,
     required TResult Function(EmailInsertionProceedingValidated value)
         emailInsertionProceedingValidated,
     required TResult Function(PasswordInsertionProceedingValidated value)
@@ -2396,7 +2702,9 @@ class _$PasswordInsertionProceedingValidated
         returnFromPasswordInsertionPagePressed,
     TResult Function(ReturnFromUsernameInsertationPagePressed value)?
         returnFromUsernameInsertionPagePressed,
-    TResult Function(ValidationRequested value)? validationRequested,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
     TResult Function(EmailInsertionProceedingValidated value)?
         emailInsertionProceedingValidated,
     TResult Function(PasswordInsertionProceedingValidated value)?
@@ -2422,7 +2730,9 @@ class _$PasswordInsertionProceedingValidated
         returnFromPasswordInsertionPagePressed,
     TResult Function(ReturnFromUsernameInsertationPagePressed value)?
         returnFromUsernameInsertionPagePressed,
-    TResult Function(ValidationRequested value)? validationRequested,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
     TResult Function(EmailInsertionProceedingValidated value)?
         emailInsertionProceedingValidated,
     TResult Function(PasswordInsertionProceedingValidated value)?
@@ -2493,7 +2803,8 @@ class _$RegisterValidated implements RegisterValidated {
     required TResult Function() confirmationPasswordVisibilityIconPressed,
     required TResult Function() returnFromPasswordInsertionPagePressed,
     required TResult Function() returnFromUsernameInsertionPagePressed,
-    required TResult Function() validationRequested,
+    required TResult Function() proceedingRequested,
+    required TResult Function() proceedingRequestEvaluated,
     required TResult Function() emailInsertionProceedingValidated,
     required TResult Function() passwordInsertionProceedingValidated,
     required TResult Function() registerValidated,
@@ -2512,7 +2823,8 @@ class _$RegisterValidated implements RegisterValidated {
     TResult Function()? confirmationPasswordVisibilityIconPressed,
     TResult Function()? returnFromPasswordInsertionPagePressed,
     TResult Function()? returnFromUsernameInsertionPagePressed,
-    TResult Function()? validationRequested,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
     TResult Function()? emailInsertionProceedingValidated,
     TResult Function()? passwordInsertionProceedingValidated,
     TResult Function()? registerValidated,
@@ -2531,7 +2843,8 @@ class _$RegisterValidated implements RegisterValidated {
     TResult Function()? confirmationPasswordVisibilityIconPressed,
     TResult Function()? returnFromPasswordInsertionPagePressed,
     TResult Function()? returnFromUsernameInsertionPagePressed,
-    TResult Function()? validationRequested,
+    TResult Function()? proceedingRequested,
+    TResult Function()? proceedingRequestEvaluated,
     TResult Function()? emailInsertionProceedingValidated,
     TResult Function()? passwordInsertionProceedingValidated,
     TResult Function()? registerValidated,
@@ -2559,7 +2872,9 @@ class _$RegisterValidated implements RegisterValidated {
         returnFromPasswordInsertionPagePressed,
     required TResult Function(ReturnFromUsernameInsertationPagePressed value)
         returnFromUsernameInsertionPagePressed,
-    required TResult Function(ValidationRequested value) validationRequested,
+    required TResult Function(ProceedingRequested value) proceedingRequested,
+    required TResult Function(ProceedingRequestEvaluated value)
+        proceedingRequestEvaluated,
     required TResult Function(EmailInsertionProceedingValidated value)
         emailInsertionProceedingValidated,
     required TResult Function(PasswordInsertionProceedingValidated value)
@@ -2585,7 +2900,9 @@ class _$RegisterValidated implements RegisterValidated {
         returnFromPasswordInsertionPagePressed,
     TResult Function(ReturnFromUsernameInsertationPagePressed value)?
         returnFromUsernameInsertionPagePressed,
-    TResult Function(ValidationRequested value)? validationRequested,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
     TResult Function(EmailInsertionProceedingValidated value)?
         emailInsertionProceedingValidated,
     TResult Function(PasswordInsertionProceedingValidated value)?
@@ -2611,7 +2928,9 @@ class _$RegisterValidated implements RegisterValidated {
         returnFromPasswordInsertionPagePressed,
     TResult Function(ReturnFromUsernameInsertationPagePressed value)?
         returnFromUsernameInsertionPagePressed,
-    TResult Function(ValidationRequested value)? validationRequested,
+    TResult Function(ProceedingRequested value)? proceedingRequested,
+    TResult Function(ProceedingRequestEvaluated value)?
+        proceedingRequestEvaluated,
     TResult Function(EmailInsertionProceedingValidated value)?
         emailInsertionProceedingValidated,
     TResult Function(PasswordInsertionProceedingValidated value)?
@@ -2641,9 +2960,8 @@ class _$RegistrationStateTearOff {
       required Username username,
       required bool isPasswordVisible,
       required bool isConfirmationPasswordVisible,
-      required bool isValidationRequested,
-      required bool stateFlipper,
-      required Either<ValueFailure, Unit> valueFailureOrValidityOption}) {
+      required bool isNavigationRequested,
+      required Either<ValueFailure, Unit> valueFailureOrSuccess}) {
     return InsertEmail(
       emailAddress: emailAddress,
       password: password,
@@ -2651,9 +2969,8 @@ class _$RegistrationStateTearOff {
       username: username,
       isPasswordVisible: isPasswordVisible,
       isConfirmationPasswordVisible: isConfirmationPasswordVisible,
-      isValidationRequested: isValidationRequested,
-      stateFlipper: stateFlipper,
-      valueFailureOrValidityOption: valueFailureOrValidityOption,
+      isNavigationRequested: isNavigationRequested,
+      valueFailureOrSuccess: valueFailureOrSuccess,
     );
   }
 
@@ -2664,9 +2981,8 @@ class _$RegistrationStateTearOff {
       required Username username,
       required bool isPasswordVisible,
       required bool isConfirmationPasswordVisible,
-      required bool isValidationRequested,
-      required bool stateFlipper,
-      required Either<ValueFailure, Unit> valueFailureOrValidityOption}) {
+      required bool isNavigationRequested,
+      required Either<ValueFailure, Unit> valueFailureOrSuccess}) {
     return InsertPassword(
       emailAddress: emailAddress,
       password: password,
@@ -2674,9 +2990,8 @@ class _$RegistrationStateTearOff {
       username: username,
       isPasswordVisible: isPasswordVisible,
       isConfirmationPasswordVisible: isConfirmationPasswordVisible,
-      isValidationRequested: isValidationRequested,
-      stateFlipper: stateFlipper,
-      valueFailureOrValidityOption: valueFailureOrValidityOption,
+      isNavigationRequested: isNavigationRequested,
+      valueFailureOrSuccess: valueFailureOrSuccess,
     );
   }
 
@@ -2687,10 +3002,9 @@ class _$RegistrationStateTearOff {
       required Username username,
       required bool isPasswordVisible,
       required bool isConfirmationPasswordVisible,
-      required bool isValidationRequested,
+      required bool isNavigationRequested,
       required bool isSubmitting,
-      required bool stateFlipper,
-      required Either<ValueFailure, Unit> valueFailureOrValidityOption,
+      required Either<ValueFailure, Unit> valueFailureOrSuccess,
       required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption}) {
     return InsertUsername(
       emailAddress: emailAddress,
@@ -2699,10 +3013,9 @@ class _$RegistrationStateTearOff {
       username: username,
       isPasswordVisible: isPasswordVisible,
       isConfirmationPasswordVisible: isConfirmationPasswordVisible,
-      isValidationRequested: isValidationRequested,
+      isNavigationRequested: isNavigationRequested,
       isSubmitting: isSubmitting,
-      stateFlipper: stateFlipper,
-      valueFailureOrValidityOption: valueFailureOrValidityOption,
+      valueFailureOrSuccess: valueFailureOrSuccess,
       authFailureOrSuccessOption: authFailureOrSuccessOption,
     );
   }
@@ -2719,10 +3032,8 @@ mixin _$RegistrationState {
   Username get username => throw _privateConstructorUsedError;
   bool get isPasswordVisible => throw _privateConstructorUsedError;
   bool get isConfirmationPasswordVisible => throw _privateConstructorUsedError;
-  bool get isValidationRequested => throw _privateConstructorUsedError;
-  bool get stateFlipper =>
-      throw _privateConstructorUsedError; // Required to fire stateChange when .copyWith is called
-  Either<ValueFailure, Unit> get valueFailureOrValidityOption =>
+  bool get isNavigationRequested => throw _privateConstructorUsedError;
+  Either<ValueFailure, Unit> get valueFailureOrSuccess =>
       throw _privateConstructorUsedError;
 
   @optionalTypeArgs
@@ -2734,9 +3045,8 @@ mixin _$RegistrationState {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption)
+            bool isNavigationRequested,
+            Either<ValueFailure, Unit> valueFailureOrSuccess)
         insertEmail,
     required TResult Function(
             EmailAddress emailAddress,
@@ -2745,9 +3055,8 @@ mixin _$RegistrationState {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption)
+            bool isNavigationRequested,
+            Either<ValueFailure, Unit> valueFailureOrSuccess)
         insertPassword,
     required TResult Function(
             EmailAddress emailAddress,
@@ -2756,10 +3065,9 @@ mixin _$RegistrationState {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
+            bool isNavigationRequested,
             bool isSubmitting,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption,
+            Either<ValueFailure, Unit> valueFailureOrSuccess,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)
         insertUsername,
   }) =>
@@ -2773,9 +3081,8 @@ mixin _$RegistrationState {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption)?
+            bool isNavigationRequested,
+            Either<ValueFailure, Unit> valueFailureOrSuccess)?
         insertEmail,
     TResult Function(
             EmailAddress emailAddress,
@@ -2784,9 +3091,8 @@ mixin _$RegistrationState {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption)?
+            bool isNavigationRequested,
+            Either<ValueFailure, Unit> valueFailureOrSuccess)?
         insertPassword,
     TResult Function(
             EmailAddress emailAddress,
@@ -2795,10 +3101,9 @@ mixin _$RegistrationState {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
+            bool isNavigationRequested,
             bool isSubmitting,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption,
+            Either<ValueFailure, Unit> valueFailureOrSuccess,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
         insertUsername,
   }) =>
@@ -2812,9 +3117,8 @@ mixin _$RegistrationState {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption)?
+            bool isNavigationRequested,
+            Either<ValueFailure, Unit> valueFailureOrSuccess)?
         insertEmail,
     TResult Function(
             EmailAddress emailAddress,
@@ -2823,9 +3127,8 @@ mixin _$RegistrationState {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption)?
+            bool isNavigationRequested,
+            Either<ValueFailure, Unit> valueFailureOrSuccess)?
         insertPassword,
     TResult Function(
             EmailAddress emailAddress,
@@ -2834,10 +3137,9 @@ mixin _$RegistrationState {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
+            bool isNavigationRequested,
             bool isSubmitting,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption,
+            Either<ValueFailure, Unit> valueFailureOrSuccess,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
         insertUsername,
     required TResult orElse(),
@@ -2883,9 +3185,8 @@ abstract class $RegistrationStateCopyWith<$Res> {
       Username username,
       bool isPasswordVisible,
       bool isConfirmationPasswordVisible,
-      bool isValidationRequested,
-      bool stateFlipper,
-      Either<ValueFailure, Unit> valueFailureOrValidityOption});
+      bool isNavigationRequested,
+      Either<ValueFailure, Unit> valueFailureOrSuccess});
 }
 
 /// @nodoc
@@ -2905,9 +3206,8 @@ class _$RegistrationStateCopyWithImpl<$Res>
     Object? username = freezed,
     Object? isPasswordVisible = freezed,
     Object? isConfirmationPasswordVisible = freezed,
-    Object? isValidationRequested = freezed,
-    Object? stateFlipper = freezed,
-    Object? valueFailureOrValidityOption = freezed,
+    Object? isNavigationRequested = freezed,
+    Object? valueFailureOrSuccess = freezed,
   }) {
     return _then(_value.copyWith(
       emailAddress: emailAddress == freezed
@@ -2934,17 +3234,13 @@ class _$RegistrationStateCopyWithImpl<$Res>
           ? _value.isConfirmationPasswordVisible
           : isConfirmationPasswordVisible // ignore: cast_nullable_to_non_nullable
               as bool,
-      isValidationRequested: isValidationRequested == freezed
-          ? _value.isValidationRequested
-          : isValidationRequested // ignore: cast_nullable_to_non_nullable
+      isNavigationRequested: isNavigationRequested == freezed
+          ? _value.isNavigationRequested
+          : isNavigationRequested // ignore: cast_nullable_to_non_nullable
               as bool,
-      stateFlipper: stateFlipper == freezed
-          ? _value.stateFlipper
-          : stateFlipper // ignore: cast_nullable_to_non_nullable
-              as bool,
-      valueFailureOrValidityOption: valueFailureOrValidityOption == freezed
-          ? _value.valueFailureOrValidityOption
-          : valueFailureOrValidityOption // ignore: cast_nullable_to_non_nullable
+      valueFailureOrSuccess: valueFailureOrSuccess == freezed
+          ? _value.valueFailureOrSuccess
+          : valueFailureOrSuccess // ignore: cast_nullable_to_non_nullable
               as Either<ValueFailure, Unit>,
     ));
   }
@@ -2964,9 +3260,8 @@ abstract class $InsertEmailCopyWith<$Res>
       Username username,
       bool isPasswordVisible,
       bool isConfirmationPasswordVisible,
-      bool isValidationRequested,
-      bool stateFlipper,
-      Either<ValueFailure, Unit> valueFailureOrValidityOption});
+      bool isNavigationRequested,
+      Either<ValueFailure, Unit> valueFailureOrSuccess});
 }
 
 /// @nodoc
@@ -2988,9 +3283,8 @@ class _$InsertEmailCopyWithImpl<$Res>
     Object? username = freezed,
     Object? isPasswordVisible = freezed,
     Object? isConfirmationPasswordVisible = freezed,
-    Object? isValidationRequested = freezed,
-    Object? stateFlipper = freezed,
-    Object? valueFailureOrValidityOption = freezed,
+    Object? isNavigationRequested = freezed,
+    Object? valueFailureOrSuccess = freezed,
   }) {
     return _then(InsertEmail(
       emailAddress: emailAddress == freezed
@@ -3017,17 +3311,13 @@ class _$InsertEmailCopyWithImpl<$Res>
           ? _value.isConfirmationPasswordVisible
           : isConfirmationPasswordVisible // ignore: cast_nullable_to_non_nullable
               as bool,
-      isValidationRequested: isValidationRequested == freezed
-          ? _value.isValidationRequested
-          : isValidationRequested // ignore: cast_nullable_to_non_nullable
+      isNavigationRequested: isNavigationRequested == freezed
+          ? _value.isNavigationRequested
+          : isNavigationRequested // ignore: cast_nullable_to_non_nullable
               as bool,
-      stateFlipper: stateFlipper == freezed
-          ? _value.stateFlipper
-          : stateFlipper // ignore: cast_nullable_to_non_nullable
-              as bool,
-      valueFailureOrValidityOption: valueFailureOrValidityOption == freezed
-          ? _value.valueFailureOrValidityOption
-          : valueFailureOrValidityOption // ignore: cast_nullable_to_non_nullable
+      valueFailureOrSuccess: valueFailureOrSuccess == freezed
+          ? _value.valueFailureOrSuccess
+          : valueFailureOrSuccess // ignore: cast_nullable_to_non_nullable
               as Either<ValueFailure, Unit>,
     ));
   }
@@ -3043,9 +3333,8 @@ class _$InsertEmail implements InsertEmail {
       required this.username,
       required this.isPasswordVisible,
       required this.isConfirmationPasswordVisible,
-      required this.isValidationRequested,
-      required this.stateFlipper,
-      required this.valueFailureOrValidityOption});
+      required this.isNavigationRequested,
+      required this.valueFailureOrSuccess});
 
   @override
   final EmailAddress emailAddress;
@@ -3060,15 +3349,13 @@ class _$InsertEmail implements InsertEmail {
   @override
   final bool isConfirmationPasswordVisible;
   @override
-  final bool isValidationRequested;
+  final bool isNavigationRequested;
   @override
-  final bool stateFlipper;
-  @override // Required to fire stateChange when .copyWith is called
-  final Either<ValueFailure, Unit> valueFailureOrValidityOption;
+  final Either<ValueFailure, Unit> valueFailureOrSuccess;
 
   @override
   String toString() {
-    return 'RegistrationState.insertEmail(emailAddress: $emailAddress, password: $password, confirmationPassword: $confirmationPassword, username: $username, isPasswordVisible: $isPasswordVisible, isConfirmationPasswordVisible: $isConfirmationPasswordVisible, isValidationRequested: $isValidationRequested, stateFlipper: $stateFlipper, valueFailureOrValidityOption: $valueFailureOrValidityOption)';
+    return 'RegistrationState.insertEmail(emailAddress: $emailAddress, password: $password, confirmationPassword: $confirmationPassword, username: $username, isPasswordVisible: $isPasswordVisible, isConfirmationPasswordVisible: $isConfirmationPasswordVisible, isNavigationRequested: $isNavigationRequested, valueFailureOrSuccess: $valueFailureOrSuccess)';
   }
 
   @override
@@ -3088,12 +3375,9 @@ class _$InsertEmail implements InsertEmail {
                 other.isConfirmationPasswordVisible,
                 isConfirmationPasswordVisible) &&
             const DeepCollectionEquality()
-                .equals(other.isValidationRequested, isValidationRequested) &&
+                .equals(other.isNavigationRequested, isNavigationRequested) &&
             const DeepCollectionEquality()
-                .equals(other.stateFlipper, stateFlipper) &&
-            const DeepCollectionEquality().equals(
-                other.valueFailureOrValidityOption,
-                valueFailureOrValidityOption));
+                .equals(other.valueFailureOrSuccess, valueFailureOrSuccess));
   }
 
   @override
@@ -3105,9 +3389,8 @@ class _$InsertEmail implements InsertEmail {
       const DeepCollectionEquality().hash(username),
       const DeepCollectionEquality().hash(isPasswordVisible),
       const DeepCollectionEquality().hash(isConfirmationPasswordVisible),
-      const DeepCollectionEquality().hash(isValidationRequested),
-      const DeepCollectionEquality().hash(stateFlipper),
-      const DeepCollectionEquality().hash(valueFailureOrValidityOption));
+      const DeepCollectionEquality().hash(isNavigationRequested),
+      const DeepCollectionEquality().hash(valueFailureOrSuccess));
 
   @JsonKey(ignore: true)
   @override
@@ -3124,9 +3407,8 @@ class _$InsertEmail implements InsertEmail {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption)
+            bool isNavigationRequested,
+            Either<ValueFailure, Unit> valueFailureOrSuccess)
         insertEmail,
     required TResult Function(
             EmailAddress emailAddress,
@@ -3135,9 +3417,8 @@ class _$InsertEmail implements InsertEmail {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption)
+            bool isNavigationRequested,
+            Either<ValueFailure, Unit> valueFailureOrSuccess)
         insertPassword,
     required TResult Function(
             EmailAddress emailAddress,
@@ -3146,10 +3427,9 @@ class _$InsertEmail implements InsertEmail {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
+            bool isNavigationRequested,
             bool isSubmitting,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption,
+            Either<ValueFailure, Unit> valueFailureOrSuccess,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)
         insertUsername,
   }) {
@@ -3160,9 +3440,8 @@ class _$InsertEmail implements InsertEmail {
         username,
         isPasswordVisible,
         isConfirmationPasswordVisible,
-        isValidationRequested,
-        stateFlipper,
-        valueFailureOrValidityOption);
+        isNavigationRequested,
+        valueFailureOrSuccess);
   }
 
   @override
@@ -3175,9 +3454,8 @@ class _$InsertEmail implements InsertEmail {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption)?
+            bool isNavigationRequested,
+            Either<ValueFailure, Unit> valueFailureOrSuccess)?
         insertEmail,
     TResult Function(
             EmailAddress emailAddress,
@@ -3186,9 +3464,8 @@ class _$InsertEmail implements InsertEmail {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption)?
+            bool isNavigationRequested,
+            Either<ValueFailure, Unit> valueFailureOrSuccess)?
         insertPassword,
     TResult Function(
             EmailAddress emailAddress,
@@ -3197,10 +3474,9 @@ class _$InsertEmail implements InsertEmail {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
+            bool isNavigationRequested,
             bool isSubmitting,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption,
+            Either<ValueFailure, Unit> valueFailureOrSuccess,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
         insertUsername,
   }) {
@@ -3211,9 +3487,8 @@ class _$InsertEmail implements InsertEmail {
         username,
         isPasswordVisible,
         isConfirmationPasswordVisible,
-        isValidationRequested,
-        stateFlipper,
-        valueFailureOrValidityOption);
+        isNavigationRequested,
+        valueFailureOrSuccess);
   }
 
   @override
@@ -3226,9 +3501,8 @@ class _$InsertEmail implements InsertEmail {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption)?
+            bool isNavigationRequested,
+            Either<ValueFailure, Unit> valueFailureOrSuccess)?
         insertEmail,
     TResult Function(
             EmailAddress emailAddress,
@@ -3237,9 +3511,8 @@ class _$InsertEmail implements InsertEmail {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption)?
+            bool isNavigationRequested,
+            Either<ValueFailure, Unit> valueFailureOrSuccess)?
         insertPassword,
     TResult Function(
             EmailAddress emailAddress,
@@ -3248,10 +3521,9 @@ class _$InsertEmail implements InsertEmail {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
+            bool isNavigationRequested,
             bool isSubmitting,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption,
+            Either<ValueFailure, Unit> valueFailureOrSuccess,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
         insertUsername,
     required TResult orElse(),
@@ -3264,9 +3536,8 @@ class _$InsertEmail implements InsertEmail {
           username,
           isPasswordVisible,
           isConfirmationPasswordVisible,
-          isValidationRequested,
-          stateFlipper,
-          valueFailureOrValidityOption);
+          isNavigationRequested,
+          valueFailureOrSuccess);
     }
     return orElse();
   }
@@ -3314,9 +3585,8 @@ abstract class InsertEmail implements RegistrationState {
           required Username username,
           required bool isPasswordVisible,
           required bool isConfirmationPasswordVisible,
-          required bool isValidationRequested,
-          required bool stateFlipper,
-          required Either<ValueFailure, Unit> valueFailureOrValidityOption}) =
+          required bool isNavigationRequested,
+          required Either<ValueFailure, Unit> valueFailureOrSuccess}) =
       _$InsertEmail;
 
   @override
@@ -3332,11 +3602,9 @@ abstract class InsertEmail implements RegistrationState {
   @override
   bool get isConfirmationPasswordVisible;
   @override
-  bool get isValidationRequested;
+  bool get isNavigationRequested;
   @override
-  bool get stateFlipper;
-  @override // Required to fire stateChange when .copyWith is called
-  Either<ValueFailure, Unit> get valueFailureOrValidityOption;
+  Either<ValueFailure, Unit> get valueFailureOrSuccess;
   @override
   @JsonKey(ignore: true)
   $InsertEmailCopyWith<InsertEmail> get copyWith =>
@@ -3357,9 +3625,8 @@ abstract class $InsertPasswordCopyWith<$Res>
       Username username,
       bool isPasswordVisible,
       bool isConfirmationPasswordVisible,
-      bool isValidationRequested,
-      bool stateFlipper,
-      Either<ValueFailure, Unit> valueFailureOrValidityOption});
+      bool isNavigationRequested,
+      Either<ValueFailure, Unit> valueFailureOrSuccess});
 }
 
 /// @nodoc
@@ -3381,9 +3648,8 @@ class _$InsertPasswordCopyWithImpl<$Res>
     Object? username = freezed,
     Object? isPasswordVisible = freezed,
     Object? isConfirmationPasswordVisible = freezed,
-    Object? isValidationRequested = freezed,
-    Object? stateFlipper = freezed,
-    Object? valueFailureOrValidityOption = freezed,
+    Object? isNavigationRequested = freezed,
+    Object? valueFailureOrSuccess = freezed,
   }) {
     return _then(InsertPassword(
       emailAddress: emailAddress == freezed
@@ -3410,17 +3676,13 @@ class _$InsertPasswordCopyWithImpl<$Res>
           ? _value.isConfirmationPasswordVisible
           : isConfirmationPasswordVisible // ignore: cast_nullable_to_non_nullable
               as bool,
-      isValidationRequested: isValidationRequested == freezed
-          ? _value.isValidationRequested
-          : isValidationRequested // ignore: cast_nullable_to_non_nullable
+      isNavigationRequested: isNavigationRequested == freezed
+          ? _value.isNavigationRequested
+          : isNavigationRequested // ignore: cast_nullable_to_non_nullable
               as bool,
-      stateFlipper: stateFlipper == freezed
-          ? _value.stateFlipper
-          : stateFlipper // ignore: cast_nullable_to_non_nullable
-              as bool,
-      valueFailureOrValidityOption: valueFailureOrValidityOption == freezed
-          ? _value.valueFailureOrValidityOption
-          : valueFailureOrValidityOption // ignore: cast_nullable_to_non_nullable
+      valueFailureOrSuccess: valueFailureOrSuccess == freezed
+          ? _value.valueFailureOrSuccess
+          : valueFailureOrSuccess // ignore: cast_nullable_to_non_nullable
               as Either<ValueFailure, Unit>,
     ));
   }
@@ -3436,9 +3698,8 @@ class _$InsertPassword implements InsertPassword {
       required this.username,
       required this.isPasswordVisible,
       required this.isConfirmationPasswordVisible,
-      required this.isValidationRequested,
-      required this.stateFlipper,
-      required this.valueFailureOrValidityOption});
+      required this.isNavigationRequested,
+      required this.valueFailureOrSuccess});
 
   @override
   final EmailAddress emailAddress;
@@ -3453,15 +3714,13 @@ class _$InsertPassword implements InsertPassword {
   @override
   final bool isConfirmationPasswordVisible;
   @override
-  final bool isValidationRequested;
+  final bool isNavigationRequested;
   @override
-  final bool stateFlipper;
-  @override // Required to fire stateChange when .copyWith is called
-  final Either<ValueFailure, Unit> valueFailureOrValidityOption;
+  final Either<ValueFailure, Unit> valueFailureOrSuccess;
 
   @override
   String toString() {
-    return 'RegistrationState.insertPassword(emailAddress: $emailAddress, password: $password, confirmationPassword: $confirmationPassword, username: $username, isPasswordVisible: $isPasswordVisible, isConfirmationPasswordVisible: $isConfirmationPasswordVisible, isValidationRequested: $isValidationRequested, stateFlipper: $stateFlipper, valueFailureOrValidityOption: $valueFailureOrValidityOption)';
+    return 'RegistrationState.insertPassword(emailAddress: $emailAddress, password: $password, confirmationPassword: $confirmationPassword, username: $username, isPasswordVisible: $isPasswordVisible, isConfirmationPasswordVisible: $isConfirmationPasswordVisible, isNavigationRequested: $isNavigationRequested, valueFailureOrSuccess: $valueFailureOrSuccess)';
   }
 
   @override
@@ -3481,12 +3740,9 @@ class _$InsertPassword implements InsertPassword {
                 other.isConfirmationPasswordVisible,
                 isConfirmationPasswordVisible) &&
             const DeepCollectionEquality()
-                .equals(other.isValidationRequested, isValidationRequested) &&
+                .equals(other.isNavigationRequested, isNavigationRequested) &&
             const DeepCollectionEquality()
-                .equals(other.stateFlipper, stateFlipper) &&
-            const DeepCollectionEquality().equals(
-                other.valueFailureOrValidityOption,
-                valueFailureOrValidityOption));
+                .equals(other.valueFailureOrSuccess, valueFailureOrSuccess));
   }
 
   @override
@@ -3498,9 +3754,8 @@ class _$InsertPassword implements InsertPassword {
       const DeepCollectionEquality().hash(username),
       const DeepCollectionEquality().hash(isPasswordVisible),
       const DeepCollectionEquality().hash(isConfirmationPasswordVisible),
-      const DeepCollectionEquality().hash(isValidationRequested),
-      const DeepCollectionEquality().hash(stateFlipper),
-      const DeepCollectionEquality().hash(valueFailureOrValidityOption));
+      const DeepCollectionEquality().hash(isNavigationRequested),
+      const DeepCollectionEquality().hash(valueFailureOrSuccess));
 
   @JsonKey(ignore: true)
   @override
@@ -3517,9 +3772,8 @@ class _$InsertPassword implements InsertPassword {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption)
+            bool isNavigationRequested,
+            Either<ValueFailure, Unit> valueFailureOrSuccess)
         insertEmail,
     required TResult Function(
             EmailAddress emailAddress,
@@ -3528,9 +3782,8 @@ class _$InsertPassword implements InsertPassword {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption)
+            bool isNavigationRequested,
+            Either<ValueFailure, Unit> valueFailureOrSuccess)
         insertPassword,
     required TResult Function(
             EmailAddress emailAddress,
@@ -3539,10 +3792,9 @@ class _$InsertPassword implements InsertPassword {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
+            bool isNavigationRequested,
             bool isSubmitting,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption,
+            Either<ValueFailure, Unit> valueFailureOrSuccess,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)
         insertUsername,
   }) {
@@ -3553,9 +3805,8 @@ class _$InsertPassword implements InsertPassword {
         username,
         isPasswordVisible,
         isConfirmationPasswordVisible,
-        isValidationRequested,
-        stateFlipper,
-        valueFailureOrValidityOption);
+        isNavigationRequested,
+        valueFailureOrSuccess);
   }
 
   @override
@@ -3568,9 +3819,8 @@ class _$InsertPassword implements InsertPassword {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption)?
+            bool isNavigationRequested,
+            Either<ValueFailure, Unit> valueFailureOrSuccess)?
         insertEmail,
     TResult Function(
             EmailAddress emailAddress,
@@ -3579,9 +3829,8 @@ class _$InsertPassword implements InsertPassword {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption)?
+            bool isNavigationRequested,
+            Either<ValueFailure, Unit> valueFailureOrSuccess)?
         insertPassword,
     TResult Function(
             EmailAddress emailAddress,
@@ -3590,10 +3839,9 @@ class _$InsertPassword implements InsertPassword {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
+            bool isNavigationRequested,
             bool isSubmitting,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption,
+            Either<ValueFailure, Unit> valueFailureOrSuccess,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
         insertUsername,
   }) {
@@ -3604,9 +3852,8 @@ class _$InsertPassword implements InsertPassword {
         username,
         isPasswordVisible,
         isConfirmationPasswordVisible,
-        isValidationRequested,
-        stateFlipper,
-        valueFailureOrValidityOption);
+        isNavigationRequested,
+        valueFailureOrSuccess);
   }
 
   @override
@@ -3619,9 +3866,8 @@ class _$InsertPassword implements InsertPassword {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption)?
+            bool isNavigationRequested,
+            Either<ValueFailure, Unit> valueFailureOrSuccess)?
         insertEmail,
     TResult Function(
             EmailAddress emailAddress,
@@ -3630,9 +3876,8 @@ class _$InsertPassword implements InsertPassword {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption)?
+            bool isNavigationRequested,
+            Either<ValueFailure, Unit> valueFailureOrSuccess)?
         insertPassword,
     TResult Function(
             EmailAddress emailAddress,
@@ -3641,10 +3886,9 @@ class _$InsertPassword implements InsertPassword {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
+            bool isNavigationRequested,
             bool isSubmitting,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption,
+            Either<ValueFailure, Unit> valueFailureOrSuccess,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
         insertUsername,
     required TResult orElse(),
@@ -3657,9 +3901,8 @@ class _$InsertPassword implements InsertPassword {
           username,
           isPasswordVisible,
           isConfirmationPasswordVisible,
-          isValidationRequested,
-          stateFlipper,
-          valueFailureOrValidityOption);
+          isNavigationRequested,
+          valueFailureOrSuccess);
     }
     return orElse();
   }
@@ -3707,9 +3950,8 @@ abstract class InsertPassword implements RegistrationState {
           required Username username,
           required bool isPasswordVisible,
           required bool isConfirmationPasswordVisible,
-          required bool isValidationRequested,
-          required bool stateFlipper,
-          required Either<ValueFailure, Unit> valueFailureOrValidityOption}) =
+          required bool isNavigationRequested,
+          required Either<ValueFailure, Unit> valueFailureOrSuccess}) =
       _$InsertPassword;
 
   @override
@@ -3725,11 +3967,9 @@ abstract class InsertPassword implements RegistrationState {
   @override
   bool get isConfirmationPasswordVisible;
   @override
-  bool get isValidationRequested;
+  bool get isNavigationRequested;
   @override
-  bool get stateFlipper;
-  @override // Required to fire stateChange when .copyWith is called
-  Either<ValueFailure, Unit> get valueFailureOrValidityOption;
+  Either<ValueFailure, Unit> get valueFailureOrSuccess;
   @override
   @JsonKey(ignore: true)
   $InsertPasswordCopyWith<InsertPassword> get copyWith =>
@@ -3750,10 +3990,9 @@ abstract class $InsertUsernameCopyWith<$Res>
       Username username,
       bool isPasswordVisible,
       bool isConfirmationPasswordVisible,
-      bool isValidationRequested,
+      bool isNavigationRequested,
       bool isSubmitting,
-      bool stateFlipper,
-      Either<ValueFailure, Unit> valueFailureOrValidityOption,
+      Either<ValueFailure, Unit> valueFailureOrSuccess,
       Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption});
 }
 
@@ -3776,10 +4015,9 @@ class _$InsertUsernameCopyWithImpl<$Res>
     Object? username = freezed,
     Object? isPasswordVisible = freezed,
     Object? isConfirmationPasswordVisible = freezed,
-    Object? isValidationRequested = freezed,
+    Object? isNavigationRequested = freezed,
     Object? isSubmitting = freezed,
-    Object? stateFlipper = freezed,
-    Object? valueFailureOrValidityOption = freezed,
+    Object? valueFailureOrSuccess = freezed,
     Object? authFailureOrSuccessOption = freezed,
   }) {
     return _then(InsertUsername(
@@ -3807,21 +4045,17 @@ class _$InsertUsernameCopyWithImpl<$Res>
           ? _value.isConfirmationPasswordVisible
           : isConfirmationPasswordVisible // ignore: cast_nullable_to_non_nullable
               as bool,
-      isValidationRequested: isValidationRequested == freezed
-          ? _value.isValidationRequested
-          : isValidationRequested // ignore: cast_nullable_to_non_nullable
+      isNavigationRequested: isNavigationRequested == freezed
+          ? _value.isNavigationRequested
+          : isNavigationRequested // ignore: cast_nullable_to_non_nullable
               as bool,
       isSubmitting: isSubmitting == freezed
           ? _value.isSubmitting
           : isSubmitting // ignore: cast_nullable_to_non_nullable
               as bool,
-      stateFlipper: stateFlipper == freezed
-          ? _value.stateFlipper
-          : stateFlipper // ignore: cast_nullable_to_non_nullable
-              as bool,
-      valueFailureOrValidityOption: valueFailureOrValidityOption == freezed
-          ? _value.valueFailureOrValidityOption
-          : valueFailureOrValidityOption // ignore: cast_nullable_to_non_nullable
+      valueFailureOrSuccess: valueFailureOrSuccess == freezed
+          ? _value.valueFailureOrSuccess
+          : valueFailureOrSuccess // ignore: cast_nullable_to_non_nullable
               as Either<ValueFailure, Unit>,
       authFailureOrSuccessOption: authFailureOrSuccessOption == freezed
           ? _value.authFailureOrSuccessOption
@@ -3841,10 +4075,9 @@ class _$InsertUsername implements InsertUsername {
       required this.username,
       required this.isPasswordVisible,
       required this.isConfirmationPasswordVisible,
-      required this.isValidationRequested,
+      required this.isNavigationRequested,
       required this.isSubmitting,
-      required this.stateFlipper,
-      required this.valueFailureOrValidityOption,
+      required this.valueFailureOrSuccess,
       required this.authFailureOrSuccessOption});
 
   @override
@@ -3860,19 +4093,17 @@ class _$InsertUsername implements InsertUsername {
   @override
   final bool isConfirmationPasswordVisible;
   @override
-  final bool isValidationRequested;
+  final bool isNavigationRequested;
   @override
   final bool isSubmitting;
   @override
-  final bool stateFlipper;
-  @override // Required to fire stateChange when .copyWith is called#
-  final Either<ValueFailure, Unit> valueFailureOrValidityOption;
+  final Either<ValueFailure, Unit> valueFailureOrSuccess;
   @override
   final Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption;
 
   @override
   String toString() {
-    return 'RegistrationState.insertUsername(emailAddress: $emailAddress, password: $password, confirmationPassword: $confirmationPassword, username: $username, isPasswordVisible: $isPasswordVisible, isConfirmationPasswordVisible: $isConfirmationPasswordVisible, isValidationRequested: $isValidationRequested, isSubmitting: $isSubmitting, stateFlipper: $stateFlipper, valueFailureOrValidityOption: $valueFailureOrValidityOption, authFailureOrSuccessOption: $authFailureOrSuccessOption)';
+    return 'RegistrationState.insertUsername(emailAddress: $emailAddress, password: $password, confirmationPassword: $confirmationPassword, username: $username, isPasswordVisible: $isPasswordVisible, isConfirmationPasswordVisible: $isConfirmationPasswordVisible, isNavigationRequested: $isNavigationRequested, isSubmitting: $isSubmitting, valueFailureOrSuccess: $valueFailureOrSuccess, authFailureOrSuccessOption: $authFailureOrSuccessOption)';
   }
 
   @override
@@ -3892,14 +4123,11 @@ class _$InsertUsername implements InsertUsername {
                 other.isConfirmationPasswordVisible,
                 isConfirmationPasswordVisible) &&
             const DeepCollectionEquality()
-                .equals(other.isValidationRequested, isValidationRequested) &&
+                .equals(other.isNavigationRequested, isNavigationRequested) &&
             const DeepCollectionEquality()
                 .equals(other.isSubmitting, isSubmitting) &&
             const DeepCollectionEquality()
-                .equals(other.stateFlipper, stateFlipper) &&
-            const DeepCollectionEquality().equals(
-                other.valueFailureOrValidityOption,
-                valueFailureOrValidityOption) &&
+                .equals(other.valueFailureOrSuccess, valueFailureOrSuccess) &&
             const DeepCollectionEquality().equals(
                 other.authFailureOrSuccessOption, authFailureOrSuccessOption));
   }
@@ -3913,10 +4141,9 @@ class _$InsertUsername implements InsertUsername {
       const DeepCollectionEquality().hash(username),
       const DeepCollectionEquality().hash(isPasswordVisible),
       const DeepCollectionEquality().hash(isConfirmationPasswordVisible),
-      const DeepCollectionEquality().hash(isValidationRequested),
+      const DeepCollectionEquality().hash(isNavigationRequested),
       const DeepCollectionEquality().hash(isSubmitting),
-      const DeepCollectionEquality().hash(stateFlipper),
-      const DeepCollectionEquality().hash(valueFailureOrValidityOption),
+      const DeepCollectionEquality().hash(valueFailureOrSuccess),
       const DeepCollectionEquality().hash(authFailureOrSuccessOption));
 
   @JsonKey(ignore: true)
@@ -3934,9 +4161,8 @@ class _$InsertUsername implements InsertUsername {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption)
+            bool isNavigationRequested,
+            Either<ValueFailure, Unit> valueFailureOrSuccess)
         insertEmail,
     required TResult Function(
             EmailAddress emailAddress,
@@ -3945,9 +4171,8 @@ class _$InsertUsername implements InsertUsername {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption)
+            bool isNavigationRequested,
+            Either<ValueFailure, Unit> valueFailureOrSuccess)
         insertPassword,
     required TResult Function(
             EmailAddress emailAddress,
@@ -3956,10 +4181,9 @@ class _$InsertUsername implements InsertUsername {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
+            bool isNavigationRequested,
             bool isSubmitting,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption,
+            Either<ValueFailure, Unit> valueFailureOrSuccess,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)
         insertUsername,
   }) {
@@ -3970,10 +4194,9 @@ class _$InsertUsername implements InsertUsername {
         username,
         isPasswordVisible,
         isConfirmationPasswordVisible,
-        isValidationRequested,
+        isNavigationRequested,
         isSubmitting,
-        stateFlipper,
-        valueFailureOrValidityOption,
+        valueFailureOrSuccess,
         authFailureOrSuccessOption);
   }
 
@@ -3987,9 +4210,8 @@ class _$InsertUsername implements InsertUsername {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption)?
+            bool isNavigationRequested,
+            Either<ValueFailure, Unit> valueFailureOrSuccess)?
         insertEmail,
     TResult Function(
             EmailAddress emailAddress,
@@ -3998,9 +4220,8 @@ class _$InsertUsername implements InsertUsername {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption)?
+            bool isNavigationRequested,
+            Either<ValueFailure, Unit> valueFailureOrSuccess)?
         insertPassword,
     TResult Function(
             EmailAddress emailAddress,
@@ -4009,10 +4230,9 @@ class _$InsertUsername implements InsertUsername {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
+            bool isNavigationRequested,
             bool isSubmitting,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption,
+            Either<ValueFailure, Unit> valueFailureOrSuccess,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
         insertUsername,
   }) {
@@ -4023,10 +4243,9 @@ class _$InsertUsername implements InsertUsername {
         username,
         isPasswordVisible,
         isConfirmationPasswordVisible,
-        isValidationRequested,
+        isNavigationRequested,
         isSubmitting,
-        stateFlipper,
-        valueFailureOrValidityOption,
+        valueFailureOrSuccess,
         authFailureOrSuccessOption);
   }
 
@@ -4040,9 +4259,8 @@ class _$InsertUsername implements InsertUsername {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption)?
+            bool isNavigationRequested,
+            Either<ValueFailure, Unit> valueFailureOrSuccess)?
         insertEmail,
     TResult Function(
             EmailAddress emailAddress,
@@ -4051,9 +4269,8 @@ class _$InsertUsername implements InsertUsername {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption)?
+            bool isNavigationRequested,
+            Either<ValueFailure, Unit> valueFailureOrSuccess)?
         insertPassword,
     TResult Function(
             EmailAddress emailAddress,
@@ -4062,10 +4279,9 @@ class _$InsertUsername implements InsertUsername {
             Username username,
             bool isPasswordVisible,
             bool isConfirmationPasswordVisible,
-            bool isValidationRequested,
+            bool isNavigationRequested,
             bool isSubmitting,
-            bool stateFlipper,
-            Either<ValueFailure, Unit> valueFailureOrValidityOption,
+            Either<ValueFailure, Unit> valueFailureOrSuccess,
             Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption)?
         insertUsername,
     required TResult orElse(),
@@ -4078,10 +4294,9 @@ class _$InsertUsername implements InsertUsername {
           username,
           isPasswordVisible,
           isConfirmationPasswordVisible,
-          isValidationRequested,
+          isNavigationRequested,
           isSubmitting,
-          stateFlipper,
-          valueFailureOrValidityOption,
+          valueFailureOrSuccess,
           authFailureOrSuccessOption);
     }
     return orElse();
@@ -4130,10 +4345,9 @@ abstract class InsertUsername implements RegistrationState {
       required Username username,
       required bool isPasswordVisible,
       required bool isConfirmationPasswordVisible,
-      required bool isValidationRequested,
+      required bool isNavigationRequested,
       required bool isSubmitting,
-      required bool stateFlipper,
-      required Either<ValueFailure, Unit> valueFailureOrValidityOption,
+      required Either<ValueFailure, Unit> valueFailureOrSuccess,
       required Option<Either<AuthFailure, Unit>>
           authFailureOrSuccessOption}) = _$InsertUsername;
 
@@ -4150,12 +4364,10 @@ abstract class InsertUsername implements RegistrationState {
   @override
   bool get isConfirmationPasswordVisible;
   @override
-  bool get isValidationRequested;
+  bool get isNavigationRequested;
   bool get isSubmitting;
   @override
-  bool get stateFlipper;
-  @override // Required to fire stateChange when .copyWith is called#
-  Either<ValueFailure, Unit> get valueFailureOrValidityOption;
+  Either<ValueFailure, Unit> get valueFailureOrSuccess;
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption;
   @override
   @JsonKey(ignore: true)

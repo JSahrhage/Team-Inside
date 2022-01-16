@@ -14,10 +14,10 @@ class RegistrationInsertPasswordForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<RegistrationBloc, RegistrationState>(
       listener: (context, state) {
-        if (!state.isValidationRequested) {
+        if (!state.isNavigationRequested) {
           return;
         }
-        state.valueFailureOrValidityOption.fold(
+        state.valueFailureOrSuccess.fold(
           (failure) {
             showDialog(
               context: context,
@@ -27,6 +27,9 @@ class RegistrationInsertPasswordForm extends StatelessWidget {
                 );
               },
             );
+            context.read<RegistrationBloc>().add(
+                  const RegistrationEvent.proceedingRequestEvaluated(),
+                );
           },
           (_) {
             context.read<RegistrationBloc>().add(
@@ -39,21 +42,68 @@ class RegistrationInsertPasswordForm extends StatelessWidget {
       builder: (context, state) {
         return ListView(
           children: [
-            const RegistrationInsertPasswordReturnButton(height: 64),
+            RegistrationInsertPasswordReturnButton(
+              callback: () {
+                context.read<RegistrationBloc>().add(
+                      const RegistrationEvent
+                          .returnFromPasswordInsertionPagePressed(),
+                    );
+              },
+              height: 64,
+            ),
             const RegistrationInsertPasswordLogo(),
             const SizedBox(height: 32),
             const RegistrationInsertPasswordInstructionText(),
             const SizedBox(height: 8),
             RegistrationInsertPasswordPasswordFormField(
+              formFieldCallback: (value) {
+                context
+                    .read<RegistrationBloc>()
+                    .add(RegistrationEvent.passwordChanged(value));
+              },
+              iconButtonCallback: () {
+                context.read<RegistrationBloc>().add(
+                      const RegistrationEvent.passwordVisibilityIconPressed(),
+                    );
+              },
               isPasswordVisible: state.isPasswordVisible,
+              initialValue: context
+                  .read<RegistrationBloc>()
+                  .state
+                  .password
+                  .value
+                  .getOrElse(() => ''),
             ),
             const SizedBox(height: 8),
             RegistrationInsertPasswordConfirmationPasswordFormField(
+              formFieldCallback: (value) {
+                context
+                    .read<RegistrationBloc>()
+                    .add(RegistrationEvent.confirmationPasswordChanged(value));
+              },
+              iconButtonCallback: () {
+                context.read<RegistrationBloc>().add(
+                      const RegistrationEvent
+                          .confirmationPasswordVisibilityIconPressed(),
+                    );
+              },
               isConfirmationPasswordVisible:
                   state.isConfirmationPasswordVisible,
+              initialValue: context
+                  .read<RegistrationBloc>()
+                  .state
+                  .confirmationPassword
+                  .value
+                  .getOrElse(() => ''),
             ),
             const SizedBox(height: 32),
-            const RegistrationInsertPasswordContinueButton(),
+            RegistrationInsertPasswordContinueButton(
+              callback: () {
+                context.read<RegistrationBloc>().add(
+                      const RegistrationEvent.proceedingRequested(),
+                    );
+              },
+            ),
           ],
         );
       },

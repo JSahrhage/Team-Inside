@@ -15,10 +15,10 @@ class RegistrationInsertEmailForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<RegistrationBloc, RegistrationState>(
       listener: (context, state) {
-        if (!state.isValidationRequested) {
+        if (!state.isNavigationRequested) {
           return;
         }
-        state.valueFailureOrValidityOption.fold(
+        state.valueFailureOrSuccess.fold(
           (failure) {
             showDialog(
               context: context,
@@ -28,6 +28,9 @@ class RegistrationInsertEmailForm extends StatelessWidget {
                 );
               },
             );
+            context.read<RegistrationBloc>().add(
+                  const RegistrationEvent.proceedingRequestEvaluated(),
+                );
           },
           (_) {
             context.read<RegistrationBloc>().add(
@@ -51,9 +54,27 @@ class RegistrationInsertEmailForm extends StatelessWidget {
             const SizedBox(height: 32),
             const RegistrationInsertEmailInstructionText(),
             const SizedBox(height: 8),
-            const RegistrationInsertEmailEmailFormField(),
+            RegistrationInsertEmailEmailFormField(
+              callback: (value) {
+                context
+                    .read<RegistrationBloc>()
+                    .add(RegistrationEvent.emailChanged(value));
+              },
+              initialValue: context
+                  .read<RegistrationBloc>()
+                  .state
+                  .emailAddress
+                  .value
+                  .getOrElse(() => ''),
+            ),
             const SizedBox(height: 32),
-            const RegistrationInsertEmailContinueButton(),
+            RegistrationInsertEmailContinueButton(
+              callback: () {
+                context.read<RegistrationBloc>().add(
+                      const RegistrationEvent.proceedingRequested(),
+                    );
+              },
+            ),
           ],
         );
       },

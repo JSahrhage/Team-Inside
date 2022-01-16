@@ -16,7 +16,7 @@ class RegistrationInsertUsernameForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<RegistrationBloc, RegistrationState>(
       listener: (context, state) {
-        if (!state.isValidationRequested) {
+        if (!state.isNavigationRequested) {
           return;
         }
         (state as InsertUsername).authFailureOrSuccessOption.fold(
@@ -42,7 +42,7 @@ class RegistrationInsertUsernameForm extends StatelessWidget {
                 },
               ),
             );
-        state.valueFailureOrValidityOption.fold(
+        state.valueFailureOrSuccess.fold(
           (failure) {
             showDialog(
               context: context,
@@ -52,6 +52,9 @@ class RegistrationInsertUsernameForm extends StatelessWidget {
                 );
               },
             );
+            context.read<RegistrationBloc>().add(
+                  const RegistrationEvent.proceedingRequestEvaluated(),
+                );
           },
           (_) {
             if (!state.isSubmitting) {
@@ -65,14 +68,39 @@ class RegistrationInsertUsernameForm extends StatelessWidget {
       builder: (context, state) {
         return ListView(
           children: [
-            const RegistrationInsertUsernameReturnButton(height: 64),
+            RegistrationInsertUsernameReturnButton(
+              callback: () {
+                context.read<RegistrationBloc>().add(
+                      const RegistrationEvent
+                          .returnFromUsernameInsertionPagePressed(),
+                    );
+              },
+              height: 64,
+            ),
             const RegistrationInsertUsernameLogo(),
             const SizedBox(height: 32),
             const RegistrationInsertUsernameInstructionText(),
             const SizedBox(height: 8),
-            const RegistrationInsertUsernameUsernameFormField(),
+            RegistrationInsertUsernameUsernameFormField(
+              callback: (value) {
+                context
+                    .read<RegistrationBloc>()
+                    .add(RegistrationEvent.usernameChanged(value));
+              },
+              initialValue: context
+                  .read<RegistrationBloc>()
+                  .state
+                  .username
+                  .value
+                  .getOrElse(() => ''),
+            ),
             const SizedBox(height: 32),
             RegistrationInsertUsernameRegisterButton(
+              callback: () {
+                context.read<RegistrationBloc>().add(
+                      const RegistrationEvent.proceedingRequested(),
+                    );
+              },
               isSubmitting: (state as InsertUsername).isSubmitting,
             ),
           ],

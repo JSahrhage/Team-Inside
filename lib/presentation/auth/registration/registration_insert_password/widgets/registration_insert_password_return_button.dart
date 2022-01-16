@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:team_inside/application/auth/registration/registration_bloc.dart';
 import 'package:team_inside/presentation/core/widgets/core_return_button.dart';
 import 'package:team_inside/presentation/core/widgets/core_sized_padding_box.dart';
 
 class RegistrationInsertPasswordReturnButton extends StatelessWidget {
   const RegistrationInsertPasswordReturnButton({
     Key? key,
+    required this.callback,
     required this.height,
   }) : super(key: key);
 
+  final VoidCallback callback;
   final double height;
 
   @override
@@ -17,12 +17,7 @@ class RegistrationInsertPasswordReturnButton extends StatelessWidget {
     return CoreSizedPaddingBox(
       height: height,
       child: CoreReturnButton(
-        callback: () {
-          context.read<RegistrationBloc>().add(
-                const RegistrationEvent
-                    .returnFromPasswordInsertionPagePressed(),
-              );
-        },
+        callback: callback,
       ),
     );
   }
