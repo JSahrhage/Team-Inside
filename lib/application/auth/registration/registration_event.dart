@@ -23,7 +23,7 @@ class RegistrationEvent with _$RegistrationEvent {
   const factory RegistrationEvent.returnFromUsernameInsertionPagePressed() =
       ReturnFromUsernameInsertationPagePressed;
   // RequestValidation
-  const factory RegistrationEvent.requestValidation() = RequestValidation;
+  const factory RegistrationEvent.validationRequested() = ValidationRequested;
   // ProceedingValidated
   const factory RegistrationEvent.emailInsertionProceedingValidated() =
       EmailInsertionProceedingValidated;

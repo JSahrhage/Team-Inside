@@ -171,7 +171,7 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
       },
     );
     // RequestValidation
-    on<RequestValidation>(
+    on<ValidationRequested>(
       (event, emit) {
         emit(
           state.copyWith(

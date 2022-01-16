@@ -33,6 +33,15 @@ class Router extends _i6.RootStackRouter {
       return _i6.MaterialPageX<dynamic>(
           routeData: routeData, child: _i2.SignInPage());
     },
+    SignInSlideRightPageRoute.name: (routeData) {
+      return _i6.CustomPage<dynamic>(
+          routeData: routeData,
+          child: _i2.SignInPage(),
+          transitionsBuilder: _i6.TransitionsBuilders.slideRight,
+          durationInMilliseconds: 100,
+          opaque: true,
+          barrierDismissible: false);
+    },
     RegistrationPageRoute.name: (routeData) {
       return _i6.MaterialPageX<dynamic>(
           routeData: routeData, child: _i3.RegistrationPage());
@@ -51,6 +60,7 @@ class Router extends _i6.RootStackRouter {
   List<_i6.RouteConfig> get routes => [
         _i6.RouteConfig(SplashPageRoute.name, path: '/'),
         _i6.RouteConfig(SignInPageRoute.name, path: '/sign-in-page'),
+        _i6.RouteConfig(SignInSlideRightPageRoute.name, path: '/sign-in-page'),
         _i6.RouteConfig(RegistrationPageRoute.name, path: '/registration-page'),
         _i6.RouteConfig(PasswordResetPageRoute.name,
             path: '/password-reset-page'),
@@ -73,6 +83,15 @@ class SignInPageRoute extends _i6.PageRouteInfo<void> {
   const SignInPageRoute() : super(SignInPageRoute.name, path: '/sign-in-page');
 
   static const String name = 'SignInPageRoute';
+}
+
+/// generated route for
+/// [_i2.SignInPage]
+class SignInSlideRightPageRoute extends _i6.PageRouteInfo<void> {
+  const SignInSlideRightPageRoute()
+      : super(SignInSlideRightPageRoute.name, path: '/sign-in-page');
+
+  static const String name = 'SignInSlideRightPageRoute';
 }
 
 /// generated route for

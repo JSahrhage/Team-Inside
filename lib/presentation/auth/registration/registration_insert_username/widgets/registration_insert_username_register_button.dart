@@ -18,7 +18,7 @@ class RegistrationInsertUsernameRegisterButton extends StatelessWidget {
       child: CoreElevatedButton(
         callback: () {
           context.read<RegistrationBloc>().add(
-                const RegistrationEvent.requestValidation(),
+                const RegistrationEvent.validationRequested(),
               );
         },
         text: 'register',

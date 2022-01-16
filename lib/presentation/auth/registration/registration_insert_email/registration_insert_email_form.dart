@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team_inside/application/auth/registration/registration_bloc.dart';
@@ -7,6 +8,7 @@ import 'package:team_inside/presentation/auth/registration/registration_insert_e
 import 'package:team_inside/presentation/auth/registration/registration_insert_email/widgets/registration_insert_email_instruction_text.dart';
 import 'package:team_inside/presentation/auth/registration/registration_insert_email/widgets/registration_insert_email_logo.dart';
 import 'package:team_inside/presentation/auth/registration/registration_insert_email/widgets/registration_insert_email_return_button.dart';
+import 'package:team_inside/presentation/routes/router.gr.dart';
 
 class RegistrationInsertEmailForm extends StatelessWidget {
   @override
@@ -36,15 +38,22 @@ class RegistrationInsertEmailForm extends StatelessWidget {
       },
       builder: (context, state) {
         return ListView(
-          children: const [
-            RegistrationInsertEmailReturnButton(height: 64),
-            RegistrationInsertEmailLogo(),
-            SizedBox(height: 32),
-            RegistrationInsertEmailInstructionText(),
-            SizedBox(height: 8),
-            RegistrationInsertEmailEmailFormField(),
-            SizedBox(height: 32),
-            RegistrationInsertEmailContinueButton(),
+          children: [
+            RegistrationInsertEmailReturnButton(
+              callback: () {
+                context.router.replace(
+                  const SignInSlideRightPageRoute(),
+                );
+              },
+              height: 64,
+            ),
+            const RegistrationInsertEmailLogo(),
+            const SizedBox(height: 32),
+            const RegistrationInsertEmailInstructionText(),
+            const SizedBox(height: 8),
+            const RegistrationInsertEmailEmailFormField(),
+            const SizedBox(height: 32),
+            const RegistrationInsertEmailContinueButton(),
           ],
         );
       },
