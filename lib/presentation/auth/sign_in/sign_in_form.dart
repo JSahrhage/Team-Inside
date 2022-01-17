@@ -41,19 +41,50 @@ class SignInForm extends StatelessWidget {
             const SizedBox(height: 64),
             const SignInLogo(),
             const SizedBox(height: 32),
-            const SignInEmailTextFormField(),
+            SignInEmailTextFormField(
+              callback: (value) {
+                context.read<SignInBloc>().add(SignInEvent.emailChanged(value));
+              },
+            ),
             const SizedBox(height: 8),
             SignInPasswordTextFormField(
+              formFieldCallback: (value) {
+                context
+                    .read<SignInBloc>()
+                    .add(SignInEvent.passwordChanged(value));
+              },
+              iconButtonCallback: () {
+                context.read<SignInBloc>().add(
+                      const SignInEvent.passwordVisibilityIconPressed(),
+                    );
+              },
               isPasswordVisible: state.isPasswordVisible,
             ),
             const SizedBox(height: 16),
-            const SignInPasswordForgottenText(),
+            SignInPasswordForgottenText(
+              callback: () {
+                context.router.replace(
+                  const PasswordResetPageRoute(),
+                );
+              },
+            ),
             const SizedBox(height: 24),
             SignInSignInButton(
+              callback: () {
+                context.read<SignInBloc>().add(
+                      const SignInEvent.signInWithEmailAndPasswordPressed(),
+                    );
+              },
               isSubmitting: state.isSubmitting,
             ),
             const SizedBox(height: 24),
-            const SignInRegisterTextButton(),
+            SignInRegisterTextButton(
+              callback: () {
+                context.router.replace(
+                  const RegistrationPageRoute(),
+                );
+              },
+            ),
           ],
         );
       },

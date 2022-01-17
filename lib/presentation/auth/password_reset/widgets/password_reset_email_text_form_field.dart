@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:team_inside/application/auth/password_reset/password_reset_bloc.dart';
 import 'package:team_inside/presentation/core/widgets/core_email_form_field.dart';
 import 'package:team_inside/presentation/core/widgets/core_sized_padding_box.dart';
 
 class PasswordResetEmailTextFormField extends StatelessWidget {
-  const PasswordResetEmailTextFormField({Key? key}) : super(key: key);
+  const PasswordResetEmailTextFormField({
+    Key? key,
+    required this.callback,
+  }) : super(key: key);
+
+  final void Function(String) callback;
 
   @override
   Widget build(BuildContext context) {
     return CoreSizedPaddingBox(
       child: CoreEmailFormField(
-        callback: (value) {
-          context
-              .read<PasswordResetBloc>()
-              .add(PasswordResetEvent.emailChanged(value));
-        },
+        callback: callback,
       ),
     );
   }

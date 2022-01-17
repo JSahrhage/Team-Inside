@@ -33,6 +33,10 @@ class RegistrationInsertUsernameForm extends StatelessWidget {
                           );
                         },
                       ),
+                      context.read<RegistrationBloc>().add(
+                            const RegistrationEvent
+                                .proceedingRequestEvaluated(),
+                          ),
                     }
                 },
                 (_) => {

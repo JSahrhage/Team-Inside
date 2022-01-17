@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team_inside/application/auth/password_reset/password_reset_bloc.dart';
@@ -7,6 +8,7 @@ import 'package:team_inside/presentation/auth/password_reset/widgets/password_re
 import 'package:team_inside/presentation/auth/password_reset/widgets/password_reset_reset_password_elevated_button.dart';
 import 'package:team_inside/presentation/auth/password_reset/widgets/password_reset_return_button.dart';
 import 'package:team_inside/presentation/auth/password_reset/widgets/password_reset_success_alert_dialog.dart';
+import 'package:team_inside/presentation/routes/router.gr.dart';
 
 class PasswordResetForm extends StatelessWidget {
   @override
@@ -38,12 +40,30 @@ class PasswordResetForm extends StatelessWidget {
       builder: (context, state) {
         return ListView(
           children: [
-            const PasswordResetReturnButton(height: 64),
+            PasswordResetReturnButton(
+              callback: () {
+                context.router.replace(
+                  const SignInPageRoute(),
+                );
+              },
+              height: 64,
+            ),
             const PasswordResetLogo(),
             const SizedBox(height: 32),
-            const PasswordResetEmailTextFormField(),
+            PasswordResetEmailTextFormField(
+              callback: (value) {
+                context
+                    .read<PasswordResetBloc>()
+                    .add(PasswordResetEvent.emailChanged(value));
+              },
+            ),
             const SizedBox(height: 16),
             PasswordResetResetPasswordElevatedButton(
+              callback: () {
+                context.read<PasswordResetBloc>().add(
+                      const PasswordResetEvent.sendPasswordResetEmailPressed(),
+                    );
+              },
               isSubmitting: state.isSubmitting,
             )
           ],

@@ -1,11 +1,14 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:team_inside/application/localization/app_localizations.dart';
-import 'package:team_inside/presentation/routes/router.gr.dart';
 
 class SignInPasswordForgottenText extends StatelessWidget {
-  const SignInPasswordForgottenText({Key? key}) : super(key: key);
+  const SignInPasswordForgottenText({
+    Key? key,
+    required this.callback,
+  }) : super(key: key);
+
+  final VoidCallback callback;
 
   @override
   Widget build(BuildContext context) {
@@ -21,12 +24,7 @@ class SignInPasswordForgottenText extends StatelessWidget {
           style: TextStyle(
             color: Theme.of(context).colorScheme.primary,
           ),
-          recognizer: TapGestureRecognizer()
-            ..onTap = () {
-              context.router.replace(
-                const PasswordResetPageRoute(),
-              );
-            },
+          recognizer: TapGestureRecognizer()..onTap = callback,
         ),
       ),
     );
