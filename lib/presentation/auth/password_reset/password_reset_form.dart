@@ -43,7 +43,7 @@ class PasswordResetForm extends StatelessWidget {
             PasswordResetReturnButton(
               callback: () {
                 context.router.replace(
-                  const SignInPageRoute(),
+                  const SignInSlideRightPageRoute(),
                 );
               },
               height: 64,

@@ -46,13 +46,40 @@ class Router extends _i6.RootStackRouter {
       return _i6.MaterialPageX<dynamic>(
           routeData: routeData, child: _i3.RegistrationPage());
     },
+    RegistrationSlideLeftPageRoute.name: (routeData) {
+      return _i6.CustomPage<dynamic>(
+          routeData: routeData,
+          child: _i3.RegistrationPage(),
+          transitionsBuilder: _i6.TransitionsBuilders.slideLeft,
+          durationInMilliseconds: 100,
+          opaque: true,
+          barrierDismissible: false);
+    },
     PasswordResetPageRoute.name: (routeData) {
       return _i6.MaterialPageX<dynamic>(
           routeData: routeData, child: _i4.PasswordResetPage());
     },
+    PasswordResetSlideLeftPageRoute.name: (routeData) {
+      return _i6.CustomPage<dynamic>(
+          routeData: routeData,
+          child: _i4.PasswordResetPage(),
+          transitionsBuilder: _i6.TransitionsBuilders.slideLeft,
+          durationInMilliseconds: 100,
+          opaque: true,
+          barrierDismissible: false);
+    },
     TeamsFrameworkPageRoute.name: (routeData) {
       return _i6.MaterialPageX<dynamic>(
           routeData: routeData, child: _i5.TeamsFrameworkPage());
+    },
+    TeamsFrameworkSlideLeftPageRoute.name: (routeData) {
+      return _i6.CustomPage<dynamic>(
+          routeData: routeData,
+          child: _i5.TeamsFrameworkPage(),
+          transitionsBuilder: _i6.TransitionsBuilders.slideLeft,
+          durationInMilliseconds: 100,
+          opaque: true,
+          barrierDismissible: false);
     }
   };
 
@@ -62,9 +89,15 @@ class Router extends _i6.RootStackRouter {
         _i6.RouteConfig(SignInPageRoute.name, path: '/sign-in-page'),
         _i6.RouteConfig(SignInSlideRightPageRoute.name, path: '/sign-in-page'),
         _i6.RouteConfig(RegistrationPageRoute.name, path: '/registration-page'),
+        _i6.RouteConfig(RegistrationSlideLeftPageRoute.name,
+            path: '/registration-page'),
         _i6.RouteConfig(PasswordResetPageRoute.name,
             path: '/password-reset-page'),
+        _i6.RouteConfig(PasswordResetSlideLeftPageRoute.name,
+            path: '/password-reset-page'),
         _i6.RouteConfig(TeamsFrameworkPageRoute.name,
+            path: '/teams-framework-page'),
+        _i6.RouteConfig(TeamsFrameworkSlideLeftPageRoute.name,
             path: '/teams-framework-page')
       ];
 }
@@ -104,6 +137,15 @@ class RegistrationPageRoute extends _i6.PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [_i3.RegistrationPage]
+class RegistrationSlideLeftPageRoute extends _i6.PageRouteInfo<void> {
+  const RegistrationSlideLeftPageRoute()
+      : super(RegistrationSlideLeftPageRoute.name, path: '/registration-page');
+
+  static const String name = 'RegistrationSlideLeftPageRoute';
+}
+
+/// generated route for
 /// [_i4.PasswordResetPage]
 class PasswordResetPageRoute extends _i6.PageRouteInfo<void> {
   const PasswordResetPageRoute()
@@ -113,10 +155,30 @@ class PasswordResetPageRoute extends _i6.PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [_i4.PasswordResetPage]
+class PasswordResetSlideLeftPageRoute extends _i6.PageRouteInfo<void> {
+  const PasswordResetSlideLeftPageRoute()
+      : super(PasswordResetSlideLeftPageRoute.name,
+            path: '/password-reset-page');
+
+  static const String name = 'PasswordResetSlideLeftPageRoute';
+}
+
+/// generated route for
 /// [_i5.TeamsFrameworkPage]
 class TeamsFrameworkPageRoute extends _i6.PageRouteInfo<void> {
   const TeamsFrameworkPageRoute()
       : super(TeamsFrameworkPageRoute.name, path: '/teams-framework-page');
 
   static const String name = 'TeamsFrameworkPageRoute';
+}
+
+/// generated route for
+/// [_i5.TeamsFrameworkPage]
+class TeamsFrameworkSlideLeftPageRoute extends _i6.PageRouteInfo<void> {
+  const TeamsFrameworkSlideLeftPageRoute()
+      : super(TeamsFrameworkSlideLeftPageRoute.name,
+            path: '/teams-framework-page');
+
+  static const String name = 'TeamsFrameworkSlideLeftPageRoute';
 }

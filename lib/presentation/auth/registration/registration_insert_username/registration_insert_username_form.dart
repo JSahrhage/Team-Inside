@@ -41,7 +41,7 @@ class RegistrationInsertUsernameForm extends StatelessWidget {
                 },
                 (_) => {
                   context.router.replace(
-                    const TeamsFrameworkPageRoute(),
+                    const TeamsFrameworkSlideLeftPageRoute(),
                   )
                 },
               ),

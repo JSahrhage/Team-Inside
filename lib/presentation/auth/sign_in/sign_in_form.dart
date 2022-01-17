@@ -29,7 +29,7 @@ class SignInForm extends StatelessWidget {
             },
             (_) {
               context.router.replace(
-                const TeamsFrameworkPageRoute(),
+                const TeamsFrameworkSlideLeftPageRoute(),
               );
             },
           ),
@@ -64,7 +64,7 @@ class SignInForm extends StatelessWidget {
             SignInPasswordForgottenText(
               callback: () {
                 context.router.replace(
-                  const PasswordResetPageRoute(),
+                  const PasswordResetSlideLeftPageRoute(),
                 );
               },
             ),
@@ -81,7 +81,7 @@ class SignInForm extends StatelessWidget {
             SignInRegisterTextButton(
               callback: () {
                 context.router.replace(
-                  const RegistrationPageRoute(),
+                  const RegistrationSlideLeftPageRoute(),
                 );
               },
             ),
