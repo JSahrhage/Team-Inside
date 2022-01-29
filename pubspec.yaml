@@ -9,11 +9,12 @@ environment:
   sdk: ">=2.15.1 <3.0.0"
 
 dependencies:
-  auto_route: ^3.2.1
-  cloud_firestore: ^3.1.6
+  auto_route: ^3.2.2
+  cloud_firestore: ^3.1.7
   dartz: ^0.10.1
-  firebase_auth: ^3.3.5
-  firebase_core: ^1.11.0
+  firebase_auth: ^3.3.6
+  firebase_core: ^1.12.0
+  firebase_storage: ^10.2.6
   flutter:
     sdk: flutter
   flutter_bloc: ^8.0.1
@@ -21,6 +22,7 @@ dependencies:
     sdk: flutter
   freezed_annotation: ^1.1.0
   get_it: ^7.2.0
+  image_picker: ^0.8.4+5
   injectable: ^1.5.3
   ionicons: ^0.1.2
   json_annotation: ^4.4.0
@@ -35,7 +37,7 @@ dev_dependencies:
     sdk: flutter
   freezed: ^1.1.1
   json_serializable: ^6.1.4
-  lint: ^1.8.1
+  lint: ^1.8.2
 
 flutter:
   uses-material-design: true

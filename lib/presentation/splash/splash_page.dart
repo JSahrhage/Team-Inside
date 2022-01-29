@@ -24,7 +24,7 @@ class SplashPage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Theme.of(context).colorScheme.background,
         body: const Center(
-          child: CircularProgressIndicator(),
+          child: CircularProgressIndicator.adaptive(),
         ),
       ),
     );

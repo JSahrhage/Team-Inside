@@ -28,7 +28,7 @@ class CoreElevatedButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: callback,
       child: isSubmitting!
-          ? const CircularProgressIndicator()
+          ? const CircularProgressIndicator.adaptive()
           : Text(
               AppLocalizations.of(context)!.translate(
                 text,

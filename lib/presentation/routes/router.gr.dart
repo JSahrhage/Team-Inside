@@ -38,7 +38,7 @@ class Router extends _i6.RootStackRouter {
           routeData: routeData,
           child: _i2.SignInPage(),
           transitionsBuilder: _i6.TransitionsBuilders.slideRight,
-          durationInMilliseconds: 100,
+          durationInMilliseconds: 200,
           opaque: true,
           barrierDismissible: false);
     },
@@ -51,7 +51,7 @@ class Router extends _i6.RootStackRouter {
           routeData: routeData,
           child: _i3.RegistrationPage(),
           transitionsBuilder: _i6.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 100,
+          durationInMilliseconds: 200,
           opaque: true,
           barrierDismissible: false);
     },
@@ -64,7 +64,7 @@ class Router extends _i6.RootStackRouter {
           routeData: routeData,
           child: _i4.PasswordResetPage(),
           transitionsBuilder: _i6.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 100,
+          durationInMilliseconds: 200,
           opaque: true,
           barrierDismissible: false);
     },
@@ -77,7 +77,7 @@ class Router extends _i6.RootStackRouter {
           routeData: routeData,
           child: _i5.TeamsFrameworkPage(),
           transitionsBuilder: _i6.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 100,
+          durationInMilliseconds: 200,
           opaque: true,
           barrierDismissible: false);
     }
