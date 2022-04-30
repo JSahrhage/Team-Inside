@@ -10,19 +10,19 @@ environment:
 
 dependencies:
   auto_route: ^3.2.2
-  cloud_firestore: ^3.1.7
+  cloud_firestore: ^3.1.8
   dartz: ^0.10.1
-  firebase_auth: ^3.3.6
+  firebase_auth: ^3.3.7
   firebase_core: ^1.12.0
-  firebase_storage: ^10.2.6
+  firebase_storage: ^10.2.7
   flutter:
     sdk: flutter
   flutter_bloc: ^8.0.1
   flutter_localizations:
     sdk: flutter
-  freezed_annotation: ^1.1.0
+  freezed_annotation: ^2.0.1
   get_it: ^7.2.0
-  image_picker: ^0.8.4+5
+  image_picker: ^0.8.4+8
   injectable: ^1.5.3
   ionicons: ^0.1.2
   json_annotation: ^4.4.0
@@ -32,10 +32,10 @@ dependencies:
 dev_dependencies:
   auto_route_generator: ^3.2.1
   build_runner: null
-  flutter_lints: ^1.0.0
+  flutter_lints: ^1.0.4
   flutter_test:
     sdk: flutter
-  freezed: ^1.1.1
+  freezed: ^2.0.2
   json_serializable: ^6.1.4
   lint: ^1.8.2
 
