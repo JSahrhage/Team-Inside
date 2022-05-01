@@ -17,7 +17,7 @@ class CoreEmailFormField extends StatelessWidget {
       style: TextStyle(color: Theme.of(context).colorScheme.onBackground),
       decoration: InputDecoration(
         filled: true,
-        fillColor: Theme.of(context).colorScheme.secondaryVariant,
+        fillColor: Theme.of(context).colorScheme.secondaryContainer,
         border: OutlineInputBorder(
           borderSide: BorderSide.none,
           borderRadius: BorderRadius.circular(8),

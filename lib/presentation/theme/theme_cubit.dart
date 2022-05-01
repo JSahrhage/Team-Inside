@@ -10,10 +10,10 @@ class ThemeCubit extends Cubit<ThemeData> {
       background: Colors.black,
       onBackground: Colors.white,
       primary: Color.fromARGB(255, 0, 153, 255),
-      primaryVariant: Color.fromARGB(255, 0, 107, 179),
+      primaryContainer: Color.fromARGB(255, 0, 107, 179),
       onPrimary: Colors.black,
       secondary: Color.fromARGB(255, 51, 51, 51),
-      secondaryVariant: Color.fromARGB(255, 13, 13, 13),
+      secondaryContainer: Color.fromARGB(255, 13, 13, 13),
       onSecondary: Colors.white,
       error: Colors.redAccent,
       onError: Colors.black,
@@ -30,10 +30,10 @@ class ThemeCubit extends Cubit<ThemeData> {
       background: Colors.black,
       onBackground: Colors.white,
       primary: Color.fromARGB(255, 0, 153, 255),
-      primaryVariant: Color.fromARGB(255, 0, 122, 204), // -10%
+      primaryContainer: Color.fromARGB(255, 0, 122, 204), // -10%
       onPrimary: Colors.white,
       secondary: Color.fromARGB(255, 51, 51, 51),
-      secondaryVariant: Color.fromARGB(255, 26, 26, 26), // -10%
+      secondaryContainer: Color.fromARGB(255, 26, 26, 26), // -10%
       onSecondary: Color.fromARGB(255, 170, 170, 170),
       error: Colors.redAccent,
       onError: Colors.black,
