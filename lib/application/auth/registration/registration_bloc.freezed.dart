@@ -12,79 +12,7 @@ part of 'registration_bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$RegistrationEventTearOff {
-  const _$RegistrationEventTearOff();
-
-  EmailChanged emailChanged(String email) {
-    return EmailChanged(
-      email,
-    );
-  }
-
-  PasswordChanged passwordChanged(String password) {
-    return PasswordChanged(
-      password,
-    );
-  }
-
-  ConfirmationPasswordChanged confirmationPasswordChanged(
-      String confirmationPassword) {
-    return ConfirmationPasswordChanged(
-      confirmationPassword,
-    );
-  }
-
-  UsernameChanged usernameChanged(String username) {
-    return UsernameChanged(
-      username,
-    );
-  }
-
-  PasswordVisibilityIconPressed passwordVisibilityIconPressed() {
-    return const PasswordVisibilityIconPressed();
-  }
-
-  ConfirmationPasswordVisibilityIconPressed
-      confirmationPasswordVisibilityIconPressed() {
-    return const ConfirmationPasswordVisibilityIconPressed();
-  }
-
-  ReturnFromPasswordInsertationPagePressed
-      returnFromPasswordInsertionPagePressed() {
-    return const ReturnFromPasswordInsertationPagePressed();
-  }
-
-  ReturnFromUsernameInsertationPagePressed
-      returnFromUsernameInsertionPagePressed() {
-    return const ReturnFromUsernameInsertationPagePressed();
-  }
-
-  ProceedingRequested proceedingRequested() {
-    return const ProceedingRequested();
-  }
-
-  ProceedingRequestEvaluated proceedingRequestEvaluated() {
-    return const ProceedingRequestEvaluated();
-  }
-
-  EmailInsertionProceedingValidated emailInsertionProceedingValidated() {
-    return const EmailInsertionProceedingValidated();
-  }
-
-  PasswordInsertionProceedingValidated passwordInsertionProceedingValidated() {
-    return const PasswordInsertionProceedingValidated();
-  }
-
-  RegisterValidated registerValidated() {
-    return const RegisterValidated();
-  }
-}
-
-/// @nodoc
-const $RegistrationEvent = _$RegistrationEventTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$RegistrationEvent {
@@ -453,9 +381,9 @@ class _$EmailChanged implements EmailChanged {
 }
 
 abstract class EmailChanged implements RegistrationEvent {
-  const factory EmailChanged(String email) = _$EmailChanged;
+  const factory EmailChanged(final String email) = _$EmailChanged;
 
-  String get email;
+  String get email => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $EmailChangedCopyWith<EmailChanged> get copyWith =>
       throw _privateConstructorUsedError;
@@ -678,9 +606,9 @@ class _$PasswordChanged implements PasswordChanged {
 }
 
 abstract class PasswordChanged implements RegistrationEvent {
-  const factory PasswordChanged(String password) = _$PasswordChanged;
+  const factory PasswordChanged(final String password) = _$PasswordChanged;
 
-  String get password;
+  String get password => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $PasswordChangedCopyWith<PasswordChanged> get copyWith =>
       throw _privateConstructorUsedError;
@@ -907,10 +835,10 @@ class _$ConfirmationPasswordChanged implements ConfirmationPasswordChanged {
 }
 
 abstract class ConfirmationPasswordChanged implements RegistrationEvent {
-  const factory ConfirmationPasswordChanged(String confirmationPassword) =
+  const factory ConfirmationPasswordChanged(final String confirmationPassword) =
       _$ConfirmationPasswordChanged;
 
-  String get confirmationPassword;
+  String get confirmationPassword => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $ConfirmationPasswordChangedCopyWith<ConfirmationPasswordChanged>
       get copyWith => throw _privateConstructorUsedError;
@@ -1133,9 +1061,9 @@ class _$UsernameChanged implements UsernameChanged {
 }
 
 abstract class UsernameChanged implements RegistrationEvent {
-  const factory UsernameChanged(String username) = _$UsernameChanged;
+  const factory UsernameChanged(final String username) = _$UsernameChanged;
 
-  String get username;
+  String get username => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $UsernameChangedCopyWith<UsernameChanged> get copyWith =>
       throw _privateConstructorUsedError;
@@ -2950,81 +2878,6 @@ abstract class RegisterValidated implements RegistrationEvent {
 }
 
 /// @nodoc
-class _$RegistrationStateTearOff {
-  const _$RegistrationStateTearOff();
-
-  InsertEmail insertEmail(
-      {required EmailAddress emailAddress,
-      required Password password,
-      required Password confirmationPassword,
-      required Username username,
-      required bool isPasswordVisible,
-      required bool isConfirmationPasswordVisible,
-      required bool isNavigationRequested,
-      required Either<ValueFailure, Unit> valueFailureOrSuccess}) {
-    return InsertEmail(
-      emailAddress: emailAddress,
-      password: password,
-      confirmationPassword: confirmationPassword,
-      username: username,
-      isPasswordVisible: isPasswordVisible,
-      isConfirmationPasswordVisible: isConfirmationPasswordVisible,
-      isNavigationRequested: isNavigationRequested,
-      valueFailureOrSuccess: valueFailureOrSuccess,
-    );
-  }
-
-  InsertPassword insertPassword(
-      {required EmailAddress emailAddress,
-      required Password password,
-      required Password confirmationPassword,
-      required Username username,
-      required bool isPasswordVisible,
-      required bool isConfirmationPasswordVisible,
-      required bool isNavigationRequested,
-      required Either<ValueFailure, Unit> valueFailureOrSuccess}) {
-    return InsertPassword(
-      emailAddress: emailAddress,
-      password: password,
-      confirmationPassword: confirmationPassword,
-      username: username,
-      isPasswordVisible: isPasswordVisible,
-      isConfirmationPasswordVisible: isConfirmationPasswordVisible,
-      isNavigationRequested: isNavigationRequested,
-      valueFailureOrSuccess: valueFailureOrSuccess,
-    );
-  }
-
-  InsertUsername insertUsername(
-      {required EmailAddress emailAddress,
-      required Password password,
-      required Password confirmationPassword,
-      required Username username,
-      required bool isPasswordVisible,
-      required bool isConfirmationPasswordVisible,
-      required bool isNavigationRequested,
-      required bool isSubmitting,
-      required Either<ValueFailure, Unit> valueFailureOrSuccess,
-      required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption}) {
-    return InsertUsername(
-      emailAddress: emailAddress,
-      password: password,
-      confirmationPassword: confirmationPassword,
-      username: username,
-      isPasswordVisible: isPasswordVisible,
-      isConfirmationPasswordVisible: isConfirmationPasswordVisible,
-      isNavigationRequested: isNavigationRequested,
-      isSubmitting: isSubmitting,
-      valueFailureOrSuccess: valueFailureOrSuccess,
-      authFailureOrSuccessOption: authFailureOrSuccessOption,
-    );
-  }
-}
-
-/// @nodoc
-const $RegistrationState = _$RegistrationStateTearOff();
-
-/// @nodoc
 mixin _$RegistrationState {
   EmailAddress get emailAddress => throw _privateConstructorUsedError;
   Password get password => throw _privateConstructorUsedError;
@@ -3035,7 +2888,6 @@ mixin _$RegistrationState {
   bool get isNavigationRequested => throw _privateConstructorUsedError;
   Either<ValueFailure, Unit> get valueFailureOrSuccess =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
@@ -3579,32 +3431,33 @@ class _$InsertEmail implements InsertEmail {
 
 abstract class InsertEmail implements RegistrationState {
   const factory InsertEmail(
-          {required EmailAddress emailAddress,
-          required Password password,
-          required Password confirmationPassword,
-          required Username username,
-          required bool isPasswordVisible,
-          required bool isConfirmationPasswordVisible,
-          required bool isNavigationRequested,
-          required Either<ValueFailure, Unit> valueFailureOrSuccess}) =
+          {required final EmailAddress emailAddress,
+          required final Password password,
+          required final Password confirmationPassword,
+          required final Username username,
+          required final bool isPasswordVisible,
+          required final bool isConfirmationPasswordVisible,
+          required final bool isNavigationRequested,
+          required final Either<ValueFailure, Unit> valueFailureOrSuccess}) =
       _$InsertEmail;
 
   @override
-  EmailAddress get emailAddress;
+  EmailAddress get emailAddress => throw _privateConstructorUsedError;
   @override
-  Password get password;
+  Password get password => throw _privateConstructorUsedError;
   @override
-  Password get confirmationPassword;
+  Password get confirmationPassword => throw _privateConstructorUsedError;
   @override
-  Username get username;
+  Username get username => throw _privateConstructorUsedError;
   @override
-  bool get isPasswordVisible;
+  bool get isPasswordVisible => throw _privateConstructorUsedError;
   @override
-  bool get isConfirmationPasswordVisible;
+  bool get isConfirmationPasswordVisible => throw _privateConstructorUsedError;
   @override
-  bool get isNavigationRequested;
+  bool get isNavigationRequested => throw _privateConstructorUsedError;
   @override
-  Either<ValueFailure, Unit> get valueFailureOrSuccess;
+  Either<ValueFailure, Unit> get valueFailureOrSuccess =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   $InsertEmailCopyWith<InsertEmail> get copyWith =>
@@ -3944,32 +3797,33 @@ class _$InsertPassword implements InsertPassword {
 
 abstract class InsertPassword implements RegistrationState {
   const factory InsertPassword(
-          {required EmailAddress emailAddress,
-          required Password password,
-          required Password confirmationPassword,
-          required Username username,
-          required bool isPasswordVisible,
-          required bool isConfirmationPasswordVisible,
-          required bool isNavigationRequested,
-          required Either<ValueFailure, Unit> valueFailureOrSuccess}) =
+          {required final EmailAddress emailAddress,
+          required final Password password,
+          required final Password confirmationPassword,
+          required final Username username,
+          required final bool isPasswordVisible,
+          required final bool isConfirmationPasswordVisible,
+          required final bool isNavigationRequested,
+          required final Either<ValueFailure, Unit> valueFailureOrSuccess}) =
       _$InsertPassword;
 
   @override
-  EmailAddress get emailAddress;
+  EmailAddress get emailAddress => throw _privateConstructorUsedError;
   @override
-  Password get password;
+  Password get password => throw _privateConstructorUsedError;
   @override
-  Password get confirmationPassword;
+  Password get confirmationPassword => throw _privateConstructorUsedError;
   @override
-  Username get username;
+  Username get username => throw _privateConstructorUsedError;
   @override
-  bool get isPasswordVisible;
+  bool get isPasswordVisible => throw _privateConstructorUsedError;
   @override
-  bool get isConfirmationPasswordVisible;
+  bool get isConfirmationPasswordVisible => throw _privateConstructorUsedError;
   @override
-  bool get isNavigationRequested;
+  bool get isNavigationRequested => throw _privateConstructorUsedError;
   @override
-  Either<ValueFailure, Unit> get valueFailureOrSuccess;
+  Either<ValueFailure, Unit> get valueFailureOrSuccess =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   $InsertPasswordCopyWith<InsertPassword> get copyWith =>
@@ -4339,36 +4193,38 @@ class _$InsertUsername implements InsertUsername {
 
 abstract class InsertUsername implements RegistrationState {
   const factory InsertUsername(
-      {required EmailAddress emailAddress,
-      required Password password,
-      required Password confirmationPassword,
-      required Username username,
-      required bool isPasswordVisible,
-      required bool isConfirmationPasswordVisible,
-      required bool isNavigationRequested,
-      required bool isSubmitting,
-      required Either<ValueFailure, Unit> valueFailureOrSuccess,
-      required Option<Either<AuthFailure, Unit>>
+      {required final EmailAddress emailAddress,
+      required final Password password,
+      required final Password confirmationPassword,
+      required final Username username,
+      required final bool isPasswordVisible,
+      required final bool isConfirmationPasswordVisible,
+      required final bool isNavigationRequested,
+      required final bool isSubmitting,
+      required final Either<ValueFailure, Unit> valueFailureOrSuccess,
+      required final Option<Either<AuthFailure, Unit>>
           authFailureOrSuccessOption}) = _$InsertUsername;
 
   @override
-  EmailAddress get emailAddress;
+  EmailAddress get emailAddress => throw _privateConstructorUsedError;
   @override
-  Password get password;
+  Password get password => throw _privateConstructorUsedError;
   @override
-  Password get confirmationPassword;
+  Password get confirmationPassword => throw _privateConstructorUsedError;
   @override
-  Username get username;
+  Username get username => throw _privateConstructorUsedError;
   @override
-  bool get isPasswordVisible;
+  bool get isPasswordVisible => throw _privateConstructorUsedError;
   @override
-  bool get isConfirmationPasswordVisible;
+  bool get isConfirmationPasswordVisible => throw _privateConstructorUsedError;
   @override
-  bool get isNavigationRequested;
-  bool get isSubmitting;
+  bool get isNavigationRequested => throw _privateConstructorUsedError;
+  bool get isSubmitting => throw _privateConstructorUsedError;
   @override
-  Either<ValueFailure, Unit> get valueFailureOrSuccess;
-  Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption;
+  Either<ValueFailure, Unit> get valueFailureOrSuccess =>
+      throw _privateConstructorUsedError;
+  Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   $InsertUsernameCopyWith<InsertUsername> get copyWith =>

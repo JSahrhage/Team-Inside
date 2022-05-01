@@ -12,28 +12,7 @@ part of 'user.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$UserTearOff {
-  const _$UserTearOff();
-
-  _User call(
-      {required UniqueId id,
-      required Username username,
-      required JoinedTeams<UniqueId> joinedTeams,
-      required TeamRequests<UniqueId> teamRequests}) {
-    return _User(
-      id: id,
-      username: username,
-      joinedTeams: joinedTeams,
-      teamRequests: teamRequests,
-    );
-  }
-}
-
-/// @nodoc
-const $User = _$UserTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$User {
@@ -195,20 +174,20 @@ class _$_User extends _User {
 
 abstract class _User extends User {
   const factory _User(
-      {required UniqueId id,
-      required Username username,
-      required JoinedTeams<UniqueId> joinedTeams,
-      required TeamRequests<UniqueId> teamRequests}) = _$_User;
+      {required final UniqueId id,
+      required final Username username,
+      required final JoinedTeams<UniqueId> joinedTeams,
+      required final TeamRequests<UniqueId> teamRequests}) = _$_User;
   const _User._() : super._();
 
   @override
-  UniqueId get id;
+  UniqueId get id => throw _privateConstructorUsedError;
   @override
-  Username get username;
+  Username get username => throw _privateConstructorUsedError;
   @override
-  JoinedTeams<UniqueId> get joinedTeams;
+  JoinedTeams<UniqueId> get joinedTeams => throw _privateConstructorUsedError;
   @override
-  TeamRequests<UniqueId> get teamRequests;
+  TeamRequests<UniqueId> get teamRequests => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$UserCopyWith<_User> get copyWith => throw _privateConstructorUsedError;

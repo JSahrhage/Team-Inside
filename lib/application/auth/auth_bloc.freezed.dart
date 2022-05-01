@@ -12,23 +12,7 @@ part of 'auth_bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$AuthEventTearOff {
-  const _$AuthEventTearOff();
-
-  AuthCheckRequested authCheckRequested() {
-    return const AuthCheckRequested();
-  }
-
-  SignedOut signedOut() {
-    return const SignedOut();
-  }
-}
-
-/// @nodoc
-const $AuthEvent = _$AuthEventTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$AuthEvent {
@@ -293,26 +277,6 @@ class _$SignedOut implements SignedOut {
 abstract class SignedOut implements AuthEvent {
   const factory SignedOut() = _$SignedOut;
 }
-
-/// @nodoc
-class _$AuthStateTearOff {
-  const _$AuthStateTearOff();
-
-  Initial initial() {
-    return const Initial();
-  }
-
-  Authenticated authenticated() {
-    return const Authenticated();
-  }
-
-  Unauthenticated unauthenticated() {
-    return const Unauthenticated();
-  }
-}
-
-/// @nodoc
-const $AuthState = _$AuthStateTearOff();
 
 /// @nodoc
 mixin _$AuthState {

@@ -12,35 +12,7 @@ part of 'sign_in_bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$SignInEventTearOff {
-  const _$SignInEventTearOff();
-
-  EmailChanged emailChanged(String email) {
-    return EmailChanged(
-      email,
-    );
-  }
-
-  PasswordChanged passwordChanged(String password) {
-    return PasswordChanged(
-      password,
-    );
-  }
-
-  PasswordVisibilityIconPressed passwordVisibilityIconPressed() {
-    return const PasswordVisibilityIconPressed();
-  }
-
-  SignInWithEmailAndPasswordPressed signInWithEmailAndPasswordPressed() {
-    return const SignInWithEmailAndPasswordPressed();
-  }
-}
-
-/// @nodoc
-const $SignInEvent = _$SignInEventTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$SignInEvent {
@@ -261,9 +233,9 @@ class _$EmailChanged implements EmailChanged {
 }
 
 abstract class EmailChanged implements SignInEvent {
-  const factory EmailChanged(String email) = _$EmailChanged;
+  const factory EmailChanged(final String email) = _$EmailChanged;
 
-  String get email;
+  String get email => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $EmailChangedCopyWith<EmailChanged> get copyWith =>
       throw _privateConstructorUsedError;
@@ -413,9 +385,9 @@ class _$PasswordChanged implements PasswordChanged {
 }
 
 abstract class PasswordChanged implements SignInEvent {
-  const factory PasswordChanged(String password) = _$PasswordChanged;
+  const factory PasswordChanged(final String password) = _$PasswordChanged;
 
-  String get password;
+  String get password => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $PasswordChangedCopyWith<PasswordChanged> get copyWith =>
       throw _privateConstructorUsedError;
@@ -679,31 +651,6 @@ abstract class SignInWithEmailAndPasswordPressed implements SignInEvent {
 }
 
 /// @nodoc
-class _$SignInStateTearOff {
-  const _$SignInStateTearOff();
-
-  _SignInState call(
-      {required EmailAddress emailAddress,
-      required Password password,
-      required bool isSubmitting,
-      required bool isPasswordVisible,
-      required bool stateFlipper,
-      required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption}) {
-    return _SignInState(
-      emailAddress: emailAddress,
-      password: password,
-      isSubmitting: isSubmitting,
-      isPasswordVisible: isPasswordVisible,
-      stateFlipper: stateFlipper,
-      authFailureOrSuccessOption: authFailureOrSuccessOption,
-    );
-  }
-}
-
-/// @nodoc
-const $SignInState = _$SignInStateTearOff();
-
-/// @nodoc
 mixin _$SignInState {
   EmailAddress get emailAddress => throw _privateConstructorUsedError;
   Password get password => throw _privateConstructorUsedError;
@@ -864,7 +811,8 @@ class _$_SignInState implements _SignInState {
   final bool isPasswordVisible;
   @override
   final bool stateFlipper;
-  @override // Required to fire stateChange when .copyWith is called
+// Required to fire stateChange when .copyWith is called
+  @override
   final Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption;
 
   @override
@@ -908,26 +856,27 @@ class _$_SignInState implements _SignInState {
 
 abstract class _SignInState implements SignInState {
   const factory _SignInState(
-      {required EmailAddress emailAddress,
-      required Password password,
-      required bool isSubmitting,
-      required bool isPasswordVisible,
-      required bool stateFlipper,
-      required Option<Either<AuthFailure, Unit>>
+      {required final EmailAddress emailAddress,
+      required final Password password,
+      required final bool isSubmitting,
+      required final bool isPasswordVisible,
+      required final bool stateFlipper,
+      required final Option<Either<AuthFailure, Unit>>
           authFailureOrSuccessOption}) = _$_SignInState;
 
   @override
-  EmailAddress get emailAddress;
+  EmailAddress get emailAddress => throw _privateConstructorUsedError;
   @override
-  Password get password;
+  Password get password => throw _privateConstructorUsedError;
   @override
-  bool get isSubmitting;
+  bool get isSubmitting => throw _privateConstructorUsedError;
   @override
-  bool get isPasswordVisible;
+  bool get isPasswordVisible => throw _privateConstructorUsedError;
   @override
-  bool get stateFlipper;
+  bool get stateFlipper => throw _privateConstructorUsedError;
   @override // Required to fire stateChange when .copyWith is called
-  Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption;
+  Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SignInStateCopyWith<_SignInState> get copyWith =>

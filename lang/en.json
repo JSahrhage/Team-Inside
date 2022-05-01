@@ -23,5 +23,8 @@
     "insert_email": "Insert E-Mail-Address",
     "insert_password": "Insert Password",
     "insert_username": "Insert Username",
-    "sign_out": "Sign out"
+    "sign_out": "Sign out",
+    "teams": "Teams",
+    "requests": "Requests",
+    "settings": "Settings"
 }

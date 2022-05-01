@@ -12,25 +12,7 @@ part of 'password_reset_bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$PasswordResetEventTearOff {
-  const _$PasswordResetEventTearOff();
-
-  EmailChanged emailChanged(String email) {
-    return EmailChanged(
-      email,
-    );
-  }
-
-  SendPasswordResetEmailPressed sendPasswordResetEmailPressed() {
-    return const SendPasswordResetEmailPressed();
-  }
-}
-
-/// @nodoc
-const $PasswordResetEvent = _$PasswordResetEventTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$PasswordResetEvent {
@@ -223,9 +205,9 @@ class _$EmailChanged implements EmailChanged {
 }
 
 abstract class EmailChanged implements PasswordResetEvent {
-  const factory EmailChanged(String email) = _$EmailChanged;
+  const factory EmailChanged(final String email) = _$EmailChanged;
 
-  String get email;
+  String get email => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $EmailChangedCopyWith<EmailChanged> get copyWith =>
       throw _privateConstructorUsedError;
@@ -343,27 +325,6 @@ abstract class SendPasswordResetEmailPressed implements PasswordResetEvent {
   const factory SendPasswordResetEmailPressed() =
       _$SendPasswordResetEmailPressed;
 }
-
-/// @nodoc
-class _$PasswordResetStateTearOff {
-  const _$PasswordResetStateTearOff();
-
-  _PasswordResetState call(
-      {required EmailAddress emailAddress,
-      required bool isSubmitting,
-      required bool stateFlipper,
-      required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption}) {
-    return _PasswordResetState(
-      emailAddress: emailAddress,
-      isSubmitting: isSubmitting,
-      stateFlipper: stateFlipper,
-      authFailureOrSuccessOption: authFailureOrSuccessOption,
-    );
-  }
-}
-
-/// @nodoc
-const $PasswordResetState = _$PasswordResetStateTearOff();
 
 /// @nodoc
 mixin _$PasswordResetState {
@@ -496,7 +457,8 @@ class _$_PasswordResetState implements _PasswordResetState {
   final bool isSubmitting;
   @override
   final bool stateFlipper;
-  @override // Required to fire stateChange when .copyWith is called
+// Required to fire stateChange when .copyWith is called
+  @override
   final Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption;
 
   @override
@@ -535,20 +497,21 @@ class _$_PasswordResetState implements _PasswordResetState {
 
 abstract class _PasswordResetState implements PasswordResetState {
   const factory _PasswordResetState(
-      {required EmailAddress emailAddress,
-      required bool isSubmitting,
-      required bool stateFlipper,
-      required Option<Either<AuthFailure, Unit>>
+      {required final EmailAddress emailAddress,
+      required final bool isSubmitting,
+      required final bool stateFlipper,
+      required final Option<Either<AuthFailure, Unit>>
           authFailureOrSuccessOption}) = _$_PasswordResetState;
 
   @override
-  EmailAddress get emailAddress;
+  EmailAddress get emailAddress => throw _privateConstructorUsedError;
   @override
-  bool get isSubmitting;
+  bool get isSubmitting => throw _privateConstructorUsedError;
   @override
-  bool get stateFlipper;
+  bool get stateFlipper => throw _privateConstructorUsedError;
   @override // Required to fire stateChange when .copyWith is called
-  Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption;
+  Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PasswordResetStateCopyWith<_PasswordResetState> get copyWith =>

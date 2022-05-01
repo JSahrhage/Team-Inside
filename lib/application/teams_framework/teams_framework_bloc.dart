@@ -11,9 +11,14 @@ part 'teams_framework_bloc.freezed.dart';
 class TeamsFrameworkBloc
     extends Bloc<TeamsFrameworkEvent, TeamsFrameworkState> {
   final IAuthFacade _authFacade;
-  TeamsFrameworkBloc(this._authFacade) : super(const Initial()) {
+  TeamsFrameworkBloc(this._authFacade) : super(TeamsFrameworkState.initial()) {
     on<SignOut>((event, emit) async {
       await _authFacade.signOut();
+      emit(
+        state.copyWith(
+          shouldSignOut: true,
+        ),
+      );
     });
   }
 }

@@ -12,47 +12,7 @@ part of 'failures.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$ValueFailureTearOff {
-  const _$ValueFailureTearOff();
-
-  EmptyValue<T> emptyValue<T>({required T failedValue}) {
-    return EmptyValue<T>(
-      failedValue: failedValue,
-    );
-  }
-
-  InvalidEmail<T> invalidEmail<T>({required T failedValue}) {
-    return InvalidEmail<T>(
-      failedValue: failedValue,
-    );
-  }
-
-  UnsecurePassword<T> unsecurePassword<T>({required T failedValue}) {
-    return UnsecurePassword<T>(
-      failedValue: failedValue,
-    );
-  }
-
-  NotMatchingPasswords<T> notMatchingPasswords<T>(
-      {required T firstFailedValue, required T secondFailedValue}) {
-    return NotMatchingPasswords<T>(
-      firstFailedValue: firstFailedValue,
-      secondFailedValue: secondFailedValue,
-    );
-  }
-
-  InvalidUsername<T> invalidUsername<T>({required T failedValue}) {
-    return InvalidUsername<T>(
-      failedValue: failedValue,
-    );
-  }
-}
-
-/// @nodoc
-const $ValueFailure = _$ValueFailureTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$ValueFailure<T> {
@@ -284,9 +244,9 @@ class _$EmptyValue<T> implements EmptyValue<T> {
 }
 
 abstract class EmptyValue<T> implements ValueFailure<T> {
-  const factory EmptyValue({required T failedValue}) = _$EmptyValue<T>;
+  const factory EmptyValue({required final T failedValue}) = _$EmptyValue<T>;
 
-  T get failedValue;
+  T get failedValue => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $EmptyValueCopyWith<T, EmptyValue<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -441,9 +401,10 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
 }
 
 abstract class InvalidEmail<T> implements ValueFailure<T> {
-  const factory InvalidEmail({required T failedValue}) = _$InvalidEmail<T>;
+  const factory InvalidEmail({required final T failedValue}) =
+      _$InvalidEmail<T>;
 
-  T get failedValue;
+  T get failedValue => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $InvalidEmailCopyWith<T, InvalidEmail<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -598,10 +559,10 @@ class _$UnsecurePassword<T> implements UnsecurePassword<T> {
 }
 
 abstract class UnsecurePassword<T> implements ValueFailure<T> {
-  const factory UnsecurePassword({required T failedValue}) =
+  const factory UnsecurePassword({required final T failedValue}) =
       _$UnsecurePassword<T>;
 
-  T get failedValue;
+  T get failedValue => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $UnsecurePasswordCopyWith<T, UnsecurePassword<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -770,11 +731,11 @@ class _$NotMatchingPasswords<T> implements NotMatchingPasswords<T> {
 
 abstract class NotMatchingPasswords<T> implements ValueFailure<T> {
   const factory NotMatchingPasswords(
-      {required T firstFailedValue,
-      required T secondFailedValue}) = _$NotMatchingPasswords<T>;
+      {required final T firstFailedValue,
+      required final T secondFailedValue}) = _$NotMatchingPasswords<T>;
 
-  T get firstFailedValue;
-  T get secondFailedValue;
+  T get firstFailedValue => throw _privateConstructorUsedError;
+  T get secondFailedValue => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $NotMatchingPasswordsCopyWith<T, NotMatchingPasswords<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -929,10 +890,10 @@ class _$InvalidUsername<T> implements InvalidUsername<T> {
 }
 
 abstract class InvalidUsername<T> implements ValueFailure<T> {
-  const factory InvalidUsername({required T failedValue}) =
+  const factory InvalidUsername({required final T failedValue}) =
       _$InvalidUsername<T>;
 
-  T get failedValue;
+  T get failedValue => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $InvalidUsernameCopyWith<T, InvalidUsername<T>> get copyWith =>
       throw _privateConstructorUsedError;

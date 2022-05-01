@@ -12,36 +12,11 @@ part of 'user_dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 UserDTO _$UserDTOFromJson(Map<String, dynamic> json) {
   return _UserDTO.fromJson(json);
 }
-
-/// @nodoc
-class _$UserDTOTearOff {
-  const _$UserDTOTearOff();
-
-  _UserDTO call(
-      {required String id,
-      required String username,
-      required List<String> joinedTeams,
-      required List<String> teamRequests}) {
-    return _UserDTO(
-      id: id,
-      username: username,
-      joinedTeams: joinedTeams,
-      teamRequests: teamRequests,
-    );
-  }
-
-  UserDTO fromJson(Map<String, Object?> json) {
-    return UserDTO.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $UserDTO = _$UserDTOTearOff();
 
 /// @nodoc
 mixin _$UserDTO {
@@ -157,9 +132,11 @@ class _$_UserDTO extends _UserDTO {
   const _$_UserDTO(
       {required this.id,
       required this.username,
-      required this.joinedTeams,
-      required this.teamRequests})
-      : super._();
+      required final List<String> joinedTeams,
+      required final List<String> teamRequests})
+      : _joinedTeams = joinedTeams,
+        _teamRequests = teamRequests,
+        super._();
 
   factory _$_UserDTO.fromJson(Map<String, dynamic> json) =>
       _$$_UserDTOFromJson(json);
@@ -168,10 +145,19 @@ class _$_UserDTO extends _UserDTO {
   final String id;
   @override
   final String username;
+  final List<String> _joinedTeams;
   @override
-  final List<String> joinedTeams;
+  List<String> get joinedTeams {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_joinedTeams);
+  }
+
+  final List<String> _teamRequests;
   @override
-  final List<String> teamRequests;
+  List<String> get teamRequests {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_teamRequests);
+  }
 
   @override
   String toString() {
@@ -191,6 +177,7 @@ class _$_UserDTO extends _UserDTO {
                 .equals(other.teamRequests, teamRequests));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -212,22 +199,22 @@ class _$_UserDTO extends _UserDTO {
 
 abstract class _UserDTO extends UserDTO {
   const factory _UserDTO(
-      {required String id,
-      required String username,
-      required List<String> joinedTeams,
-      required List<String> teamRequests}) = _$_UserDTO;
+      {required final String id,
+      required final String username,
+      required final List<String> joinedTeams,
+      required final List<String> teamRequests}) = _$_UserDTO;
   const _UserDTO._() : super._();
 
   factory _UserDTO.fromJson(Map<String, dynamic> json) = _$_UserDTO.fromJson;
 
   @override
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @override
-  String get username;
+  String get username => throw _privateConstructorUsedError;
   @override
-  List<String> get joinedTeams;
+  List<String> get joinedTeams => throw _privateConstructorUsedError;
   @override
-  List<String> get teamRequests;
+  List<String> get teamRequests => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$UserDTOCopyWith<_UserDTO> get copyWith =>
