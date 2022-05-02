@@ -31,3 +31,11 @@ Either<ValueFailure<String>, String> validateUsername(String input) {
   }
   return right(input);
 }
+
+// TeamValidator
+Either<ValueFailure<String>, String> validateTeamname(String input) {
+  if (input.isEmpty) {
+    return left(ValueFailure.emptyValue(failedValue: input));
+  }
+  return right(input);
+}

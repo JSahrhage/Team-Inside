@@ -4,7 +4,7 @@ part 'failures.freezed.dart';
 
 @freezed
 class ValueFailure<T> with _$ValueFailure<T> {
-  // AuthFailure
+  // GeneralFailure
   const factory ValueFailure.emptyValue({
     required T failedValue,
   }) = EmptyValue<T>;
