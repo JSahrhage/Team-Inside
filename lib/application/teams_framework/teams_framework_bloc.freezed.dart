@@ -19,32 +19,44 @@ mixin _$TeamsFrameworkEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() signOut,
+    required TResult Function() createTeam,
+    required TResult Function() printTeams,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? signOut,
+    TResult Function()? createTeam,
+    TResult Function()? printTeams,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? signOut,
+    TResult Function()? createTeam,
+    TResult Function()? printTeams,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(SignOut value) signOut,
+    required TResult Function(CreateTeam value) createTeam,
+    required TResult Function(PrintTeams value) printTeams,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(SignOut value)? signOut,
+    TResult Function(CreateTeam value)? createTeam,
+    TResult Function(PrintTeams value)? printTeams,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(SignOut value)? signOut,
+    TResult Function(CreateTeam value)? createTeam,
+    TResult Function(PrintTeams value)? printTeams,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -107,6 +119,8 @@ class _$SignOut implements SignOut {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() signOut,
+    required TResult Function() createTeam,
+    required TResult Function() printTeams,
   }) {
     return signOut();
   }
@@ -115,6 +129,8 @@ class _$SignOut implements SignOut {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? signOut,
+    TResult Function()? createTeam,
+    TResult Function()? printTeams,
   }) {
     return signOut?.call();
   }
@@ -123,6 +139,8 @@ class _$SignOut implements SignOut {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? signOut,
+    TResult Function()? createTeam,
+    TResult Function()? printTeams,
     required TResult orElse(),
   }) {
     if (signOut != null) {
@@ -135,6 +153,8 @@ class _$SignOut implements SignOut {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(SignOut value) signOut,
+    required TResult Function(CreateTeam value) createTeam,
+    required TResult Function(PrintTeams value) printTeams,
   }) {
     return signOut(this);
   }
@@ -143,6 +163,8 @@ class _$SignOut implements SignOut {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(SignOut value)? signOut,
+    TResult Function(CreateTeam value)? createTeam,
+    TResult Function(PrintTeams value)? printTeams,
   }) {
     return signOut?.call(this);
   }
@@ -151,6 +173,8 @@ class _$SignOut implements SignOut {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(SignOut value)? signOut,
+    TResult Function(CreateTeam value)? createTeam,
+    TResult Function(PrintTeams value)? printTeams,
     required TResult orElse(),
   }) {
     if (signOut != null) {
@@ -162,6 +186,226 @@ class _$SignOut implements SignOut {
 
 abstract class SignOut implements TeamsFrameworkEvent {
   const factory SignOut() = _$SignOut;
+}
+
+/// @nodoc
+abstract class $CreateTeamCopyWith<$Res> {
+  factory $CreateTeamCopyWith(
+          CreateTeam value, $Res Function(CreateTeam) then) =
+      _$CreateTeamCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$CreateTeamCopyWithImpl<$Res>
+    extends _$TeamsFrameworkEventCopyWithImpl<$Res>
+    implements $CreateTeamCopyWith<$Res> {
+  _$CreateTeamCopyWithImpl(CreateTeam _value, $Res Function(CreateTeam) _then)
+      : super(_value, (v) => _then(v as CreateTeam));
+
+  @override
+  CreateTeam get _value => super._value as CreateTeam;
+}
+
+/// @nodoc
+
+class _$CreateTeam implements CreateTeam {
+  const _$CreateTeam();
+
+  @override
+  String toString() {
+    return 'TeamsFrameworkEvent.createTeam()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is CreateTeam);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() signOut,
+    required TResult Function() createTeam,
+    required TResult Function() printTeams,
+  }) {
+    return createTeam();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? signOut,
+    TResult Function()? createTeam,
+    TResult Function()? printTeams,
+  }) {
+    return createTeam?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? signOut,
+    TResult Function()? createTeam,
+    TResult Function()? printTeams,
+    required TResult orElse(),
+  }) {
+    if (createTeam != null) {
+      return createTeam();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(SignOut value) signOut,
+    required TResult Function(CreateTeam value) createTeam,
+    required TResult Function(PrintTeams value) printTeams,
+  }) {
+    return createTeam(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(SignOut value)? signOut,
+    TResult Function(CreateTeam value)? createTeam,
+    TResult Function(PrintTeams value)? printTeams,
+  }) {
+    return createTeam?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SignOut value)? signOut,
+    TResult Function(CreateTeam value)? createTeam,
+    TResult Function(PrintTeams value)? printTeams,
+    required TResult orElse(),
+  }) {
+    if (createTeam != null) {
+      return createTeam(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CreateTeam implements TeamsFrameworkEvent {
+  const factory CreateTeam() = _$CreateTeam;
+}
+
+/// @nodoc
+abstract class $PrintTeamsCopyWith<$Res> {
+  factory $PrintTeamsCopyWith(
+          PrintTeams value, $Res Function(PrintTeams) then) =
+      _$PrintTeamsCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$PrintTeamsCopyWithImpl<$Res>
+    extends _$TeamsFrameworkEventCopyWithImpl<$Res>
+    implements $PrintTeamsCopyWith<$Res> {
+  _$PrintTeamsCopyWithImpl(PrintTeams _value, $Res Function(PrintTeams) _then)
+      : super(_value, (v) => _then(v as PrintTeams));
+
+  @override
+  PrintTeams get _value => super._value as PrintTeams;
+}
+
+/// @nodoc
+
+class _$PrintTeams implements PrintTeams {
+  const _$PrintTeams();
+
+  @override
+  String toString() {
+    return 'TeamsFrameworkEvent.printTeams()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is PrintTeams);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() signOut,
+    required TResult Function() createTeam,
+    required TResult Function() printTeams,
+  }) {
+    return printTeams();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? signOut,
+    TResult Function()? createTeam,
+    TResult Function()? printTeams,
+  }) {
+    return printTeams?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? signOut,
+    TResult Function()? createTeam,
+    TResult Function()? printTeams,
+    required TResult orElse(),
+  }) {
+    if (printTeams != null) {
+      return printTeams();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(SignOut value) signOut,
+    required TResult Function(CreateTeam value) createTeam,
+    required TResult Function(PrintTeams value) printTeams,
+  }) {
+    return printTeams(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(SignOut value)? signOut,
+    TResult Function(CreateTeam value)? createTeam,
+    TResult Function(PrintTeams value)? printTeams,
+  }) {
+    return printTeams?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SignOut value)? signOut,
+    TResult Function(CreateTeam value)? createTeam,
+    TResult Function(PrintTeams value)? printTeams,
+    required TResult orElse(),
+  }) {
+    if (printTeams != null) {
+      return printTeams(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PrintTeams implements TeamsFrameworkEvent {
+  const factory PrintTeams() = _$PrintTeams;
 }
 
 /// @nodoc

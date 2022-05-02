@@ -7,6 +7,8 @@ import 'package:team_inside/domain/teams/team_failure.dart';
 abstract class ITeamRepository {
   Future<Either<TeamFailure, Team>> getTeamById(UniqueId id);
   Future<Either<TeamFailure, KtList<Team>>> getJoinedTeams();
+  Stream<Either<TeamFailure, KtList<Team>>> watchJoinedTeams();
+  Future<Either<TeamFailure, Unit>> create(Team team);
   Future<Either<TeamFailure, Unit>> update(Team team);
   Future<Either<TeamFailure, Unit>> delete(Team team);
 }

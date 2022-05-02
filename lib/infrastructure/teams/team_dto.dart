@@ -14,6 +14,7 @@ class TeamDTO with _$TeamDTO {
     required String id,
     required String teamname,
     required List<String> joinedUsers,
+    @ServerTimestampConverter() required FieldValue serverTimeStamp,
   }) = _TeamDTO;
 
   const TeamDTO._();
@@ -28,6 +29,7 @@ class TeamDTO with _$TeamDTO {
             (uniqueId) => uniqueId.toString(),
           )
           .asList(),
+      serverTimeStamp: FieldValue.serverTimestamp(),
     );
   }
 
@@ -50,4 +52,16 @@ class TeamDTO with _$TeamDTO {
     return TeamDTO.fromJson(doc.data()! as Map<String, dynamic>)
         .copyWith(id: doc.id);
   }
+}
+
+class ServerTimestampConverter implements JsonConverter<FieldValue, Object?> {
+  const ServerTimestampConverter();
+
+  @override
+  FieldValue fromJson(Object? json) {
+    return FieldValue.serverTimestamp();
+  }
+
+  @override
+  Object toJson(FieldValue fieldValue) => fieldValue;
 }

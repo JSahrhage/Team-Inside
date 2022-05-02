@@ -66,6 +66,67 @@ class TeamRepository implements ITeamRepository {
   }
 
   @override
+  Stream<Either<TeamFailure, KtList<Team>>> watchJoinedTeams() async* {
+    try {
+      final userDoc = await _firestore.userDocument();
+      userDoc.joinedTeamsCollection.snapshots().asyncMap(
+        (joinedTeamIdSnapshots) async {
+          final List<Team> joinedTeams = [];
+          for (final joinedTeamIdSnapshot in joinedTeamIdSnapshots.docs) {
+            final team = await getTeamById(
+              UniqueId.fromUniqueString(
+                joinedTeamIdSnapshot.data as String,
+              ),
+            );
+            team.fold(
+              (failure) {
+                return left(failure);
+              },
+              (success) {
+                joinedTeams.add(success);
+              },
+            );
+          }
+          joinedTeams.sort(
+            (a, b) {
+              final aDateTime =
+                  (TeamDTO.fromDomain(a).serverTimeStamp as Timestamp).toDate();
+              final bDateTime =
+                  (TeamDTO.fromDomain(b).serverTimeStamp as Timestamp).toDate();
+              return aDateTime.compareTo(bDateTime);
+            },
+          );
+          return right(joinedTeams.toImmutableList());
+        },
+      );
+    } on FirebaseException catch (e) {
+      if (e.message!.contains('PERMISSION_DENIED')) {
+        yield left(const TeamFailure.insufficientPermission());
+      }
+      yield left(const TeamFailure.unexpected());
+    }
+  }
+
+  @override
+  Future<Either<TeamFailure, Unit>> create(Team team) async {
+    try {
+      final teamDoc = await _firestore.teamDocument(team.id);
+      final teamDTO = TeamDTO.fromDomain(team);
+
+      await teamDoc.set(teamDTO.toJson());
+
+      return right(unit);
+    } on FirebaseException catch (e) {
+      if (e.message!.contains('PERMISSION_DENIED')) {
+        return left(const TeamFailure.insufficientPermission());
+      } else if (e.message!.contains('NOT_FOUND')) {
+        return left(const TeamFailure.unableToUpdate());
+      }
+      return left(const TeamFailure.unexpected());
+    }
+  }
+
+  @override
   Future<Either<TeamFailure, Unit>> update(Team team) async {
     try {
       final teamDoc = await _firestore.teamDocument(team.id);

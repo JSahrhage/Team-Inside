@@ -21,5 +21,5 @@ extension FirestoreX on FirebaseFirestore {
 }
 
 extension DocumentReferenceX on DocumentReference {
-  //
+  CollectionReference get joinedTeamsCollection => collection('joinedTeams');
 }

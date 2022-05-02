@@ -12,6 +12,8 @@ _$_TeamDTO _$$_TeamDTOFromJson(Map<String, dynamic> json) => _$_TeamDTO(
       joinedUsers: (json['joinedUsers'] as List<dynamic>)
           .map((e) => e as String)
           .toList(),
+      serverTimeStamp:
+          const ServerTimestampConverter().fromJson(json['serverTimeStamp']),
     );
 
 Map<String, dynamic> _$$_TeamDTOToJson(_$_TeamDTO instance) =>
@@ -19,4 +21,6 @@ Map<String, dynamic> _$$_TeamDTOToJson(_$_TeamDTO instance) =>
       'id': instance.id,
       'teamname': instance.teamname,
       'joinedUsers': instance.joinedUsers,
+      'serverTimeStamp':
+          const ServerTimestampConverter().toJson(instance.serverTimeStamp),
     };
