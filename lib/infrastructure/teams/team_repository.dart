@@ -43,17 +43,20 @@ class TeamRepository implements ITeamRepository {
       final joinedTeamIds = user.joinedTeams.getOrCrash();
 
       final List<Team> joinedTeams = [];
-      joinedTeamIds.forEach(
-        (joinedTeamId) async {
-          final team = await getTeamById(joinedTeamId);
-          team.fold(
-            (failure) {
-              return left(failure);
-            },
-            (success) {
-              joinedTeams.add(success);
-            },
-          );
+      for (final joinedTeamId in joinedTeamIds.iter) {
+        final team = await getTeamById(joinedTeamId);
+        team.fold(
+          (failure) {
+            return left(failure);
+          },
+          (success) {
+            joinedTeams.add(success);
+          },
+        );
+      }
+      joinedTeams.sort(
+        (a, b) {
+          return a.teamname.getOrCrash().compareTo(b.teamname.getOrCrash());
         },
       );
       return right(joinedTeams.toImmutableList());
@@ -66,44 +69,38 @@ class TeamRepository implements ITeamRepository {
   }
 
   @override
-  Stream<Either<TeamFailure, KtList<Team>>> watchJoinedTeams() async* {
+  Future<Either<TeamFailure, KtList<Team>>> getTeamRequests() async {
     try {
       final userDoc = await _firestore.userDocument();
-      userDoc.joinedTeamsCollection.snapshots().asyncMap(
-        (joinedTeamIdSnapshots) async {
-          final List<Team> joinedTeams = [];
-          for (final joinedTeamIdSnapshot in joinedTeamIdSnapshots.docs) {
-            final team = await getTeamById(
-              UniqueId.fromUniqueString(
-                joinedTeamIdSnapshot.data as String,
-              ),
-            );
-            team.fold(
-              (failure) {
-                return left(failure);
-              },
-              (success) {
-                joinedTeams.add(success);
-              },
-            );
-          }
-          joinedTeams.sort(
-            (a, b) {
-              final aDateTime =
-                  (TeamDTO.fromDomain(a).serverTimeStamp as Timestamp).toDate();
-              final bDateTime =
-                  (TeamDTO.fromDomain(b).serverTimeStamp as Timestamp).toDate();
-              return aDateTime.compareTo(bDateTime);
-            },
-          );
-          return right(joinedTeams.toImmutableList());
+      final userSnap = await userDoc.get();
+      final userDTO = UserDTO.fromFirestore(userSnap);
+      final user = userDTO.toDomain();
+
+      final teamRequestIds = user.teamRequests.getOrCrash();
+
+      final List<Team> teamRequests = [];
+      for (final teamRequestId in teamRequestIds.iter) {
+        final team = await getTeamById(teamRequestId);
+        team.fold(
+          (failure) {
+            return left(failure);
+          },
+          (success) {
+            teamRequests.add(success);
+          },
+        );
+      }
+      teamRequests.sort(
+        (a, b) {
+          return a.teamname.getOrCrash().compareTo(b.teamname.getOrCrash());
         },
       );
+      return right(teamRequests.toImmutableList());
     } on FirebaseException catch (e) {
       if (e.message!.contains('PERMISSION_DENIED')) {
-        yield left(const TeamFailure.insufficientPermission());
+        return left(const TeamFailure.insufficientPermission());
       }
-      yield left(const TeamFailure.unexpected());
+      return left(const TeamFailure.unexpected());
     }
   }
 

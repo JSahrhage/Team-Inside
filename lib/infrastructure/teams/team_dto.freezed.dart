@@ -23,8 +23,6 @@ mixin _$TeamDTO {
   String get id => throw _privateConstructorUsedError;
   String get teamname => throw _privateConstructorUsedError;
   List<String> get joinedUsers => throw _privateConstructorUsedError;
-  @ServerTimestampConverter()
-  FieldValue get serverTimeStamp => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,11 +33,7 @@ mixin _$TeamDTO {
 abstract class $TeamDTOCopyWith<$Res> {
   factory $TeamDTOCopyWith(TeamDTO value, $Res Function(TeamDTO) then) =
       _$TeamDTOCopyWithImpl<$Res>;
-  $Res call(
-      {String id,
-      String teamname,
-      List<String> joinedUsers,
-      @ServerTimestampConverter() FieldValue serverTimeStamp});
+  $Res call({String id, String teamname, List<String> joinedUsers});
 }
 
 /// @nodoc
@@ -55,7 +49,6 @@ class _$TeamDTOCopyWithImpl<$Res> implements $TeamDTOCopyWith<$Res> {
     Object? id = freezed,
     Object? teamname = freezed,
     Object? joinedUsers = freezed,
-    Object? serverTimeStamp = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -70,10 +63,6 @@ class _$TeamDTOCopyWithImpl<$Res> implements $TeamDTOCopyWith<$Res> {
           ? _value.joinedUsers
           : joinedUsers // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      serverTimeStamp: serverTimeStamp == freezed
-          ? _value.serverTimeStamp
-          : serverTimeStamp // ignore: cast_nullable_to_non_nullable
-              as FieldValue,
     ));
   }
 }
@@ -83,11 +72,7 @@ abstract class _$TeamDTOCopyWith<$Res> implements $TeamDTOCopyWith<$Res> {
   factory _$TeamDTOCopyWith(_TeamDTO value, $Res Function(_TeamDTO) then) =
       __$TeamDTOCopyWithImpl<$Res>;
   @override
-  $Res call(
-      {String id,
-      String teamname,
-      List<String> joinedUsers,
-      @ServerTimestampConverter() FieldValue serverTimeStamp});
+  $Res call({String id, String teamname, List<String> joinedUsers});
 }
 
 /// @nodoc
@@ -104,7 +89,6 @@ class __$TeamDTOCopyWithImpl<$Res> extends _$TeamDTOCopyWithImpl<$Res>
     Object? id = freezed,
     Object? teamname = freezed,
     Object? joinedUsers = freezed,
-    Object? serverTimeStamp = freezed,
   }) {
     return _then(_TeamDTO(
       id: id == freezed
@@ -119,10 +103,6 @@ class __$TeamDTOCopyWithImpl<$Res> extends _$TeamDTOCopyWithImpl<$Res>
           ? _value.joinedUsers
           : joinedUsers // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      serverTimeStamp: serverTimeStamp == freezed
-          ? _value.serverTimeStamp
-          : serverTimeStamp // ignore: cast_nullable_to_non_nullable
-              as FieldValue,
     ));
   }
 }
@@ -133,8 +113,7 @@ class _$_TeamDTO extends _TeamDTO {
   const _$_TeamDTO(
       {required this.id,
       required this.teamname,
-      required final List<String> joinedUsers,
-      @ServerTimestampConverter() required this.serverTimeStamp})
+      required final List<String> joinedUsers})
       : _joinedUsers = joinedUsers,
         super._();
 
@@ -153,12 +132,8 @@ class _$_TeamDTO extends _TeamDTO {
   }
 
   @override
-  @ServerTimestampConverter()
-  final FieldValue serverTimeStamp;
-
-  @override
   String toString() {
-    return 'TeamDTO(id: $id, teamname: $teamname, joinedUsers: $joinedUsers, serverTimeStamp: $serverTimeStamp)';
+    return 'TeamDTO(id: $id, teamname: $teamname, joinedUsers: $joinedUsers)';
   }
 
   @override
@@ -169,9 +144,7 @@ class _$_TeamDTO extends _TeamDTO {
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.teamname, teamname) &&
             const DeepCollectionEquality()
-                .equals(other.joinedUsers, joinedUsers) &&
-            const DeepCollectionEquality()
-                .equals(other.serverTimeStamp, serverTimeStamp));
+                .equals(other.joinedUsers, joinedUsers));
   }
 
   @JsonKey(ignore: true)
@@ -180,8 +153,7 @@ class _$_TeamDTO extends _TeamDTO {
       runtimeType,
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(teamname),
-      const DeepCollectionEquality().hash(joinedUsers),
-      const DeepCollectionEquality().hash(serverTimeStamp));
+      const DeepCollectionEquality().hash(joinedUsers));
 
   @JsonKey(ignore: true)
   @override
@@ -198,9 +170,7 @@ abstract class _TeamDTO extends TeamDTO {
   const factory _TeamDTO(
       {required final String id,
       required final String teamname,
-      required final List<String> joinedUsers,
-      @ServerTimestampConverter()
-          required final FieldValue serverTimeStamp}) = _$_TeamDTO;
+      required final List<String> joinedUsers}) = _$_TeamDTO;
   const _TeamDTO._() : super._();
 
   factory _TeamDTO.fromJson(Map<String, dynamic> json) = _$_TeamDTO.fromJson;
@@ -211,9 +181,6 @@ abstract class _TeamDTO extends TeamDTO {
   String get teamname => throw _privateConstructorUsedError;
   @override
   List<String> get joinedUsers => throw _privateConstructorUsedError;
-  @override
-  @ServerTimestampConverter()
-  FieldValue get serverTimeStamp => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$TeamDTOCopyWith<_TeamDTO> get copyWith =>

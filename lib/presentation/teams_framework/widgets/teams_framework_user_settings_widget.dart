@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team_inside/application/teams_framework/teams_framework_bloc.dart';
-import 'package:team_inside/presentation/teams_framework/widgets/teams_framework_create_team_button.dart';
 import 'package:team_inside/presentation/teams_framework/widgets/teams_framework_sign_out_button.dart';
 
 class TeamsFrameworkUserSettingsWidget extends StatelessWidget {
@@ -14,7 +13,6 @@ class TeamsFrameworkUserSettingsWidget extends StatelessWidget {
           shrinkWrap: true,
           children: const [
             TeamsFrameworkSignOutButton(),
-            TeamsFrameworkCreateTeamButton(),
           ],
         );
       },

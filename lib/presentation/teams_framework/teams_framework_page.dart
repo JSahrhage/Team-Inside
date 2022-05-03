@@ -17,7 +17,9 @@ class TeamsFrameworkPage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Theme.of(context).colorScheme.background,
         body: BlocProvider(
-          create: (context) => getIt<TeamsFrameworkBloc>(),
+          create: (context) => getIt<TeamsFrameworkBloc>()
+            ..add(const RefreshJoinedTeams())
+            ..add(const RefreshTeamRequests()),
           child: TeamsFrameworkForm(),
         ),
       ),

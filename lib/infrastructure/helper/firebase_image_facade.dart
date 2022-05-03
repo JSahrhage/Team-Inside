@@ -15,20 +15,56 @@ class FirebaseImageFacade implements IImageFacade {
   );
 
   @override
-  Future<Option<String>> getDownloadURL(String ref) async {
+  Future<Option<String>> getDownloadURLForGroupImage(String ref) async {
     try {
-      return some(
-        await _firebaseStorage.ref(ref).getDownloadURL(),
-      );
+      final pathReference =
+          _firebaseStorage.ref().child('GroupImages/$ref.png');
+      final downloadURL = await pathReference.getDownloadURL();
+      return some(downloadURL);
     } catch (e) {
       return none();
     }
   }
 
   @override
-  Future<Either<ImageFailure, Unit>> uploadImage(File file, String ref) async {
+  Future<Either<ImageFailure, Unit>> uploadGroupImage(
+    File file,
+    String ref,
+  ) async {
     try {
-      await _firebaseStorage.ref(ref).putFile(file);
+      await _firebaseStorage.ref().child('GroupImages/$ref').putFile(file);
+      return right(unit);
+    } on FirebaseException catch (e) {
+      if (e.code == 'canceled') {
+        return left(const ImageFailure.cancelledByUser());
+      } else if (e.code == 'invalid-url') {
+        return left(const ImageFailure.invalidURL());
+      } else if (e.code == 'unauthorized') {
+        return left(const ImageFailure.unauthorized());
+      } else {
+        return left(const ImageFailure.serverError());
+      }
+    }
+  }
+
+  @override
+  Future<Option<String>> getDownloadURLForUserImage(String ref) async {
+    try {
+      final pathReference = _firebaseStorage.ref().child('UserImages/$ref.png');
+      final downloadURL = await pathReference.getDownloadURL();
+      return some(downloadURL);
+    } catch (e) {
+      return none();
+    }
+  }
+
+  @override
+  Future<Either<ImageFailure, Unit>> uploadUserImage(
+    File file,
+    String ref,
+  ) async {
+    try {
+      await _firebaseStorage.ref().child('UserImages/$ref').putFile(file);
       return right(unit);
     } on FirebaseException catch (e) {
       if (e.code == 'canceled') {

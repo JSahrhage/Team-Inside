@@ -6,7 +6,6 @@ import 'package:team_inside/application/auth/auth_bloc.dart';
 import 'package:team_inside/application/auth/password_reset/password_reset_bloc.dart';
 import 'package:team_inside/application/auth/registration/registration_bloc.dart';
 import 'package:team_inside/application/auth/sign_in/sign_in_bloc.dart';
-import 'package:team_inside/application/teams_framework/joined_teams_watcher/joined_teams_watcher_bloc.dart';
 import 'package:team_inside/application/teams_framework/teams_framework_bloc.dart';
 import 'package:team_inside/domain/auth/i_auth_facade.dart';
 import 'package:team_inside/domain/image/i_image_facade.dart';
@@ -70,11 +69,7 @@ void $initGetIt(
     () => TeamsFrameworkBloc(
       getIt<IAuthFacade>(),
       getIt<ITeamRepository>(),
-    ),
-  );
-  getIt.registerFactory<JoinedTeamsWatcherBloc>(
-    () => JoinedTeamsWatcherBloc(
-      getIt<ITeamRepository>(),
+      getIt<IImageFacade>(),
     ),
   );
 }

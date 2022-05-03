@@ -19,44 +19,44 @@ mixin _$TeamsFrameworkEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() signOut,
-    required TResult Function() createTeam,
-    required TResult Function() printTeams,
+    required TResult Function() refreshJoinedTeams,
+    required TResult Function() refreshTeamRequests,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? signOut,
-    TResult Function()? createTeam,
-    TResult Function()? printTeams,
+    TResult Function()? refreshJoinedTeams,
+    TResult Function()? refreshTeamRequests,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? signOut,
-    TResult Function()? createTeam,
-    TResult Function()? printTeams,
+    TResult Function()? refreshJoinedTeams,
+    TResult Function()? refreshTeamRequests,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(SignOut value) signOut,
-    required TResult Function(CreateTeam value) createTeam,
-    required TResult Function(PrintTeams value) printTeams,
+    required TResult Function(RefreshJoinedTeams value) refreshJoinedTeams,
+    required TResult Function(RefreshTeamRequests value) refreshTeamRequests,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(SignOut value)? signOut,
-    TResult Function(CreateTeam value)? createTeam,
-    TResult Function(PrintTeams value)? printTeams,
+    TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
+    TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(SignOut value)? signOut,
-    TResult Function(CreateTeam value)? createTeam,
-    TResult Function(PrintTeams value)? printTeams,
+    TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
+    TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -119,8 +119,8 @@ class _$SignOut implements SignOut {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() signOut,
-    required TResult Function() createTeam,
-    required TResult Function() printTeams,
+    required TResult Function() refreshJoinedTeams,
+    required TResult Function() refreshTeamRequests,
   }) {
     return signOut();
   }
@@ -129,8 +129,8 @@ class _$SignOut implements SignOut {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? signOut,
-    TResult Function()? createTeam,
-    TResult Function()? printTeams,
+    TResult Function()? refreshJoinedTeams,
+    TResult Function()? refreshTeamRequests,
   }) {
     return signOut?.call();
   }
@@ -139,8 +139,8 @@ class _$SignOut implements SignOut {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? signOut,
-    TResult Function()? createTeam,
-    TResult Function()? printTeams,
+    TResult Function()? refreshJoinedTeams,
+    TResult Function()? refreshTeamRequests,
     required TResult orElse(),
   }) {
     if (signOut != null) {
@@ -153,8 +153,8 @@ class _$SignOut implements SignOut {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(SignOut value) signOut,
-    required TResult Function(CreateTeam value) createTeam,
-    required TResult Function(PrintTeams value) printTeams,
+    required TResult Function(RefreshJoinedTeams value) refreshJoinedTeams,
+    required TResult Function(RefreshTeamRequests value) refreshTeamRequests,
   }) {
     return signOut(this);
   }
@@ -163,8 +163,8 @@ class _$SignOut implements SignOut {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(SignOut value)? signOut,
-    TResult Function(CreateTeam value)? createTeam,
-    TResult Function(PrintTeams value)? printTeams,
+    TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
+    TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
   }) {
     return signOut?.call(this);
   }
@@ -173,8 +173,8 @@ class _$SignOut implements SignOut {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(SignOut value)? signOut,
-    TResult Function(CreateTeam value)? createTeam,
-    TResult Function(PrintTeams value)? printTeams,
+    TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
+    TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
     required TResult orElse(),
   }) {
     if (signOut != null) {
@@ -189,37 +189,38 @@ abstract class SignOut implements TeamsFrameworkEvent {
 }
 
 /// @nodoc
-abstract class $CreateTeamCopyWith<$Res> {
-  factory $CreateTeamCopyWith(
-          CreateTeam value, $Res Function(CreateTeam) then) =
-      _$CreateTeamCopyWithImpl<$Res>;
+abstract class $RefreshJoinedTeamsCopyWith<$Res> {
+  factory $RefreshJoinedTeamsCopyWith(
+          RefreshJoinedTeams value, $Res Function(RefreshJoinedTeams) then) =
+      _$RefreshJoinedTeamsCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$CreateTeamCopyWithImpl<$Res>
+class _$RefreshJoinedTeamsCopyWithImpl<$Res>
     extends _$TeamsFrameworkEventCopyWithImpl<$Res>
-    implements $CreateTeamCopyWith<$Res> {
-  _$CreateTeamCopyWithImpl(CreateTeam _value, $Res Function(CreateTeam) _then)
-      : super(_value, (v) => _then(v as CreateTeam));
+    implements $RefreshJoinedTeamsCopyWith<$Res> {
+  _$RefreshJoinedTeamsCopyWithImpl(
+      RefreshJoinedTeams _value, $Res Function(RefreshJoinedTeams) _then)
+      : super(_value, (v) => _then(v as RefreshJoinedTeams));
 
   @override
-  CreateTeam get _value => super._value as CreateTeam;
+  RefreshJoinedTeams get _value => super._value as RefreshJoinedTeams;
 }
 
 /// @nodoc
 
-class _$CreateTeam implements CreateTeam {
-  const _$CreateTeam();
+class _$RefreshJoinedTeams implements RefreshJoinedTeams {
+  const _$RefreshJoinedTeams();
 
   @override
   String toString() {
-    return 'TeamsFrameworkEvent.createTeam()';
+    return 'TeamsFrameworkEvent.refreshJoinedTeams()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is CreateTeam);
+        (other.runtimeType == runtimeType && other is RefreshJoinedTeams);
   }
 
   @override
@@ -229,32 +230,32 @@ class _$CreateTeam implements CreateTeam {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() signOut,
-    required TResult Function() createTeam,
-    required TResult Function() printTeams,
+    required TResult Function() refreshJoinedTeams,
+    required TResult Function() refreshTeamRequests,
   }) {
-    return createTeam();
+    return refreshJoinedTeams();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? signOut,
-    TResult Function()? createTeam,
-    TResult Function()? printTeams,
+    TResult Function()? refreshJoinedTeams,
+    TResult Function()? refreshTeamRequests,
   }) {
-    return createTeam?.call();
+    return refreshJoinedTeams?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? signOut,
-    TResult Function()? createTeam,
-    TResult Function()? printTeams,
+    TResult Function()? refreshJoinedTeams,
+    TResult Function()? refreshTeamRequests,
     required TResult orElse(),
   }) {
-    if (createTeam != null) {
-      return createTeam();
+    if (refreshJoinedTeams != null) {
+      return refreshJoinedTeams();
     }
     return orElse();
   }
@@ -263,73 +264,74 @@ class _$CreateTeam implements CreateTeam {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(SignOut value) signOut,
-    required TResult Function(CreateTeam value) createTeam,
-    required TResult Function(PrintTeams value) printTeams,
+    required TResult Function(RefreshJoinedTeams value) refreshJoinedTeams,
+    required TResult Function(RefreshTeamRequests value) refreshTeamRequests,
   }) {
-    return createTeam(this);
+    return refreshJoinedTeams(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(SignOut value)? signOut,
-    TResult Function(CreateTeam value)? createTeam,
-    TResult Function(PrintTeams value)? printTeams,
+    TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
+    TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
   }) {
-    return createTeam?.call(this);
+    return refreshJoinedTeams?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(SignOut value)? signOut,
-    TResult Function(CreateTeam value)? createTeam,
-    TResult Function(PrintTeams value)? printTeams,
+    TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
+    TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
     required TResult orElse(),
   }) {
-    if (createTeam != null) {
-      return createTeam(this);
+    if (refreshJoinedTeams != null) {
+      return refreshJoinedTeams(this);
     }
     return orElse();
   }
 }
 
-abstract class CreateTeam implements TeamsFrameworkEvent {
-  const factory CreateTeam() = _$CreateTeam;
+abstract class RefreshJoinedTeams implements TeamsFrameworkEvent {
+  const factory RefreshJoinedTeams() = _$RefreshJoinedTeams;
 }
 
 /// @nodoc
-abstract class $PrintTeamsCopyWith<$Res> {
-  factory $PrintTeamsCopyWith(
-          PrintTeams value, $Res Function(PrintTeams) then) =
-      _$PrintTeamsCopyWithImpl<$Res>;
+abstract class $RefreshTeamRequestsCopyWith<$Res> {
+  factory $RefreshTeamRequestsCopyWith(
+          RefreshTeamRequests value, $Res Function(RefreshTeamRequests) then) =
+      _$RefreshTeamRequestsCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$PrintTeamsCopyWithImpl<$Res>
+class _$RefreshTeamRequestsCopyWithImpl<$Res>
     extends _$TeamsFrameworkEventCopyWithImpl<$Res>
-    implements $PrintTeamsCopyWith<$Res> {
-  _$PrintTeamsCopyWithImpl(PrintTeams _value, $Res Function(PrintTeams) _then)
-      : super(_value, (v) => _then(v as PrintTeams));
+    implements $RefreshTeamRequestsCopyWith<$Res> {
+  _$RefreshTeamRequestsCopyWithImpl(
+      RefreshTeamRequests _value, $Res Function(RefreshTeamRequests) _then)
+      : super(_value, (v) => _then(v as RefreshTeamRequests));
 
   @override
-  PrintTeams get _value => super._value as PrintTeams;
+  RefreshTeamRequests get _value => super._value as RefreshTeamRequests;
 }
 
 /// @nodoc
 
-class _$PrintTeams implements PrintTeams {
-  const _$PrintTeams();
+class _$RefreshTeamRequests implements RefreshTeamRequests {
+  const _$RefreshTeamRequests();
 
   @override
   String toString() {
-    return 'TeamsFrameworkEvent.printTeams()';
+    return 'TeamsFrameworkEvent.refreshTeamRequests()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is PrintTeams);
+        (other.runtimeType == runtimeType && other is RefreshTeamRequests);
   }
 
   @override
@@ -339,32 +341,32 @@ class _$PrintTeams implements PrintTeams {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() signOut,
-    required TResult Function() createTeam,
-    required TResult Function() printTeams,
+    required TResult Function() refreshJoinedTeams,
+    required TResult Function() refreshTeamRequests,
   }) {
-    return printTeams();
+    return refreshTeamRequests();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? signOut,
-    TResult Function()? createTeam,
-    TResult Function()? printTeams,
+    TResult Function()? refreshJoinedTeams,
+    TResult Function()? refreshTeamRequests,
   }) {
-    return printTeams?.call();
+    return refreshTeamRequests?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? signOut,
-    TResult Function()? createTeam,
-    TResult Function()? printTeams,
+    TResult Function()? refreshJoinedTeams,
+    TResult Function()? refreshTeamRequests,
     required TResult orElse(),
   }) {
-    if (printTeams != null) {
-      return printTeams();
+    if (refreshTeamRequests != null) {
+      return refreshTeamRequests();
     }
     return orElse();
   }
@@ -373,44 +375,56 @@ class _$PrintTeams implements PrintTeams {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(SignOut value) signOut,
-    required TResult Function(CreateTeam value) createTeam,
-    required TResult Function(PrintTeams value) printTeams,
+    required TResult Function(RefreshJoinedTeams value) refreshJoinedTeams,
+    required TResult Function(RefreshTeamRequests value) refreshTeamRequests,
   }) {
-    return printTeams(this);
+    return refreshTeamRequests(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(SignOut value)? signOut,
-    TResult Function(CreateTeam value)? createTeam,
-    TResult Function(PrintTeams value)? printTeams,
+    TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
+    TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
   }) {
-    return printTeams?.call(this);
+    return refreshTeamRequests?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(SignOut value)? signOut,
-    TResult Function(CreateTeam value)? createTeam,
-    TResult Function(PrintTeams value)? printTeams,
+    TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
+    TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
     required TResult orElse(),
   }) {
-    if (printTeams != null) {
-      return printTeams(this);
+    if (refreshTeamRequests != null) {
+      return refreshTeamRequests(this);
     }
     return orElse();
   }
 }
 
-abstract class PrintTeams implements TeamsFrameworkEvent {
-  const factory PrintTeams() = _$PrintTeams;
+abstract class RefreshTeamRequests implements TeamsFrameworkEvent {
+  const factory RefreshTeamRequests() = _$RefreshTeamRequests;
 }
 
 /// @nodoc
 mixin _$TeamsFrameworkState {
   bool get shouldSignOut => throw _privateConstructorUsedError;
+  Either<TeamFailure, KtList<Team>> get joinedTeams =>
+      throw _privateConstructorUsedError;
+  Either<TeamFailure, Unit> get joinedTeamsFetchFailureOrSuccess =>
+      throw _privateConstructorUsedError;
+  KtList<Tuple2<Team, Option<String>>> get joinedTeamURLs =>
+      throw _privateConstructorUsedError;
+  Either<TeamFailure, KtList<Team>> get teamRequests =>
+      throw _privateConstructorUsedError;
+  Either<TeamFailure, Unit> get teamRequestsFetchFailureOrSuccess =>
+      throw _privateConstructorUsedError;
+  KtList<Tuple2<Team, Option<String>>> get teamRequestURLs =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $TeamsFrameworkStateCopyWith<TeamsFrameworkState> get copyWith =>
@@ -422,7 +436,14 @@ abstract class $TeamsFrameworkStateCopyWith<$Res> {
   factory $TeamsFrameworkStateCopyWith(
           TeamsFrameworkState value, $Res Function(TeamsFrameworkState) then) =
       _$TeamsFrameworkStateCopyWithImpl<$Res>;
-  $Res call({bool shouldSignOut});
+  $Res call(
+      {bool shouldSignOut,
+      Either<TeamFailure, KtList<Team>> joinedTeams,
+      Either<TeamFailure, Unit> joinedTeamsFetchFailureOrSuccess,
+      KtList<Tuple2<Team, Option<String>>> joinedTeamURLs,
+      Either<TeamFailure, KtList<Team>> teamRequests,
+      Either<TeamFailure, Unit> teamRequestsFetchFailureOrSuccess,
+      KtList<Tuple2<Team, Option<String>>> teamRequestURLs});
 }
 
 /// @nodoc
@@ -437,12 +458,44 @@ class _$TeamsFrameworkStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? shouldSignOut = freezed,
+    Object? joinedTeams = freezed,
+    Object? joinedTeamsFetchFailureOrSuccess = freezed,
+    Object? joinedTeamURLs = freezed,
+    Object? teamRequests = freezed,
+    Object? teamRequestsFetchFailureOrSuccess = freezed,
+    Object? teamRequestURLs = freezed,
   }) {
     return _then(_value.copyWith(
       shouldSignOut: shouldSignOut == freezed
           ? _value.shouldSignOut
           : shouldSignOut // ignore: cast_nullable_to_non_nullable
               as bool,
+      joinedTeams: joinedTeams == freezed
+          ? _value.joinedTeams
+          : joinedTeams // ignore: cast_nullable_to_non_nullable
+              as Either<TeamFailure, KtList<Team>>,
+      joinedTeamsFetchFailureOrSuccess: joinedTeamsFetchFailureOrSuccess ==
+              freezed
+          ? _value.joinedTeamsFetchFailureOrSuccess
+          : joinedTeamsFetchFailureOrSuccess // ignore: cast_nullable_to_non_nullable
+              as Either<TeamFailure, Unit>,
+      joinedTeamURLs: joinedTeamURLs == freezed
+          ? _value.joinedTeamURLs
+          : joinedTeamURLs // ignore: cast_nullable_to_non_nullable
+              as KtList<Tuple2<Team, Option<String>>>,
+      teamRequests: teamRequests == freezed
+          ? _value.teamRequests
+          : teamRequests // ignore: cast_nullable_to_non_nullable
+              as Either<TeamFailure, KtList<Team>>,
+      teamRequestsFetchFailureOrSuccess: teamRequestsFetchFailureOrSuccess ==
+              freezed
+          ? _value.teamRequestsFetchFailureOrSuccess
+          : teamRequestsFetchFailureOrSuccess // ignore: cast_nullable_to_non_nullable
+              as Either<TeamFailure, Unit>,
+      teamRequestURLs: teamRequestURLs == freezed
+          ? _value.teamRequestURLs
+          : teamRequestURLs // ignore: cast_nullable_to_non_nullable
+              as KtList<Tuple2<Team, Option<String>>>,
     ));
   }
 }
@@ -454,7 +507,14 @@ abstract class _$TeamsFrameworkStateCopyWith<$Res>
           $Res Function(_TeamsFrameworkState) then) =
       __$TeamsFrameworkStateCopyWithImpl<$Res>;
   @override
-  $Res call({bool shouldSignOut});
+  $Res call(
+      {bool shouldSignOut,
+      Either<TeamFailure, KtList<Team>> joinedTeams,
+      Either<TeamFailure, Unit> joinedTeamsFetchFailureOrSuccess,
+      KtList<Tuple2<Team, Option<String>>> joinedTeamURLs,
+      Either<TeamFailure, KtList<Team>> teamRequests,
+      Either<TeamFailure, Unit> teamRequestsFetchFailureOrSuccess,
+      KtList<Tuple2<Team, Option<String>>> teamRequestURLs});
 }
 
 /// @nodoc
@@ -471,12 +531,44 @@ class __$TeamsFrameworkStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? shouldSignOut = freezed,
+    Object? joinedTeams = freezed,
+    Object? joinedTeamsFetchFailureOrSuccess = freezed,
+    Object? joinedTeamURLs = freezed,
+    Object? teamRequests = freezed,
+    Object? teamRequestsFetchFailureOrSuccess = freezed,
+    Object? teamRequestURLs = freezed,
   }) {
     return _then(_TeamsFrameworkState(
       shouldSignOut: shouldSignOut == freezed
           ? _value.shouldSignOut
           : shouldSignOut // ignore: cast_nullable_to_non_nullable
               as bool,
+      joinedTeams: joinedTeams == freezed
+          ? _value.joinedTeams
+          : joinedTeams // ignore: cast_nullable_to_non_nullable
+              as Either<TeamFailure, KtList<Team>>,
+      joinedTeamsFetchFailureOrSuccess: joinedTeamsFetchFailureOrSuccess ==
+              freezed
+          ? _value.joinedTeamsFetchFailureOrSuccess
+          : joinedTeamsFetchFailureOrSuccess // ignore: cast_nullable_to_non_nullable
+              as Either<TeamFailure, Unit>,
+      joinedTeamURLs: joinedTeamURLs == freezed
+          ? _value.joinedTeamURLs
+          : joinedTeamURLs // ignore: cast_nullable_to_non_nullable
+              as KtList<Tuple2<Team, Option<String>>>,
+      teamRequests: teamRequests == freezed
+          ? _value.teamRequests
+          : teamRequests // ignore: cast_nullable_to_non_nullable
+              as Either<TeamFailure, KtList<Team>>,
+      teamRequestsFetchFailureOrSuccess: teamRequestsFetchFailureOrSuccess ==
+              freezed
+          ? _value.teamRequestsFetchFailureOrSuccess
+          : teamRequestsFetchFailureOrSuccess // ignore: cast_nullable_to_non_nullable
+              as Either<TeamFailure, Unit>,
+      teamRequestURLs: teamRequestURLs == freezed
+          ? _value.teamRequestURLs
+          : teamRequestURLs // ignore: cast_nullable_to_non_nullable
+              as KtList<Tuple2<Team, Option<String>>>,
     ));
   }
 }
@@ -484,14 +576,33 @@ class __$TeamsFrameworkStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_TeamsFrameworkState implements _TeamsFrameworkState {
-  const _$_TeamsFrameworkState({required this.shouldSignOut});
+  const _$_TeamsFrameworkState(
+      {required this.shouldSignOut,
+      required this.joinedTeams,
+      required this.joinedTeamsFetchFailureOrSuccess,
+      required this.joinedTeamURLs,
+      required this.teamRequests,
+      required this.teamRequestsFetchFailureOrSuccess,
+      required this.teamRequestURLs});
 
   @override
   final bool shouldSignOut;
+  @override
+  final Either<TeamFailure, KtList<Team>> joinedTeams;
+  @override
+  final Either<TeamFailure, Unit> joinedTeamsFetchFailureOrSuccess;
+  @override
+  final KtList<Tuple2<Team, Option<String>>> joinedTeamURLs;
+  @override
+  final Either<TeamFailure, KtList<Team>> teamRequests;
+  @override
+  final Either<TeamFailure, Unit> teamRequestsFetchFailureOrSuccess;
+  @override
+  final KtList<Tuple2<Team, Option<String>>> teamRequestURLs;
 
   @override
   String toString() {
-    return 'TeamsFrameworkState(shouldSignOut: $shouldSignOut)';
+    return 'TeamsFrameworkState(shouldSignOut: $shouldSignOut, joinedTeams: $joinedTeams, joinedTeamsFetchFailureOrSuccess: $joinedTeamsFetchFailureOrSuccess, joinedTeamURLs: $joinedTeamURLs, teamRequests: $teamRequests, teamRequestsFetchFailureOrSuccess: $teamRequestsFetchFailureOrSuccess, teamRequestURLs: $teamRequestURLs)';
   }
 
   @override
@@ -500,12 +611,33 @@ class _$_TeamsFrameworkState implements _TeamsFrameworkState {
         (other.runtimeType == runtimeType &&
             other is _TeamsFrameworkState &&
             const DeepCollectionEquality()
-                .equals(other.shouldSignOut, shouldSignOut));
+                .equals(other.shouldSignOut, shouldSignOut) &&
+            const DeepCollectionEquality()
+                .equals(other.joinedTeams, joinedTeams) &&
+            const DeepCollectionEquality().equals(
+                other.joinedTeamsFetchFailureOrSuccess,
+                joinedTeamsFetchFailureOrSuccess) &&
+            const DeepCollectionEquality()
+                .equals(other.joinedTeamURLs, joinedTeamURLs) &&
+            const DeepCollectionEquality()
+                .equals(other.teamRequests, teamRequests) &&
+            const DeepCollectionEquality().equals(
+                other.teamRequestsFetchFailureOrSuccess,
+                teamRequestsFetchFailureOrSuccess) &&
+            const DeepCollectionEquality()
+                .equals(other.teamRequestURLs, teamRequestURLs));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(shouldSignOut));
+      runtimeType,
+      const DeepCollectionEquality().hash(shouldSignOut),
+      const DeepCollectionEquality().hash(joinedTeams),
+      const DeepCollectionEquality().hash(joinedTeamsFetchFailureOrSuccess),
+      const DeepCollectionEquality().hash(joinedTeamURLs),
+      const DeepCollectionEquality().hash(teamRequests),
+      const DeepCollectionEquality().hash(teamRequestsFetchFailureOrSuccess),
+      const DeepCollectionEquality().hash(teamRequestURLs));
 
   @JsonKey(ignore: true)
   @override
@@ -515,11 +647,37 @@ class _$_TeamsFrameworkState implements _TeamsFrameworkState {
 }
 
 abstract class _TeamsFrameworkState implements TeamsFrameworkState {
-  const factory _TeamsFrameworkState({required final bool shouldSignOut}) =
-      _$_TeamsFrameworkState;
+  const factory _TeamsFrameworkState(
+      {required final bool shouldSignOut,
+      required final Either<TeamFailure, KtList<Team>> joinedTeams,
+      required final Either<TeamFailure, Unit> joinedTeamsFetchFailureOrSuccess,
+      required final KtList<Tuple2<Team, Option<String>>> joinedTeamURLs,
+      required final Either<TeamFailure, KtList<Team>> teamRequests,
+      required final Either<TeamFailure, Unit>
+          teamRequestsFetchFailureOrSuccess,
+      required final KtList<Tuple2<Team, Option<String>>>
+          teamRequestURLs}) = _$_TeamsFrameworkState;
 
   @override
   bool get shouldSignOut => throw _privateConstructorUsedError;
+  @override
+  Either<TeamFailure, KtList<Team>> get joinedTeams =>
+      throw _privateConstructorUsedError;
+  @override
+  Either<TeamFailure, Unit> get joinedTeamsFetchFailureOrSuccess =>
+      throw _privateConstructorUsedError;
+  @override
+  KtList<Tuple2<Team, Option<String>>> get joinedTeamURLs =>
+      throw _privateConstructorUsedError;
+  @override
+  Either<TeamFailure, KtList<Team>> get teamRequests =>
+      throw _privateConstructorUsedError;
+  @override
+  Either<TeamFailure, Unit> get teamRequestsFetchFailureOrSuccess =>
+      throw _privateConstructorUsedError;
+  @override
+  KtList<Tuple2<Team, Option<String>>> get teamRequestURLs =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$TeamsFrameworkStateCopyWith<_TeamsFrameworkState> get copyWith =>
