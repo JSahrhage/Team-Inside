@@ -413,6 +413,8 @@ abstract class RefreshTeamRequests implements TeamsFrameworkEvent {
 /// @nodoc
 mixin _$TeamsFrameworkState {
   bool get shouldSignOut => throw _privateConstructorUsedError;
+  bool get joinedTeamsRefreshing => throw _privateConstructorUsedError;
+  bool get teamRequestsRefreshing => throw _privateConstructorUsedError;
   Either<TeamFailure, KtList<Team>> get joinedTeams =>
       throw _privateConstructorUsedError;
   Either<TeamFailure, Unit> get joinedTeamsFetchFailureOrSuccess =>
@@ -438,6 +440,8 @@ abstract class $TeamsFrameworkStateCopyWith<$Res> {
       _$TeamsFrameworkStateCopyWithImpl<$Res>;
   $Res call(
       {bool shouldSignOut,
+      bool joinedTeamsRefreshing,
+      bool teamRequestsRefreshing,
       Either<TeamFailure, KtList<Team>> joinedTeams,
       Either<TeamFailure, Unit> joinedTeamsFetchFailureOrSuccess,
       KtList<Tuple2<Team, Option<String>>> joinedTeamURLs,
@@ -458,6 +462,8 @@ class _$TeamsFrameworkStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? shouldSignOut = freezed,
+    Object? joinedTeamsRefreshing = freezed,
+    Object? teamRequestsRefreshing = freezed,
     Object? joinedTeams = freezed,
     Object? joinedTeamsFetchFailureOrSuccess = freezed,
     Object? joinedTeamURLs = freezed,
@@ -469,6 +475,14 @@ class _$TeamsFrameworkStateCopyWithImpl<$Res>
       shouldSignOut: shouldSignOut == freezed
           ? _value.shouldSignOut
           : shouldSignOut // ignore: cast_nullable_to_non_nullable
+              as bool,
+      joinedTeamsRefreshing: joinedTeamsRefreshing == freezed
+          ? _value.joinedTeamsRefreshing
+          : joinedTeamsRefreshing // ignore: cast_nullable_to_non_nullable
+              as bool,
+      teamRequestsRefreshing: teamRequestsRefreshing == freezed
+          ? _value.teamRequestsRefreshing
+          : teamRequestsRefreshing // ignore: cast_nullable_to_non_nullable
               as bool,
       joinedTeams: joinedTeams == freezed
           ? _value.joinedTeams
@@ -509,6 +523,8 @@ abstract class _$TeamsFrameworkStateCopyWith<$Res>
   @override
   $Res call(
       {bool shouldSignOut,
+      bool joinedTeamsRefreshing,
+      bool teamRequestsRefreshing,
       Either<TeamFailure, KtList<Team>> joinedTeams,
       Either<TeamFailure, Unit> joinedTeamsFetchFailureOrSuccess,
       KtList<Tuple2<Team, Option<String>>> joinedTeamURLs,
@@ -531,6 +547,8 @@ class __$TeamsFrameworkStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? shouldSignOut = freezed,
+    Object? joinedTeamsRefreshing = freezed,
+    Object? teamRequestsRefreshing = freezed,
     Object? joinedTeams = freezed,
     Object? joinedTeamsFetchFailureOrSuccess = freezed,
     Object? joinedTeamURLs = freezed,
@@ -542,6 +560,14 @@ class __$TeamsFrameworkStateCopyWithImpl<$Res>
       shouldSignOut: shouldSignOut == freezed
           ? _value.shouldSignOut
           : shouldSignOut // ignore: cast_nullable_to_non_nullable
+              as bool,
+      joinedTeamsRefreshing: joinedTeamsRefreshing == freezed
+          ? _value.joinedTeamsRefreshing
+          : joinedTeamsRefreshing // ignore: cast_nullable_to_non_nullable
+              as bool,
+      teamRequestsRefreshing: teamRequestsRefreshing == freezed
+          ? _value.teamRequestsRefreshing
+          : teamRequestsRefreshing // ignore: cast_nullable_to_non_nullable
               as bool,
       joinedTeams: joinedTeams == freezed
           ? _value.joinedTeams
@@ -578,6 +604,8 @@ class __$TeamsFrameworkStateCopyWithImpl<$Res>
 class _$_TeamsFrameworkState implements _TeamsFrameworkState {
   const _$_TeamsFrameworkState(
       {required this.shouldSignOut,
+      required this.joinedTeamsRefreshing,
+      required this.teamRequestsRefreshing,
       required this.joinedTeams,
       required this.joinedTeamsFetchFailureOrSuccess,
       required this.joinedTeamURLs,
@@ -587,6 +615,10 @@ class _$_TeamsFrameworkState implements _TeamsFrameworkState {
 
   @override
   final bool shouldSignOut;
+  @override
+  final bool joinedTeamsRefreshing;
+  @override
+  final bool teamRequestsRefreshing;
   @override
   final Either<TeamFailure, KtList<Team>> joinedTeams;
   @override
@@ -602,7 +634,7 @@ class _$_TeamsFrameworkState implements _TeamsFrameworkState {
 
   @override
   String toString() {
-    return 'TeamsFrameworkState(shouldSignOut: $shouldSignOut, joinedTeams: $joinedTeams, joinedTeamsFetchFailureOrSuccess: $joinedTeamsFetchFailureOrSuccess, joinedTeamURLs: $joinedTeamURLs, teamRequests: $teamRequests, teamRequestsFetchFailureOrSuccess: $teamRequestsFetchFailureOrSuccess, teamRequestURLs: $teamRequestURLs)';
+    return 'TeamsFrameworkState(shouldSignOut: $shouldSignOut, joinedTeamsRefreshing: $joinedTeamsRefreshing, teamRequestsRefreshing: $teamRequestsRefreshing, joinedTeams: $joinedTeams, joinedTeamsFetchFailureOrSuccess: $joinedTeamsFetchFailureOrSuccess, joinedTeamURLs: $joinedTeamURLs, teamRequests: $teamRequests, teamRequestsFetchFailureOrSuccess: $teamRequestsFetchFailureOrSuccess, teamRequestURLs: $teamRequestURLs)';
   }
 
   @override
@@ -612,6 +644,10 @@ class _$_TeamsFrameworkState implements _TeamsFrameworkState {
             other is _TeamsFrameworkState &&
             const DeepCollectionEquality()
                 .equals(other.shouldSignOut, shouldSignOut) &&
+            const DeepCollectionEquality()
+                .equals(other.joinedTeamsRefreshing, joinedTeamsRefreshing) &&
+            const DeepCollectionEquality()
+                .equals(other.teamRequestsRefreshing, teamRequestsRefreshing) &&
             const DeepCollectionEquality()
                 .equals(other.joinedTeams, joinedTeams) &&
             const DeepCollectionEquality().equals(
@@ -632,6 +668,8 @@ class _$_TeamsFrameworkState implements _TeamsFrameworkState {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(shouldSignOut),
+      const DeepCollectionEquality().hash(joinedTeamsRefreshing),
+      const DeepCollectionEquality().hash(teamRequestsRefreshing),
       const DeepCollectionEquality().hash(joinedTeams),
       const DeepCollectionEquality().hash(joinedTeamsFetchFailureOrSuccess),
       const DeepCollectionEquality().hash(joinedTeamURLs),
@@ -649,6 +687,8 @@ class _$_TeamsFrameworkState implements _TeamsFrameworkState {
 abstract class _TeamsFrameworkState implements TeamsFrameworkState {
   const factory _TeamsFrameworkState(
       {required final bool shouldSignOut,
+      required final bool joinedTeamsRefreshing,
+      required final bool teamRequestsRefreshing,
       required final Either<TeamFailure, KtList<Team>> joinedTeams,
       required final Either<TeamFailure, Unit> joinedTeamsFetchFailureOrSuccess,
       required final KtList<Tuple2<Team, Option<String>>> joinedTeamURLs,
@@ -660,6 +700,10 @@ abstract class _TeamsFrameworkState implements TeamsFrameworkState {
 
   @override
   bool get shouldSignOut => throw _privateConstructorUsedError;
+  @override
+  bool get joinedTeamsRefreshing => throw _privateConstructorUsedError;
+  @override
+  bool get teamRequestsRefreshing => throw _privateConstructorUsedError;
   @override
   Either<TeamFailure, KtList<Team>> get joinedTeams =>
       throw _privateConstructorUsedError;

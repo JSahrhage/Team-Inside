@@ -5,3 +5,4 @@ const double kdefaultFieldHeight = 48;
 const int kdurationInMillisecondsForTransition = 200;
 const double kInkwellCardImageSize = 80;
 const double kInkwellCardFontSize = 20;
+const int kRefreshIndicatorDuration = 1;

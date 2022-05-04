@@ -34,6 +34,12 @@ class TeamsFrameworkBloc
     );
     on<RefreshJoinedTeams>(
       (event, emit) async {
+        emit(
+          state.copyWith(
+            joinedTeamsRefreshing: true,
+          ),
+        );
+
         final joinedTeams = await _teamRepository.getJoinedTeams();
 
         await joinedTeams.fold(
@@ -56,22 +62,26 @@ class TeamsFrameworkBloc
             }
             emit(
               state.copyWith(
+                joinedTeamsRefreshing: false,
+                joinedTeams: joinedTeams,
                 joinedTeamURLs: joinedTeamURLs.toImmutableList(),
                 joinedTeamsFetchFailureOrSuccess: right(unit),
               ),
             );
           },
         );
-        emit(
-          state.copyWith(
-            joinedTeams: joinedTeams,
-          ),
-        );
       },
     );
     on<RefreshTeamRequests>(
       (event, emit) async {
+        emit(
+          state.copyWith(
+            teamRequestsRefreshing: true,
+          ),
+        );
+
         final teamRequests = await _teamRepository.getTeamRequests();
+
         await teamRequests.fold(
           (failure) {
             emit(
@@ -92,17 +102,13 @@ class TeamsFrameworkBloc
             }
             emit(
               state.copyWith(
+                teamRequestsRefreshing: false,
+                teamRequests: teamRequests,
                 teamRequestURLs: teamRequestURLs.toImmutableList(),
                 teamRequestsFetchFailureOrSuccess: right(unit),
               ),
             );
           },
-        );
-
-        emit(
-          state.copyWith(
-            teamRequests: teamRequests,
-          ),
         );
       },
     );

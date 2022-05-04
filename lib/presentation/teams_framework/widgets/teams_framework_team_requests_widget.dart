@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team_inside/application/teams_framework/teams_framework_bloc.dart';
 import 'package:team_inside/presentation/core/widgets/core_inkwell_card.dart';
+import 'package:team_inside/presentation/presentation_config.dart' as config;
 
 class TeamsFrameworkTeamRequestsWidget extends StatelessWidget {
   @override
@@ -12,11 +13,16 @@ class TeamsFrameworkTeamRequestsWidget extends StatelessWidget {
               const TeamsFrameworkEvent.refreshTeamRequests(),
             );
         return Future.delayed(
-          const Duration(seconds: 3),
+          const Duration(seconds: config.kRefreshIndicatorDuration),
         );
       },
       child: BlocBuilder<TeamsFrameworkBloc, TeamsFrameworkState>(
         builder: (context, state) {
+          if (state.teamRequestsRefreshing) {
+            return const Center(
+              child: CircularProgressIndicator.adaptive(),
+            );
+          }
           return state.teamRequestsFetchFailureOrSuccess.fold(
             (failure) {
               return Container(
