@@ -8,9 +8,11 @@ import 'package:team_inside/domain/auth/i_auth_facade.dart';
 import 'package:team_inside/domain/auth/user.dart';
 import 'package:team_inside/domain/auth/value_objects.dart';
 import 'package:team_inside/domain/core/unique_id_value_object.dart';
+import 'package:team_inside/domain/teams/value_objects.dart';
 import 'package:team_inside/infrastructure/auth/firebase_user_mapper.dart';
 import 'package:team_inside/infrastructure/auth/user_dto.dart';
 import 'package:team_inside/infrastructure/core/firestore_helpers.dart';
+import 'package:team_inside/infrastructure/teams/team_dto.dart';
 
 @LazySingleton(as: IAuthFacade)
 class FirebaseAuthFacade implements IAuthFacade {
@@ -25,6 +27,42 @@ class FirebaseAuthFacade implements IAuthFacade {
   @override
   Option<User> getSignedInUser() =>
       optionOf(_firebaseAuth.currentUser?.toDomain());
+
+  @override
+  Future<void> signOut() => _firebaseAuth.signOut();
+
+  @override
+  Future<void> deleteUser() async {
+    final userDoc = await _firestore.userDocument();
+    final user = await userDoc.get();
+    final userDTO = UserDTO.fromFirestore(user);
+
+    final joinedTeamIds = userDTO.joinedTeams;
+    for (final joinedTeamId in joinedTeamIds) {
+      try {
+        final teamDoc = await _firestore
+            .teamDocument(UniqueId.fromUniqueString(joinedTeamId));
+        final team = await teamDoc.get();
+        final teamDTO = TeamDTO.fromFirestore(team).toDomain();
+
+        final mutableJoinedUsers =
+            teamDTO.joinedUsers.getOrCrash().toMutableList().asList();
+        mutableJoinedUsers.remove(UniqueId.fromUniqueString(userDTO.id));
+
+        final mutatedTeamDTO = teamDTO.copyWith(
+          joinedUsers: JoinedUsers(mutableJoinedUsers.toImmutableList()),
+        );
+
+        await teamDoc.update(TeamDTO.fromDomain(mutatedTeamDTO).toJson());
+        // ignore: empty_catches, unused_catch_clause
+      } on FirebaseException catch (e) {}
+
+      final userDoc = await _firestore.userDocument();
+      userDoc.delete();
+
+      _firebaseAuth.currentUser?.delete();
+    }
+  }
 
   @override
   Future<Either<AuthFailure, Unit>> registerWithEmailAndPasswordAndUsername({
@@ -79,9 +117,6 @@ class FirebaseAuthFacade implements IAuthFacade {
       return left(const AuthFailure.serverError());
     }
   }
-
-  @override
-  Future<void> signOut() => _firebaseAuth.signOut();
 
   @override
   Future<Either<AuthFailure, Unit>> sendPasswordResetEmail({

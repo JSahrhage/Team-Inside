@@ -34,6 +34,16 @@ class TeamsFrameworkBloc
         );
       },
     );
+    on<DeleteUser>(
+      (event, emit) async {
+        await _authFacade.deleteUser();
+        emit(
+          state.copyWith(
+            shouldSignOut: true,
+          ),
+        );
+      },
+    );
     on<RefreshJoinedTeams>(
       (event, emit) async {
         emit(

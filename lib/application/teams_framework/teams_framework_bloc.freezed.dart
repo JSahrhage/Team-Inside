@@ -19,6 +19,7 @@ mixin _$TeamsFrameworkEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() signOut,
+    required TResult Function() deleteUser,
     required TResult Function() refreshJoinedTeams,
     required TResult Function() refreshTeamRequests,
     required TResult Function() refreshUserSettings,
@@ -28,6 +29,7 @@ mixin _$TeamsFrameworkEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? signOut,
+    TResult Function()? deleteUser,
     TResult Function()? refreshJoinedTeams,
     TResult Function()? refreshTeamRequests,
     TResult Function()? refreshUserSettings,
@@ -37,6 +39,7 @@ mixin _$TeamsFrameworkEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? signOut,
+    TResult Function()? deleteUser,
     TResult Function()? refreshJoinedTeams,
     TResult Function()? refreshTeamRequests,
     TResult Function()? refreshUserSettings,
@@ -47,6 +50,7 @@ mixin _$TeamsFrameworkEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(SignOut value) signOut,
+    required TResult Function(DeleteUser value) deleteUser,
     required TResult Function(RefreshJoinedTeams value) refreshJoinedTeams,
     required TResult Function(RefreshTeamRequests value) refreshTeamRequests,
     required TResult Function(RefreshUserSettings value) refreshUserSettings,
@@ -56,6 +60,7 @@ mixin _$TeamsFrameworkEvent {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteUser value)? deleteUser,
     TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
     TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
     TResult Function(RefreshUserSettings value)? refreshUserSettings,
@@ -65,6 +70,7 @@ mixin _$TeamsFrameworkEvent {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteUser value)? deleteUser,
     TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
     TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
     TResult Function(RefreshUserSettings value)? refreshUserSettings,
@@ -131,6 +137,7 @@ class _$SignOut implements SignOut {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() signOut,
+    required TResult Function() deleteUser,
     required TResult Function() refreshJoinedTeams,
     required TResult Function() refreshTeamRequests,
     required TResult Function() refreshUserSettings,
@@ -143,6 +150,7 @@ class _$SignOut implements SignOut {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? signOut,
+    TResult Function()? deleteUser,
     TResult Function()? refreshJoinedTeams,
     TResult Function()? refreshTeamRequests,
     TResult Function()? refreshUserSettings,
@@ -155,6 +163,7 @@ class _$SignOut implements SignOut {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? signOut,
+    TResult Function()? deleteUser,
     TResult Function()? refreshJoinedTeams,
     TResult Function()? refreshTeamRequests,
     TResult Function()? refreshUserSettings,
@@ -171,6 +180,7 @@ class _$SignOut implements SignOut {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(SignOut value) signOut,
+    required TResult Function(DeleteUser value) deleteUser,
     required TResult Function(RefreshJoinedTeams value) refreshJoinedTeams,
     required TResult Function(RefreshTeamRequests value) refreshTeamRequests,
     required TResult Function(RefreshUserSettings value) refreshUserSettings,
@@ -183,6 +193,7 @@ class _$SignOut implements SignOut {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteUser value)? deleteUser,
     TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
     TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
     TResult Function(RefreshUserSettings value)? refreshUserSettings,
@@ -195,6 +206,7 @@ class _$SignOut implements SignOut {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteUser value)? deleteUser,
     TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
     TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
     TResult Function(RefreshUserSettings value)? refreshUserSettings,
@@ -210,6 +222,134 @@ class _$SignOut implements SignOut {
 
 abstract class SignOut implements TeamsFrameworkEvent {
   const factory SignOut() = _$SignOut;
+}
+
+/// @nodoc
+abstract class $DeleteUserCopyWith<$Res> {
+  factory $DeleteUserCopyWith(
+          DeleteUser value, $Res Function(DeleteUser) then) =
+      _$DeleteUserCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$DeleteUserCopyWithImpl<$Res>
+    extends _$TeamsFrameworkEventCopyWithImpl<$Res>
+    implements $DeleteUserCopyWith<$Res> {
+  _$DeleteUserCopyWithImpl(DeleteUser _value, $Res Function(DeleteUser) _then)
+      : super(_value, (v) => _then(v as DeleteUser));
+
+  @override
+  DeleteUser get _value => super._value as DeleteUser;
+}
+
+/// @nodoc
+
+class _$DeleteUser implements DeleteUser {
+  const _$DeleteUser();
+
+  @override
+  String toString() {
+    return 'TeamsFrameworkEvent.deleteUser()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is DeleteUser);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() signOut,
+    required TResult Function() deleteUser,
+    required TResult Function() refreshJoinedTeams,
+    required TResult Function() refreshTeamRequests,
+    required TResult Function() refreshUserSettings,
+    required TResult Function(File image) imagePicked,
+  }) {
+    return deleteUser();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? signOut,
+    TResult Function()? deleteUser,
+    TResult Function()? refreshJoinedTeams,
+    TResult Function()? refreshTeamRequests,
+    TResult Function()? refreshUserSettings,
+    TResult Function(File image)? imagePicked,
+  }) {
+    return deleteUser?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? signOut,
+    TResult Function()? deleteUser,
+    TResult Function()? refreshJoinedTeams,
+    TResult Function()? refreshTeamRequests,
+    TResult Function()? refreshUserSettings,
+    TResult Function(File image)? imagePicked,
+    required TResult orElse(),
+  }) {
+    if (deleteUser != null) {
+      return deleteUser();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(SignOut value) signOut,
+    required TResult Function(DeleteUser value) deleteUser,
+    required TResult Function(RefreshJoinedTeams value) refreshJoinedTeams,
+    required TResult Function(RefreshTeamRequests value) refreshTeamRequests,
+    required TResult Function(RefreshUserSettings value) refreshUserSettings,
+    required TResult Function(ImagePicked value) imagePicked,
+  }) {
+    return deleteUser(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteUser value)? deleteUser,
+    TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
+    TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
+    TResult Function(RefreshUserSettings value)? refreshUserSettings,
+    TResult Function(ImagePicked value)? imagePicked,
+  }) {
+    return deleteUser?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteUser value)? deleteUser,
+    TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
+    TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
+    TResult Function(RefreshUserSettings value)? refreshUserSettings,
+    TResult Function(ImagePicked value)? imagePicked,
+    required TResult orElse(),
+  }) {
+    if (deleteUser != null) {
+      return deleteUser(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class DeleteUser implements TeamsFrameworkEvent {
+  const factory DeleteUser() = _$DeleteUser;
 }
 
 /// @nodoc
@@ -254,6 +394,7 @@ class _$RefreshJoinedTeams implements RefreshJoinedTeams {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() signOut,
+    required TResult Function() deleteUser,
     required TResult Function() refreshJoinedTeams,
     required TResult Function() refreshTeamRequests,
     required TResult Function() refreshUserSettings,
@@ -266,6 +407,7 @@ class _$RefreshJoinedTeams implements RefreshJoinedTeams {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? signOut,
+    TResult Function()? deleteUser,
     TResult Function()? refreshJoinedTeams,
     TResult Function()? refreshTeamRequests,
     TResult Function()? refreshUserSettings,
@@ -278,6 +420,7 @@ class _$RefreshJoinedTeams implements RefreshJoinedTeams {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? signOut,
+    TResult Function()? deleteUser,
     TResult Function()? refreshJoinedTeams,
     TResult Function()? refreshTeamRequests,
     TResult Function()? refreshUserSettings,
@@ -294,6 +437,7 @@ class _$RefreshJoinedTeams implements RefreshJoinedTeams {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(SignOut value) signOut,
+    required TResult Function(DeleteUser value) deleteUser,
     required TResult Function(RefreshJoinedTeams value) refreshJoinedTeams,
     required TResult Function(RefreshTeamRequests value) refreshTeamRequests,
     required TResult Function(RefreshUserSettings value) refreshUserSettings,
@@ -306,6 +450,7 @@ class _$RefreshJoinedTeams implements RefreshJoinedTeams {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteUser value)? deleteUser,
     TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
     TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
     TResult Function(RefreshUserSettings value)? refreshUserSettings,
@@ -318,6 +463,7 @@ class _$RefreshJoinedTeams implements RefreshJoinedTeams {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteUser value)? deleteUser,
     TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
     TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
     TResult Function(RefreshUserSettings value)? refreshUserSettings,
@@ -377,6 +523,7 @@ class _$RefreshTeamRequests implements RefreshTeamRequests {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() signOut,
+    required TResult Function() deleteUser,
     required TResult Function() refreshJoinedTeams,
     required TResult Function() refreshTeamRequests,
     required TResult Function() refreshUserSettings,
@@ -389,6 +536,7 @@ class _$RefreshTeamRequests implements RefreshTeamRequests {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? signOut,
+    TResult Function()? deleteUser,
     TResult Function()? refreshJoinedTeams,
     TResult Function()? refreshTeamRequests,
     TResult Function()? refreshUserSettings,
@@ -401,6 +549,7 @@ class _$RefreshTeamRequests implements RefreshTeamRequests {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? signOut,
+    TResult Function()? deleteUser,
     TResult Function()? refreshJoinedTeams,
     TResult Function()? refreshTeamRequests,
     TResult Function()? refreshUserSettings,
@@ -417,6 +566,7 @@ class _$RefreshTeamRequests implements RefreshTeamRequests {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(SignOut value) signOut,
+    required TResult Function(DeleteUser value) deleteUser,
     required TResult Function(RefreshJoinedTeams value) refreshJoinedTeams,
     required TResult Function(RefreshTeamRequests value) refreshTeamRequests,
     required TResult Function(RefreshUserSettings value) refreshUserSettings,
@@ -429,6 +579,7 @@ class _$RefreshTeamRequests implements RefreshTeamRequests {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteUser value)? deleteUser,
     TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
     TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
     TResult Function(RefreshUserSettings value)? refreshUserSettings,
@@ -441,6 +592,7 @@ class _$RefreshTeamRequests implements RefreshTeamRequests {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteUser value)? deleteUser,
     TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
     TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
     TResult Function(RefreshUserSettings value)? refreshUserSettings,
@@ -500,6 +652,7 @@ class _$RefreshUserSettings implements RefreshUserSettings {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() signOut,
+    required TResult Function() deleteUser,
     required TResult Function() refreshJoinedTeams,
     required TResult Function() refreshTeamRequests,
     required TResult Function() refreshUserSettings,
@@ -512,6 +665,7 @@ class _$RefreshUserSettings implements RefreshUserSettings {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? signOut,
+    TResult Function()? deleteUser,
     TResult Function()? refreshJoinedTeams,
     TResult Function()? refreshTeamRequests,
     TResult Function()? refreshUserSettings,
@@ -524,6 +678,7 @@ class _$RefreshUserSettings implements RefreshUserSettings {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? signOut,
+    TResult Function()? deleteUser,
     TResult Function()? refreshJoinedTeams,
     TResult Function()? refreshTeamRequests,
     TResult Function()? refreshUserSettings,
@@ -540,6 +695,7 @@ class _$RefreshUserSettings implements RefreshUserSettings {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(SignOut value) signOut,
+    required TResult Function(DeleteUser value) deleteUser,
     required TResult Function(RefreshJoinedTeams value) refreshJoinedTeams,
     required TResult Function(RefreshTeamRequests value) refreshTeamRequests,
     required TResult Function(RefreshUserSettings value) refreshUserSettings,
@@ -552,6 +708,7 @@ class _$RefreshUserSettings implements RefreshUserSettings {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteUser value)? deleteUser,
     TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
     TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
     TResult Function(RefreshUserSettings value)? refreshUserSettings,
@@ -564,6 +721,7 @@ class _$RefreshUserSettings implements RefreshUserSettings {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteUser value)? deleteUser,
     TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
     TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
     TResult Function(RefreshUserSettings value)? refreshUserSettings,
@@ -647,6 +805,7 @@ class _$ImagePicked implements ImagePicked {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() signOut,
+    required TResult Function() deleteUser,
     required TResult Function() refreshJoinedTeams,
     required TResult Function() refreshTeamRequests,
     required TResult Function() refreshUserSettings,
@@ -659,6 +818,7 @@ class _$ImagePicked implements ImagePicked {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? signOut,
+    TResult Function()? deleteUser,
     TResult Function()? refreshJoinedTeams,
     TResult Function()? refreshTeamRequests,
     TResult Function()? refreshUserSettings,
@@ -671,6 +831,7 @@ class _$ImagePicked implements ImagePicked {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? signOut,
+    TResult Function()? deleteUser,
     TResult Function()? refreshJoinedTeams,
     TResult Function()? refreshTeamRequests,
     TResult Function()? refreshUserSettings,
@@ -687,6 +848,7 @@ class _$ImagePicked implements ImagePicked {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(SignOut value) signOut,
+    required TResult Function(DeleteUser value) deleteUser,
     required TResult Function(RefreshJoinedTeams value) refreshJoinedTeams,
     required TResult Function(RefreshTeamRequests value) refreshTeamRequests,
     required TResult Function(RefreshUserSettings value) refreshUserSettings,
@@ -699,6 +861,7 @@ class _$ImagePicked implements ImagePicked {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteUser value)? deleteUser,
     TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
     TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
     TResult Function(RefreshUserSettings value)? refreshUserSettings,
@@ -711,6 +874,7 @@ class _$ImagePicked implements ImagePicked {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteUser value)? deleteUser,
     TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
     TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
     TResult Function(RefreshUserSettings value)? refreshUserSettings,

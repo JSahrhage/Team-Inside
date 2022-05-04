@@ -6,6 +6,7 @@ import 'package:team_inside/domain/auth/value_objects.dart';
 abstract class IAuthFacade {
   Option<User> getSignedInUser();
   Future<void> signOut();
+  Future<void> deleteUser();
   Future<Either<AuthFailure, Unit>> signInWithEmailAndPassword({
     required EmailAddress emailAddress,
     required Password password,
