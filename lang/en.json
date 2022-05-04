@@ -20,11 +20,14 @@
     "send_reset_email": "Send reset e-mail",
     "reset_email_send": "Reset e-mail was send.",
     "continue": "Continue",
+    "back": "Back",
     "insert_email": "Insert E-Mail-Address",
     "insert_password": "Insert Password",
     "insert_username": "Insert Username",
     "sign_out": "Sign out",
     "teams": "Teams",
     "requests": "Requests",
-    "settings": "Settings"
+    "settings": "Settings",
+    "select_photo": "Select photo",
+    "take_photo": "Take photo"
 }

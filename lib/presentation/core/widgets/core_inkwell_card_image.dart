@@ -22,8 +22,8 @@ class CoreInkwellCardImage extends StatelessWidget {
         size: size ?? config.kInkwellCardImageSize,
         color: Theme.of(context).colorScheme.primary,
       ),
-      (some) => Image.network(
-        some,
+      (imageURL) => Image.network(
+        imageURL,
         height: size ?? config.kInkwellCardImageSize,
         width: size ?? config.kInkwellCardImageSize,
       ),

@@ -21,6 +21,8 @@ mixin _$TeamsFrameworkEvent {
     required TResult Function() signOut,
     required TResult Function() refreshJoinedTeams,
     required TResult Function() refreshTeamRequests,
+    required TResult Function() refreshUserSettings,
+    required TResult Function(File image) imagePicked,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +30,8 @@ mixin _$TeamsFrameworkEvent {
     TResult Function()? signOut,
     TResult Function()? refreshJoinedTeams,
     TResult Function()? refreshTeamRequests,
+    TResult Function()? refreshUserSettings,
+    TResult Function(File image)? imagePicked,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +39,8 @@ mixin _$TeamsFrameworkEvent {
     TResult Function()? signOut,
     TResult Function()? refreshJoinedTeams,
     TResult Function()? refreshTeamRequests,
+    TResult Function()? refreshUserSettings,
+    TResult Function(File image)? imagePicked,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,6 +49,8 @@ mixin _$TeamsFrameworkEvent {
     required TResult Function(SignOut value) signOut,
     required TResult Function(RefreshJoinedTeams value) refreshJoinedTeams,
     required TResult Function(RefreshTeamRequests value) refreshTeamRequests,
+    required TResult Function(RefreshUserSettings value) refreshUserSettings,
+    required TResult Function(ImagePicked value) imagePicked,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +58,8 @@ mixin _$TeamsFrameworkEvent {
     TResult Function(SignOut value)? signOut,
     TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
     TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
+    TResult Function(RefreshUserSettings value)? refreshUserSettings,
+    TResult Function(ImagePicked value)? imagePicked,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +67,8 @@ mixin _$TeamsFrameworkEvent {
     TResult Function(SignOut value)? signOut,
     TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
     TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
+    TResult Function(RefreshUserSettings value)? refreshUserSettings,
+    TResult Function(ImagePicked value)? imagePicked,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -121,6 +133,8 @@ class _$SignOut implements SignOut {
     required TResult Function() signOut,
     required TResult Function() refreshJoinedTeams,
     required TResult Function() refreshTeamRequests,
+    required TResult Function() refreshUserSettings,
+    required TResult Function(File image) imagePicked,
   }) {
     return signOut();
   }
@@ -131,6 +145,8 @@ class _$SignOut implements SignOut {
     TResult Function()? signOut,
     TResult Function()? refreshJoinedTeams,
     TResult Function()? refreshTeamRequests,
+    TResult Function()? refreshUserSettings,
+    TResult Function(File image)? imagePicked,
   }) {
     return signOut?.call();
   }
@@ -141,6 +157,8 @@ class _$SignOut implements SignOut {
     TResult Function()? signOut,
     TResult Function()? refreshJoinedTeams,
     TResult Function()? refreshTeamRequests,
+    TResult Function()? refreshUserSettings,
+    TResult Function(File image)? imagePicked,
     required TResult orElse(),
   }) {
     if (signOut != null) {
@@ -155,6 +173,8 @@ class _$SignOut implements SignOut {
     required TResult Function(SignOut value) signOut,
     required TResult Function(RefreshJoinedTeams value) refreshJoinedTeams,
     required TResult Function(RefreshTeamRequests value) refreshTeamRequests,
+    required TResult Function(RefreshUserSettings value) refreshUserSettings,
+    required TResult Function(ImagePicked value) imagePicked,
   }) {
     return signOut(this);
   }
@@ -165,6 +185,8 @@ class _$SignOut implements SignOut {
     TResult Function(SignOut value)? signOut,
     TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
     TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
+    TResult Function(RefreshUserSettings value)? refreshUserSettings,
+    TResult Function(ImagePicked value)? imagePicked,
   }) {
     return signOut?.call(this);
   }
@@ -175,6 +197,8 @@ class _$SignOut implements SignOut {
     TResult Function(SignOut value)? signOut,
     TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
     TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
+    TResult Function(RefreshUserSettings value)? refreshUserSettings,
+    TResult Function(ImagePicked value)? imagePicked,
     required TResult orElse(),
   }) {
     if (signOut != null) {
@@ -232,6 +256,8 @@ class _$RefreshJoinedTeams implements RefreshJoinedTeams {
     required TResult Function() signOut,
     required TResult Function() refreshJoinedTeams,
     required TResult Function() refreshTeamRequests,
+    required TResult Function() refreshUserSettings,
+    required TResult Function(File image) imagePicked,
   }) {
     return refreshJoinedTeams();
   }
@@ -242,6 +268,8 @@ class _$RefreshJoinedTeams implements RefreshJoinedTeams {
     TResult Function()? signOut,
     TResult Function()? refreshJoinedTeams,
     TResult Function()? refreshTeamRequests,
+    TResult Function()? refreshUserSettings,
+    TResult Function(File image)? imagePicked,
   }) {
     return refreshJoinedTeams?.call();
   }
@@ -252,6 +280,8 @@ class _$RefreshJoinedTeams implements RefreshJoinedTeams {
     TResult Function()? signOut,
     TResult Function()? refreshJoinedTeams,
     TResult Function()? refreshTeamRequests,
+    TResult Function()? refreshUserSettings,
+    TResult Function(File image)? imagePicked,
     required TResult orElse(),
   }) {
     if (refreshJoinedTeams != null) {
@@ -266,6 +296,8 @@ class _$RefreshJoinedTeams implements RefreshJoinedTeams {
     required TResult Function(SignOut value) signOut,
     required TResult Function(RefreshJoinedTeams value) refreshJoinedTeams,
     required TResult Function(RefreshTeamRequests value) refreshTeamRequests,
+    required TResult Function(RefreshUserSettings value) refreshUserSettings,
+    required TResult Function(ImagePicked value) imagePicked,
   }) {
     return refreshJoinedTeams(this);
   }
@@ -276,6 +308,8 @@ class _$RefreshJoinedTeams implements RefreshJoinedTeams {
     TResult Function(SignOut value)? signOut,
     TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
     TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
+    TResult Function(RefreshUserSettings value)? refreshUserSettings,
+    TResult Function(ImagePicked value)? imagePicked,
   }) {
     return refreshJoinedTeams?.call(this);
   }
@@ -286,6 +320,8 @@ class _$RefreshJoinedTeams implements RefreshJoinedTeams {
     TResult Function(SignOut value)? signOut,
     TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
     TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
+    TResult Function(RefreshUserSettings value)? refreshUserSettings,
+    TResult Function(ImagePicked value)? imagePicked,
     required TResult orElse(),
   }) {
     if (refreshJoinedTeams != null) {
@@ -343,6 +379,8 @@ class _$RefreshTeamRequests implements RefreshTeamRequests {
     required TResult Function() signOut,
     required TResult Function() refreshJoinedTeams,
     required TResult Function() refreshTeamRequests,
+    required TResult Function() refreshUserSettings,
+    required TResult Function(File image) imagePicked,
   }) {
     return refreshTeamRequests();
   }
@@ -353,6 +391,8 @@ class _$RefreshTeamRequests implements RefreshTeamRequests {
     TResult Function()? signOut,
     TResult Function()? refreshJoinedTeams,
     TResult Function()? refreshTeamRequests,
+    TResult Function()? refreshUserSettings,
+    TResult Function(File image)? imagePicked,
   }) {
     return refreshTeamRequests?.call();
   }
@@ -363,6 +403,8 @@ class _$RefreshTeamRequests implements RefreshTeamRequests {
     TResult Function()? signOut,
     TResult Function()? refreshJoinedTeams,
     TResult Function()? refreshTeamRequests,
+    TResult Function()? refreshUserSettings,
+    TResult Function(File image)? imagePicked,
     required TResult orElse(),
   }) {
     if (refreshTeamRequests != null) {
@@ -377,6 +419,8 @@ class _$RefreshTeamRequests implements RefreshTeamRequests {
     required TResult Function(SignOut value) signOut,
     required TResult Function(RefreshJoinedTeams value) refreshJoinedTeams,
     required TResult Function(RefreshTeamRequests value) refreshTeamRequests,
+    required TResult Function(RefreshUserSettings value) refreshUserSettings,
+    required TResult Function(ImagePicked value) imagePicked,
   }) {
     return refreshTeamRequests(this);
   }
@@ -387,6 +431,8 @@ class _$RefreshTeamRequests implements RefreshTeamRequests {
     TResult Function(SignOut value)? signOut,
     TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
     TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
+    TResult Function(RefreshUserSettings value)? refreshUserSettings,
+    TResult Function(ImagePicked value)? imagePicked,
   }) {
     return refreshTeamRequests?.call(this);
   }
@@ -397,6 +443,8 @@ class _$RefreshTeamRequests implements RefreshTeamRequests {
     TResult Function(SignOut value)? signOut,
     TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
     TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
+    TResult Function(RefreshUserSettings value)? refreshUserSettings,
+    TResult Function(ImagePicked value)? imagePicked,
     required TResult orElse(),
   }) {
     if (refreshTeamRequests != null) {
@@ -411,10 +459,286 @@ abstract class RefreshTeamRequests implements TeamsFrameworkEvent {
 }
 
 /// @nodoc
+abstract class $RefreshUserSettingsCopyWith<$Res> {
+  factory $RefreshUserSettingsCopyWith(
+          RefreshUserSettings value, $Res Function(RefreshUserSettings) then) =
+      _$RefreshUserSettingsCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$RefreshUserSettingsCopyWithImpl<$Res>
+    extends _$TeamsFrameworkEventCopyWithImpl<$Res>
+    implements $RefreshUserSettingsCopyWith<$Res> {
+  _$RefreshUserSettingsCopyWithImpl(
+      RefreshUserSettings _value, $Res Function(RefreshUserSettings) _then)
+      : super(_value, (v) => _then(v as RefreshUserSettings));
+
+  @override
+  RefreshUserSettings get _value => super._value as RefreshUserSettings;
+}
+
+/// @nodoc
+
+class _$RefreshUserSettings implements RefreshUserSettings {
+  const _$RefreshUserSettings();
+
+  @override
+  String toString() {
+    return 'TeamsFrameworkEvent.refreshUserSettings()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is RefreshUserSettings);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() signOut,
+    required TResult Function() refreshJoinedTeams,
+    required TResult Function() refreshTeamRequests,
+    required TResult Function() refreshUserSettings,
+    required TResult Function(File image) imagePicked,
+  }) {
+    return refreshUserSettings();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? signOut,
+    TResult Function()? refreshJoinedTeams,
+    TResult Function()? refreshTeamRequests,
+    TResult Function()? refreshUserSettings,
+    TResult Function(File image)? imagePicked,
+  }) {
+    return refreshUserSettings?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? signOut,
+    TResult Function()? refreshJoinedTeams,
+    TResult Function()? refreshTeamRequests,
+    TResult Function()? refreshUserSettings,
+    TResult Function(File image)? imagePicked,
+    required TResult orElse(),
+  }) {
+    if (refreshUserSettings != null) {
+      return refreshUserSettings();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(SignOut value) signOut,
+    required TResult Function(RefreshJoinedTeams value) refreshJoinedTeams,
+    required TResult Function(RefreshTeamRequests value) refreshTeamRequests,
+    required TResult Function(RefreshUserSettings value) refreshUserSettings,
+    required TResult Function(ImagePicked value) imagePicked,
+  }) {
+    return refreshUserSettings(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(SignOut value)? signOut,
+    TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
+    TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
+    TResult Function(RefreshUserSettings value)? refreshUserSettings,
+    TResult Function(ImagePicked value)? imagePicked,
+  }) {
+    return refreshUserSettings?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SignOut value)? signOut,
+    TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
+    TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
+    TResult Function(RefreshUserSettings value)? refreshUserSettings,
+    TResult Function(ImagePicked value)? imagePicked,
+    required TResult orElse(),
+  }) {
+    if (refreshUserSettings != null) {
+      return refreshUserSettings(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class RefreshUserSettings implements TeamsFrameworkEvent {
+  const factory RefreshUserSettings() = _$RefreshUserSettings;
+}
+
+/// @nodoc
+abstract class $ImagePickedCopyWith<$Res> {
+  factory $ImagePickedCopyWith(
+          ImagePicked value, $Res Function(ImagePicked) then) =
+      _$ImagePickedCopyWithImpl<$Res>;
+  $Res call({File image});
+}
+
+/// @nodoc
+class _$ImagePickedCopyWithImpl<$Res>
+    extends _$TeamsFrameworkEventCopyWithImpl<$Res>
+    implements $ImagePickedCopyWith<$Res> {
+  _$ImagePickedCopyWithImpl(
+      ImagePicked _value, $Res Function(ImagePicked) _then)
+      : super(_value, (v) => _then(v as ImagePicked));
+
+  @override
+  ImagePicked get _value => super._value as ImagePicked;
+
+  @override
+  $Res call({
+    Object? image = freezed,
+  }) {
+    return _then(ImagePicked(
+      image == freezed
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as File,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ImagePicked implements ImagePicked {
+  const _$ImagePicked(this.image);
+
+  @override
+  final File image;
+
+  @override
+  String toString() {
+    return 'TeamsFrameworkEvent.imagePicked(image: $image)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is ImagePicked &&
+            const DeepCollectionEquality().equals(other.image, image));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(image));
+
+  @JsonKey(ignore: true)
+  @override
+  $ImagePickedCopyWith<ImagePicked> get copyWith =>
+      _$ImagePickedCopyWithImpl<ImagePicked>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() signOut,
+    required TResult Function() refreshJoinedTeams,
+    required TResult Function() refreshTeamRequests,
+    required TResult Function() refreshUserSettings,
+    required TResult Function(File image) imagePicked,
+  }) {
+    return imagePicked(image);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? signOut,
+    TResult Function()? refreshJoinedTeams,
+    TResult Function()? refreshTeamRequests,
+    TResult Function()? refreshUserSettings,
+    TResult Function(File image)? imagePicked,
+  }) {
+    return imagePicked?.call(image);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? signOut,
+    TResult Function()? refreshJoinedTeams,
+    TResult Function()? refreshTeamRequests,
+    TResult Function()? refreshUserSettings,
+    TResult Function(File image)? imagePicked,
+    required TResult orElse(),
+  }) {
+    if (imagePicked != null) {
+      return imagePicked(image);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(SignOut value) signOut,
+    required TResult Function(RefreshJoinedTeams value) refreshJoinedTeams,
+    required TResult Function(RefreshTeamRequests value) refreshTeamRequests,
+    required TResult Function(RefreshUserSettings value) refreshUserSettings,
+    required TResult Function(ImagePicked value) imagePicked,
+  }) {
+    return imagePicked(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(SignOut value)? signOut,
+    TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
+    TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
+    TResult Function(RefreshUserSettings value)? refreshUserSettings,
+    TResult Function(ImagePicked value)? imagePicked,
+  }) {
+    return imagePicked?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SignOut value)? signOut,
+    TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
+    TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
+    TResult Function(RefreshUserSettings value)? refreshUserSettings,
+    TResult Function(ImagePicked value)? imagePicked,
+    required TResult orElse(),
+  }) {
+    if (imagePicked != null) {
+      return imagePicked(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ImagePicked implements TeamsFrameworkEvent {
+  const factory ImagePicked(final File image) = _$ImagePicked;
+
+  File get image => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ImagePickedCopyWith<ImagePicked> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$TeamsFrameworkState {
   bool get shouldSignOut => throw _privateConstructorUsedError;
   bool get joinedTeamsRefreshing => throw _privateConstructorUsedError;
   bool get teamRequestsRefreshing => throw _privateConstructorUsedError;
+  bool get userSettingsRefreshing => throw _privateConstructorUsedError;
   Either<TeamFailure, KtList<Team>> get joinedTeams =>
       throw _privateConstructorUsedError;
   Either<TeamFailure, Unit> get joinedTeamsFetchFailureOrSuccess =>
@@ -427,6 +751,7 @@ mixin _$TeamsFrameworkState {
       throw _privateConstructorUsedError;
   KtList<Tuple2<Team, Option<String>>> get teamRequestURLs =>
       throw _privateConstructorUsedError;
+  Option<String> get userImageURL => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $TeamsFrameworkStateCopyWith<TeamsFrameworkState> get copyWith =>
@@ -442,12 +767,14 @@ abstract class $TeamsFrameworkStateCopyWith<$Res> {
       {bool shouldSignOut,
       bool joinedTeamsRefreshing,
       bool teamRequestsRefreshing,
+      bool userSettingsRefreshing,
       Either<TeamFailure, KtList<Team>> joinedTeams,
       Either<TeamFailure, Unit> joinedTeamsFetchFailureOrSuccess,
       KtList<Tuple2<Team, Option<String>>> joinedTeamURLs,
       Either<TeamFailure, KtList<Team>> teamRequests,
       Either<TeamFailure, Unit> teamRequestsFetchFailureOrSuccess,
-      KtList<Tuple2<Team, Option<String>>> teamRequestURLs});
+      KtList<Tuple2<Team, Option<String>>> teamRequestURLs,
+      Option<String> userImageURL});
 }
 
 /// @nodoc
@@ -464,12 +791,14 @@ class _$TeamsFrameworkStateCopyWithImpl<$Res>
     Object? shouldSignOut = freezed,
     Object? joinedTeamsRefreshing = freezed,
     Object? teamRequestsRefreshing = freezed,
+    Object? userSettingsRefreshing = freezed,
     Object? joinedTeams = freezed,
     Object? joinedTeamsFetchFailureOrSuccess = freezed,
     Object? joinedTeamURLs = freezed,
     Object? teamRequests = freezed,
     Object? teamRequestsFetchFailureOrSuccess = freezed,
     Object? teamRequestURLs = freezed,
+    Object? userImageURL = freezed,
   }) {
     return _then(_value.copyWith(
       shouldSignOut: shouldSignOut == freezed
@@ -483,6 +812,10 @@ class _$TeamsFrameworkStateCopyWithImpl<$Res>
       teamRequestsRefreshing: teamRequestsRefreshing == freezed
           ? _value.teamRequestsRefreshing
           : teamRequestsRefreshing // ignore: cast_nullable_to_non_nullable
+              as bool,
+      userSettingsRefreshing: userSettingsRefreshing == freezed
+          ? _value.userSettingsRefreshing
+          : userSettingsRefreshing // ignore: cast_nullable_to_non_nullable
               as bool,
       joinedTeams: joinedTeams == freezed
           ? _value.joinedTeams
@@ -510,6 +843,10 @@ class _$TeamsFrameworkStateCopyWithImpl<$Res>
           ? _value.teamRequestURLs
           : teamRequestURLs // ignore: cast_nullable_to_non_nullable
               as KtList<Tuple2<Team, Option<String>>>,
+      userImageURL: userImageURL == freezed
+          ? _value.userImageURL
+          : userImageURL // ignore: cast_nullable_to_non_nullable
+              as Option<String>,
     ));
   }
 }
@@ -525,12 +862,14 @@ abstract class _$TeamsFrameworkStateCopyWith<$Res>
       {bool shouldSignOut,
       bool joinedTeamsRefreshing,
       bool teamRequestsRefreshing,
+      bool userSettingsRefreshing,
       Either<TeamFailure, KtList<Team>> joinedTeams,
       Either<TeamFailure, Unit> joinedTeamsFetchFailureOrSuccess,
       KtList<Tuple2<Team, Option<String>>> joinedTeamURLs,
       Either<TeamFailure, KtList<Team>> teamRequests,
       Either<TeamFailure, Unit> teamRequestsFetchFailureOrSuccess,
-      KtList<Tuple2<Team, Option<String>>> teamRequestURLs});
+      KtList<Tuple2<Team, Option<String>>> teamRequestURLs,
+      Option<String> userImageURL});
 }
 
 /// @nodoc
@@ -549,12 +888,14 @@ class __$TeamsFrameworkStateCopyWithImpl<$Res>
     Object? shouldSignOut = freezed,
     Object? joinedTeamsRefreshing = freezed,
     Object? teamRequestsRefreshing = freezed,
+    Object? userSettingsRefreshing = freezed,
     Object? joinedTeams = freezed,
     Object? joinedTeamsFetchFailureOrSuccess = freezed,
     Object? joinedTeamURLs = freezed,
     Object? teamRequests = freezed,
     Object? teamRequestsFetchFailureOrSuccess = freezed,
     Object? teamRequestURLs = freezed,
+    Object? userImageURL = freezed,
   }) {
     return _then(_TeamsFrameworkState(
       shouldSignOut: shouldSignOut == freezed
@@ -568,6 +909,10 @@ class __$TeamsFrameworkStateCopyWithImpl<$Res>
       teamRequestsRefreshing: teamRequestsRefreshing == freezed
           ? _value.teamRequestsRefreshing
           : teamRequestsRefreshing // ignore: cast_nullable_to_non_nullable
+              as bool,
+      userSettingsRefreshing: userSettingsRefreshing == freezed
+          ? _value.userSettingsRefreshing
+          : userSettingsRefreshing // ignore: cast_nullable_to_non_nullable
               as bool,
       joinedTeams: joinedTeams == freezed
           ? _value.joinedTeams
@@ -595,6 +940,10 @@ class __$TeamsFrameworkStateCopyWithImpl<$Res>
           ? _value.teamRequestURLs
           : teamRequestURLs // ignore: cast_nullable_to_non_nullable
               as KtList<Tuple2<Team, Option<String>>>,
+      userImageURL: userImageURL == freezed
+          ? _value.userImageURL
+          : userImageURL // ignore: cast_nullable_to_non_nullable
+              as Option<String>,
     ));
   }
 }
@@ -606,12 +955,14 @@ class _$_TeamsFrameworkState implements _TeamsFrameworkState {
       {required this.shouldSignOut,
       required this.joinedTeamsRefreshing,
       required this.teamRequestsRefreshing,
+      required this.userSettingsRefreshing,
       required this.joinedTeams,
       required this.joinedTeamsFetchFailureOrSuccess,
       required this.joinedTeamURLs,
       required this.teamRequests,
       required this.teamRequestsFetchFailureOrSuccess,
-      required this.teamRequestURLs});
+      required this.teamRequestURLs,
+      required this.userImageURL});
 
   @override
   final bool shouldSignOut;
@@ -619,6 +970,8 @@ class _$_TeamsFrameworkState implements _TeamsFrameworkState {
   final bool joinedTeamsRefreshing;
   @override
   final bool teamRequestsRefreshing;
+  @override
+  final bool userSettingsRefreshing;
   @override
   final Either<TeamFailure, KtList<Team>> joinedTeams;
   @override
@@ -631,10 +984,12 @@ class _$_TeamsFrameworkState implements _TeamsFrameworkState {
   final Either<TeamFailure, Unit> teamRequestsFetchFailureOrSuccess;
   @override
   final KtList<Tuple2<Team, Option<String>>> teamRequestURLs;
+  @override
+  final Option<String> userImageURL;
 
   @override
   String toString() {
-    return 'TeamsFrameworkState(shouldSignOut: $shouldSignOut, joinedTeamsRefreshing: $joinedTeamsRefreshing, teamRequestsRefreshing: $teamRequestsRefreshing, joinedTeams: $joinedTeams, joinedTeamsFetchFailureOrSuccess: $joinedTeamsFetchFailureOrSuccess, joinedTeamURLs: $joinedTeamURLs, teamRequests: $teamRequests, teamRequestsFetchFailureOrSuccess: $teamRequestsFetchFailureOrSuccess, teamRequestURLs: $teamRequestURLs)';
+    return 'TeamsFrameworkState(shouldSignOut: $shouldSignOut, joinedTeamsRefreshing: $joinedTeamsRefreshing, teamRequestsRefreshing: $teamRequestsRefreshing, userSettingsRefreshing: $userSettingsRefreshing, joinedTeams: $joinedTeams, joinedTeamsFetchFailureOrSuccess: $joinedTeamsFetchFailureOrSuccess, joinedTeamURLs: $joinedTeamURLs, teamRequests: $teamRequests, teamRequestsFetchFailureOrSuccess: $teamRequestsFetchFailureOrSuccess, teamRequestURLs: $teamRequestURLs, userImageURL: $userImageURL)';
   }
 
   @override
@@ -649,6 +1004,8 @@ class _$_TeamsFrameworkState implements _TeamsFrameworkState {
             const DeepCollectionEquality()
                 .equals(other.teamRequestsRefreshing, teamRequestsRefreshing) &&
             const DeepCollectionEquality()
+                .equals(other.userSettingsRefreshing, userSettingsRefreshing) &&
+            const DeepCollectionEquality()
                 .equals(other.joinedTeams, joinedTeams) &&
             const DeepCollectionEquality().equals(
                 other.joinedTeamsFetchFailureOrSuccess,
@@ -661,7 +1018,9 @@ class _$_TeamsFrameworkState implements _TeamsFrameworkState {
                 other.teamRequestsFetchFailureOrSuccess,
                 teamRequestsFetchFailureOrSuccess) &&
             const DeepCollectionEquality()
-                .equals(other.teamRequestURLs, teamRequestURLs));
+                .equals(other.teamRequestURLs, teamRequestURLs) &&
+            const DeepCollectionEquality()
+                .equals(other.userImageURL, userImageURL));
   }
 
   @override
@@ -670,12 +1029,14 @@ class _$_TeamsFrameworkState implements _TeamsFrameworkState {
       const DeepCollectionEquality().hash(shouldSignOut),
       const DeepCollectionEquality().hash(joinedTeamsRefreshing),
       const DeepCollectionEquality().hash(teamRequestsRefreshing),
+      const DeepCollectionEquality().hash(userSettingsRefreshing),
       const DeepCollectionEquality().hash(joinedTeams),
       const DeepCollectionEquality().hash(joinedTeamsFetchFailureOrSuccess),
       const DeepCollectionEquality().hash(joinedTeamURLs),
       const DeepCollectionEquality().hash(teamRequests),
       const DeepCollectionEquality().hash(teamRequestsFetchFailureOrSuccess),
-      const DeepCollectionEquality().hash(teamRequestURLs));
+      const DeepCollectionEquality().hash(teamRequestURLs),
+      const DeepCollectionEquality().hash(userImageURL));
 
   @JsonKey(ignore: true)
   @override
@@ -689,14 +1050,15 @@ abstract class _TeamsFrameworkState implements TeamsFrameworkState {
       {required final bool shouldSignOut,
       required final bool joinedTeamsRefreshing,
       required final bool teamRequestsRefreshing,
+      required final bool userSettingsRefreshing,
       required final Either<TeamFailure, KtList<Team>> joinedTeams,
       required final Either<TeamFailure, Unit> joinedTeamsFetchFailureOrSuccess,
       required final KtList<Tuple2<Team, Option<String>>> joinedTeamURLs,
       required final Either<TeamFailure, KtList<Team>> teamRequests,
       required final Either<TeamFailure, Unit>
           teamRequestsFetchFailureOrSuccess,
-      required final KtList<Tuple2<Team, Option<String>>>
-          teamRequestURLs}) = _$_TeamsFrameworkState;
+      required final KtList<Tuple2<Team, Option<String>>> teamRequestURLs,
+      required final Option<String> userImageURL}) = _$_TeamsFrameworkState;
 
   @override
   bool get shouldSignOut => throw _privateConstructorUsedError;
@@ -704,6 +1066,8 @@ abstract class _TeamsFrameworkState implements TeamsFrameworkState {
   bool get joinedTeamsRefreshing => throw _privateConstructorUsedError;
   @override
   bool get teamRequestsRefreshing => throw _privateConstructorUsedError;
+  @override
+  bool get userSettingsRefreshing => throw _privateConstructorUsedError;
   @override
   Either<TeamFailure, KtList<Team>> get joinedTeams =>
       throw _privateConstructorUsedError;
@@ -722,6 +1086,8 @@ abstract class _TeamsFrameworkState implements TeamsFrameworkState {
   @override
   KtList<Tuple2<Team, Option<String>>> get teamRequestURLs =>
       throw _privateConstructorUsedError;
+  @override
+  Option<String> get userImageURL => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$TeamsFrameworkStateCopyWith<_TeamsFrameworkState> get copyWith =>

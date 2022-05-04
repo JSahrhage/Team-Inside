@@ -17,8 +17,7 @@ class FirebaseImageFacade implements IImageFacade {
   @override
   Future<Option<String>> getDownloadURLForGroupImage(String ref) async {
     try {
-      final pathReference =
-          _firebaseStorage.ref().child('GroupImages/$ref.png');
+      final pathReference = _firebaseStorage.ref().child('GroupImages/$ref');
       final downloadURL = await pathReference.getDownloadURL();
       return some(downloadURL);
     } catch (e) {
@@ -50,7 +49,7 @@ class FirebaseImageFacade implements IImageFacade {
   @override
   Future<Option<String>> getDownloadURLForUserImage(String ref) async {
     try {
-      final pathReference = _firebaseStorage.ref().child('UserImages/$ref.png');
+      final pathReference = _firebaseStorage.ref().child('UserImages/$ref');
       final downloadURL = await pathReference.getDownloadURL();
       return some(downloadURL);
     } catch (e) {

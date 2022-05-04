@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:dartz/dartz.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -107,6 +109,47 @@ class TeamsFrameworkBloc
                 teamRequestURLs: teamRequestURLs.toImmutableList(),
                 teamRequestsFetchFailureOrSuccess: right(unit),
               ),
+            );
+          },
+        );
+      },
+    );
+    on<RefreshUserSettings>(
+      (event, emit) async {
+        emit(
+          state.copyWith(
+            userSettingsRefreshing: true,
+          ),
+        );
+
+        await _authFacade.getSignedInUser().fold(
+          () async {},
+          (user) async {
+            final userImageURL = await _imageFacade.getDownloadURLForUserImage(
+              user.id.getOrCrash(),
+            );
+            userImageURL.fold(() {}, (user) {});
+            emit(
+              state.copyWith(
+                userSettingsRefreshing: false,
+                userImageURL: userImageURL,
+              ),
+            );
+          },
+        );
+      },
+    );
+    on<ImagePicked>(
+      (event, emit) async {
+        await _authFacade.getSignedInUser().fold(
+          () async {},
+          (user) async {
+            await _imageFacade.uploadUserImage(
+              event.image,
+              user.id.getOrCrash(),
+            );
+            add(
+              const TeamsFrameworkEvent.refreshUserSettings(),
             );
           },
         );

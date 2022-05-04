@@ -19,7 +19,8 @@ class TeamsFrameworkPage extends StatelessWidget {
         body: BlocProvider(
           create: (context) => getIt<TeamsFrameworkBloc>()
             ..add(const RefreshJoinedTeams())
-            ..add(const RefreshTeamRequests()),
+            ..add(const RefreshTeamRequests())
+            ..add(const RefreshUserSettings()),
           child: TeamsFrameworkForm(),
         ),
       ),

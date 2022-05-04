@@ -20,11 +20,14 @@
     "send_reset_email": "Sende E-Mail zur Zurücksetzung",
     "reset_email_send": "E-Mail zur Zurücksetzung wurde versendet.",
     "continue": "Weiter",
+    "back": "Zurück",
     "insert_email": "E-Mail-Adresse eingeben",
     "insert_password": "Passwort eingeben",
     "insert_username": "Anzeigename eingeben",
     "sign_out": "Ausloggen",
     "teams": "Teams",
     "requests": "Anfragen",
-    "settings": "Einstellungen"
+    "settings": "Einstellungen",
+    "select_photo": "Foto auswählen",
+    "take_photo": "Foto aufnehmen"
 }
