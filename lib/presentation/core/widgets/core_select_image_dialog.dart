@@ -15,7 +15,7 @@ class CoreSelectImageDialog extends StatelessWidget {
     return AlertDialog(
       content: SizedBox(
         width: 256,
-        height: 128,
+        height: 64,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -39,29 +39,6 @@ class CoreSelectImageDialog extends StatelessWidget {
               child: Text(
                 AppLocalizations.of(context)!.translate(
                   'select_photo',
-                )!,
-              ),
-            ),
-            TextButton(
-              onPressed: () async {
-                try {
-                  await _picker
-                      .pickImage(
-                    source: ImageSource.camera,
-                  )
-                      .then((value) {
-                    Navigator.pop(
-                      context,
-                      right(value),
-                    );
-                  });
-                } catch (e) {
-                  Navigator.pop(context, left(e));
-                }
-              },
-              child: Text(
-                AppLocalizations.of(context)!.translate(
-                  'take_photo',
                 )!,
               ),
             ),
