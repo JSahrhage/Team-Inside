@@ -1,7 +1,10 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:dartz/dartz.dart' as dartz;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:kt_dart/collection.dart';
 import 'package:team_inside/application/teams_framework/teams_framework_bloc.dart';
+import 'package:team_inside/domain/team/team.dart';
 import 'package:team_inside/presentation/routes/router.gr.dart';
 import 'package:team_inside/presentation/teams_framework/widgets/teams_framework_bottom_navigation_bar.dart';
 import 'package:team_inside/presentation/teams_framework/widgets/teams_framework_joined_teams_widget.dart';
@@ -31,6 +34,25 @@ class _TeamsFrameworkFormState extends State<TeamsFrameworkForm> {
   Widget build(BuildContext context) {
     return BlocConsumer<TeamsFrameworkBloc, TeamsFrameworkState>(
       listener: (context, state) {
+        if (state.shouldNavigateToTeam) {
+          state.joinedTeams.fold(
+            (failure) {},
+            (joinedTeams) {
+              final joinedTeamOption =
+                  _getJoinedTeamById(joinedTeams, state.teamIdToNavigateTo);
+              joinedTeamOption.fold(
+                () {},
+                (team) {
+                  context.router.replace(
+                    TeamSlideLeftPageRoute(
+                      team: team,
+                    ),
+                  );
+                },
+              );
+            },
+          );
+        }
         if (state.shouldSignOut) {
           context.router.replace(
             const SignInSlideRightPageRoute(),
@@ -53,5 +75,17 @@ class _TeamsFrameworkFormState extends State<TeamsFrameworkForm> {
         );
       },
     );
+  }
+
+  dartz.Option<Team> _getJoinedTeamById(
+    KtList<Team> joinedTeams,
+    String teamId,
+  ) {
+    for (final team in joinedTeams.iter) {
+      if (team.id.getOrCrash() == teamId) {
+        return dartz.some(team);
+      }
+    }
+    return dartz.none();
   }
 }

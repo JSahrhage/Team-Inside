@@ -170,37 +170,10 @@ abstract class NavigateBackToFramework implements TeamEvent {
 
 /// @nodoc
 mixin _$TeamState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    required TResult orElse(),
-  }) =>
+  bool get shouldNavigateBackToFramework => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $TeamStateCopyWith<TeamState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -208,6 +181,7 @@ mixin _$TeamState {
 abstract class $TeamStateCopyWith<$Res> {
   factory $TeamStateCopyWith(TeamState value, $Res Function(TeamState) then) =
       _$TeamStateCopyWithImpl<$Res>;
+  $Res call({bool shouldNavigateBackToFramework});
 }
 
 /// @nodoc
@@ -217,101 +191,93 @@ class _$TeamStateCopyWithImpl<$Res> implements $TeamStateCopyWith<$Res> {
   final TeamState _value;
   // ignore: unused_field
   final $Res Function(TeamState) _then;
-}
-
-/// @nodoc
-abstract class _$$_InitialCopyWith<$Res> {
-  factory _$$_InitialCopyWith(
-          _$_Initial value, $Res Function(_$_Initial) then) =
-      __$$_InitialCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$_InitialCopyWithImpl<$Res> extends _$TeamStateCopyWithImpl<$Res>
-    implements _$$_InitialCopyWith<$Res> {
-  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
-      : super(_value, (v) => _then(v as _$_Initial));
 
   @override
-  _$_Initial get _value => super._value as _$_Initial;
+  $Res call({
+    Object? shouldNavigateBackToFramework = freezed,
+  }) {
+    return _then(_value.copyWith(
+      shouldNavigateBackToFramework: shouldNavigateBackToFramework == freezed
+          ? _value.shouldNavigateBackToFramework
+          : shouldNavigateBackToFramework // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$$_TeamStateCopyWith<$Res> implements $TeamStateCopyWith<$Res> {
+  factory _$$_TeamStateCopyWith(
+          _$_TeamState value, $Res Function(_$_TeamState) then) =
+      __$$_TeamStateCopyWithImpl<$Res>;
+  @override
+  $Res call({bool shouldNavigateBackToFramework});
+}
+
+/// @nodoc
+class __$$_TeamStateCopyWithImpl<$Res> extends _$TeamStateCopyWithImpl<$Res>
+    implements _$$_TeamStateCopyWith<$Res> {
+  __$$_TeamStateCopyWithImpl(
+      _$_TeamState _value, $Res Function(_$_TeamState) _then)
+      : super(_value, (v) => _then(v as _$_TeamState));
+
+  @override
+  _$_TeamState get _value => super._value as _$_TeamState;
+
+  @override
+  $Res call({
+    Object? shouldNavigateBackToFramework = freezed,
+  }) {
+    return _then(_$_TeamState(
+      shouldNavigateBackToFramework: shouldNavigateBackToFramework == freezed
+          ? _value.shouldNavigateBackToFramework
+          : shouldNavigateBackToFramework // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$_Initial implements _Initial {
-  const _$_Initial();
+class _$_TeamState implements _TeamState {
+  const _$_TeamState({required this.shouldNavigateBackToFramework});
+
+  @override
+  final bool shouldNavigateBackToFramework;
 
   @override
   String toString() {
-    return 'TeamState.initial()';
+    return 'TeamState(shouldNavigateBackToFramework: $shouldNavigateBackToFramework)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Initial);
+        (other.runtimeType == runtimeType &&
+            other is _$_TeamState &&
+            const DeepCollectionEquality().equals(
+                other.shouldNavigateBackToFramework,
+                shouldNavigateBackToFramework));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType,
+      const DeepCollectionEquality().hash(shouldNavigateBackToFramework));
 
+  @JsonKey(ignore: true)
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-  }) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
+  _$$_TeamStateCopyWith<_$_TeamState> get copyWith =>
+      __$$_TeamStateCopyWithImpl<_$_TeamState>(this, _$identity);
 }
 
-abstract class _Initial implements TeamState {
-  const factory _Initial() = _$_Initial;
+abstract class _TeamState implements TeamState {
+  const factory _TeamState(
+      {required final bool shouldNavigateBackToFramework}) = _$_TeamState;
+
+  @override
+  bool get shouldNavigateBackToFramework => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_TeamStateCopyWith<_$_TeamState> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -18,7 +18,7 @@ class TeamBloc extends Bloc<TeamEvent, TeamState> {
     this._userRepository,
     this._teamRepository,
     this._imageFacade,
-  ) : super(const TeamState.initial()) {
+  ) : super(TeamState.initial()) {
     on<NavigateBackToFramework>(
       (event, emit) {},
     );

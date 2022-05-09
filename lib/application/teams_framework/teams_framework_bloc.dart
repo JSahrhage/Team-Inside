@@ -8,6 +8,7 @@ import 'package:kt_dart/kt.dart';
 import 'package:team_inside/domain/auth/i_auth_facade.dart';
 import 'package:team_inside/domain/auth/i_user_repository.dart';
 import 'package:team_inside/domain/auth/value_objects.dart';
+import 'package:team_inside/domain/core/unique_id_value_object.dart';
 import 'package:team_inside/domain/image/i_image_facade.dart';
 import 'package:team_inside/domain/team/i_team_repository.dart';
 import 'package:team_inside/domain/team/team.dart';
@@ -63,6 +64,29 @@ class TeamsFrameworkBloc
             await _userRepository.update(updatedUser);
           },
         );
+      },
+    );
+    on<NavigateToTeam>(
+      (event, emit) async {
+        final teamId = event.teamId;
+        final currentUserOrFailure = await _userRepository.getCurrentUser();
+        final joinedTeams = currentUserOrFailure.fold(
+          (failure) {
+            return emptyList();
+          },
+          (user) {
+            return user.joinedTeams;
+          },
+        );
+
+        if (joinedTeams.contains(UniqueId.fromUniqueString(teamId))) {
+          emit(
+            state.copyWith(
+              shouldNavigateToTeam: true,
+              teamIdToNavigateTo: teamId,
+            ),
+          );
+        }
       },
     );
     on<RefreshJoinedTeams>(

@@ -66,7 +66,11 @@ class TeamsFrameworkJoinedTeamsWidget extends StatelessWidget {
         for (final teamImageTuple in state.joinedTeamURLs.iter) {
           if (joinedTeams[index] == teamImageTuple.value1) {
             return CoreInkwellCard(
-              callback: (String underlayingObjId) {},
+              callback: (String underlayingObjId) {
+                context.read<TeamsFrameworkBloc>().add(
+                      TeamsFrameworkEvent.navigateToTeam(underlayingObjId),
+                    );
+              },
               underlayingObjId: teamImageTuple.value1.id.getOrCrash(),
               cardTitle: teamImageTuple.value1.teamname.getOrCrash(),
               icon: Icons.group,

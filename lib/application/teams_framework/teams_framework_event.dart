@@ -10,4 +10,6 @@ class TeamsFrameworkEvent with _$TeamsFrameworkEvent {
   const factory TeamsFrameworkEvent.refreshTeamRequests() = RefreshTeamRequests;
   const factory TeamsFrameworkEvent.refreshUserSettings() = RefreshUserSettings;
   const factory TeamsFrameworkEvent.imagePicked(File image) = ImagePicked;
+  const factory TeamsFrameworkEvent.navigateToTeam(String teamId) =
+      NavigateToTeam;
 }
