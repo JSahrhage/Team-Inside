@@ -18,7 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$Team {
   UniqueId get id => throw _privateConstructorUsedError;
   Teamname get teamname => throw _privateConstructorUsedError;
-  JoinedUsers<dynamic> get joinedUsers => throw _privateConstructorUsedError;
+  JoinedUsers<UniqueId> get joinedUsers => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $TeamCopyWith<Team> get copyWith => throw _privateConstructorUsedError;
@@ -28,7 +28,8 @@ mixin _$Team {
 abstract class $TeamCopyWith<$Res> {
   factory $TeamCopyWith(Team value, $Res Function(Team) then) =
       _$TeamCopyWithImpl<$Res>;
-  $Res call({UniqueId id, Teamname teamname, JoinedUsers<dynamic> joinedUsers});
+  $Res call(
+      {UniqueId id, Teamname teamname, JoinedUsers<UniqueId> joinedUsers});
 }
 
 /// @nodoc
@@ -57,27 +58,28 @@ class _$TeamCopyWithImpl<$Res> implements $TeamCopyWith<$Res> {
       joinedUsers: joinedUsers == freezed
           ? _value.joinedUsers
           : joinedUsers // ignore: cast_nullable_to_non_nullable
-              as JoinedUsers<dynamic>,
+              as JoinedUsers<UniqueId>,
     ));
   }
 }
 
 /// @nodoc
-abstract class _$TeamCopyWith<$Res> implements $TeamCopyWith<$Res> {
-  factory _$TeamCopyWith(_Team value, $Res Function(_Team) then) =
-      __$TeamCopyWithImpl<$Res>;
+abstract class _$$_TeamCopyWith<$Res> implements $TeamCopyWith<$Res> {
+  factory _$$_TeamCopyWith(_$_Team value, $Res Function(_$_Team) then) =
+      __$$_TeamCopyWithImpl<$Res>;
   @override
-  $Res call({UniqueId id, Teamname teamname, JoinedUsers<dynamic> joinedUsers});
+  $Res call(
+      {UniqueId id, Teamname teamname, JoinedUsers<UniqueId> joinedUsers});
 }
 
 /// @nodoc
-class __$TeamCopyWithImpl<$Res> extends _$TeamCopyWithImpl<$Res>
-    implements _$TeamCopyWith<$Res> {
-  __$TeamCopyWithImpl(_Team _value, $Res Function(_Team) _then)
-      : super(_value, (v) => _then(v as _Team));
+class __$$_TeamCopyWithImpl<$Res> extends _$TeamCopyWithImpl<$Res>
+    implements _$$_TeamCopyWith<$Res> {
+  __$$_TeamCopyWithImpl(_$_Team _value, $Res Function(_$_Team) _then)
+      : super(_value, (v) => _then(v as _$_Team));
 
   @override
-  _Team get _value => super._value as _Team;
+  _$_Team get _value => super._value as _$_Team;
 
   @override
   $Res call({
@@ -85,7 +87,7 @@ class __$TeamCopyWithImpl<$Res> extends _$TeamCopyWithImpl<$Res>
     Object? teamname = freezed,
     Object? joinedUsers = freezed,
   }) {
-    return _then(_Team(
+    return _then(_$_Team(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -97,7 +99,7 @@ class __$TeamCopyWithImpl<$Res> extends _$TeamCopyWithImpl<$Res>
       joinedUsers: joinedUsers == freezed
           ? _value.joinedUsers
           : joinedUsers // ignore: cast_nullable_to_non_nullable
-              as JoinedUsers<dynamic>,
+              as JoinedUsers<UniqueId>,
     ));
   }
 }
@@ -114,7 +116,7 @@ class _$_Team extends _Team {
   @override
   final Teamname teamname;
   @override
-  final JoinedUsers<dynamic> joinedUsers;
+  final JoinedUsers<UniqueId> joinedUsers;
 
   @override
   String toString() {
@@ -125,7 +127,7 @@ class _$_Team extends _Team {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Team &&
+            other is _$_Team &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.teamname, teamname) &&
             const DeepCollectionEquality()
@@ -141,15 +143,15 @@ class _$_Team extends _Team {
 
   @JsonKey(ignore: true)
   @override
-  _$TeamCopyWith<_Team> get copyWith =>
-      __$TeamCopyWithImpl<_Team>(this, _$identity);
+  _$$_TeamCopyWith<_$_Team> get copyWith =>
+      __$$_TeamCopyWithImpl<_$_Team>(this, _$identity);
 }
 
 abstract class _Team extends Team {
   const factory _Team(
       {required final UniqueId id,
       required final Teamname teamname,
-      required final JoinedUsers<dynamic> joinedUsers}) = _$_Team;
+      required final JoinedUsers<UniqueId> joinedUsers}) = _$_Team;
   const _Team._() : super._();
 
   @override
@@ -157,8 +159,8 @@ abstract class _Team extends Team {
   @override
   Teamname get teamname => throw _privateConstructorUsedError;
   @override
-  JoinedUsers<dynamic> get joinedUsers => throw _privateConstructorUsedError;
+  JoinedUsers<UniqueId> get joinedUsers => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TeamCopyWith<_Team> get copyWith => throw _privateConstructorUsedError;
+  _$$_TeamCopyWith<_$_Team> get copyWith => throw _privateConstructorUsedError;
 }

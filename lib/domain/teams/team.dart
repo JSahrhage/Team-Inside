@@ -13,7 +13,7 @@ class Team with _$Team implements IEntity {
   const factory Team({
     required UniqueId id,
     required Teamname teamname,
-    required JoinedUsers joinedUsers,
+    required JoinedUsers<UniqueId> joinedUsers,
   }) = _Team;
 
   const Team._();

@@ -85,22 +85,22 @@ class _$ImageFailureCopyWithImpl<$Res> implements $ImageFailureCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $CancelledByUserCopyWith<$Res> {
-  factory $CancelledByUserCopyWith(
-          CancelledByUser value, $Res Function(CancelledByUser) then) =
-      _$CancelledByUserCopyWithImpl<$Res>;
+abstract class _$$CancelledByUserCopyWith<$Res> {
+  factory _$$CancelledByUserCopyWith(
+          _$CancelledByUser value, $Res Function(_$CancelledByUser) then) =
+      __$$CancelledByUserCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$CancelledByUserCopyWithImpl<$Res>
+class __$$CancelledByUserCopyWithImpl<$Res>
     extends _$ImageFailureCopyWithImpl<$Res>
-    implements $CancelledByUserCopyWith<$Res> {
-  _$CancelledByUserCopyWithImpl(
-      CancelledByUser _value, $Res Function(CancelledByUser) _then)
-      : super(_value, (v) => _then(v as CancelledByUser));
+    implements _$$CancelledByUserCopyWith<$Res> {
+  __$$CancelledByUserCopyWithImpl(
+      _$CancelledByUser _value, $Res Function(_$CancelledByUser) _then)
+      : super(_value, (v) => _then(v as _$CancelledByUser));
 
   @override
-  CancelledByUser get _value => super._value as CancelledByUser;
+  _$CancelledByUser get _value => super._value as _$CancelledByUser;
 }
 
 /// @nodoc
@@ -116,7 +116,7 @@ class _$CancelledByUser implements CancelledByUser {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is CancelledByUser);
+        (other.runtimeType == runtimeType && other is _$CancelledByUser);
   }
 
   @override
@@ -202,20 +202,21 @@ abstract class CancelledByUser implements ImageFailure {
 }
 
 /// @nodoc
-abstract class $InvalidURLCopyWith<$Res> {
-  factory $InvalidURLCopyWith(
-          InvalidURL value, $Res Function(InvalidURL) then) =
-      _$InvalidURLCopyWithImpl<$Res>;
+abstract class _$$InvalidURLCopyWith<$Res> {
+  factory _$$InvalidURLCopyWith(
+          _$InvalidURL value, $Res Function(_$InvalidURL) then) =
+      __$$InvalidURLCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$InvalidURLCopyWithImpl<$Res> extends _$ImageFailureCopyWithImpl<$Res>
-    implements $InvalidURLCopyWith<$Res> {
-  _$InvalidURLCopyWithImpl(InvalidURL _value, $Res Function(InvalidURL) _then)
-      : super(_value, (v) => _then(v as InvalidURL));
+class __$$InvalidURLCopyWithImpl<$Res> extends _$ImageFailureCopyWithImpl<$Res>
+    implements _$$InvalidURLCopyWith<$Res> {
+  __$$InvalidURLCopyWithImpl(
+      _$InvalidURL _value, $Res Function(_$InvalidURL) _then)
+      : super(_value, (v) => _then(v as _$InvalidURL));
 
   @override
-  InvalidURL get _value => super._value as InvalidURL;
+  _$InvalidURL get _value => super._value as _$InvalidURL;
 }
 
 /// @nodoc
@@ -231,7 +232,7 @@ class _$InvalidURL implements InvalidURL {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is InvalidURL);
+        (other.runtimeType == runtimeType && other is _$InvalidURL);
   }
 
   @override
@@ -317,21 +318,22 @@ abstract class InvalidURL implements ImageFailure {
 }
 
 /// @nodoc
-abstract class $UnauthorizedCopyWith<$Res> {
-  factory $UnauthorizedCopyWith(
-          Unauthorized value, $Res Function(Unauthorized) then) =
-      _$UnauthorizedCopyWithImpl<$Res>;
+abstract class _$$UnauthorizedCopyWith<$Res> {
+  factory _$$UnauthorizedCopyWith(
+          _$Unauthorized value, $Res Function(_$Unauthorized) then) =
+      __$$UnauthorizedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$UnauthorizedCopyWithImpl<$Res> extends _$ImageFailureCopyWithImpl<$Res>
-    implements $UnauthorizedCopyWith<$Res> {
-  _$UnauthorizedCopyWithImpl(
-      Unauthorized _value, $Res Function(Unauthorized) _then)
-      : super(_value, (v) => _then(v as Unauthorized));
+class __$$UnauthorizedCopyWithImpl<$Res>
+    extends _$ImageFailureCopyWithImpl<$Res>
+    implements _$$UnauthorizedCopyWith<$Res> {
+  __$$UnauthorizedCopyWithImpl(
+      _$Unauthorized _value, $Res Function(_$Unauthorized) _then)
+      : super(_value, (v) => _then(v as _$Unauthorized));
 
   @override
-  Unauthorized get _value => super._value as Unauthorized;
+  _$Unauthorized get _value => super._value as _$Unauthorized;
 }
 
 /// @nodoc
@@ -347,7 +349,7 @@ class _$Unauthorized implements Unauthorized {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is Unauthorized);
+        (other.runtimeType == runtimeType && other is _$Unauthorized);
   }
 
   @override
@@ -433,21 +435,21 @@ abstract class Unauthorized implements ImageFailure {
 }
 
 /// @nodoc
-abstract class $ServerErrorCopyWith<$Res> {
-  factory $ServerErrorCopyWith(
-          ServerError value, $Res Function(ServerError) then) =
-      _$ServerErrorCopyWithImpl<$Res>;
+abstract class _$$ServerErrorCopyWith<$Res> {
+  factory _$$ServerErrorCopyWith(
+          _$ServerError value, $Res Function(_$ServerError) then) =
+      __$$ServerErrorCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$ServerErrorCopyWithImpl<$Res> extends _$ImageFailureCopyWithImpl<$Res>
-    implements $ServerErrorCopyWith<$Res> {
-  _$ServerErrorCopyWithImpl(
-      ServerError _value, $Res Function(ServerError) _then)
-      : super(_value, (v) => _then(v as ServerError));
+class __$$ServerErrorCopyWithImpl<$Res> extends _$ImageFailureCopyWithImpl<$Res>
+    implements _$$ServerErrorCopyWith<$Res> {
+  __$$ServerErrorCopyWithImpl(
+      _$ServerError _value, $Res Function(_$ServerError) _then)
+      : super(_value, (v) => _then(v as _$ServerError));
 
   @override
-  ServerError get _value => super._value as ServerError;
+  _$ServerError get _value => super._value as _$ServerError;
 }
 
 /// @nodoc
@@ -463,7 +465,7 @@ class _$ServerError implements ServerError {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is ServerError);
+        (other.runtimeType == runtimeType && other is _$ServerError);
   }
 
   @override

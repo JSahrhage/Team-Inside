@@ -6,6 +6,10 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:kt_dart/kt.dart';
 import 'package:team_inside/domain/auth/i_auth_facade.dart';
+import 'package:team_inside/domain/auth/i_user_repository.dart';
+import 'package:team_inside/domain/auth/user.dart';
+import 'package:team_inside/domain/auth/user_failure.dart';
+import 'package:team_inside/domain/auth/value_objects.dart';
 import 'package:team_inside/domain/image/i_image_facade.dart';
 import 'package:team_inside/domain/teams/i_team_repository.dart';
 import 'package:team_inside/domain/teams/team.dart';
@@ -19,11 +23,16 @@ part 'teams_framework_bloc.freezed.dart';
 class TeamsFrameworkBloc
     extends Bloc<TeamsFrameworkEvent, TeamsFrameworkState> {
   final IAuthFacade _authFacade;
+  final IUserRepository _userRepository;
   final ITeamRepository _teamRepository;
   final IImageFacade _imageFacade;
 
-  TeamsFrameworkBloc(this._authFacade, this._teamRepository, this._imageFacade)
-      : super(TeamsFrameworkState.initial()) {
+  TeamsFrameworkBloc(
+    this._authFacade,
+    this._userRepository,
+    this._teamRepository,
+    this._imageFacade,
+  ) : super(TeamsFrameworkState.initial()) {
     on<SignOut>(
       (event, emit) async {
         await _authFacade.signOut();
@@ -41,6 +50,20 @@ class TeamsFrameworkBloc
           state.copyWith(
             shouldSignOut: true,
           ),
+        );
+      },
+    );
+    on<ChangeUsername>(
+      (event, emit) async {
+        final currentUser = await _userRepository.getCurrentUser();
+        currentUser.fold(
+          (failure) {},
+          (user) async {
+            final updatedUser = user.copyWith(
+              username: Username(event.username),
+            );
+            await _userRepository.update(updatedUser);
+          },
         );
       },
     );

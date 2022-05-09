@@ -8,9 +8,11 @@ import 'package:team_inside/application/auth/registration/registration_bloc.dart
 import 'package:team_inside/application/auth/sign_in/sign_in_bloc.dart';
 import 'package:team_inside/application/teams_framework/teams_framework_bloc.dart';
 import 'package:team_inside/domain/auth/i_auth_facade.dart';
+import 'package:team_inside/domain/auth/i_user_repository.dart';
 import 'package:team_inside/domain/image/i_image_facade.dart';
 import 'package:team_inside/domain/teams/i_team_repository.dart';
 import 'package:team_inside/infrastructure/auth/firebase_auth_facade.dart';
+import 'package:team_inside/infrastructure/auth/user_repository.dart';
 import 'package:team_inside/infrastructure/core/firebase_injectable_module.dart';
 import 'package:team_inside/infrastructure/helper/firebase_image_facade.dart';
 import 'package:team_inside/infrastructure/teams/team_repository.dart';
@@ -32,6 +34,11 @@ void $initGetIt(
   getIt.registerLazySingleton<IAuthFacade>(
     () => FirebaseAuthFacade(
       getIt<FirebaseAuth>(),
+      getIt<FirebaseFirestore>(),
+    ),
+  );
+  getIt.registerLazySingleton<IUserRepository>(
+    () => UserRepository(
       getIt<FirebaseFirestore>(),
     ),
   );
@@ -68,6 +75,7 @@ void $initGetIt(
   getIt.registerFactory<TeamsFrameworkBloc>(
     () => TeamsFrameworkBloc(
       getIt<IAuthFacade>(),
+      getIt<IUserRepository>(),
       getIt<ITeamRepository>(),
       getIt<IImageFacade>(),
     ),

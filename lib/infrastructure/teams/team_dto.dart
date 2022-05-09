@@ -25,7 +25,7 @@ class TeamDTO with _$TeamDTO {
       joinedUsers: team.joinedUsers
           .getOrCrash()
           .map(
-            (uniqueId) => uniqueId.toString(),
+            (uniqueId) => uniqueId.getOrCrash(),
           )
           .asList(),
     );

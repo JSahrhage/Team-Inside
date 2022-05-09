@@ -78,9 +78,10 @@ class _$UserDTOCopyWithImpl<$Res> implements $UserDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$UserDTOCopyWith<$Res> implements $UserDTOCopyWith<$Res> {
-  factory _$UserDTOCopyWith(_UserDTO value, $Res Function(_UserDTO) then) =
-      __$UserDTOCopyWithImpl<$Res>;
+abstract class _$$_UserDTOCopyWith<$Res> implements $UserDTOCopyWith<$Res> {
+  factory _$$_UserDTOCopyWith(
+          _$_UserDTO value, $Res Function(_$_UserDTO) then) =
+      __$$_UserDTOCopyWithImpl<$Res>;
   @override
   $Res call(
       {String id,
@@ -90,13 +91,13 @@ abstract class _$UserDTOCopyWith<$Res> implements $UserDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$UserDTOCopyWithImpl<$Res> extends _$UserDTOCopyWithImpl<$Res>
-    implements _$UserDTOCopyWith<$Res> {
-  __$UserDTOCopyWithImpl(_UserDTO _value, $Res Function(_UserDTO) _then)
-      : super(_value, (v) => _then(v as _UserDTO));
+class __$$_UserDTOCopyWithImpl<$Res> extends _$UserDTOCopyWithImpl<$Res>
+    implements _$$_UserDTOCopyWith<$Res> {
+  __$$_UserDTOCopyWithImpl(_$_UserDTO _value, $Res Function(_$_UserDTO) _then)
+      : super(_value, (v) => _then(v as _$_UserDTO));
 
   @override
-  _UserDTO get _value => super._value as _UserDTO;
+  _$_UserDTO get _value => super._value as _$_UserDTO;
 
   @override
   $Res call({
@@ -105,7 +106,7 @@ class __$UserDTOCopyWithImpl<$Res> extends _$UserDTOCopyWithImpl<$Res>
     Object? joinedTeams = freezed,
     Object? teamRequests = freezed,
   }) {
-    return _then(_UserDTO(
+    return _then(_$_UserDTO(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -115,11 +116,11 @@ class __$UserDTOCopyWithImpl<$Res> extends _$UserDTOCopyWithImpl<$Res>
           : username // ignore: cast_nullable_to_non_nullable
               as String,
       joinedTeams: joinedTeams == freezed
-          ? _value.joinedTeams
+          ? _value._joinedTeams
           : joinedTeams // ignore: cast_nullable_to_non_nullable
               as List<String>,
       teamRequests: teamRequests == freezed
-          ? _value.teamRequests
+          ? _value._teamRequests
           : teamRequests // ignore: cast_nullable_to_non_nullable
               as List<String>,
     ));
@@ -168,13 +169,13 @@ class _$_UserDTO extends _UserDTO {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _UserDTO &&
+            other is _$_UserDTO &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.username, username) &&
             const DeepCollectionEquality()
-                .equals(other.joinedTeams, joinedTeams) &&
+                .equals(other._joinedTeams, _joinedTeams) &&
             const DeepCollectionEquality()
-                .equals(other.teamRequests, teamRequests));
+                .equals(other._teamRequests, _teamRequests));
   }
 
   @JsonKey(ignore: true)
@@ -183,13 +184,13 @@ class _$_UserDTO extends _UserDTO {
       runtimeType,
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(username),
-      const DeepCollectionEquality().hash(joinedTeams),
-      const DeepCollectionEquality().hash(teamRequests));
+      const DeepCollectionEquality().hash(_joinedTeams),
+      const DeepCollectionEquality().hash(_teamRequests));
 
   @JsonKey(ignore: true)
   @override
-  _$UserDTOCopyWith<_UserDTO> get copyWith =>
-      __$UserDTOCopyWithImpl<_UserDTO>(this, _$identity);
+  _$$_UserDTOCopyWith<_$_UserDTO> get copyWith =>
+      __$$_UserDTOCopyWithImpl<_$_UserDTO>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -217,6 +218,6 @@ abstract class _UserDTO extends UserDTO {
   List<String> get teamRequests => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$UserDTOCopyWith<_UserDTO> get copyWith =>
+  _$$_UserDTOCopyWith<_$_UserDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }

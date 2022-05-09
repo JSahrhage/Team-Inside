@@ -26,13 +26,13 @@ class UserDTO with _$UserDTO {
       joinedTeams: user.joinedTeams
           .getOrCrash()
           .map(
-            (uniqueId) => uniqueId.toString(),
+            (uniqueId) => uniqueId.getOrCrash(),
           )
           .asList(),
       teamRequests: user.teamRequests
           .getOrCrash()
           .map(
-            (uniqueId) => uniqueId.toString(),
+            (uniqueId) => uniqueId.getOrCrash(),
           )
           .asList(),
     );

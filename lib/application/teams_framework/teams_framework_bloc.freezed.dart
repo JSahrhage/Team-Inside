@@ -104,20 +104,20 @@ class _$TeamsFrameworkEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $SignOutCopyWith<$Res> {
-  factory $SignOutCopyWith(SignOut value, $Res Function(SignOut) then) =
-      _$SignOutCopyWithImpl<$Res>;
+abstract class _$$SignOutCopyWith<$Res> {
+  factory _$$SignOutCopyWith(_$SignOut value, $Res Function(_$SignOut) then) =
+      __$$SignOutCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$SignOutCopyWithImpl<$Res>
+class __$$SignOutCopyWithImpl<$Res>
     extends _$TeamsFrameworkEventCopyWithImpl<$Res>
-    implements $SignOutCopyWith<$Res> {
-  _$SignOutCopyWithImpl(SignOut _value, $Res Function(SignOut) _then)
-      : super(_value, (v) => _then(v as SignOut));
+    implements _$$SignOutCopyWith<$Res> {
+  __$$SignOutCopyWithImpl(_$SignOut _value, $Res Function(_$SignOut) _then)
+      : super(_value, (v) => _then(v as _$SignOut));
 
   @override
-  SignOut get _value => super._value as SignOut;
+  _$SignOut get _value => super._value as _$SignOut;
 }
 
 /// @nodoc
@@ -133,7 +133,7 @@ class _$SignOut implements SignOut {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is SignOut);
+        (other.runtimeType == runtimeType && other is _$SignOut);
   }
 
   @override
@@ -237,21 +237,22 @@ abstract class SignOut implements TeamsFrameworkEvent {
 }
 
 /// @nodoc
-abstract class $DeleteUserCopyWith<$Res> {
-  factory $DeleteUserCopyWith(
-          DeleteUser value, $Res Function(DeleteUser) then) =
-      _$DeleteUserCopyWithImpl<$Res>;
+abstract class _$$DeleteUserCopyWith<$Res> {
+  factory _$$DeleteUserCopyWith(
+          _$DeleteUser value, $Res Function(_$DeleteUser) then) =
+      __$$DeleteUserCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$DeleteUserCopyWithImpl<$Res>
+class __$$DeleteUserCopyWithImpl<$Res>
     extends _$TeamsFrameworkEventCopyWithImpl<$Res>
-    implements $DeleteUserCopyWith<$Res> {
-  _$DeleteUserCopyWithImpl(DeleteUser _value, $Res Function(DeleteUser) _then)
-      : super(_value, (v) => _then(v as DeleteUser));
+    implements _$$DeleteUserCopyWith<$Res> {
+  __$$DeleteUserCopyWithImpl(
+      _$DeleteUser _value, $Res Function(_$DeleteUser) _then)
+      : super(_value, (v) => _then(v as _$DeleteUser));
 
   @override
-  DeleteUser get _value => super._value as DeleteUser;
+  _$DeleteUser get _value => super._value as _$DeleteUser;
 }
 
 /// @nodoc
@@ -267,7 +268,7 @@ class _$DeleteUser implements DeleteUser {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is DeleteUser);
+        (other.runtimeType == runtimeType && other is _$DeleteUser);
   }
 
   @override
@@ -371,29 +372,29 @@ abstract class DeleteUser implements TeamsFrameworkEvent {
 }
 
 /// @nodoc
-abstract class $ChangeUsernameCopyWith<$Res> {
-  factory $ChangeUsernameCopyWith(
-          ChangeUsername value, $Res Function(ChangeUsername) then) =
-      _$ChangeUsernameCopyWithImpl<$Res>;
+abstract class _$$ChangeUsernameCopyWith<$Res> {
+  factory _$$ChangeUsernameCopyWith(
+          _$ChangeUsername value, $Res Function(_$ChangeUsername) then) =
+      __$$ChangeUsernameCopyWithImpl<$Res>;
   $Res call({String username});
 }
 
 /// @nodoc
-class _$ChangeUsernameCopyWithImpl<$Res>
+class __$$ChangeUsernameCopyWithImpl<$Res>
     extends _$TeamsFrameworkEventCopyWithImpl<$Res>
-    implements $ChangeUsernameCopyWith<$Res> {
-  _$ChangeUsernameCopyWithImpl(
-      ChangeUsername _value, $Res Function(ChangeUsername) _then)
-      : super(_value, (v) => _then(v as ChangeUsername));
+    implements _$$ChangeUsernameCopyWith<$Res> {
+  __$$ChangeUsernameCopyWithImpl(
+      _$ChangeUsername _value, $Res Function(_$ChangeUsername) _then)
+      : super(_value, (v) => _then(v as _$ChangeUsername));
 
   @override
-  ChangeUsername get _value => super._value as ChangeUsername;
+  _$ChangeUsername get _value => super._value as _$ChangeUsername;
 
   @override
   $Res call({
     Object? username = freezed,
   }) {
-    return _then(ChangeUsername(
+    return _then(_$ChangeUsername(
       username == freezed
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
@@ -419,7 +420,7 @@ class _$ChangeUsername implements ChangeUsername {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ChangeUsername &&
+            other is _$ChangeUsername &&
             const DeepCollectionEquality().equals(other.username, username));
   }
 
@@ -429,8 +430,8 @@ class _$ChangeUsername implements ChangeUsername {
 
   @JsonKey(ignore: true)
   @override
-  $ChangeUsernameCopyWith<ChangeUsername> get copyWith =>
-      _$ChangeUsernameCopyWithImpl<ChangeUsername>(this, _$identity);
+  _$$ChangeUsernameCopyWith<_$ChangeUsername> get copyWith =>
+      __$$ChangeUsernameCopyWithImpl<_$ChangeUsername>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -530,27 +531,27 @@ abstract class ChangeUsername implements TeamsFrameworkEvent {
 
   String get username => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ChangeUsernameCopyWith<ChangeUsername> get copyWith =>
+  _$$ChangeUsernameCopyWith<_$ChangeUsername> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $RefreshJoinedTeamsCopyWith<$Res> {
-  factory $RefreshJoinedTeamsCopyWith(
-          RefreshJoinedTeams value, $Res Function(RefreshJoinedTeams) then) =
-      _$RefreshJoinedTeamsCopyWithImpl<$Res>;
+abstract class _$$RefreshJoinedTeamsCopyWith<$Res> {
+  factory _$$RefreshJoinedTeamsCopyWith(_$RefreshJoinedTeams value,
+          $Res Function(_$RefreshJoinedTeams) then) =
+      __$$RefreshJoinedTeamsCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$RefreshJoinedTeamsCopyWithImpl<$Res>
+class __$$RefreshJoinedTeamsCopyWithImpl<$Res>
     extends _$TeamsFrameworkEventCopyWithImpl<$Res>
-    implements $RefreshJoinedTeamsCopyWith<$Res> {
-  _$RefreshJoinedTeamsCopyWithImpl(
-      RefreshJoinedTeams _value, $Res Function(RefreshJoinedTeams) _then)
-      : super(_value, (v) => _then(v as RefreshJoinedTeams));
+    implements _$$RefreshJoinedTeamsCopyWith<$Res> {
+  __$$RefreshJoinedTeamsCopyWithImpl(
+      _$RefreshJoinedTeams _value, $Res Function(_$RefreshJoinedTeams) _then)
+      : super(_value, (v) => _then(v as _$RefreshJoinedTeams));
 
   @override
-  RefreshJoinedTeams get _value => super._value as RefreshJoinedTeams;
+  _$RefreshJoinedTeams get _value => super._value as _$RefreshJoinedTeams;
 }
 
 /// @nodoc
@@ -566,7 +567,7 @@ class _$RefreshJoinedTeams implements RefreshJoinedTeams {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is RefreshJoinedTeams);
+        (other.runtimeType == runtimeType && other is _$RefreshJoinedTeams);
   }
 
   @override
@@ -670,22 +671,22 @@ abstract class RefreshJoinedTeams implements TeamsFrameworkEvent {
 }
 
 /// @nodoc
-abstract class $RefreshTeamRequestsCopyWith<$Res> {
-  factory $RefreshTeamRequestsCopyWith(
-          RefreshTeamRequests value, $Res Function(RefreshTeamRequests) then) =
-      _$RefreshTeamRequestsCopyWithImpl<$Res>;
+abstract class _$$RefreshTeamRequestsCopyWith<$Res> {
+  factory _$$RefreshTeamRequestsCopyWith(_$RefreshTeamRequests value,
+          $Res Function(_$RefreshTeamRequests) then) =
+      __$$RefreshTeamRequestsCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$RefreshTeamRequestsCopyWithImpl<$Res>
+class __$$RefreshTeamRequestsCopyWithImpl<$Res>
     extends _$TeamsFrameworkEventCopyWithImpl<$Res>
-    implements $RefreshTeamRequestsCopyWith<$Res> {
-  _$RefreshTeamRequestsCopyWithImpl(
-      RefreshTeamRequests _value, $Res Function(RefreshTeamRequests) _then)
-      : super(_value, (v) => _then(v as RefreshTeamRequests));
+    implements _$$RefreshTeamRequestsCopyWith<$Res> {
+  __$$RefreshTeamRequestsCopyWithImpl(
+      _$RefreshTeamRequests _value, $Res Function(_$RefreshTeamRequests) _then)
+      : super(_value, (v) => _then(v as _$RefreshTeamRequests));
 
   @override
-  RefreshTeamRequests get _value => super._value as RefreshTeamRequests;
+  _$RefreshTeamRequests get _value => super._value as _$RefreshTeamRequests;
 }
 
 /// @nodoc
@@ -701,7 +702,7 @@ class _$RefreshTeamRequests implements RefreshTeamRequests {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is RefreshTeamRequests);
+        (other.runtimeType == runtimeType && other is _$RefreshTeamRequests);
   }
 
   @override
@@ -805,22 +806,22 @@ abstract class RefreshTeamRequests implements TeamsFrameworkEvent {
 }
 
 /// @nodoc
-abstract class $RefreshUserSettingsCopyWith<$Res> {
-  factory $RefreshUserSettingsCopyWith(
-          RefreshUserSettings value, $Res Function(RefreshUserSettings) then) =
-      _$RefreshUserSettingsCopyWithImpl<$Res>;
+abstract class _$$RefreshUserSettingsCopyWith<$Res> {
+  factory _$$RefreshUserSettingsCopyWith(_$RefreshUserSettings value,
+          $Res Function(_$RefreshUserSettings) then) =
+      __$$RefreshUserSettingsCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$RefreshUserSettingsCopyWithImpl<$Res>
+class __$$RefreshUserSettingsCopyWithImpl<$Res>
     extends _$TeamsFrameworkEventCopyWithImpl<$Res>
-    implements $RefreshUserSettingsCopyWith<$Res> {
-  _$RefreshUserSettingsCopyWithImpl(
-      RefreshUserSettings _value, $Res Function(RefreshUserSettings) _then)
-      : super(_value, (v) => _then(v as RefreshUserSettings));
+    implements _$$RefreshUserSettingsCopyWith<$Res> {
+  __$$RefreshUserSettingsCopyWithImpl(
+      _$RefreshUserSettings _value, $Res Function(_$RefreshUserSettings) _then)
+      : super(_value, (v) => _then(v as _$RefreshUserSettings));
 
   @override
-  RefreshUserSettings get _value => super._value as RefreshUserSettings;
+  _$RefreshUserSettings get _value => super._value as _$RefreshUserSettings;
 }
 
 /// @nodoc
@@ -836,7 +837,7 @@ class _$RefreshUserSettings implements RefreshUserSettings {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is RefreshUserSettings);
+        (other.runtimeType == runtimeType && other is _$RefreshUserSettings);
   }
 
   @override
@@ -940,29 +941,29 @@ abstract class RefreshUserSettings implements TeamsFrameworkEvent {
 }
 
 /// @nodoc
-abstract class $ImagePickedCopyWith<$Res> {
-  factory $ImagePickedCopyWith(
-          ImagePicked value, $Res Function(ImagePicked) then) =
-      _$ImagePickedCopyWithImpl<$Res>;
+abstract class _$$ImagePickedCopyWith<$Res> {
+  factory _$$ImagePickedCopyWith(
+          _$ImagePicked value, $Res Function(_$ImagePicked) then) =
+      __$$ImagePickedCopyWithImpl<$Res>;
   $Res call({File image});
 }
 
 /// @nodoc
-class _$ImagePickedCopyWithImpl<$Res>
+class __$$ImagePickedCopyWithImpl<$Res>
     extends _$TeamsFrameworkEventCopyWithImpl<$Res>
-    implements $ImagePickedCopyWith<$Res> {
-  _$ImagePickedCopyWithImpl(
-      ImagePicked _value, $Res Function(ImagePicked) _then)
-      : super(_value, (v) => _then(v as ImagePicked));
+    implements _$$ImagePickedCopyWith<$Res> {
+  __$$ImagePickedCopyWithImpl(
+      _$ImagePicked _value, $Res Function(_$ImagePicked) _then)
+      : super(_value, (v) => _then(v as _$ImagePicked));
 
   @override
-  ImagePicked get _value => super._value as ImagePicked;
+  _$ImagePicked get _value => super._value as _$ImagePicked;
 
   @override
   $Res call({
     Object? image = freezed,
   }) {
-    return _then(ImagePicked(
+    return _then(_$ImagePicked(
       image == freezed
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
@@ -988,7 +989,7 @@ class _$ImagePicked implements ImagePicked {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ImagePicked &&
+            other is _$ImagePicked &&
             const DeepCollectionEquality().equals(other.image, image));
   }
 
@@ -998,8 +999,8 @@ class _$ImagePicked implements ImagePicked {
 
   @JsonKey(ignore: true)
   @override
-  $ImagePickedCopyWith<ImagePicked> get copyWith =>
-      _$ImagePickedCopyWithImpl<ImagePicked>(this, _$identity);
+  _$$ImagePickedCopyWith<_$ImagePicked> get copyWith =>
+      __$$ImagePickedCopyWithImpl<_$ImagePicked>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1099,7 +1100,7 @@ abstract class ImagePicked implements TeamsFrameworkEvent {
 
   File get image => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ImagePickedCopyWith<ImagePicked> get copyWith =>
+  _$$ImagePickedCopyWith<_$ImagePicked> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1222,11 +1223,11 @@ class _$TeamsFrameworkStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TeamsFrameworkStateCopyWith<$Res>
+abstract class _$$_TeamsFrameworkStateCopyWith<$Res>
     implements $TeamsFrameworkStateCopyWith<$Res> {
-  factory _$TeamsFrameworkStateCopyWith(_TeamsFrameworkState value,
-          $Res Function(_TeamsFrameworkState) then) =
-      __$TeamsFrameworkStateCopyWithImpl<$Res>;
+  factory _$$_TeamsFrameworkStateCopyWith(_$_TeamsFrameworkState value,
+          $Res Function(_$_TeamsFrameworkState) then) =
+      __$$_TeamsFrameworkStateCopyWithImpl<$Res>;
   @override
   $Res call(
       {bool shouldSignOut,
@@ -1243,15 +1244,15 @@ abstract class _$TeamsFrameworkStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TeamsFrameworkStateCopyWithImpl<$Res>
+class __$$_TeamsFrameworkStateCopyWithImpl<$Res>
     extends _$TeamsFrameworkStateCopyWithImpl<$Res>
-    implements _$TeamsFrameworkStateCopyWith<$Res> {
-  __$TeamsFrameworkStateCopyWithImpl(
-      _TeamsFrameworkState _value, $Res Function(_TeamsFrameworkState) _then)
-      : super(_value, (v) => _then(v as _TeamsFrameworkState));
+    implements _$$_TeamsFrameworkStateCopyWith<$Res> {
+  __$$_TeamsFrameworkStateCopyWithImpl(_$_TeamsFrameworkState _value,
+      $Res Function(_$_TeamsFrameworkState) _then)
+      : super(_value, (v) => _then(v as _$_TeamsFrameworkState));
 
   @override
-  _TeamsFrameworkState get _value => super._value as _TeamsFrameworkState;
+  _$_TeamsFrameworkState get _value => super._value as _$_TeamsFrameworkState;
 
   @override
   $Res call({
@@ -1267,7 +1268,7 @@ class __$TeamsFrameworkStateCopyWithImpl<$Res>
     Object? teamRequestURLs = freezed,
     Object? userImageURL = freezed,
   }) {
-    return _then(_TeamsFrameworkState(
+    return _then(_$_TeamsFrameworkState(
       shouldSignOut: shouldSignOut == freezed
           ? _value.shouldSignOut
           : shouldSignOut // ignore: cast_nullable_to_non_nullable
@@ -1366,7 +1367,7 @@ class _$_TeamsFrameworkState implements _TeamsFrameworkState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TeamsFrameworkState &&
+            other is _$_TeamsFrameworkState &&
             const DeepCollectionEquality()
                 .equals(other.shouldSignOut, shouldSignOut) &&
             const DeepCollectionEquality()
@@ -1410,8 +1411,8 @@ class _$_TeamsFrameworkState implements _TeamsFrameworkState {
 
   @JsonKey(ignore: true)
   @override
-  _$TeamsFrameworkStateCopyWith<_TeamsFrameworkState> get copyWith =>
-      __$TeamsFrameworkStateCopyWithImpl<_TeamsFrameworkState>(
+  _$$_TeamsFrameworkStateCopyWith<_$_TeamsFrameworkState> get copyWith =>
+      __$$_TeamsFrameworkStateCopyWithImpl<_$_TeamsFrameworkState>(
           this, _$identity);
 }
 
@@ -1460,6 +1461,6 @@ abstract class _TeamsFrameworkState implements TeamsFrameworkState {
   Option<String> get userImageURL => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TeamsFrameworkStateCopyWith<_TeamsFrameworkState> get copyWith =>
+  _$$_TeamsFrameworkStateCopyWith<_$_TeamsFrameworkState> get copyWith =>
       throw _privateConstructorUsedError;
 }

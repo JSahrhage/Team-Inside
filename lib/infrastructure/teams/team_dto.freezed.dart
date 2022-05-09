@@ -68,21 +68,22 @@ class _$TeamDTOCopyWithImpl<$Res> implements $TeamDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$TeamDTOCopyWith<$Res> implements $TeamDTOCopyWith<$Res> {
-  factory _$TeamDTOCopyWith(_TeamDTO value, $Res Function(_TeamDTO) then) =
-      __$TeamDTOCopyWithImpl<$Res>;
+abstract class _$$_TeamDTOCopyWith<$Res> implements $TeamDTOCopyWith<$Res> {
+  factory _$$_TeamDTOCopyWith(
+          _$_TeamDTO value, $Res Function(_$_TeamDTO) then) =
+      __$$_TeamDTOCopyWithImpl<$Res>;
   @override
   $Res call({String id, String teamname, List<String> joinedUsers});
 }
 
 /// @nodoc
-class __$TeamDTOCopyWithImpl<$Res> extends _$TeamDTOCopyWithImpl<$Res>
-    implements _$TeamDTOCopyWith<$Res> {
-  __$TeamDTOCopyWithImpl(_TeamDTO _value, $Res Function(_TeamDTO) _then)
-      : super(_value, (v) => _then(v as _TeamDTO));
+class __$$_TeamDTOCopyWithImpl<$Res> extends _$TeamDTOCopyWithImpl<$Res>
+    implements _$$_TeamDTOCopyWith<$Res> {
+  __$$_TeamDTOCopyWithImpl(_$_TeamDTO _value, $Res Function(_$_TeamDTO) _then)
+      : super(_value, (v) => _then(v as _$_TeamDTO));
 
   @override
-  _TeamDTO get _value => super._value as _TeamDTO;
+  _$_TeamDTO get _value => super._value as _$_TeamDTO;
 
   @override
   $Res call({
@@ -90,7 +91,7 @@ class __$TeamDTOCopyWithImpl<$Res> extends _$TeamDTOCopyWithImpl<$Res>
     Object? teamname = freezed,
     Object? joinedUsers = freezed,
   }) {
-    return _then(_TeamDTO(
+    return _then(_$_TeamDTO(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -100,7 +101,7 @@ class __$TeamDTOCopyWithImpl<$Res> extends _$TeamDTOCopyWithImpl<$Res>
           : teamname // ignore: cast_nullable_to_non_nullable
               as String,
       joinedUsers: joinedUsers == freezed
-          ? _value.joinedUsers
+          ? _value._joinedUsers
           : joinedUsers // ignore: cast_nullable_to_non_nullable
               as List<String>,
     ));
@@ -140,11 +141,11 @@ class _$_TeamDTO extends _TeamDTO {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TeamDTO &&
+            other is _$_TeamDTO &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.teamname, teamname) &&
             const DeepCollectionEquality()
-                .equals(other.joinedUsers, joinedUsers));
+                .equals(other._joinedUsers, _joinedUsers));
   }
 
   @JsonKey(ignore: true)
@@ -153,12 +154,12 @@ class _$_TeamDTO extends _TeamDTO {
       runtimeType,
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(teamname),
-      const DeepCollectionEquality().hash(joinedUsers));
+      const DeepCollectionEquality().hash(_joinedUsers));
 
   @JsonKey(ignore: true)
   @override
-  _$TeamDTOCopyWith<_TeamDTO> get copyWith =>
-      __$TeamDTOCopyWithImpl<_TeamDTO>(this, _$identity);
+  _$$_TeamDTOCopyWith<_$_TeamDTO> get copyWith =>
+      __$$_TeamDTOCopyWithImpl<_$_TeamDTO>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -183,6 +184,6 @@ abstract class _TeamDTO extends TeamDTO {
   List<String> get joinedUsers => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TeamDTOCopyWith<_TeamDTO> get copyWith =>
+  _$$_TeamDTOCopyWith<_$_TeamDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }

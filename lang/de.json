@@ -25,6 +25,7 @@
     "insert_password": "Passwort eingeben",
     "insert_username": "Anzeigename eingeben",
     "sign_out": "Ausloggen",
+    "change_username": "Anzeigename ändern",
     "delete_user": "Account löschen",
     "teams": "Teams",
     "requests": "Anfragen",

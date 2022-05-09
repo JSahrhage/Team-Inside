@@ -77,29 +77,29 @@ class _$PasswordResetEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $EmailChangedCopyWith<$Res> {
-  factory $EmailChangedCopyWith(
-          EmailChanged value, $Res Function(EmailChanged) then) =
-      _$EmailChangedCopyWithImpl<$Res>;
+abstract class _$$EmailChangedCopyWith<$Res> {
+  factory _$$EmailChangedCopyWith(
+          _$EmailChanged value, $Res Function(_$EmailChanged) then) =
+      __$$EmailChangedCopyWithImpl<$Res>;
   $Res call({String email});
 }
 
 /// @nodoc
-class _$EmailChangedCopyWithImpl<$Res>
+class __$$EmailChangedCopyWithImpl<$Res>
     extends _$PasswordResetEventCopyWithImpl<$Res>
-    implements $EmailChangedCopyWith<$Res> {
-  _$EmailChangedCopyWithImpl(
-      EmailChanged _value, $Res Function(EmailChanged) _then)
-      : super(_value, (v) => _then(v as EmailChanged));
+    implements _$$EmailChangedCopyWith<$Res> {
+  __$$EmailChangedCopyWithImpl(
+      _$EmailChanged _value, $Res Function(_$EmailChanged) _then)
+      : super(_value, (v) => _then(v as _$EmailChanged));
 
   @override
-  EmailChanged get _value => super._value as EmailChanged;
+  _$EmailChanged get _value => super._value as _$EmailChanged;
 
   @override
   $Res call({
     Object? email = freezed,
   }) {
-    return _then(EmailChanged(
+    return _then(_$EmailChanged(
       email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -125,7 +125,7 @@ class _$EmailChanged implements EmailChanged {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is EmailChanged &&
+            other is _$EmailChanged &&
             const DeepCollectionEquality().equals(other.email, email));
   }
 
@@ -135,8 +135,8 @@ class _$EmailChanged implements EmailChanged {
 
   @JsonKey(ignore: true)
   @override
-  $EmailChangedCopyWith<EmailChanged> get copyWith =>
-      _$EmailChangedCopyWithImpl<EmailChanged>(this, _$identity);
+  _$$EmailChangedCopyWith<_$EmailChanged> get copyWith =>
+      __$$EmailChangedCopyWithImpl<_$EmailChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -209,30 +209,30 @@ abstract class EmailChanged implements PasswordResetEvent {
 
   String get email => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $EmailChangedCopyWith<EmailChanged> get copyWith =>
+  _$$EmailChangedCopyWith<_$EmailChanged> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SendPasswordResetEmailPressedCopyWith<$Res> {
-  factory $SendPasswordResetEmailPressedCopyWith(
-          SendPasswordResetEmailPressed value,
-          $Res Function(SendPasswordResetEmailPressed) then) =
-      _$SendPasswordResetEmailPressedCopyWithImpl<$Res>;
+abstract class _$$SendPasswordResetEmailPressedCopyWith<$Res> {
+  factory _$$SendPasswordResetEmailPressedCopyWith(
+          _$SendPasswordResetEmailPressed value,
+          $Res Function(_$SendPasswordResetEmailPressed) then) =
+      __$$SendPasswordResetEmailPressedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$SendPasswordResetEmailPressedCopyWithImpl<$Res>
+class __$$SendPasswordResetEmailPressedCopyWithImpl<$Res>
     extends _$PasswordResetEventCopyWithImpl<$Res>
-    implements $SendPasswordResetEmailPressedCopyWith<$Res> {
-  _$SendPasswordResetEmailPressedCopyWithImpl(
-      SendPasswordResetEmailPressed _value,
-      $Res Function(SendPasswordResetEmailPressed) _then)
-      : super(_value, (v) => _then(v as SendPasswordResetEmailPressed));
+    implements _$$SendPasswordResetEmailPressedCopyWith<$Res> {
+  __$$SendPasswordResetEmailPressedCopyWithImpl(
+      _$SendPasswordResetEmailPressed _value,
+      $Res Function(_$SendPasswordResetEmailPressed) _then)
+      : super(_value, (v) => _then(v as _$SendPasswordResetEmailPressed));
 
   @override
-  SendPasswordResetEmailPressed get _value =>
-      super._value as SendPasswordResetEmailPressed;
+  _$SendPasswordResetEmailPressed get _value =>
+      super._value as _$SendPasswordResetEmailPressed;
 }
 
 /// @nodoc
@@ -249,7 +249,7 @@ class _$SendPasswordResetEmailPressed implements SendPasswordResetEmailPressed {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is SendPasswordResetEmailPressed);
+            other is _$SendPasswordResetEmailPressed);
   }
 
   @override
@@ -390,11 +390,11 @@ class _$PasswordResetStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$PasswordResetStateCopyWith<$Res>
+abstract class _$$_PasswordResetStateCopyWith<$Res>
     implements $PasswordResetStateCopyWith<$Res> {
-  factory _$PasswordResetStateCopyWith(
-          _PasswordResetState value, $Res Function(_PasswordResetState) then) =
-      __$PasswordResetStateCopyWithImpl<$Res>;
+  factory _$$_PasswordResetStateCopyWith(_$_PasswordResetState value,
+          $Res Function(_$_PasswordResetState) then) =
+      __$$_PasswordResetStateCopyWithImpl<$Res>;
   @override
   $Res call(
       {EmailAddress emailAddress,
@@ -404,15 +404,15 @@ abstract class _$PasswordResetStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$PasswordResetStateCopyWithImpl<$Res>
+class __$$_PasswordResetStateCopyWithImpl<$Res>
     extends _$PasswordResetStateCopyWithImpl<$Res>
-    implements _$PasswordResetStateCopyWith<$Res> {
-  __$PasswordResetStateCopyWithImpl(
-      _PasswordResetState _value, $Res Function(_PasswordResetState) _then)
-      : super(_value, (v) => _then(v as _PasswordResetState));
+    implements _$$_PasswordResetStateCopyWith<$Res> {
+  __$$_PasswordResetStateCopyWithImpl(
+      _$_PasswordResetState _value, $Res Function(_$_PasswordResetState) _then)
+      : super(_value, (v) => _then(v as _$_PasswordResetState));
 
   @override
-  _PasswordResetState get _value => super._value as _PasswordResetState;
+  _$_PasswordResetState get _value => super._value as _$_PasswordResetState;
 
   @override
   $Res call({
@@ -421,7 +421,7 @@ class __$PasswordResetStateCopyWithImpl<$Res>
     Object? stateFlipper = freezed,
     Object? authFailureOrSuccessOption = freezed,
   }) {
-    return _then(_PasswordResetState(
+    return _then(_$_PasswordResetState(
       emailAddress: emailAddress == freezed
           ? _value.emailAddress
           : emailAddress // ignore: cast_nullable_to_non_nullable
@@ -470,7 +470,7 @@ class _$_PasswordResetState implements _PasswordResetState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PasswordResetState &&
+            other is _$_PasswordResetState &&
             const DeepCollectionEquality()
                 .equals(other.emailAddress, emailAddress) &&
             const DeepCollectionEquality()
@@ -491,8 +491,9 @@ class _$_PasswordResetState implements _PasswordResetState {
 
   @JsonKey(ignore: true)
   @override
-  _$PasswordResetStateCopyWith<_PasswordResetState> get copyWith =>
-      __$PasswordResetStateCopyWithImpl<_PasswordResetState>(this, _$identity);
+  _$$_PasswordResetStateCopyWith<_$_PasswordResetState> get copyWith =>
+      __$$_PasswordResetStateCopyWithImpl<_$_PasswordResetState>(
+          this, _$identity);
 }
 
 abstract class _PasswordResetState implements PasswordResetState {
@@ -514,6 +515,6 @@ abstract class _PasswordResetState implements PasswordResetState {
       throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PasswordResetStateCopyWith<_PasswordResetState> get copyWith =>
+  _$$_PasswordResetStateCopyWith<_$_PasswordResetState> get copyWith =>
       throw _privateConstructorUsedError;
 }

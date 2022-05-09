@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:team_inside/application/teams_framework/teams_framework_bloc.dart';
 import 'package:team_inside/presentation/presentation_config.dart' as config;
+import 'package:team_inside/presentation/teams_framework/widgets/teams_framework_change_username_button.dart';
 import 'package:team_inside/presentation/teams_framework/widgets/teams_framework_clickable_user_image.dart';
 import 'package:team_inside/presentation/teams_framework/widgets/teams_framework_delete_user_button.dart';
 import 'package:team_inside/presentation/teams_framework/widgets/teams_framework_select_image_dialog.dart';
@@ -60,6 +61,8 @@ class TeamsFrameworkUserSettingsWidget extends StatelessWidget {
               ),
               const SizedBox(height: 128),
               const TeamsFrameworkSignOutButton(),
+              const SizedBox(height: 32),
+              const TeamsFrameworkChangeUsernameButton(),
               const SizedBox(height: 32),
               const TeamsFrameworkDeleteUserButton(),
             ],
