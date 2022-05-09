@@ -37,8 +37,11 @@ class TeamsFrameworkJoinedTeamsWidget extends StatelessWidget {
                   );
                 },
                 (joinedTeams) {
-                  return ListView.builder(
+                  return ListView.separated(
                     physics: const AlwaysScrollableScrollPhysics(),
+                    separatorBuilder: (context, index) => Divider(
+                      color: Theme.of(context).colorScheme.onBackground,
+                    ),
                     itemCount: joinedTeams.size,
                     itemBuilder: (context, index) {
                       for (final teamImageTuple in state.joinedTeamURLs.iter) {

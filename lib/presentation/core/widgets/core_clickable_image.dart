@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
-import 'package:team_inside/presentation/presentation_config.dart' as config;
+import 'package:team_inside/presentation/core/widgets/core_image.dart';
 
 class CoreClickableImage extends StatelessWidget {
   const CoreClickableImage({
@@ -23,23 +23,11 @@ class CoreClickableImage extends StatelessWidget {
     return InkWell(
       onTap: callback,
       splashColor: Colors.white10,
-      child: Align(
-        alignment: alignment ?? Alignment.center,
-        child: imageURL.fold(
-          () => Icon(
-            icon,
-            size: size ?? config.kInkwellCardImageSize,
-            color: Theme.of(context).colorScheme.primary,
-          ),
-          (imageURL) => Ink.image(
-            fit: BoxFit.cover,
-            height: size ?? config.kInkwellCardImageSize,
-            width: size ?? config.kInkwellCardImageSize,
-            image: NetworkImage(
-              imageURL,
-            ),
-          ),
-        ),
+      child: CoreImage(
+        icon: icon,
+        imageURL: imageURL,
+        size: size,
+        alignment: alignment,
       ),
     );
   }

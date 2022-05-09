@@ -6,3 +6,4 @@ const int kdurationInMillisecondsForTransition = 200;
 const double kInkwellCardImageSize = 80;
 const double kInkwellCardFontSize = 20;
 const int kRefreshIndicatorDuration = 1;
+BorderRadius kImageBorderRadius = BorderRadius.circular(32.0);

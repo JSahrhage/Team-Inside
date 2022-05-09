@@ -27,6 +27,7 @@ class CoreInkwellCard extends StatelessWidget {
     return CoreSizedPaddingBox(
       height: height ?? (config.kInkwellCardImageSize * 1.1),
       child: Card(
+        color: Theme.of(context).colorScheme.background,
         child: InkWell(
           onTap: () => callback(underlayingObjId),
           child: Row(

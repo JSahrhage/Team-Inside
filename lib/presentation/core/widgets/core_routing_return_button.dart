@@ -6,7 +6,7 @@ class CoreRoutingReturnButton extends StatelessWidget {
     required this.callback,
   }) : super(key: key);
 
-  final Null Function() callback;
+  final VoidCallback callback;
 
   @override
   Widget build(BuildContext context) {
