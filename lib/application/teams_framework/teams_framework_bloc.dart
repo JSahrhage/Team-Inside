@@ -7,13 +7,11 @@ import 'package:injectable/injectable.dart';
 import 'package:kt_dart/kt.dart';
 import 'package:team_inside/domain/auth/i_auth_facade.dart';
 import 'package:team_inside/domain/auth/i_user_repository.dart';
-import 'package:team_inside/domain/auth/user.dart';
-import 'package:team_inside/domain/auth/user_failure.dart';
 import 'package:team_inside/domain/auth/value_objects.dart';
 import 'package:team_inside/domain/image/i_image_facade.dart';
-import 'package:team_inside/domain/teams/i_team_repository.dart';
-import 'package:team_inside/domain/teams/team.dart';
-import 'package:team_inside/domain/teams/team_failure.dart';
+import 'package:team_inside/domain/team/i_team_repository.dart';
+import 'package:team_inside/domain/team/team.dart';
+import 'package:team_inside/domain/team/team_failure.dart';
 
 part 'teams_framework_event.dart';
 part 'teams_framework_state.dart';

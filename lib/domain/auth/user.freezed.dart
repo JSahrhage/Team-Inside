@@ -18,8 +18,8 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$User {
   UniqueId get id => throw _privateConstructorUsedError;
   Username get username => throw _privateConstructorUsedError;
-  JoinedTeams<UniqueId> get joinedTeams => throw _privateConstructorUsedError;
-  TeamRequests<UniqueId> get teamRequests => throw _privateConstructorUsedError;
+  KtList<UniqueId> get joinedTeams => throw _privateConstructorUsedError;
+  KtList<UniqueId> get teamRequests => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $UserCopyWith<User> get copyWith => throw _privateConstructorUsedError;
@@ -32,8 +32,8 @@ abstract class $UserCopyWith<$Res> {
   $Res call(
       {UniqueId id,
       Username username,
-      JoinedTeams<UniqueId> joinedTeams,
-      TeamRequests<UniqueId> teamRequests});
+      KtList<UniqueId> joinedTeams,
+      KtList<UniqueId> teamRequests});
 }
 
 /// @nodoc
@@ -63,11 +63,11 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
       joinedTeams: joinedTeams == freezed
           ? _value.joinedTeams
           : joinedTeams // ignore: cast_nullable_to_non_nullable
-              as JoinedTeams<UniqueId>,
+              as KtList<UniqueId>,
       teamRequests: teamRequests == freezed
           ? _value.teamRequests
           : teamRequests // ignore: cast_nullable_to_non_nullable
-              as TeamRequests<UniqueId>,
+              as KtList<UniqueId>,
     ));
   }
 }
@@ -80,8 +80,8 @@ abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
   $Res call(
       {UniqueId id,
       Username username,
-      JoinedTeams<UniqueId> joinedTeams,
-      TeamRequests<UniqueId> teamRequests});
+      KtList<UniqueId> joinedTeams,
+      KtList<UniqueId> teamRequests});
 }
 
 /// @nodoc
@@ -112,11 +112,11 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
       joinedTeams: joinedTeams == freezed
           ? _value.joinedTeams
           : joinedTeams // ignore: cast_nullable_to_non_nullable
-              as JoinedTeams<UniqueId>,
+              as KtList<UniqueId>,
       teamRequests: teamRequests == freezed
           ? _value.teamRequests
           : teamRequests // ignore: cast_nullable_to_non_nullable
-              as TeamRequests<UniqueId>,
+              as KtList<UniqueId>,
     ));
   }
 }
@@ -136,9 +136,9 @@ class _$_User extends _User {
   @override
   final Username username;
   @override
-  final JoinedTeams<UniqueId> joinedTeams;
+  final KtList<UniqueId> joinedTeams;
   @override
-  final TeamRequests<UniqueId> teamRequests;
+  final KtList<UniqueId> teamRequests;
 
   @override
   String toString() {
@@ -176,8 +176,8 @@ abstract class _User extends User {
   const factory _User(
       {required final UniqueId id,
       required final Username username,
-      required final JoinedTeams<UniqueId> joinedTeams,
-      required final TeamRequests<UniqueId> teamRequests}) = _$_User;
+      required final KtList<UniqueId> joinedTeams,
+      required final KtList<UniqueId> teamRequests}) = _$_User;
   const _User._() : super._();
 
   @override
@@ -185,9 +185,9 @@ abstract class _User extends User {
   @override
   Username get username => throw _privateConstructorUsedError;
   @override
-  JoinedTeams<UniqueId> get joinedTeams => throw _privateConstructorUsedError;
+  KtList<UniqueId> get joinedTeams => throw _privateConstructorUsedError;
   @override
-  TeamRequests<UniqueId> get teamRequests => throw _privateConstructorUsedError;
+  KtList<UniqueId> get teamRequests => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_UserCopyWith<_$_User> get copyWith => throw _privateConstructorUsedError;

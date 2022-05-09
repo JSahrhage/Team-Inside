@@ -24,15 +24,13 @@ class UserDTO with _$UserDTO {
       id: user.id.getOrCrash(),
       username: user.username.getOrCrash(),
       joinedTeams: user.joinedTeams
-          .getOrCrash()
           .map(
-            (uniqueId) => uniqueId.getOrCrash(),
+            (joinedTeamId) => joinedTeamId.getOrCrash(),
           )
           .asList(),
       teamRequests: user.teamRequests
-          .getOrCrash()
           .map(
-            (uniqueId) => uniqueId.getOrCrash(),
+            (joinedTeamId) => joinedTeamId.getOrCrash(),
           )
           .asList(),
     );
@@ -42,16 +40,12 @@ class UserDTO with _$UserDTO {
     return User(
       id: UniqueId.fromUniqueString(id),
       username: Username(username),
-      joinedTeams: JoinedTeams(
-        joinedTeams
-            .map((uniqueId) => UniqueId.fromUniqueString(uniqueId))
-            .toImmutableList(),
-      ),
-      teamRequests: TeamRequests(
-        teamRequests
-            .map((uniqueId) => UniqueId.fromUniqueString(uniqueId))
-            .toImmutableList(),
-      ),
+      joinedTeams: joinedTeams
+          .map((uniqueId) => UniqueId.fromUniqueString(uniqueId))
+          .toImmutableList(),
+      teamRequests: teamRequests
+          .map((uniqueId) => UniqueId.fromUniqueString(uniqueId))
+          .toImmutableList(),
     );
   }
 

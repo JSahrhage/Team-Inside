@@ -23,6 +23,7 @@ mixin _$TeamDTO {
   String get id => throw _privateConstructorUsedError;
   String get teamname => throw _privateConstructorUsedError;
   List<String> get joinedUsers => throw _privateConstructorUsedError;
+  List<WorkoutDTO> get workouts => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -33,7 +34,11 @@ mixin _$TeamDTO {
 abstract class $TeamDTOCopyWith<$Res> {
   factory $TeamDTOCopyWith(TeamDTO value, $Res Function(TeamDTO) then) =
       _$TeamDTOCopyWithImpl<$Res>;
-  $Res call({String id, String teamname, List<String> joinedUsers});
+  $Res call(
+      {String id,
+      String teamname,
+      List<String> joinedUsers,
+      List<WorkoutDTO> workouts});
 }
 
 /// @nodoc
@@ -49,6 +54,7 @@ class _$TeamDTOCopyWithImpl<$Res> implements $TeamDTOCopyWith<$Res> {
     Object? id = freezed,
     Object? teamname = freezed,
     Object? joinedUsers = freezed,
+    Object? workouts = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -63,6 +69,10 @@ class _$TeamDTOCopyWithImpl<$Res> implements $TeamDTOCopyWith<$Res> {
           ? _value.joinedUsers
           : joinedUsers // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      workouts: workouts == freezed
+          ? _value.workouts
+          : workouts // ignore: cast_nullable_to_non_nullable
+              as List<WorkoutDTO>,
     ));
   }
 }
@@ -73,7 +83,11 @@ abstract class _$$_TeamDTOCopyWith<$Res> implements $TeamDTOCopyWith<$Res> {
           _$_TeamDTO value, $Res Function(_$_TeamDTO) then) =
       __$$_TeamDTOCopyWithImpl<$Res>;
   @override
-  $Res call({String id, String teamname, List<String> joinedUsers});
+  $Res call(
+      {String id,
+      String teamname,
+      List<String> joinedUsers,
+      List<WorkoutDTO> workouts});
 }
 
 /// @nodoc
@@ -90,6 +104,7 @@ class __$$_TeamDTOCopyWithImpl<$Res> extends _$TeamDTOCopyWithImpl<$Res>
     Object? id = freezed,
     Object? teamname = freezed,
     Object? joinedUsers = freezed,
+    Object? workouts = freezed,
   }) {
     return _then(_$_TeamDTO(
       id: id == freezed
@@ -104,6 +119,10 @@ class __$$_TeamDTOCopyWithImpl<$Res> extends _$TeamDTOCopyWithImpl<$Res>
           ? _value._joinedUsers
           : joinedUsers // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      workouts: workouts == freezed
+          ? _value._workouts
+          : workouts // ignore: cast_nullable_to_non_nullable
+              as List<WorkoutDTO>,
     ));
   }
 }
@@ -114,8 +133,10 @@ class _$_TeamDTO extends _TeamDTO {
   const _$_TeamDTO(
       {required this.id,
       required this.teamname,
-      required final List<String> joinedUsers})
+      required final List<String> joinedUsers,
+      required final List<WorkoutDTO> workouts})
       : _joinedUsers = joinedUsers,
+        _workouts = workouts,
         super._();
 
   factory _$_TeamDTO.fromJson(Map<String, dynamic> json) =>
@@ -132,9 +153,16 @@ class _$_TeamDTO extends _TeamDTO {
     return EqualUnmodifiableListView(_joinedUsers);
   }
 
+  final List<WorkoutDTO> _workouts;
+  @override
+  List<WorkoutDTO> get workouts {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_workouts);
+  }
+
   @override
   String toString() {
-    return 'TeamDTO(id: $id, teamname: $teamname, joinedUsers: $joinedUsers)';
+    return 'TeamDTO(id: $id, teamname: $teamname, joinedUsers: $joinedUsers, workouts: $workouts)';
   }
 
   @override
@@ -145,7 +173,8 @@ class _$_TeamDTO extends _TeamDTO {
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.teamname, teamname) &&
             const DeepCollectionEquality()
-                .equals(other._joinedUsers, _joinedUsers));
+                .equals(other._joinedUsers, _joinedUsers) &&
+            const DeepCollectionEquality().equals(other._workouts, _workouts));
   }
 
   @JsonKey(ignore: true)
@@ -154,7 +183,8 @@ class _$_TeamDTO extends _TeamDTO {
       runtimeType,
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(teamname),
-      const DeepCollectionEquality().hash(_joinedUsers));
+      const DeepCollectionEquality().hash(_joinedUsers),
+      const DeepCollectionEquality().hash(_workouts));
 
   @JsonKey(ignore: true)
   @override
@@ -171,7 +201,8 @@ abstract class _TeamDTO extends TeamDTO {
   const factory _TeamDTO(
       {required final String id,
       required final String teamname,
-      required final List<String> joinedUsers}) = _$_TeamDTO;
+      required final List<String> joinedUsers,
+      required final List<WorkoutDTO> workouts}) = _$_TeamDTO;
   const _TeamDTO._() : super._();
 
   factory _TeamDTO.fromJson(Map<String, dynamic> json) = _$_TeamDTO.fromJson;
@@ -182,6 +213,8 @@ abstract class _TeamDTO extends TeamDTO {
   String get teamname => throw _privateConstructorUsedError;
   @override
   List<String> get joinedUsers => throw _privateConstructorUsedError;
+  @override
+  List<WorkoutDTO> get workouts => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_TeamDTOCopyWith<_$_TeamDTO> get copyWith =>

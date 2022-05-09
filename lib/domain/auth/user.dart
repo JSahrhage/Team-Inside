@@ -13,8 +13,8 @@ class User with _$User implements IEntity {
   const factory User({
     required UniqueId id,
     required Username username,
-    required JoinedTeams<UniqueId> joinedTeams,
-    required TeamRequests<UniqueId> teamRequests,
+    required KtList<UniqueId> joinedTeams,
+    required KtList<UniqueId> teamRequests,
   }) = _User;
 
   const User._();
@@ -22,8 +22,8 @@ class User with _$User implements IEntity {
   factory User.empty() => User(
         id: UniqueId(),
         username: Username(''),
-        joinedTeams: JoinedTeams(emptyList()),
-        teamRequests: TeamRequests(emptyList()),
+        joinedTeams: emptyList(),
+        teamRequests: emptyList(),
       );
 
   Option<ValueFailure<dynamic>> get failureOption {

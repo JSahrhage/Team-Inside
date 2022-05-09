@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kt_dart/collection.dart';
 import 'package:team_inside/application/teams_framework/teams_framework_bloc.dart';
-import 'package:team_inside/domain/teams/team.dart';
+import 'package:team_inside/domain/team/team.dart';
 import 'package:team_inside/presentation/core/widgets/core_inkwell_card.dart';
 import 'package:team_inside/presentation/presentation_config.dart' as config;
 

@@ -18,7 +18,8 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$Team {
   UniqueId get id => throw _privateConstructorUsedError;
   Teamname get teamname => throw _privateConstructorUsedError;
-  JoinedUsers<UniqueId> get joinedUsers => throw _privateConstructorUsedError;
+  KtList<UniqueId> get joinedUsers => throw _privateConstructorUsedError;
+  KtList<Workout> get workouts => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $TeamCopyWith<Team> get copyWith => throw _privateConstructorUsedError;
@@ -29,7 +30,10 @@ abstract class $TeamCopyWith<$Res> {
   factory $TeamCopyWith(Team value, $Res Function(Team) then) =
       _$TeamCopyWithImpl<$Res>;
   $Res call(
-      {UniqueId id, Teamname teamname, JoinedUsers<UniqueId> joinedUsers});
+      {UniqueId id,
+      Teamname teamname,
+      KtList<UniqueId> joinedUsers,
+      KtList<Workout> workouts});
 }
 
 /// @nodoc
@@ -45,6 +49,7 @@ class _$TeamCopyWithImpl<$Res> implements $TeamCopyWith<$Res> {
     Object? id = freezed,
     Object? teamname = freezed,
     Object? joinedUsers = freezed,
+    Object? workouts = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -58,7 +63,11 @@ class _$TeamCopyWithImpl<$Res> implements $TeamCopyWith<$Res> {
       joinedUsers: joinedUsers == freezed
           ? _value.joinedUsers
           : joinedUsers // ignore: cast_nullable_to_non_nullable
-              as JoinedUsers<UniqueId>,
+              as KtList<UniqueId>,
+      workouts: workouts == freezed
+          ? _value.workouts
+          : workouts // ignore: cast_nullable_to_non_nullable
+              as KtList<Workout>,
     ));
   }
 }
@@ -69,7 +78,10 @@ abstract class _$$_TeamCopyWith<$Res> implements $TeamCopyWith<$Res> {
       __$$_TeamCopyWithImpl<$Res>;
   @override
   $Res call(
-      {UniqueId id, Teamname teamname, JoinedUsers<UniqueId> joinedUsers});
+      {UniqueId id,
+      Teamname teamname,
+      KtList<UniqueId> joinedUsers,
+      KtList<Workout> workouts});
 }
 
 /// @nodoc
@@ -86,6 +98,7 @@ class __$$_TeamCopyWithImpl<$Res> extends _$TeamCopyWithImpl<$Res>
     Object? id = freezed,
     Object? teamname = freezed,
     Object? joinedUsers = freezed,
+    Object? workouts = freezed,
   }) {
     return _then(_$_Team(
       id: id == freezed
@@ -99,7 +112,11 @@ class __$$_TeamCopyWithImpl<$Res> extends _$TeamCopyWithImpl<$Res>
       joinedUsers: joinedUsers == freezed
           ? _value.joinedUsers
           : joinedUsers // ignore: cast_nullable_to_non_nullable
-              as JoinedUsers<UniqueId>,
+              as KtList<UniqueId>,
+      workouts: workouts == freezed
+          ? _value.workouts
+          : workouts // ignore: cast_nullable_to_non_nullable
+              as KtList<Workout>,
     ));
   }
 }
@@ -108,7 +125,10 @@ class __$$_TeamCopyWithImpl<$Res> extends _$TeamCopyWithImpl<$Res>
 
 class _$_Team extends _Team {
   const _$_Team(
-      {required this.id, required this.teamname, required this.joinedUsers})
+      {required this.id,
+      required this.teamname,
+      required this.joinedUsers,
+      required this.workouts})
       : super._();
 
   @override
@@ -116,11 +136,13 @@ class _$_Team extends _Team {
   @override
   final Teamname teamname;
   @override
-  final JoinedUsers<UniqueId> joinedUsers;
+  final KtList<UniqueId> joinedUsers;
+  @override
+  final KtList<Workout> workouts;
 
   @override
   String toString() {
-    return 'Team(id: $id, teamname: $teamname, joinedUsers: $joinedUsers)';
+    return 'Team(id: $id, teamname: $teamname, joinedUsers: $joinedUsers, workouts: $workouts)';
   }
 
   @override
@@ -131,7 +153,8 @@ class _$_Team extends _Team {
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.teamname, teamname) &&
             const DeepCollectionEquality()
-                .equals(other.joinedUsers, joinedUsers));
+                .equals(other.joinedUsers, joinedUsers) &&
+            const DeepCollectionEquality().equals(other.workouts, workouts));
   }
 
   @override
@@ -139,7 +162,8 @@ class _$_Team extends _Team {
       runtimeType,
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(teamname),
-      const DeepCollectionEquality().hash(joinedUsers));
+      const DeepCollectionEquality().hash(joinedUsers),
+      const DeepCollectionEquality().hash(workouts));
 
   @JsonKey(ignore: true)
   @override
@@ -151,7 +175,8 @@ abstract class _Team extends Team {
   const factory _Team(
       {required final UniqueId id,
       required final Teamname teamname,
-      required final JoinedUsers<UniqueId> joinedUsers}) = _$_Team;
+      required final KtList<UniqueId> joinedUsers,
+      required final KtList<Workout> workouts}) = _$_Team;
   const _Team._() : super._();
 
   @override
@@ -159,7 +184,9 @@ abstract class _Team extends Team {
   @override
   Teamname get teamname => throw _privateConstructorUsedError;
   @override
-  JoinedUsers<UniqueId> get joinedUsers => throw _privateConstructorUsedError;
+  KtList<UniqueId> get joinedUsers => throw _privateConstructorUsedError;
+  @override
+  KtList<Workout> get workouts => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_TeamCopyWith<_$_Team> get copyWith => throw _privateConstructorUsedError;

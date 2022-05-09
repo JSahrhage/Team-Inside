@@ -9,8 +9,8 @@ extension FirebaseUserDomainX on firebase.User {
     return User(
       id: UniqueId.fromUniqueString(uid),
       username: Username(''),
-      joinedTeams: JoinedTeams(emptyList()),
-      teamRequests: TeamRequests(emptyList()),
+      joinedTeams: emptyList(),
+      teamRequests: emptyList(),
     );
   }
 }

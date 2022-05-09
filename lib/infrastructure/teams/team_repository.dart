@@ -3,9 +3,9 @@ import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
 import 'package:kt_dart/collection.dart';
 import 'package:team_inside/domain/core/unique_id_value_object.dart';
-import 'package:team_inside/domain/teams/i_team_repository.dart';
-import 'package:team_inside/domain/teams/team.dart';
-import 'package:team_inside/domain/teams/team_failure.dart';
+import 'package:team_inside/domain/team/i_team_repository.dart';
+import 'package:team_inside/domain/team/team.dart';
+import 'package:team_inside/domain/team/team_failure.dart';
 import 'package:team_inside/infrastructure/auth/user_dto.dart';
 import 'package:team_inside/infrastructure/core/firestore_helpers.dart';
 import 'package:team_inside/infrastructure/teams/team_dto.dart';
@@ -40,7 +40,7 @@ class TeamRepository implements ITeamRepository {
       final userDTO = UserDTO.fromFirestore(userSnap);
       final user = userDTO.toDomain();
 
-      final joinedTeamIds = user.joinedTeams.getOrCrash();
+      final joinedTeamIds = user.joinedTeams;
 
       final List<Team> joinedTeams = [];
       for (final joinedTeamId in joinedTeamIds.iter) {
@@ -76,7 +76,7 @@ class TeamRepository implements ITeamRepository {
       final userDTO = UserDTO.fromFirestore(userSnap);
       final user = userDTO.toDomain();
 
-      final teamRequestIds = user.teamRequests.getOrCrash();
+      final teamRequestIds = user.teamRequests;
 
       final List<Team> teamRequests = [];
       for (final teamRequestId in teamRequestIds.iter) {

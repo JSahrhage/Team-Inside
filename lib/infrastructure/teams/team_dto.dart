@@ -2,8 +2,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:kt_dart/kt.dart';
 import 'package:team_inside/domain/core/unique_id_value_object.dart';
-import 'package:team_inside/domain/teams/team.dart';
-import 'package:team_inside/domain/teams/value_objects.dart';
+import 'package:team_inside/domain/team/team.dart';
+import 'package:team_inside/domain/team/value_objects.dart';
+import 'package:team_inside/infrastructure/teams/workout_dto.dart';
 
 part 'team_dto.freezed.dart';
 part 'team_dto.g.dart';
@@ -14,6 +15,7 @@ class TeamDTO with _$TeamDTO {
     required String id,
     required String teamname,
     required List<String> joinedUsers,
+    required List<WorkoutDTO> workouts,
   }) = _TeamDTO;
 
   const TeamDTO._();
@@ -23,10 +25,12 @@ class TeamDTO with _$TeamDTO {
       id: team.id.getOrCrash(),
       teamname: team.teamname.getOrCrash(),
       joinedUsers: team.joinedUsers
-          .getOrCrash()
           .map(
             (uniqueId) => uniqueId.getOrCrash(),
           )
+          .asList(),
+      workouts: team.workouts
+          .map((workout) => WorkoutDTO.fromDomain(workout))
           .asList(),
     );
   }
@@ -35,11 +39,11 @@ class TeamDTO with _$TeamDTO {
     return Team(
       id: UniqueId.fromUniqueString(id),
       teamname: Teamname(teamname),
-      joinedUsers: JoinedUsers(
-        joinedUsers
-            .map((uniqueId) => UniqueId.fromUniqueString(uniqueId))
-            .toImmutableList(),
-      ),
+      joinedUsers: joinedUsers
+          .map((uniqueId) => UniqueId.fromUniqueString(uniqueId))
+          .toImmutableList(),
+      workouts:
+          workouts.map((workoutDTO) => workoutDTO.toDomain()).toImmutableList(),
     );
   }
 

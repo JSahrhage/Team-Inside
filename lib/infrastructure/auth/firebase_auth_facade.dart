@@ -8,7 +8,6 @@ import 'package:team_inside/domain/auth/i_auth_facade.dart';
 import 'package:team_inside/domain/auth/user.dart';
 import 'package:team_inside/domain/auth/value_objects.dart';
 import 'package:team_inside/domain/core/unique_id_value_object.dart';
-import 'package:team_inside/domain/teams/value_objects.dart';
 import 'package:team_inside/infrastructure/auth/firebase_user_mapper.dart';
 import 'package:team_inside/infrastructure/auth/user_dto.dart';
 import 'package:team_inside/infrastructure/core/firestore_helpers.dart';
@@ -45,12 +44,11 @@ class FirebaseAuthFacade implements IAuthFacade {
         final team = await teamDoc.get();
         final teamDTO = TeamDTO.fromFirestore(team).toDomain();
 
-        final mutableJoinedUsers =
-            teamDTO.joinedUsers.getOrCrash().toMutableList().asList();
+        final mutableJoinedUsers = teamDTO.joinedUsers.toMutableList().asList();
         mutableJoinedUsers.remove(UniqueId.fromUniqueString(userDTO.id));
 
         final mutatedTeamDTO = teamDTO.copyWith(
-          joinedUsers: JoinedUsers(mutableJoinedUsers.toImmutableList()),
+          joinedUsers: mutableJoinedUsers.toImmutableList(),
         );
 
         await teamDoc.update(TeamDTO.fromDomain(mutatedTeamDTO).toJson());
@@ -81,8 +79,8 @@ class FirebaseAuthFacade implements IAuthFacade {
       final User user = User(
         id: UniqueId.fromUniqueString(credentials.user!.uid),
         username: username,
-        joinedTeams: JoinedTeams(emptyList()),
-        teamRequests: TeamRequests(emptyList()),
+        joinedTeams: emptyList(),
+        teamRequests: emptyList(),
       );
       final userDTO = UserDTO.fromDomain(user);
 

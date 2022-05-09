@@ -2,7 +2,8 @@ include: package:lint/analysis_options.yaml
 
 analyzer:
   exclude: 
-    - lib/infrastructure/auth/*.g.dart
+    - lib/infrastructure/auth/**.g.dart
+    - lib/infrastructure/teams/**.g.dart
   errors:
     missing_required_param: error
     missing_return: error
