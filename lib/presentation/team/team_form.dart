@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team_inside/application/team/team_bloc.dart';
 import 'package:team_inside/presentation/routes/router.gr.dart';
 import 'package:team_inside/presentation/team/widgets/team_bottom_navigation_bar.dart';
+import 'package:team_inside/presentation/team/widgets/team_workout_overview.dart';
 
 class TeamForm extends StatefulWidget {
   @override
@@ -13,7 +14,7 @@ class TeamForm extends StatefulWidget {
 class _TeamFormState extends State<TeamForm> {
   int _selectedIndex = 0;
   static final List<Widget> _frameworkWidgets = <Widget>[
-    Container(),
+    TeamWorkoutOverview(),
     Container(),
     Container(),
   ];

@@ -20,7 +20,13 @@ class TeamBloc extends Bloc<TeamEvent, TeamState> {
     this._imageFacade,
   ) : super(TeamState.initial()) {
     on<NavigateBackToFramework>(
-      (event, emit) {},
+      (event, emit) {
+        emit(
+          state.copyWith(
+            shouldNavigateBackToFramework: true,
+          ),
+        );
+      },
     );
   }
 }
