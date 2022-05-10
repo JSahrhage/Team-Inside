@@ -30,5 +30,7 @@
     "teams": "Teams",
     "requests": "Requests",
     "settings": "Settings",
-    "select_photo": "Select photo"
+    "select_photo": "Select photo",
+    "accept_request": "Accept request",
+    "decline_request": "Decline request"
 }

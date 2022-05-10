@@ -12,4 +12,8 @@ class TeamsFrameworkEvent with _$TeamsFrameworkEvent {
   const factory TeamsFrameworkEvent.imagePicked(File image) = ImagePicked;
   const factory TeamsFrameworkEvent.navigateToTeam(String teamId) =
       NavigateToTeam;
+  const factory TeamsFrameworkEvent.acceptTeamRequest(String teamId) =
+      AcceptTeamRequest;
+  const factory TeamsFrameworkEvent.declineTeamRequest(String teamId) =
+      DeclineTeamRequest;
 }

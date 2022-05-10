@@ -89,6 +89,80 @@ class TeamsFrameworkBloc
         }
       },
     );
+    on<AcceptTeamRequest>(
+      (event, emit) async {
+        final teamId = event.teamId;
+        final currentUserOrFailure = await _userRepository.getCurrentUser();
+        await currentUserOrFailure.fold(
+          (failure) {},
+          (user) async {
+            final uniqueTeamId = UniqueId.fromUniqueString(teamId);
+            if (user.teamRequests.contains(uniqueTeamId)) {
+              final updatedTeamRequests = user.teamRequests.toMutableList();
+              updatedTeamRequests.remove(uniqueTeamId);
+              final updatedJoinedTeams = user.joinedTeams.toMutableList();
+              updatedJoinedTeams.add(uniqueTeamId);
+              final updatedUser = user.copyWith(
+                joinedTeams: updatedJoinedTeams.asList().toImmutableList(),
+                teamRequests: updatedTeamRequests.asList().toImmutableList(),
+              );
+
+              final team = await _teamRepository.getTeamById(uniqueTeamId);
+              await team.fold(
+                (failure) {},
+                (team) async {
+                  if (!team.joinedUsers.contains(user.id)) {
+                    final updatedJoinedUsers = team.joinedUsers.toMutableList();
+                    updatedJoinedUsers.add(user.id);
+                    final updatedTeam = team.copyWith(
+                      joinedUsers:
+                          updatedJoinedUsers.asList().toImmutableList(),
+                    );
+
+                    await _teamRepository.update(updatedTeam);
+                  }
+                },
+              );
+
+              await _userRepository.update(updatedUser);
+            }
+          },
+        );
+
+        add(
+          const TeamsFrameworkEvent.refreshTeamRequests(),
+        );
+
+        add(
+          const TeamsFrameworkEvent.refreshJoinedTeams(),
+        );
+      },
+    );
+    on<DeclineTeamRequest>(
+      (event, emit) async {
+        final teamId = event.teamId;
+        final currentUserOrFailure = await _userRepository.getCurrentUser();
+        await currentUserOrFailure.fold(
+          (failure) {},
+          (user) async {
+            final uniqueTeamId = UniqueId.fromUniqueString(teamId);
+            if (user.teamRequests.contains(uniqueTeamId)) {
+              final updatedTeamRequests = user.teamRequests.toMutableList();
+              updatedTeamRequests.remove(uniqueTeamId);
+              final updatedUser = user.copyWith(
+                teamRequests: updatedTeamRequests.asList().toImmutableList(),
+              );
+
+              await _userRepository.update(updatedUser);
+            }
+          },
+        );
+
+        add(
+          const TeamsFrameworkEvent.refreshTeamRequests(),
+        );
+      },
+    );
     on<RefreshJoinedTeams>(
       (event, emit) async {
         emit(

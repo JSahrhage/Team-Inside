@@ -30,5 +30,7 @@
     "teams": "Teams",
     "requests": "Anfragen",
     "settings": "Einstellungen",
-    "select_photo": "Foto auswählen"
+    "select_photo": "Foto auswählen",
+    "accept_request": "Anfrage annehmen",
+    "decline_request": "Anfrage ablehnen"
 }
