@@ -35,7 +35,7 @@ class TeamRepository implements ITeamRepository {
   @override
   Future<Either<TeamFailure, KtList<Team>>> getJoinedTeams() async {
     try {
-      final userDoc = await _firestore.userDocument();
+      final userDoc = await _firestore.currentUserDocument();
       final userSnap = await userDoc.get();
       final userDTO = UserDTO.fromFirestore(userSnap);
       final user = userDTO.toDomain();
@@ -71,7 +71,7 @@ class TeamRepository implements ITeamRepository {
   @override
   Future<Either<TeamFailure, KtList<Team>>> getTeamRequests() async {
     try {
-      final userDoc = await _firestore.userDocument();
+      final userDoc = await _firestore.currentUserDocument();
       final userSnap = await userDoc.get();
       final userDTO = UserDTO.fromFirestore(userSnap);
       final user = userDTO.toDomain();

@@ -15,6 +15,10 @@ class TeamDTO with _$TeamDTO {
     required String id,
     required String teamname,
     required List<String> joinedUsers,
+    required List<String> admins,
+    required List<String> workoutCreator,
+    required List<String> analysts,
+    required List<String> athletes,
     required List<WorkoutDTO> workouts,
   }) = _TeamDTO;
 
@@ -25,6 +29,26 @@ class TeamDTO with _$TeamDTO {
       id: team.id.getOrCrash(),
       teamname: team.teamname.getOrCrash(),
       joinedUsers: team.joinedUsers
+          .map(
+            (uniqueId) => uniqueId.getOrCrash(),
+          )
+          .asList(),
+      admins: team.admins
+          .map(
+            (uniqueId) => uniqueId.getOrCrash(),
+          )
+          .asList(),
+      workoutCreator: team.workoutCreator
+          .map(
+            (uniqueId) => uniqueId.getOrCrash(),
+          )
+          .asList(),
+      analysts: team.analysts
+          .map(
+            (uniqueId) => uniqueId.getOrCrash(),
+          )
+          .asList(),
+      athletes: team.athletes
           .map(
             (uniqueId) => uniqueId.getOrCrash(),
           )
@@ -40,6 +64,18 @@ class TeamDTO with _$TeamDTO {
       id: UniqueId.fromUniqueString(id),
       teamname: Teamname(teamname),
       joinedUsers: joinedUsers
+          .map((uniqueId) => UniqueId.fromUniqueString(uniqueId))
+          .toImmutableList(),
+      admins: admins
+          .map((uniqueId) => UniqueId.fromUniqueString(uniqueId))
+          .toImmutableList(),
+      workoutCreator: workoutCreator
+          .map((uniqueId) => UniqueId.fromUniqueString(uniqueId))
+          .toImmutableList(),
+      analysts: analysts
+          .map((uniqueId) => UniqueId.fromUniqueString(uniqueId))
+          .toImmutableList(),
+      athletes: athletes
           .map((uniqueId) => UniqueId.fromUniqueString(uniqueId))
           .toImmutableList(),
       workouts:

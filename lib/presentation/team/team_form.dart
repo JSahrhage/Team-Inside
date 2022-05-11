@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team_inside/application/team/team_bloc.dart';
 import 'package:team_inside/presentation/routes/router.gr.dart';
+import 'package:team_inside/presentation/team/widgets/team_actions_widget.dart';
 import 'package:team_inside/presentation/team/widgets/team_bottom_navigation_bar.dart';
+import 'package:team_inside/presentation/team/widgets/team_user_management.dart';
 import 'package:team_inside/presentation/team/widgets/team_workout_overview.dart';
 
 class TeamForm extends StatefulWidget {
@@ -15,8 +17,8 @@ class _TeamFormState extends State<TeamForm> {
   int _selectedIndex = 0;
   static final List<Widget> _frameworkWidgets = <Widget>[
     TeamWorkoutOverview(),
-    Container(),
-    Container(),
+    TeamActionsWidget(),
+    TeamUserManagement(),
   ];
 
   void _onItemTapped(int index) {

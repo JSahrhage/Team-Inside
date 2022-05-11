@@ -24,7 +24,13 @@ class TeamPage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Theme.of(context).colorScheme.background,
         body: BlocProvider(
-          create: (context) => getIt<TeamBloc>(),
+          create: (context) => getIt<TeamBloc>()
+            ..add(
+              TeamEvent.setTeamId(team.id),
+            )
+            ..add(
+              const TeamEvent.refreshUsers(),
+            ),
           child: TeamForm(),
         ),
       ),

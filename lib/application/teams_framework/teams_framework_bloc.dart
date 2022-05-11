@@ -13,6 +13,7 @@ import 'package:team_inside/domain/image/i_image_facade.dart';
 import 'package:team_inside/domain/team/i_team_repository.dart';
 import 'package:team_inside/domain/team/team.dart';
 import 'package:team_inside/domain/team/team_failure.dart';
+import 'package:team_inside/domain/team/value_objects.dart';
 
 part 'teams_framework_event.dart';
 part 'teams_framework_state.dart';
@@ -32,6 +33,22 @@ class TeamsFrameworkBloc
     this._teamRepository,
     this._imageFacade,
   ) : super(TeamsFrameworkState.initial()) {
+    on<CreateTeam>(
+      (event, emit) async {
+        final team = Team(
+          id: UniqueId(),
+          teamname: Teamname("TuS Spenge Herren 2"),
+          joinedUsers: emptyList(),
+          admins: emptyList(),
+          workoutCreator: emptyList(),
+          analysts: emptyList(),
+          athletes: emptyList(),
+          workouts: emptyList(),
+        );
+        await _teamRepository.create(team);
+      },
+    );
+
     on<SignOut>(
       (event, emit) async {
         await _authFacade.signOut();

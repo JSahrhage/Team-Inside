@@ -15,6 +15,10 @@ class Team with _$Team implements IEntity {
     required UniqueId id,
     required Teamname teamname,
     required KtList<UniqueId> joinedUsers,
+    required KtList<UniqueId> admins,
+    required KtList<UniqueId> workoutCreator,
+    required KtList<UniqueId> analysts,
+    required KtList<UniqueId> athletes,
     required KtList<Workout> workouts,
   }) = _Team;
 
@@ -24,6 +28,10 @@ class Team with _$Team implements IEntity {
         id: UniqueId(),
         teamname: Teamname(''),
         joinedUsers: emptyList(),
+        admins: emptyList(),
+        workoutCreator: emptyList(),
+        analysts: emptyList(),
+        athletes: emptyList(),
         workouts: emptyList(),
       );
 }

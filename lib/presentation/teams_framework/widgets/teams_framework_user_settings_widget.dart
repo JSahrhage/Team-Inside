@@ -8,6 +8,7 @@ import 'package:team_inside/application/teams_framework/teams_framework_bloc.dar
 import 'package:team_inside/presentation/presentation_config.dart' as config;
 import 'package:team_inside/presentation/teams_framework/widgets/teams_framework_change_username_button.dart';
 import 'package:team_inside/presentation/teams_framework/widgets/teams_framework_clickable_user_image.dart';
+import 'package:team_inside/presentation/teams_framework/widgets/teams_framework_create_team_button.dart';
 import 'package:team_inside/presentation/teams_framework/widgets/teams_framework_delete_user_button.dart';
 import 'package:team_inside/presentation/teams_framework/widgets/teams_framework_select_image_dialog.dart';
 import 'package:team_inside/presentation/teams_framework/widgets/teams_framework_sign_out_button.dart';
@@ -65,6 +66,8 @@ class TeamsFrameworkUserSettingsWidget extends StatelessWidget {
               const TeamsFrameworkChangeUsernameButton(),
               const SizedBox(height: 32),
               const TeamsFrameworkDeleteUserButton(),
+              const SizedBox(height: 32),
+              const TeamsFrameworkCreateTeamButton(),
             ],
           );
         },

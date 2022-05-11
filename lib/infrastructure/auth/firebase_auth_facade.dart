@@ -32,7 +32,7 @@ class FirebaseAuthFacade implements IAuthFacade {
 
   @override
   Future<void> deleteUser() async {
-    final userDoc = await _firestore.userDocument();
+    final userDoc = await _firestore.currentUserDocument();
     final user = await userDoc.get();
     final userDTO = UserDTO.fromFirestore(user);
 
@@ -55,7 +55,7 @@ class FirebaseAuthFacade implements IAuthFacade {
         // ignore: empty_catches, unused_catch_clause
       } on FirebaseException catch (e) {}
 
-      final userDoc = await _firestore.userDocument();
+      final userDoc = await _firestore.currentUserDocument();
       userDoc.delete();
 
       _firebaseAuth.currentUser?.delete();
@@ -75,7 +75,7 @@ class FirebaseAuthFacade implements IAuthFacade {
         email: emailAddressStr,
         password: passwordStr,
       );
-      final userDoc = await _firestore.userDocument();
+      final userDoc = await _firestore.currentUserDocument();
       final User user = User(
         id: UniqueId.fromUniqueString(credentials.user!.uid),
         username: username,

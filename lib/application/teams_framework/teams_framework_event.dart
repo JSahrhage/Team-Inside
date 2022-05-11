@@ -16,4 +16,5 @@ class TeamsFrameworkEvent with _$TeamsFrameworkEvent {
       AcceptTeamRequest;
   const factory TeamsFrameworkEvent.declineTeamRequest(String teamId) =
       DeclineTeamRequest;
+  const factory TeamsFrameworkEvent.createTeam() = CreateTeam;
 }

@@ -17,9 +17,9 @@ class TeamBottomNavigationBar extends StatelessWidget {
     return CoreBottomLabelNavigationBar(
       callback: callback,
       items: const [
-        Tuple2(Icon(Icons.group), 'teams'),
-        Tuple2(Icon(Icons.group_add), 'requests'),
-        Tuple2(Icon(Icons.settings), 'settings')
+        Tuple2(Icon(Icons.sports), 'workouts'),
+        Tuple2(Icon(Icons.edit), 'actions'),
+        Tuple2(Icon(Icons.group), 'members')
       ],
       selectedIndex: selectedIndex,
     );

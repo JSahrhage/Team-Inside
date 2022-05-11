@@ -28,6 +28,7 @@ mixin _$TeamsFrameworkEvent {
     required TResult Function(String teamId) navigateToTeam,
     required TResult Function(String teamId) acceptTeamRequest,
     required TResult Function(String teamId) declineTeamRequest,
+    required TResult Function() createTeam,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -42,6 +43,7 @@ mixin _$TeamsFrameworkEvent {
     TResult Function(String teamId)? navigateToTeam,
     TResult Function(String teamId)? acceptTeamRequest,
     TResult Function(String teamId)? declineTeamRequest,
+    TResult Function()? createTeam,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -56,6 +58,7 @@ mixin _$TeamsFrameworkEvent {
     TResult Function(String teamId)? navigateToTeam,
     TResult Function(String teamId)? acceptTeamRequest,
     TResult Function(String teamId)? declineTeamRequest,
+    TResult Function()? createTeam,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -71,6 +74,7 @@ mixin _$TeamsFrameworkEvent {
     required TResult Function(NavigateToTeam value) navigateToTeam,
     required TResult Function(AcceptTeamRequest value) acceptTeamRequest,
     required TResult Function(DeclineTeamRequest value) declineTeamRequest,
+    required TResult Function(CreateTeam value) createTeam,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -85,6 +89,7 @@ mixin _$TeamsFrameworkEvent {
     TResult Function(NavigateToTeam value)? navigateToTeam,
     TResult Function(AcceptTeamRequest value)? acceptTeamRequest,
     TResult Function(DeclineTeamRequest value)? declineTeamRequest,
+    TResult Function(CreateTeam value)? createTeam,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -99,6 +104,7 @@ mixin _$TeamsFrameworkEvent {
     TResult Function(NavigateToTeam value)? navigateToTeam,
     TResult Function(AcceptTeamRequest value)? acceptTeamRequest,
     TResult Function(DeclineTeamRequest value)? declineTeamRequest,
+    TResult Function(CreateTeam value)? createTeam,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -170,6 +176,7 @@ class _$SignOut implements SignOut {
     required TResult Function(String teamId) navigateToTeam,
     required TResult Function(String teamId) acceptTeamRequest,
     required TResult Function(String teamId) declineTeamRequest,
+    required TResult Function() createTeam,
   }) {
     return signOut();
   }
@@ -187,6 +194,7 @@ class _$SignOut implements SignOut {
     TResult Function(String teamId)? navigateToTeam,
     TResult Function(String teamId)? acceptTeamRequest,
     TResult Function(String teamId)? declineTeamRequest,
+    TResult Function()? createTeam,
   }) {
     return signOut?.call();
   }
@@ -204,6 +212,7 @@ class _$SignOut implements SignOut {
     TResult Function(String teamId)? navigateToTeam,
     TResult Function(String teamId)? acceptTeamRequest,
     TResult Function(String teamId)? declineTeamRequest,
+    TResult Function()? createTeam,
     required TResult orElse(),
   }) {
     if (signOut != null) {
@@ -225,6 +234,7 @@ class _$SignOut implements SignOut {
     required TResult Function(NavigateToTeam value) navigateToTeam,
     required TResult Function(AcceptTeamRequest value) acceptTeamRequest,
     required TResult Function(DeclineTeamRequest value) declineTeamRequest,
+    required TResult Function(CreateTeam value) createTeam,
   }) {
     return signOut(this);
   }
@@ -242,6 +252,7 @@ class _$SignOut implements SignOut {
     TResult Function(NavigateToTeam value)? navigateToTeam,
     TResult Function(AcceptTeamRequest value)? acceptTeamRequest,
     TResult Function(DeclineTeamRequest value)? declineTeamRequest,
+    TResult Function(CreateTeam value)? createTeam,
   }) {
     return signOut?.call(this);
   }
@@ -259,6 +270,7 @@ class _$SignOut implements SignOut {
     TResult Function(NavigateToTeam value)? navigateToTeam,
     TResult Function(AcceptTeamRequest value)? acceptTeamRequest,
     TResult Function(DeclineTeamRequest value)? declineTeamRequest,
+    TResult Function(CreateTeam value)? createTeam,
     required TResult orElse(),
   }) {
     if (signOut != null) {
@@ -323,6 +335,7 @@ class _$DeleteUser implements DeleteUser {
     required TResult Function(String teamId) navigateToTeam,
     required TResult Function(String teamId) acceptTeamRequest,
     required TResult Function(String teamId) declineTeamRequest,
+    required TResult Function() createTeam,
   }) {
     return deleteUser();
   }
@@ -340,6 +353,7 @@ class _$DeleteUser implements DeleteUser {
     TResult Function(String teamId)? navigateToTeam,
     TResult Function(String teamId)? acceptTeamRequest,
     TResult Function(String teamId)? declineTeamRequest,
+    TResult Function()? createTeam,
   }) {
     return deleteUser?.call();
   }
@@ -357,6 +371,7 @@ class _$DeleteUser implements DeleteUser {
     TResult Function(String teamId)? navigateToTeam,
     TResult Function(String teamId)? acceptTeamRequest,
     TResult Function(String teamId)? declineTeamRequest,
+    TResult Function()? createTeam,
     required TResult orElse(),
   }) {
     if (deleteUser != null) {
@@ -378,6 +393,7 @@ class _$DeleteUser implements DeleteUser {
     required TResult Function(NavigateToTeam value) navigateToTeam,
     required TResult Function(AcceptTeamRequest value) acceptTeamRequest,
     required TResult Function(DeclineTeamRequest value) declineTeamRequest,
+    required TResult Function(CreateTeam value) createTeam,
   }) {
     return deleteUser(this);
   }
@@ -395,6 +411,7 @@ class _$DeleteUser implements DeleteUser {
     TResult Function(NavigateToTeam value)? navigateToTeam,
     TResult Function(AcceptTeamRequest value)? acceptTeamRequest,
     TResult Function(DeclineTeamRequest value)? declineTeamRequest,
+    TResult Function(CreateTeam value)? createTeam,
   }) {
     return deleteUser?.call(this);
   }
@@ -412,6 +429,7 @@ class _$DeleteUser implements DeleteUser {
     TResult Function(NavigateToTeam value)? navigateToTeam,
     TResult Function(AcceptTeamRequest value)? acceptTeamRequest,
     TResult Function(DeclineTeamRequest value)? declineTeamRequest,
+    TResult Function(CreateTeam value)? createTeam,
     required TResult orElse(),
   }) {
     if (deleteUser != null) {
@@ -500,6 +518,7 @@ class _$ChangeUsername implements ChangeUsername {
     required TResult Function(String teamId) navigateToTeam,
     required TResult Function(String teamId) acceptTeamRequest,
     required TResult Function(String teamId) declineTeamRequest,
+    required TResult Function() createTeam,
   }) {
     return changeUsername(username);
   }
@@ -517,6 +536,7 @@ class _$ChangeUsername implements ChangeUsername {
     TResult Function(String teamId)? navigateToTeam,
     TResult Function(String teamId)? acceptTeamRequest,
     TResult Function(String teamId)? declineTeamRequest,
+    TResult Function()? createTeam,
   }) {
     return changeUsername?.call(username);
   }
@@ -534,6 +554,7 @@ class _$ChangeUsername implements ChangeUsername {
     TResult Function(String teamId)? navigateToTeam,
     TResult Function(String teamId)? acceptTeamRequest,
     TResult Function(String teamId)? declineTeamRequest,
+    TResult Function()? createTeam,
     required TResult orElse(),
   }) {
     if (changeUsername != null) {
@@ -555,6 +576,7 @@ class _$ChangeUsername implements ChangeUsername {
     required TResult Function(NavigateToTeam value) navigateToTeam,
     required TResult Function(AcceptTeamRequest value) acceptTeamRequest,
     required TResult Function(DeclineTeamRequest value) declineTeamRequest,
+    required TResult Function(CreateTeam value) createTeam,
   }) {
     return changeUsername(this);
   }
@@ -572,6 +594,7 @@ class _$ChangeUsername implements ChangeUsername {
     TResult Function(NavigateToTeam value)? navigateToTeam,
     TResult Function(AcceptTeamRequest value)? acceptTeamRequest,
     TResult Function(DeclineTeamRequest value)? declineTeamRequest,
+    TResult Function(CreateTeam value)? createTeam,
   }) {
     return changeUsername?.call(this);
   }
@@ -589,6 +612,7 @@ class _$ChangeUsername implements ChangeUsername {
     TResult Function(NavigateToTeam value)? navigateToTeam,
     TResult Function(AcceptTeamRequest value)? acceptTeamRequest,
     TResult Function(DeclineTeamRequest value)? declineTeamRequest,
+    TResult Function(CreateTeam value)? createTeam,
     required TResult orElse(),
   }) {
     if (changeUsername != null) {
@@ -658,6 +682,7 @@ class _$RefreshJoinedTeams implements RefreshJoinedTeams {
     required TResult Function(String teamId) navigateToTeam,
     required TResult Function(String teamId) acceptTeamRequest,
     required TResult Function(String teamId) declineTeamRequest,
+    required TResult Function() createTeam,
   }) {
     return refreshJoinedTeams();
   }
@@ -675,6 +700,7 @@ class _$RefreshJoinedTeams implements RefreshJoinedTeams {
     TResult Function(String teamId)? navigateToTeam,
     TResult Function(String teamId)? acceptTeamRequest,
     TResult Function(String teamId)? declineTeamRequest,
+    TResult Function()? createTeam,
   }) {
     return refreshJoinedTeams?.call();
   }
@@ -692,6 +718,7 @@ class _$RefreshJoinedTeams implements RefreshJoinedTeams {
     TResult Function(String teamId)? navigateToTeam,
     TResult Function(String teamId)? acceptTeamRequest,
     TResult Function(String teamId)? declineTeamRequest,
+    TResult Function()? createTeam,
     required TResult orElse(),
   }) {
     if (refreshJoinedTeams != null) {
@@ -713,6 +740,7 @@ class _$RefreshJoinedTeams implements RefreshJoinedTeams {
     required TResult Function(NavigateToTeam value) navigateToTeam,
     required TResult Function(AcceptTeamRequest value) acceptTeamRequest,
     required TResult Function(DeclineTeamRequest value) declineTeamRequest,
+    required TResult Function(CreateTeam value) createTeam,
   }) {
     return refreshJoinedTeams(this);
   }
@@ -730,6 +758,7 @@ class _$RefreshJoinedTeams implements RefreshJoinedTeams {
     TResult Function(NavigateToTeam value)? navigateToTeam,
     TResult Function(AcceptTeamRequest value)? acceptTeamRequest,
     TResult Function(DeclineTeamRequest value)? declineTeamRequest,
+    TResult Function(CreateTeam value)? createTeam,
   }) {
     return refreshJoinedTeams?.call(this);
   }
@@ -747,6 +776,7 @@ class _$RefreshJoinedTeams implements RefreshJoinedTeams {
     TResult Function(NavigateToTeam value)? navigateToTeam,
     TResult Function(AcceptTeamRequest value)? acceptTeamRequest,
     TResult Function(DeclineTeamRequest value)? declineTeamRequest,
+    TResult Function(CreateTeam value)? createTeam,
     required TResult orElse(),
   }) {
     if (refreshJoinedTeams != null) {
@@ -811,6 +841,7 @@ class _$RefreshTeamRequests implements RefreshTeamRequests {
     required TResult Function(String teamId) navigateToTeam,
     required TResult Function(String teamId) acceptTeamRequest,
     required TResult Function(String teamId) declineTeamRequest,
+    required TResult Function() createTeam,
   }) {
     return refreshTeamRequests();
   }
@@ -828,6 +859,7 @@ class _$RefreshTeamRequests implements RefreshTeamRequests {
     TResult Function(String teamId)? navigateToTeam,
     TResult Function(String teamId)? acceptTeamRequest,
     TResult Function(String teamId)? declineTeamRequest,
+    TResult Function()? createTeam,
   }) {
     return refreshTeamRequests?.call();
   }
@@ -845,6 +877,7 @@ class _$RefreshTeamRequests implements RefreshTeamRequests {
     TResult Function(String teamId)? navigateToTeam,
     TResult Function(String teamId)? acceptTeamRequest,
     TResult Function(String teamId)? declineTeamRequest,
+    TResult Function()? createTeam,
     required TResult orElse(),
   }) {
     if (refreshTeamRequests != null) {
@@ -866,6 +899,7 @@ class _$RefreshTeamRequests implements RefreshTeamRequests {
     required TResult Function(NavigateToTeam value) navigateToTeam,
     required TResult Function(AcceptTeamRequest value) acceptTeamRequest,
     required TResult Function(DeclineTeamRequest value) declineTeamRequest,
+    required TResult Function(CreateTeam value) createTeam,
   }) {
     return refreshTeamRequests(this);
   }
@@ -883,6 +917,7 @@ class _$RefreshTeamRequests implements RefreshTeamRequests {
     TResult Function(NavigateToTeam value)? navigateToTeam,
     TResult Function(AcceptTeamRequest value)? acceptTeamRequest,
     TResult Function(DeclineTeamRequest value)? declineTeamRequest,
+    TResult Function(CreateTeam value)? createTeam,
   }) {
     return refreshTeamRequests?.call(this);
   }
@@ -900,6 +935,7 @@ class _$RefreshTeamRequests implements RefreshTeamRequests {
     TResult Function(NavigateToTeam value)? navigateToTeam,
     TResult Function(AcceptTeamRequest value)? acceptTeamRequest,
     TResult Function(DeclineTeamRequest value)? declineTeamRequest,
+    TResult Function(CreateTeam value)? createTeam,
     required TResult orElse(),
   }) {
     if (refreshTeamRequests != null) {
@@ -964,6 +1000,7 @@ class _$RefreshUserSettings implements RefreshUserSettings {
     required TResult Function(String teamId) navigateToTeam,
     required TResult Function(String teamId) acceptTeamRequest,
     required TResult Function(String teamId) declineTeamRequest,
+    required TResult Function() createTeam,
   }) {
     return refreshUserSettings();
   }
@@ -981,6 +1018,7 @@ class _$RefreshUserSettings implements RefreshUserSettings {
     TResult Function(String teamId)? navigateToTeam,
     TResult Function(String teamId)? acceptTeamRequest,
     TResult Function(String teamId)? declineTeamRequest,
+    TResult Function()? createTeam,
   }) {
     return refreshUserSettings?.call();
   }
@@ -998,6 +1036,7 @@ class _$RefreshUserSettings implements RefreshUserSettings {
     TResult Function(String teamId)? navigateToTeam,
     TResult Function(String teamId)? acceptTeamRequest,
     TResult Function(String teamId)? declineTeamRequest,
+    TResult Function()? createTeam,
     required TResult orElse(),
   }) {
     if (refreshUserSettings != null) {
@@ -1019,6 +1058,7 @@ class _$RefreshUserSettings implements RefreshUserSettings {
     required TResult Function(NavigateToTeam value) navigateToTeam,
     required TResult Function(AcceptTeamRequest value) acceptTeamRequest,
     required TResult Function(DeclineTeamRequest value) declineTeamRequest,
+    required TResult Function(CreateTeam value) createTeam,
   }) {
     return refreshUserSettings(this);
   }
@@ -1036,6 +1076,7 @@ class _$RefreshUserSettings implements RefreshUserSettings {
     TResult Function(NavigateToTeam value)? navigateToTeam,
     TResult Function(AcceptTeamRequest value)? acceptTeamRequest,
     TResult Function(DeclineTeamRequest value)? declineTeamRequest,
+    TResult Function(CreateTeam value)? createTeam,
   }) {
     return refreshUserSettings?.call(this);
   }
@@ -1053,6 +1094,7 @@ class _$RefreshUserSettings implements RefreshUserSettings {
     TResult Function(NavigateToTeam value)? navigateToTeam,
     TResult Function(AcceptTeamRequest value)? acceptTeamRequest,
     TResult Function(DeclineTeamRequest value)? declineTeamRequest,
+    TResult Function(CreateTeam value)? createTeam,
     required TResult orElse(),
   }) {
     if (refreshUserSettings != null) {
@@ -1141,6 +1183,7 @@ class _$ImagePicked implements ImagePicked {
     required TResult Function(String teamId) navigateToTeam,
     required TResult Function(String teamId) acceptTeamRequest,
     required TResult Function(String teamId) declineTeamRequest,
+    required TResult Function() createTeam,
   }) {
     return imagePicked(image);
   }
@@ -1158,6 +1201,7 @@ class _$ImagePicked implements ImagePicked {
     TResult Function(String teamId)? navigateToTeam,
     TResult Function(String teamId)? acceptTeamRequest,
     TResult Function(String teamId)? declineTeamRequest,
+    TResult Function()? createTeam,
   }) {
     return imagePicked?.call(image);
   }
@@ -1175,6 +1219,7 @@ class _$ImagePicked implements ImagePicked {
     TResult Function(String teamId)? navigateToTeam,
     TResult Function(String teamId)? acceptTeamRequest,
     TResult Function(String teamId)? declineTeamRequest,
+    TResult Function()? createTeam,
     required TResult orElse(),
   }) {
     if (imagePicked != null) {
@@ -1196,6 +1241,7 @@ class _$ImagePicked implements ImagePicked {
     required TResult Function(NavigateToTeam value) navigateToTeam,
     required TResult Function(AcceptTeamRequest value) acceptTeamRequest,
     required TResult Function(DeclineTeamRequest value) declineTeamRequest,
+    required TResult Function(CreateTeam value) createTeam,
   }) {
     return imagePicked(this);
   }
@@ -1213,6 +1259,7 @@ class _$ImagePicked implements ImagePicked {
     TResult Function(NavigateToTeam value)? navigateToTeam,
     TResult Function(AcceptTeamRequest value)? acceptTeamRequest,
     TResult Function(DeclineTeamRequest value)? declineTeamRequest,
+    TResult Function(CreateTeam value)? createTeam,
   }) {
     return imagePicked?.call(this);
   }
@@ -1230,6 +1277,7 @@ class _$ImagePicked implements ImagePicked {
     TResult Function(NavigateToTeam value)? navigateToTeam,
     TResult Function(AcceptTeamRequest value)? acceptTeamRequest,
     TResult Function(DeclineTeamRequest value)? declineTeamRequest,
+    TResult Function(CreateTeam value)? createTeam,
     required TResult orElse(),
   }) {
     if (imagePicked != null) {
@@ -1323,6 +1371,7 @@ class _$NavigateToTeam implements NavigateToTeam {
     required TResult Function(String teamId) navigateToTeam,
     required TResult Function(String teamId) acceptTeamRequest,
     required TResult Function(String teamId) declineTeamRequest,
+    required TResult Function() createTeam,
   }) {
     return navigateToTeam(teamId);
   }
@@ -1340,6 +1389,7 @@ class _$NavigateToTeam implements NavigateToTeam {
     TResult Function(String teamId)? navigateToTeam,
     TResult Function(String teamId)? acceptTeamRequest,
     TResult Function(String teamId)? declineTeamRequest,
+    TResult Function()? createTeam,
   }) {
     return navigateToTeam?.call(teamId);
   }
@@ -1357,6 +1407,7 @@ class _$NavigateToTeam implements NavigateToTeam {
     TResult Function(String teamId)? navigateToTeam,
     TResult Function(String teamId)? acceptTeamRequest,
     TResult Function(String teamId)? declineTeamRequest,
+    TResult Function()? createTeam,
     required TResult orElse(),
   }) {
     if (navigateToTeam != null) {
@@ -1378,6 +1429,7 @@ class _$NavigateToTeam implements NavigateToTeam {
     required TResult Function(NavigateToTeam value) navigateToTeam,
     required TResult Function(AcceptTeamRequest value) acceptTeamRequest,
     required TResult Function(DeclineTeamRequest value) declineTeamRequest,
+    required TResult Function(CreateTeam value) createTeam,
   }) {
     return navigateToTeam(this);
   }
@@ -1395,6 +1447,7 @@ class _$NavigateToTeam implements NavigateToTeam {
     TResult Function(NavigateToTeam value)? navigateToTeam,
     TResult Function(AcceptTeamRequest value)? acceptTeamRequest,
     TResult Function(DeclineTeamRequest value)? declineTeamRequest,
+    TResult Function(CreateTeam value)? createTeam,
   }) {
     return navigateToTeam?.call(this);
   }
@@ -1412,6 +1465,7 @@ class _$NavigateToTeam implements NavigateToTeam {
     TResult Function(NavigateToTeam value)? navigateToTeam,
     TResult Function(AcceptTeamRequest value)? acceptTeamRequest,
     TResult Function(DeclineTeamRequest value)? declineTeamRequest,
+    TResult Function(CreateTeam value)? createTeam,
     required TResult orElse(),
   }) {
     if (navigateToTeam != null) {
@@ -1505,6 +1559,7 @@ class _$AcceptTeamRequest implements AcceptTeamRequest {
     required TResult Function(String teamId) navigateToTeam,
     required TResult Function(String teamId) acceptTeamRequest,
     required TResult Function(String teamId) declineTeamRequest,
+    required TResult Function() createTeam,
   }) {
     return acceptTeamRequest(teamId);
   }
@@ -1522,6 +1577,7 @@ class _$AcceptTeamRequest implements AcceptTeamRequest {
     TResult Function(String teamId)? navigateToTeam,
     TResult Function(String teamId)? acceptTeamRequest,
     TResult Function(String teamId)? declineTeamRequest,
+    TResult Function()? createTeam,
   }) {
     return acceptTeamRequest?.call(teamId);
   }
@@ -1539,6 +1595,7 @@ class _$AcceptTeamRequest implements AcceptTeamRequest {
     TResult Function(String teamId)? navigateToTeam,
     TResult Function(String teamId)? acceptTeamRequest,
     TResult Function(String teamId)? declineTeamRequest,
+    TResult Function()? createTeam,
     required TResult orElse(),
   }) {
     if (acceptTeamRequest != null) {
@@ -1560,6 +1617,7 @@ class _$AcceptTeamRequest implements AcceptTeamRequest {
     required TResult Function(NavigateToTeam value) navigateToTeam,
     required TResult Function(AcceptTeamRequest value) acceptTeamRequest,
     required TResult Function(DeclineTeamRequest value) declineTeamRequest,
+    required TResult Function(CreateTeam value) createTeam,
   }) {
     return acceptTeamRequest(this);
   }
@@ -1577,6 +1635,7 @@ class _$AcceptTeamRequest implements AcceptTeamRequest {
     TResult Function(NavigateToTeam value)? navigateToTeam,
     TResult Function(AcceptTeamRequest value)? acceptTeamRequest,
     TResult Function(DeclineTeamRequest value)? declineTeamRequest,
+    TResult Function(CreateTeam value)? createTeam,
   }) {
     return acceptTeamRequest?.call(this);
   }
@@ -1594,6 +1653,7 @@ class _$AcceptTeamRequest implements AcceptTeamRequest {
     TResult Function(NavigateToTeam value)? navigateToTeam,
     TResult Function(AcceptTeamRequest value)? acceptTeamRequest,
     TResult Function(DeclineTeamRequest value)? declineTeamRequest,
+    TResult Function(CreateTeam value)? createTeam,
     required TResult orElse(),
   }) {
     if (acceptTeamRequest != null) {
@@ -1688,6 +1748,7 @@ class _$DeclineTeamRequest implements DeclineTeamRequest {
     required TResult Function(String teamId) navigateToTeam,
     required TResult Function(String teamId) acceptTeamRequest,
     required TResult Function(String teamId) declineTeamRequest,
+    required TResult Function() createTeam,
   }) {
     return declineTeamRequest(teamId);
   }
@@ -1705,6 +1766,7 @@ class _$DeclineTeamRequest implements DeclineTeamRequest {
     TResult Function(String teamId)? navigateToTeam,
     TResult Function(String teamId)? acceptTeamRequest,
     TResult Function(String teamId)? declineTeamRequest,
+    TResult Function()? createTeam,
   }) {
     return declineTeamRequest?.call(teamId);
   }
@@ -1722,6 +1784,7 @@ class _$DeclineTeamRequest implements DeclineTeamRequest {
     TResult Function(String teamId)? navigateToTeam,
     TResult Function(String teamId)? acceptTeamRequest,
     TResult Function(String teamId)? declineTeamRequest,
+    TResult Function()? createTeam,
     required TResult orElse(),
   }) {
     if (declineTeamRequest != null) {
@@ -1743,6 +1806,7 @@ class _$DeclineTeamRequest implements DeclineTeamRequest {
     required TResult Function(NavigateToTeam value) navigateToTeam,
     required TResult Function(AcceptTeamRequest value) acceptTeamRequest,
     required TResult Function(DeclineTeamRequest value) declineTeamRequest,
+    required TResult Function(CreateTeam value) createTeam,
   }) {
     return declineTeamRequest(this);
   }
@@ -1760,6 +1824,7 @@ class _$DeclineTeamRequest implements DeclineTeamRequest {
     TResult Function(NavigateToTeam value)? navigateToTeam,
     TResult Function(AcceptTeamRequest value)? acceptTeamRequest,
     TResult Function(DeclineTeamRequest value)? declineTeamRequest,
+    TResult Function(CreateTeam value)? createTeam,
   }) {
     return declineTeamRequest?.call(this);
   }
@@ -1777,6 +1842,7 @@ class _$DeclineTeamRequest implements DeclineTeamRequest {
     TResult Function(NavigateToTeam value)? navigateToTeam,
     TResult Function(AcceptTeamRequest value)? acceptTeamRequest,
     TResult Function(DeclineTeamRequest value)? declineTeamRequest,
+    TResult Function(CreateTeam value)? createTeam,
     required TResult orElse(),
   }) {
     if (declineTeamRequest != null) {
@@ -1793,6 +1859,165 @@ abstract class DeclineTeamRequest implements TeamsFrameworkEvent {
   @JsonKey(ignore: true)
   _$$DeclineTeamRequestCopyWith<_$DeclineTeamRequest> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$CreateTeamCopyWith<$Res> {
+  factory _$$CreateTeamCopyWith(
+          _$CreateTeam value, $Res Function(_$CreateTeam) then) =
+      __$$CreateTeamCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$CreateTeamCopyWithImpl<$Res>
+    extends _$TeamsFrameworkEventCopyWithImpl<$Res>
+    implements _$$CreateTeamCopyWith<$Res> {
+  __$$CreateTeamCopyWithImpl(
+      _$CreateTeam _value, $Res Function(_$CreateTeam) _then)
+      : super(_value, (v) => _then(v as _$CreateTeam));
+
+  @override
+  _$CreateTeam get _value => super._value as _$CreateTeam;
+}
+
+/// @nodoc
+
+class _$CreateTeam implements CreateTeam {
+  const _$CreateTeam();
+
+  @override
+  String toString() {
+    return 'TeamsFrameworkEvent.createTeam()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$CreateTeam);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() signOut,
+    required TResult Function() deleteUser,
+    required TResult Function(String username) changeUsername,
+    required TResult Function() refreshJoinedTeams,
+    required TResult Function() refreshTeamRequests,
+    required TResult Function() refreshUserSettings,
+    required TResult Function(File image) imagePicked,
+    required TResult Function(String teamId) navigateToTeam,
+    required TResult Function(String teamId) acceptTeamRequest,
+    required TResult Function(String teamId) declineTeamRequest,
+    required TResult Function() createTeam,
+  }) {
+    return createTeam();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? signOut,
+    TResult Function()? deleteUser,
+    TResult Function(String username)? changeUsername,
+    TResult Function()? refreshJoinedTeams,
+    TResult Function()? refreshTeamRequests,
+    TResult Function()? refreshUserSettings,
+    TResult Function(File image)? imagePicked,
+    TResult Function(String teamId)? navigateToTeam,
+    TResult Function(String teamId)? acceptTeamRequest,
+    TResult Function(String teamId)? declineTeamRequest,
+    TResult Function()? createTeam,
+  }) {
+    return createTeam?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? signOut,
+    TResult Function()? deleteUser,
+    TResult Function(String username)? changeUsername,
+    TResult Function()? refreshJoinedTeams,
+    TResult Function()? refreshTeamRequests,
+    TResult Function()? refreshUserSettings,
+    TResult Function(File image)? imagePicked,
+    TResult Function(String teamId)? navigateToTeam,
+    TResult Function(String teamId)? acceptTeamRequest,
+    TResult Function(String teamId)? declineTeamRequest,
+    TResult Function()? createTeam,
+    required TResult orElse(),
+  }) {
+    if (createTeam != null) {
+      return createTeam();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(SignOut value) signOut,
+    required TResult Function(DeleteUser value) deleteUser,
+    required TResult Function(ChangeUsername value) changeUsername,
+    required TResult Function(RefreshJoinedTeams value) refreshJoinedTeams,
+    required TResult Function(RefreshTeamRequests value) refreshTeamRequests,
+    required TResult Function(RefreshUserSettings value) refreshUserSettings,
+    required TResult Function(ImagePicked value) imagePicked,
+    required TResult Function(NavigateToTeam value) navigateToTeam,
+    required TResult Function(AcceptTeamRequest value) acceptTeamRequest,
+    required TResult Function(DeclineTeamRequest value) declineTeamRequest,
+    required TResult Function(CreateTeam value) createTeam,
+  }) {
+    return createTeam(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteUser value)? deleteUser,
+    TResult Function(ChangeUsername value)? changeUsername,
+    TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
+    TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
+    TResult Function(RefreshUserSettings value)? refreshUserSettings,
+    TResult Function(ImagePicked value)? imagePicked,
+    TResult Function(NavigateToTeam value)? navigateToTeam,
+    TResult Function(AcceptTeamRequest value)? acceptTeamRequest,
+    TResult Function(DeclineTeamRequest value)? declineTeamRequest,
+    TResult Function(CreateTeam value)? createTeam,
+  }) {
+    return createTeam?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteUser value)? deleteUser,
+    TResult Function(ChangeUsername value)? changeUsername,
+    TResult Function(RefreshJoinedTeams value)? refreshJoinedTeams,
+    TResult Function(RefreshTeamRequests value)? refreshTeamRequests,
+    TResult Function(RefreshUserSettings value)? refreshUserSettings,
+    TResult Function(ImagePicked value)? imagePicked,
+    TResult Function(NavigateToTeam value)? navigateToTeam,
+    TResult Function(AcceptTeamRequest value)? acceptTeamRequest,
+    TResult Function(DeclineTeamRequest value)? declineTeamRequest,
+    TResult Function(CreateTeam value)? createTeam,
+    required TResult orElse(),
+  }) {
+    if (createTeam != null) {
+      return createTeam(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CreateTeam implements TeamsFrameworkEvent {
+  const factory CreateTeam() = _$CreateTeam;
 }
 
 /// @nodoc

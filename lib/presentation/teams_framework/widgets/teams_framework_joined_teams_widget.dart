@@ -40,8 +40,8 @@ class TeamsFrameworkJoinedTeamsWidget extends StatelessWidget {
                 },
                 (joinedTeams) {
                   return _generateJoinedTeamCards(
-                    joinedTeams = joinedTeams,
-                    state = state,
+                    joinedTeams,
+                    state,
                   );
                 },
               );
