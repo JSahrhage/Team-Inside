@@ -6,4 +6,7 @@ class TeamEvent with _$TeamEvent {
   const factory TeamEvent.navigateBackToFramework() = NavigateBackToFramework;
   const factory TeamEvent.refreshWorkouts() = RefreshWorkouts;
   const factory TeamEvent.refreshUsers() = RefreshUsers;
+  const factory TeamEvent.navigateToUserRights(
+    UniqueId teamMemberId,
+  ) = NavigateToUserRights;
 }

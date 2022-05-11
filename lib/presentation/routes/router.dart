@@ -5,6 +5,7 @@ import 'package:team_inside/presentation/auth/sign_in/sign_in_page.dart';
 import 'package:team_inside/presentation/presentation_config.dart' as config;
 import 'package:team_inside/presentation/splash/splash_page.dart';
 import 'package:team_inside/presentation/team/team_page.dart';
+import 'package:team_inside/presentation/team/user_rights/user_rights_page.dart';
 import 'package:team_inside/presentation/teams_framework/teams_framework_page.dart';
 
 @MaterialAutoRouter(
@@ -47,6 +48,18 @@ import 'package:team_inside/presentation/teams_framework/teams_framework_page.da
     CustomRoute(
       name: 'TeamSlideLeftPageRoute',
       page: TeamPage,
+      transitionsBuilder: TransitionsBuilders.slideLeft,
+      durationInMilliseconds: config.kdurationInMillisecondsForTransition,
+    ),
+    CustomRoute(
+      name: 'TeamSlideRightPageRoute',
+      page: TeamPage,
+      transitionsBuilder: TransitionsBuilders.slideRight,
+      durationInMilliseconds: config.kdurationInMillisecondsForTransition,
+    ),
+    CustomRoute(
+      name: 'UserRightsSlideLeftPageRoute',
+      page: UserRightsPage,
       transitionsBuilder: TransitionsBuilders.slideLeft,
       durationInMilliseconds: config.kdurationInMillisecondsForTransition,
     ),

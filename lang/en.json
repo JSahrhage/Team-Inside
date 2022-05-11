@@ -22,6 +22,7 @@
     "reset_email_send": "Reset e-mail was send.",
     "continue": "Continue",
     "back": "Back",
+    "apply": "Apply",
     "insert_email": "Insert E-Mail-Address",
     "insert_password": "Insert Password",
     "insert_username": "Insert Username",
@@ -36,5 +37,9 @@
     "decline_request": "Decline request",
     "workouts": "Workouts",
     "actions": "Actions",
-    "members": "Members"
+    "members": "Members",
+    "admin": "Admin",
+    "workout_creator": "Workout creator",
+    "analyst": "Analyst",
+    "athlete": "Athlete"
 }

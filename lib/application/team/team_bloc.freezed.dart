@@ -22,6 +22,7 @@ mixin _$TeamEvent {
     required TResult Function() navigateBackToFramework,
     required TResult Function() refreshWorkouts,
     required TResult Function() refreshUsers,
+    required TResult Function(UniqueId teamMemberId) navigateToUserRights,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$TeamEvent {
     TResult Function()? navigateBackToFramework,
     TResult Function()? refreshWorkouts,
     TResult Function()? refreshUsers,
+    TResult Function(UniqueId teamMemberId)? navigateToUserRights,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$TeamEvent {
     TResult Function()? navigateBackToFramework,
     TResult Function()? refreshWorkouts,
     TResult Function()? refreshUsers,
+    TResult Function(UniqueId teamMemberId)? navigateToUserRights,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -48,6 +51,7 @@ mixin _$TeamEvent {
         navigateBackToFramework,
     required TResult Function(RefreshWorkouts value) refreshWorkouts,
     required TResult Function(RefreshUsers value) refreshUsers,
+    required TResult Function(NavigateToUserRights value) navigateToUserRights,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -56,6 +60,7 @@ mixin _$TeamEvent {
     TResult Function(NavigateBackToFramework value)? navigateBackToFramework,
     TResult Function(RefreshWorkouts value)? refreshWorkouts,
     TResult Function(RefreshUsers value)? refreshUsers,
+    TResult Function(NavigateToUserRights value)? navigateToUserRights,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -64,6 +69,7 @@ mixin _$TeamEvent {
     TResult Function(NavigateBackToFramework value)? navigateBackToFramework,
     TResult Function(RefreshWorkouts value)? refreshWorkouts,
     TResult Function(RefreshUsers value)? refreshUsers,
+    TResult Function(NavigateToUserRights value)? navigateToUserRights,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -152,6 +158,7 @@ class _$SetTeamId implements SetTeamId {
     required TResult Function() navigateBackToFramework,
     required TResult Function() refreshWorkouts,
     required TResult Function() refreshUsers,
+    required TResult Function(UniqueId teamMemberId) navigateToUserRights,
   }) {
     return setTeamId(teamId);
   }
@@ -163,6 +170,7 @@ class _$SetTeamId implements SetTeamId {
     TResult Function()? navigateBackToFramework,
     TResult Function()? refreshWorkouts,
     TResult Function()? refreshUsers,
+    TResult Function(UniqueId teamMemberId)? navigateToUserRights,
   }) {
     return setTeamId?.call(teamId);
   }
@@ -174,6 +182,7 @@ class _$SetTeamId implements SetTeamId {
     TResult Function()? navigateBackToFramework,
     TResult Function()? refreshWorkouts,
     TResult Function()? refreshUsers,
+    TResult Function(UniqueId teamMemberId)? navigateToUserRights,
     required TResult orElse(),
   }) {
     if (setTeamId != null) {
@@ -190,6 +199,7 @@ class _$SetTeamId implements SetTeamId {
         navigateBackToFramework,
     required TResult Function(RefreshWorkouts value) refreshWorkouts,
     required TResult Function(RefreshUsers value) refreshUsers,
+    required TResult Function(NavigateToUserRights value) navigateToUserRights,
   }) {
     return setTeamId(this);
   }
@@ -201,6 +211,7 @@ class _$SetTeamId implements SetTeamId {
     TResult Function(NavigateBackToFramework value)? navigateBackToFramework,
     TResult Function(RefreshWorkouts value)? refreshWorkouts,
     TResult Function(RefreshUsers value)? refreshUsers,
+    TResult Function(NavigateToUserRights value)? navigateToUserRights,
   }) {
     return setTeamId?.call(this);
   }
@@ -212,6 +223,7 @@ class _$SetTeamId implements SetTeamId {
     TResult Function(NavigateBackToFramework value)? navigateBackToFramework,
     TResult Function(RefreshWorkouts value)? refreshWorkouts,
     TResult Function(RefreshUsers value)? refreshUsers,
+    TResult Function(NavigateToUserRights value)? navigateToUserRights,
     required TResult orElse(),
   }) {
     if (setTeamId != null) {
@@ -277,6 +289,7 @@ class _$NavigateBackToFramework implements NavigateBackToFramework {
     required TResult Function() navigateBackToFramework,
     required TResult Function() refreshWorkouts,
     required TResult Function() refreshUsers,
+    required TResult Function(UniqueId teamMemberId) navigateToUserRights,
   }) {
     return navigateBackToFramework();
   }
@@ -288,6 +301,7 @@ class _$NavigateBackToFramework implements NavigateBackToFramework {
     TResult Function()? navigateBackToFramework,
     TResult Function()? refreshWorkouts,
     TResult Function()? refreshUsers,
+    TResult Function(UniqueId teamMemberId)? navigateToUserRights,
   }) {
     return navigateBackToFramework?.call();
   }
@@ -299,6 +313,7 @@ class _$NavigateBackToFramework implements NavigateBackToFramework {
     TResult Function()? navigateBackToFramework,
     TResult Function()? refreshWorkouts,
     TResult Function()? refreshUsers,
+    TResult Function(UniqueId teamMemberId)? navigateToUserRights,
     required TResult orElse(),
   }) {
     if (navigateBackToFramework != null) {
@@ -315,6 +330,7 @@ class _$NavigateBackToFramework implements NavigateBackToFramework {
         navigateBackToFramework,
     required TResult Function(RefreshWorkouts value) refreshWorkouts,
     required TResult Function(RefreshUsers value) refreshUsers,
+    required TResult Function(NavigateToUserRights value) navigateToUserRights,
   }) {
     return navigateBackToFramework(this);
   }
@@ -326,6 +342,7 @@ class _$NavigateBackToFramework implements NavigateBackToFramework {
     TResult Function(NavigateBackToFramework value)? navigateBackToFramework,
     TResult Function(RefreshWorkouts value)? refreshWorkouts,
     TResult Function(RefreshUsers value)? refreshUsers,
+    TResult Function(NavigateToUserRights value)? navigateToUserRights,
   }) {
     return navigateBackToFramework?.call(this);
   }
@@ -337,6 +354,7 @@ class _$NavigateBackToFramework implements NavigateBackToFramework {
     TResult Function(NavigateBackToFramework value)? navigateBackToFramework,
     TResult Function(RefreshWorkouts value)? refreshWorkouts,
     TResult Function(RefreshUsers value)? refreshUsers,
+    TResult Function(NavigateToUserRights value)? navigateToUserRights,
     required TResult orElse(),
   }) {
     if (navigateBackToFramework != null) {
@@ -395,6 +413,7 @@ class _$RefreshWorkouts implements RefreshWorkouts {
     required TResult Function() navigateBackToFramework,
     required TResult Function() refreshWorkouts,
     required TResult Function() refreshUsers,
+    required TResult Function(UniqueId teamMemberId) navigateToUserRights,
   }) {
     return refreshWorkouts();
   }
@@ -406,6 +425,7 @@ class _$RefreshWorkouts implements RefreshWorkouts {
     TResult Function()? navigateBackToFramework,
     TResult Function()? refreshWorkouts,
     TResult Function()? refreshUsers,
+    TResult Function(UniqueId teamMemberId)? navigateToUserRights,
   }) {
     return refreshWorkouts?.call();
   }
@@ -417,6 +437,7 @@ class _$RefreshWorkouts implements RefreshWorkouts {
     TResult Function()? navigateBackToFramework,
     TResult Function()? refreshWorkouts,
     TResult Function()? refreshUsers,
+    TResult Function(UniqueId teamMemberId)? navigateToUserRights,
     required TResult orElse(),
   }) {
     if (refreshWorkouts != null) {
@@ -433,6 +454,7 @@ class _$RefreshWorkouts implements RefreshWorkouts {
         navigateBackToFramework,
     required TResult Function(RefreshWorkouts value) refreshWorkouts,
     required TResult Function(RefreshUsers value) refreshUsers,
+    required TResult Function(NavigateToUserRights value) navigateToUserRights,
   }) {
     return refreshWorkouts(this);
   }
@@ -444,6 +466,7 @@ class _$RefreshWorkouts implements RefreshWorkouts {
     TResult Function(NavigateBackToFramework value)? navigateBackToFramework,
     TResult Function(RefreshWorkouts value)? refreshWorkouts,
     TResult Function(RefreshUsers value)? refreshUsers,
+    TResult Function(NavigateToUserRights value)? navigateToUserRights,
   }) {
     return refreshWorkouts?.call(this);
   }
@@ -455,6 +478,7 @@ class _$RefreshWorkouts implements RefreshWorkouts {
     TResult Function(NavigateBackToFramework value)? navigateBackToFramework,
     TResult Function(RefreshWorkouts value)? refreshWorkouts,
     TResult Function(RefreshUsers value)? refreshUsers,
+    TResult Function(NavigateToUserRights value)? navigateToUserRights,
     required TResult orElse(),
   }) {
     if (refreshWorkouts != null) {
@@ -512,6 +536,7 @@ class _$RefreshUsers implements RefreshUsers {
     required TResult Function() navigateBackToFramework,
     required TResult Function() refreshWorkouts,
     required TResult Function() refreshUsers,
+    required TResult Function(UniqueId teamMemberId) navigateToUserRights,
   }) {
     return refreshUsers();
   }
@@ -523,6 +548,7 @@ class _$RefreshUsers implements RefreshUsers {
     TResult Function()? navigateBackToFramework,
     TResult Function()? refreshWorkouts,
     TResult Function()? refreshUsers,
+    TResult Function(UniqueId teamMemberId)? navigateToUserRights,
   }) {
     return refreshUsers?.call();
   }
@@ -534,6 +560,7 @@ class _$RefreshUsers implements RefreshUsers {
     TResult Function()? navigateBackToFramework,
     TResult Function()? refreshWorkouts,
     TResult Function()? refreshUsers,
+    TResult Function(UniqueId teamMemberId)? navigateToUserRights,
     required TResult orElse(),
   }) {
     if (refreshUsers != null) {
@@ -550,6 +577,7 @@ class _$RefreshUsers implements RefreshUsers {
         navigateBackToFramework,
     required TResult Function(RefreshWorkouts value) refreshWorkouts,
     required TResult Function(RefreshUsers value) refreshUsers,
+    required TResult Function(NavigateToUserRights value) navigateToUserRights,
   }) {
     return refreshUsers(this);
   }
@@ -561,6 +589,7 @@ class _$RefreshUsers implements RefreshUsers {
     TResult Function(NavigateBackToFramework value)? navigateBackToFramework,
     TResult Function(RefreshWorkouts value)? refreshWorkouts,
     TResult Function(RefreshUsers value)? refreshUsers,
+    TResult Function(NavigateToUserRights value)? navigateToUserRights,
   }) {
     return refreshUsers?.call(this);
   }
@@ -572,6 +601,7 @@ class _$RefreshUsers implements RefreshUsers {
     TResult Function(NavigateBackToFramework value)? navigateBackToFramework,
     TResult Function(RefreshWorkouts value)? refreshWorkouts,
     TResult Function(RefreshUsers value)? refreshUsers,
+    TResult Function(NavigateToUserRights value)? navigateToUserRights,
     required TResult orElse(),
   }) {
     if (refreshUsers != null) {
@@ -586,9 +616,167 @@ abstract class RefreshUsers implements TeamEvent {
 }
 
 /// @nodoc
+abstract class _$$NavigateToUserRightsCopyWith<$Res> {
+  factory _$$NavigateToUserRightsCopyWith(_$NavigateToUserRights value,
+          $Res Function(_$NavigateToUserRights) then) =
+      __$$NavigateToUserRightsCopyWithImpl<$Res>;
+  $Res call({UniqueId teamMemberId});
+}
+
+/// @nodoc
+class __$$NavigateToUserRightsCopyWithImpl<$Res>
+    extends _$TeamEventCopyWithImpl<$Res>
+    implements _$$NavigateToUserRightsCopyWith<$Res> {
+  __$$NavigateToUserRightsCopyWithImpl(_$NavigateToUserRights _value,
+      $Res Function(_$NavigateToUserRights) _then)
+      : super(_value, (v) => _then(v as _$NavigateToUserRights));
+
+  @override
+  _$NavigateToUserRights get _value => super._value as _$NavigateToUserRights;
+
+  @override
+  $Res call({
+    Object? teamMemberId = freezed,
+  }) {
+    return _then(_$NavigateToUserRights(
+      teamMemberId == freezed
+          ? _value.teamMemberId
+          : teamMemberId // ignore: cast_nullable_to_non_nullable
+              as UniqueId,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$NavigateToUserRights implements NavigateToUserRights {
+  const _$NavigateToUserRights(this.teamMemberId);
+
+  @override
+  final UniqueId teamMemberId;
+
+  @override
+  String toString() {
+    return 'TeamEvent.navigateToUserRights(teamMemberId: $teamMemberId)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NavigateToUserRights &&
+            const DeepCollectionEquality()
+                .equals(other.teamMemberId, teamMemberId));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(teamMemberId));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$NavigateToUserRightsCopyWith<_$NavigateToUserRights> get copyWith =>
+      __$$NavigateToUserRightsCopyWithImpl<_$NavigateToUserRights>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(UniqueId teamId) setTeamId,
+    required TResult Function() navigateBackToFramework,
+    required TResult Function() refreshWorkouts,
+    required TResult Function() refreshUsers,
+    required TResult Function(UniqueId teamMemberId) navigateToUserRights,
+  }) {
+    return navigateToUserRights(teamMemberId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(UniqueId teamId)? setTeamId,
+    TResult Function()? navigateBackToFramework,
+    TResult Function()? refreshWorkouts,
+    TResult Function()? refreshUsers,
+    TResult Function(UniqueId teamMemberId)? navigateToUserRights,
+  }) {
+    return navigateToUserRights?.call(teamMemberId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(UniqueId teamId)? setTeamId,
+    TResult Function()? navigateBackToFramework,
+    TResult Function()? refreshWorkouts,
+    TResult Function()? refreshUsers,
+    TResult Function(UniqueId teamMemberId)? navigateToUserRights,
+    required TResult orElse(),
+  }) {
+    if (navigateToUserRights != null) {
+      return navigateToUserRights(teamMemberId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(SetTeamId value) setTeamId,
+    required TResult Function(NavigateBackToFramework value)
+        navigateBackToFramework,
+    required TResult Function(RefreshWorkouts value) refreshWorkouts,
+    required TResult Function(RefreshUsers value) refreshUsers,
+    required TResult Function(NavigateToUserRights value) navigateToUserRights,
+  }) {
+    return navigateToUserRights(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(SetTeamId value)? setTeamId,
+    TResult Function(NavigateBackToFramework value)? navigateBackToFramework,
+    TResult Function(RefreshWorkouts value)? refreshWorkouts,
+    TResult Function(RefreshUsers value)? refreshUsers,
+    TResult Function(NavigateToUserRights value)? navigateToUserRights,
+  }) {
+    return navigateToUserRights?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SetTeamId value)? setTeamId,
+    TResult Function(NavigateBackToFramework value)? navigateBackToFramework,
+    TResult Function(RefreshWorkouts value)? refreshWorkouts,
+    TResult Function(RefreshUsers value)? refreshUsers,
+    TResult Function(NavigateToUserRights value)? navigateToUserRights,
+    required TResult orElse(),
+  }) {
+    if (navigateToUserRights != null) {
+      return navigateToUserRights(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class NavigateToUserRights implements TeamEvent {
+  const factory NavigateToUserRights(final UniqueId teamMemberId) =
+      _$NavigateToUserRights;
+
+  UniqueId get teamMemberId => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$$NavigateToUserRightsCopyWith<_$NavigateToUserRights> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$TeamState {
   UniqueId get teamId => throw _privateConstructorUsedError;
+  UniqueId get teamMemberIdToNavigateTo => throw _privateConstructorUsedError;
   bool get shouldNavigateBackToFramework => throw _privateConstructorUsedError;
+  bool get shouldNavigateToUserRights => throw _privateConstructorUsedError;
   bool get usersRefreshing => throw _privateConstructorUsedError;
   Either<UserFailure, Unit> get usersFetchFailureOrSuccess =>
       throw _privateConstructorUsedError;
@@ -606,7 +794,9 @@ abstract class $TeamStateCopyWith<$Res> {
       _$TeamStateCopyWithImpl<$Res>;
   $Res call(
       {UniqueId teamId,
+      UniqueId teamMemberIdToNavigateTo,
       bool shouldNavigateBackToFramework,
+      bool shouldNavigateToUserRights,
       bool usersRefreshing,
       Either<UserFailure, Unit> usersFetchFailureOrSuccess,
       KtList<Tuple2<User, Option<String>>> userURLs});
@@ -623,7 +813,9 @@ class _$TeamStateCopyWithImpl<$Res> implements $TeamStateCopyWith<$Res> {
   @override
   $Res call({
     Object? teamId = freezed,
+    Object? teamMemberIdToNavigateTo = freezed,
     Object? shouldNavigateBackToFramework = freezed,
+    Object? shouldNavigateToUserRights = freezed,
     Object? usersRefreshing = freezed,
     Object? usersFetchFailureOrSuccess = freezed,
     Object? userURLs = freezed,
@@ -633,9 +825,17 @@ class _$TeamStateCopyWithImpl<$Res> implements $TeamStateCopyWith<$Res> {
           ? _value.teamId
           : teamId // ignore: cast_nullable_to_non_nullable
               as UniqueId,
+      teamMemberIdToNavigateTo: teamMemberIdToNavigateTo == freezed
+          ? _value.teamMemberIdToNavigateTo
+          : teamMemberIdToNavigateTo // ignore: cast_nullable_to_non_nullable
+              as UniqueId,
       shouldNavigateBackToFramework: shouldNavigateBackToFramework == freezed
           ? _value.shouldNavigateBackToFramework
           : shouldNavigateBackToFramework // ignore: cast_nullable_to_non_nullable
+              as bool,
+      shouldNavigateToUserRights: shouldNavigateToUserRights == freezed
+          ? _value.shouldNavigateToUserRights
+          : shouldNavigateToUserRights // ignore: cast_nullable_to_non_nullable
               as bool,
       usersRefreshing: usersRefreshing == freezed
           ? _value.usersRefreshing
@@ -661,7 +861,9 @@ abstract class _$$_TeamStateCopyWith<$Res> implements $TeamStateCopyWith<$Res> {
   @override
   $Res call(
       {UniqueId teamId,
+      UniqueId teamMemberIdToNavigateTo,
       bool shouldNavigateBackToFramework,
+      bool shouldNavigateToUserRights,
       bool usersRefreshing,
       Either<UserFailure, Unit> usersFetchFailureOrSuccess,
       KtList<Tuple2<User, Option<String>>> userURLs});
@@ -680,7 +882,9 @@ class __$$_TeamStateCopyWithImpl<$Res> extends _$TeamStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? teamId = freezed,
+    Object? teamMemberIdToNavigateTo = freezed,
     Object? shouldNavigateBackToFramework = freezed,
+    Object? shouldNavigateToUserRights = freezed,
     Object? usersRefreshing = freezed,
     Object? usersFetchFailureOrSuccess = freezed,
     Object? userURLs = freezed,
@@ -690,9 +894,17 @@ class __$$_TeamStateCopyWithImpl<$Res> extends _$TeamStateCopyWithImpl<$Res>
           ? _value.teamId
           : teamId // ignore: cast_nullable_to_non_nullable
               as UniqueId,
+      teamMemberIdToNavigateTo: teamMemberIdToNavigateTo == freezed
+          ? _value.teamMemberIdToNavigateTo
+          : teamMemberIdToNavigateTo // ignore: cast_nullable_to_non_nullable
+              as UniqueId,
       shouldNavigateBackToFramework: shouldNavigateBackToFramework == freezed
           ? _value.shouldNavigateBackToFramework
           : shouldNavigateBackToFramework // ignore: cast_nullable_to_non_nullable
+              as bool,
+      shouldNavigateToUserRights: shouldNavigateToUserRights == freezed
+          ? _value.shouldNavigateToUserRights
+          : shouldNavigateToUserRights // ignore: cast_nullable_to_non_nullable
               as bool,
       usersRefreshing: usersRefreshing == freezed
           ? _value.usersRefreshing
@@ -715,7 +927,9 @@ class __$$_TeamStateCopyWithImpl<$Res> extends _$TeamStateCopyWithImpl<$Res>
 class _$_TeamState implements _TeamState {
   const _$_TeamState(
       {required this.teamId,
+      required this.teamMemberIdToNavigateTo,
       required this.shouldNavigateBackToFramework,
+      required this.shouldNavigateToUserRights,
       required this.usersRefreshing,
       required this.usersFetchFailureOrSuccess,
       required this.userURLs});
@@ -723,7 +937,11 @@ class _$_TeamState implements _TeamState {
   @override
   final UniqueId teamId;
   @override
+  final UniqueId teamMemberIdToNavigateTo;
+  @override
   final bool shouldNavigateBackToFramework;
+  @override
+  final bool shouldNavigateToUserRights;
   @override
   final bool usersRefreshing;
   @override
@@ -733,7 +951,7 @@ class _$_TeamState implements _TeamState {
 
   @override
   String toString() {
-    return 'TeamState(teamId: $teamId, shouldNavigateBackToFramework: $shouldNavigateBackToFramework, usersRefreshing: $usersRefreshing, usersFetchFailureOrSuccess: $usersFetchFailureOrSuccess, userURLs: $userURLs)';
+    return 'TeamState(teamId: $teamId, teamMemberIdToNavigateTo: $teamMemberIdToNavigateTo, shouldNavigateBackToFramework: $shouldNavigateBackToFramework, shouldNavigateToUserRights: $shouldNavigateToUserRights, usersRefreshing: $usersRefreshing, usersFetchFailureOrSuccess: $usersFetchFailureOrSuccess, userURLs: $userURLs)';
   }
 
   @override
@@ -743,8 +961,12 @@ class _$_TeamState implements _TeamState {
             other is _$_TeamState &&
             const DeepCollectionEquality().equals(other.teamId, teamId) &&
             const DeepCollectionEquality().equals(
+                other.teamMemberIdToNavigateTo, teamMemberIdToNavigateTo) &&
+            const DeepCollectionEquality().equals(
                 other.shouldNavigateBackToFramework,
                 shouldNavigateBackToFramework) &&
+            const DeepCollectionEquality().equals(
+                other.shouldNavigateToUserRights, shouldNavigateToUserRights) &&
             const DeepCollectionEquality()
                 .equals(other.usersRefreshing, usersRefreshing) &&
             const DeepCollectionEquality().equals(
@@ -756,7 +978,9 @@ class _$_TeamState implements _TeamState {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(teamId),
+      const DeepCollectionEquality().hash(teamMemberIdToNavigateTo),
       const DeepCollectionEquality().hash(shouldNavigateBackToFramework),
+      const DeepCollectionEquality().hash(shouldNavigateToUserRights),
       const DeepCollectionEquality().hash(usersRefreshing),
       const DeepCollectionEquality().hash(usersFetchFailureOrSuccess),
       const DeepCollectionEquality().hash(userURLs));
@@ -770,7 +994,9 @@ class _$_TeamState implements _TeamState {
 abstract class _TeamState implements TeamState {
   const factory _TeamState(
           {required final UniqueId teamId,
+          required final UniqueId teamMemberIdToNavigateTo,
           required final bool shouldNavigateBackToFramework,
+          required final bool shouldNavigateToUserRights,
           required final bool usersRefreshing,
           required final Either<UserFailure, Unit> usersFetchFailureOrSuccess,
           required final KtList<Tuple2<User, Option<String>>> userURLs}) =
@@ -779,7 +1005,11 @@ abstract class _TeamState implements TeamState {
   @override
   UniqueId get teamId => throw _privateConstructorUsedError;
   @override
+  UniqueId get teamMemberIdToNavigateTo => throw _privateConstructorUsedError;
+  @override
   bool get shouldNavigateBackToFramework => throw _privateConstructorUsedError;
+  @override
+  bool get shouldNavigateToUserRights => throw _privateConstructorUsedError;
   @override
   bool get usersRefreshing => throw _privateConstructorUsedError;
   @override

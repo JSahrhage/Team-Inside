@@ -22,6 +22,7 @@
     "reset_email_send": "E-Mail zur Zurücksetzung wurde versendet.",
     "continue": "Weiter",
     "back": "Zurück",
+    "apply": "Anwenden",
     "insert_email": "E-Mail-Adresse eingeben",
     "insert_password": "Passwort eingeben",
     "insert_username": "Anzeigename eingeben",
@@ -36,5 +37,9 @@
     "decline_request": "Anfrage ablehnen",
     "workouts": "Trainings",
     "actions": "Aktionen",
-    "members": "Mitglieder"
+    "members": "Mitglieder",
+    "admin": "Admin",
+    "workout_creator": "Training Ersteller*in",
+    "analyst": "Analyst*in",
+    "athlete": "Athlet*in"
 }

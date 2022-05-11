@@ -13,6 +13,7 @@ import 'package:team_inside/domain/image/i_image_facade.dart';
 import 'package:team_inside/domain/team/i_team_repository.dart';
 import 'package:team_inside/domain/team/team.dart';
 import 'package:team_inside/domain/team/team_failure.dart';
+import 'package:team_inside/domain/team/team_member.dart';
 import 'package:team_inside/domain/team/value_objects.dart';
 
 part 'teams_framework_event.dart';
@@ -39,10 +40,7 @@ class TeamsFrameworkBloc
           id: UniqueId(),
           teamname: Teamname("TuS Spenge Herren 2"),
           joinedUsers: emptyList(),
-          admins: emptyList(),
-          workoutCreator: emptyList(),
-          analysts: emptyList(),
-          athletes: emptyList(),
+          teamMembers: emptyList(),
           workouts: emptyList(),
         );
         await _teamRepository.create(team);
@@ -131,9 +129,20 @@ class TeamsFrameworkBloc
                   if (!team.joinedUsers.contains(user.id)) {
                     final updatedJoinedUsers = team.joinedUsers.toMutableList();
                     updatedJoinedUsers.add(user.id);
+                    final updatedTeamMembers = team.teamMembers.toMutableList();
+                    final teamMember = TeamMember(
+                      id: user.id,
+                      isAdmin: false,
+                      isWorkoutCreator: false,
+                      isAnalyst: false,
+                      isAthlete: false,
+                    );
+                    updatedTeamMembers.add(teamMember);
                     final updatedTeam = team.copyWith(
                       joinedUsers:
                           updatedJoinedUsers.asList().toImmutableList(),
+                      teamMembers:
+                          updatedTeamMembers.asList().toImmutableList(),
                     );
 
                     await _teamRepository.update(updatedTeam);

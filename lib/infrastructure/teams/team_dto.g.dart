@@ -12,15 +12,8 @@ _$_TeamDTO _$$_TeamDTOFromJson(Map<String, dynamic> json) => _$_TeamDTO(
       joinedUsers: (json['joinedUsers'] as List<dynamic>)
           .map((e) => e as String)
           .toList(),
-      admins:
-          (json['admins'] as List<dynamic>).map((e) => e as String).toList(),
-      workoutCreator: (json['workoutCreator'] as List<dynamic>)
-          .map((e) => e as String)
-          .toList(),
-      analysts:
-          (json['analysts'] as List<dynamic>).map((e) => e as String).toList(),
-      athletes:
-          (json['athletes'] as List<dynamic>).map((e) => e as String).toList(),
+      teamMembers: const TeamMembersConverter()
+          .fromJson(json['teamMembers'] as Map<String, dynamic>),
       workouts: (json['workouts'] as List<dynamic>)
           .map((e) => WorkoutDTO.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -31,9 +24,6 @@ Map<String, dynamic> _$$_TeamDTOToJson(_$_TeamDTO instance) =>
       'id': instance.id,
       'teamname': instance.teamname,
       'joinedUsers': instance.joinedUsers,
-      'admins': instance.admins,
-      'workoutCreator': instance.workoutCreator,
-      'analysts': instance.analysts,
-      'athletes': instance.athletes,
+      'teamMembers': const TeamMembersConverter().toJson(instance.teamMembers),
       'workouts': instance.workouts,
     };

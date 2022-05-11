@@ -35,6 +35,16 @@ class _TeamFormState extends State<TeamForm> {
           context.router.replace(
             const TeamsFrameworkSlideRightPageRoute(),
           );
+          return;
+        }
+        if (state.shouldNavigateToUserRights) {
+          context.router.replace(
+            UserRightsSlideLeftPageRoute(
+              teamId: state.teamId,
+              teamMemberId: state.teamMemberIdToNavigateTo,
+            ),
+          );
+          return;
         }
       },
       builder: (context, state) {

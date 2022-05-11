@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:kt_dart/collection.dart';
 import 'package:team_inside/application/team/team_bloc.dart';
+import 'package:team_inside/domain/core/unique_id_value_object.dart';
 import 'package:team_inside/presentation/core/widgets/core_inkwell_card.dart';
 import 'package:team_inside/presentation/presentation_config.dart' as config;
-import 'package:team_inside/presentation/team/widgets/team_return_to_framework_button.dart';
 
 class TeamUserManagement extends StatelessWidget {
   @override
@@ -32,7 +31,7 @@ class TeamUserManagement extends StatelessWidget {
               );
             },
             (unit) {
-              return _generateUserCards(state);
+              return _generateUserCards(state, context);
             },
           );
         },
@@ -42,6 +41,7 @@ class TeamUserManagement extends StatelessWidget {
 
   ListView _generateUserCards(
     TeamState state,
+    BuildContext context,
   ) {
     return ListView.separated(
       physics: const AlwaysScrollableScrollPhysics(),
@@ -52,7 +52,13 @@ class TeamUserManagement extends StatelessWidget {
       itemBuilder: (context, index) {
         for (final userURLTuple in state.userURLs.iter) {
           return CoreInkwellCard(
-            callback: (String underlayingObjId) {},
+            callback: (String underlayingObjId) {
+              context.read<TeamBloc>().add(
+                    TeamEvent.navigateToUserRights(
+                      UniqueId.fromUniqueString(underlayingObjId),
+                    ),
+                  );
+            },
             underlayingObjId: userURLTuple.value1.id.getOrCrash(),
             cardTitle: userURLTuple.value1.username.getOrCrash(),
             icon: Icons.person,

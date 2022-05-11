@@ -45,7 +45,7 @@ class _TeamsFrameworkFormState extends State<TeamsFrameworkForm> {
                 (team) {
                   context.router.replace(
                     TeamSlideLeftPageRoute(
-                      team: team,
+                      teamId: team.id,
                     ),
                   );
                 },

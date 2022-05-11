@@ -4,6 +4,7 @@ import 'package:kt_dart/collection.dart';
 import 'package:team_inside/domain/core/failures.dart';
 import 'package:team_inside/domain/core/i_entitiy.dart';
 import 'package:team_inside/domain/core/unique_id_value_object.dart';
+import 'package:team_inside/domain/team/team_member.dart';
 import 'package:team_inside/domain/team/value_objects.dart';
 import 'package:team_inside/domain/team/workout.dart';
 
@@ -15,10 +16,7 @@ class Team with _$Team implements IEntity {
     required UniqueId id,
     required Teamname teamname,
     required KtList<UniqueId> joinedUsers,
-    required KtList<UniqueId> admins,
-    required KtList<UniqueId> workoutCreator,
-    required KtList<UniqueId> analysts,
-    required KtList<UniqueId> athletes,
+    required KtList<TeamMember> teamMembers,
     required KtList<Workout> workouts,
   }) = _Team;
 
@@ -28,10 +26,7 @@ class Team with _$Team implements IEntity {
         id: UniqueId(),
         teamname: Teamname(''),
         joinedUsers: emptyList(),
-        admins: emptyList(),
-        workoutCreator: emptyList(),
-        analysts: emptyList(),
-        athletes: emptyList(),
+        teamMembers: emptyList(),
         workouts: emptyList(),
       );
 }

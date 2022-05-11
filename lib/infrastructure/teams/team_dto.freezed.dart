@@ -23,10 +23,8 @@ mixin _$TeamDTO {
   String get id => throw _privateConstructorUsedError;
   String get teamname => throw _privateConstructorUsedError;
   List<String> get joinedUsers => throw _privateConstructorUsedError;
-  List<String> get admins => throw _privateConstructorUsedError;
-  List<String> get workoutCreator => throw _privateConstructorUsedError;
-  List<String> get analysts => throw _privateConstructorUsedError;
-  List<String> get athletes => throw _privateConstructorUsedError;
+  @TeamMembersConverter()
+  Map<int, TeamMemberDTO> get teamMembers => throw _privateConstructorUsedError;
   List<WorkoutDTO> get workouts => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -42,10 +40,7 @@ abstract class $TeamDTOCopyWith<$Res> {
       {String id,
       String teamname,
       List<String> joinedUsers,
-      List<String> admins,
-      List<String> workoutCreator,
-      List<String> analysts,
-      List<String> athletes,
+      @TeamMembersConverter() Map<int, TeamMemberDTO> teamMembers,
       List<WorkoutDTO> workouts});
 }
 
@@ -62,10 +57,7 @@ class _$TeamDTOCopyWithImpl<$Res> implements $TeamDTOCopyWith<$Res> {
     Object? id = freezed,
     Object? teamname = freezed,
     Object? joinedUsers = freezed,
-    Object? admins = freezed,
-    Object? workoutCreator = freezed,
-    Object? analysts = freezed,
-    Object? athletes = freezed,
+    Object? teamMembers = freezed,
     Object? workouts = freezed,
   }) {
     return _then(_value.copyWith(
@@ -81,22 +73,10 @@ class _$TeamDTOCopyWithImpl<$Res> implements $TeamDTOCopyWith<$Res> {
           ? _value.joinedUsers
           : joinedUsers // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      admins: admins == freezed
-          ? _value.admins
-          : admins // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      workoutCreator: workoutCreator == freezed
-          ? _value.workoutCreator
-          : workoutCreator // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      analysts: analysts == freezed
-          ? _value.analysts
-          : analysts // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      athletes: athletes == freezed
-          ? _value.athletes
-          : athletes // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+      teamMembers: teamMembers == freezed
+          ? _value.teamMembers
+          : teamMembers // ignore: cast_nullable_to_non_nullable
+              as Map<int, TeamMemberDTO>,
       workouts: workouts == freezed
           ? _value.workouts
           : workouts // ignore: cast_nullable_to_non_nullable
@@ -115,10 +95,7 @@ abstract class _$$_TeamDTOCopyWith<$Res> implements $TeamDTOCopyWith<$Res> {
       {String id,
       String teamname,
       List<String> joinedUsers,
-      List<String> admins,
-      List<String> workoutCreator,
-      List<String> analysts,
-      List<String> athletes,
+      @TeamMembersConverter() Map<int, TeamMemberDTO> teamMembers,
       List<WorkoutDTO> workouts});
 }
 
@@ -136,10 +113,7 @@ class __$$_TeamDTOCopyWithImpl<$Res> extends _$TeamDTOCopyWithImpl<$Res>
     Object? id = freezed,
     Object? teamname = freezed,
     Object? joinedUsers = freezed,
-    Object? admins = freezed,
-    Object? workoutCreator = freezed,
-    Object? analysts = freezed,
-    Object? athletes = freezed,
+    Object? teamMembers = freezed,
     Object? workouts = freezed,
   }) {
     return _then(_$_TeamDTO(
@@ -155,22 +129,10 @@ class __$$_TeamDTOCopyWithImpl<$Res> extends _$TeamDTOCopyWithImpl<$Res>
           ? _value._joinedUsers
           : joinedUsers // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      admins: admins == freezed
-          ? _value._admins
-          : admins // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      workoutCreator: workoutCreator == freezed
-          ? _value._workoutCreator
-          : workoutCreator // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      analysts: analysts == freezed
-          ? _value._analysts
-          : analysts // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      athletes: athletes == freezed
-          ? _value._athletes
-          : athletes // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+      teamMembers: teamMembers == freezed
+          ? _value._teamMembers
+          : teamMembers // ignore: cast_nullable_to_non_nullable
+              as Map<int, TeamMemberDTO>,
       workouts: workouts == freezed
           ? _value._workouts
           : workouts // ignore: cast_nullable_to_non_nullable
@@ -186,16 +148,11 @@ class _$_TeamDTO extends _TeamDTO {
       {required this.id,
       required this.teamname,
       required final List<String> joinedUsers,
-      required final List<String> admins,
-      required final List<String> workoutCreator,
-      required final List<String> analysts,
-      required final List<String> athletes,
+      @TeamMembersConverter()
+          required final Map<int, TeamMemberDTO> teamMembers,
       required final List<WorkoutDTO> workouts})
       : _joinedUsers = joinedUsers,
-        _admins = admins,
-        _workoutCreator = workoutCreator,
-        _analysts = analysts,
-        _athletes = athletes,
+        _teamMembers = teamMembers,
         _workouts = workouts,
         super._();
 
@@ -213,32 +170,12 @@ class _$_TeamDTO extends _TeamDTO {
     return EqualUnmodifiableListView(_joinedUsers);
   }
 
-  final List<String> _admins;
+  final Map<int, TeamMemberDTO> _teamMembers;
   @override
-  List<String> get admins {
+  @TeamMembersConverter()
+  Map<int, TeamMemberDTO> get teamMembers {
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_admins);
-  }
-
-  final List<String> _workoutCreator;
-  @override
-  List<String> get workoutCreator {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_workoutCreator);
-  }
-
-  final List<String> _analysts;
-  @override
-  List<String> get analysts {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_analysts);
-  }
-
-  final List<String> _athletes;
-  @override
-  List<String> get athletes {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_athletes);
+    return EqualUnmodifiableMapView(_teamMembers);
   }
 
   final List<WorkoutDTO> _workouts;
@@ -250,7 +187,7 @@ class _$_TeamDTO extends _TeamDTO {
 
   @override
   String toString() {
-    return 'TeamDTO(id: $id, teamname: $teamname, joinedUsers: $joinedUsers, admins: $admins, workoutCreator: $workoutCreator, analysts: $analysts, athletes: $athletes, workouts: $workouts)';
+    return 'TeamDTO(id: $id, teamname: $teamname, joinedUsers: $joinedUsers, teamMembers: $teamMembers, workouts: $workouts)';
   }
 
   @override
@@ -262,11 +199,8 @@ class _$_TeamDTO extends _TeamDTO {
             const DeepCollectionEquality().equals(other.teamname, teamname) &&
             const DeepCollectionEquality()
                 .equals(other._joinedUsers, _joinedUsers) &&
-            const DeepCollectionEquality().equals(other._admins, _admins) &&
             const DeepCollectionEquality()
-                .equals(other._workoutCreator, _workoutCreator) &&
-            const DeepCollectionEquality().equals(other._analysts, _analysts) &&
-            const DeepCollectionEquality().equals(other._athletes, _athletes) &&
+                .equals(other._teamMembers, _teamMembers) &&
             const DeepCollectionEquality().equals(other._workouts, _workouts));
   }
 
@@ -277,10 +211,7 @@ class _$_TeamDTO extends _TeamDTO {
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(teamname),
       const DeepCollectionEquality().hash(_joinedUsers),
-      const DeepCollectionEquality().hash(_admins),
-      const DeepCollectionEquality().hash(_workoutCreator),
-      const DeepCollectionEquality().hash(_analysts),
-      const DeepCollectionEquality().hash(_athletes),
+      const DeepCollectionEquality().hash(_teamMembers),
       const DeepCollectionEquality().hash(_workouts));
 
   @JsonKey(ignore: true)
@@ -299,10 +230,8 @@ abstract class _TeamDTO extends TeamDTO {
       {required final String id,
       required final String teamname,
       required final List<String> joinedUsers,
-      required final List<String> admins,
-      required final List<String> workoutCreator,
-      required final List<String> analysts,
-      required final List<String> athletes,
+      @TeamMembersConverter()
+          required final Map<int, TeamMemberDTO> teamMembers,
       required final List<WorkoutDTO> workouts}) = _$_TeamDTO;
   const _TeamDTO._() : super._();
 
@@ -315,13 +244,8 @@ abstract class _TeamDTO extends TeamDTO {
   @override
   List<String> get joinedUsers => throw _privateConstructorUsedError;
   @override
-  List<String> get admins => throw _privateConstructorUsedError;
-  @override
-  List<String> get workoutCreator => throw _privateConstructorUsedError;
-  @override
-  List<String> get analysts => throw _privateConstructorUsedError;
-  @override
-  List<String> get athletes => throw _privateConstructorUsedError;
+  @TeamMembersConverter()
+  Map<int, TeamMemberDTO> get teamMembers => throw _privateConstructorUsedError;
   @override
   List<WorkoutDTO> get workouts => throw _privateConstructorUsedError;
   @override

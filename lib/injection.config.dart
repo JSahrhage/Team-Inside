@@ -7,6 +7,7 @@ import 'package:team_inside/application/auth/password_reset/password_reset_bloc.
 import 'package:team_inside/application/auth/registration/registration_bloc.dart';
 import 'package:team_inside/application/auth/sign_in/sign_in_bloc.dart';
 import 'package:team_inside/application/team/team_bloc.dart';
+import 'package:team_inside/application/team/user_rights/user_rights_bloc.dart';
 import 'package:team_inside/application/teams_framework/teams_framework_bloc.dart';
 import 'package:team_inside/domain/auth/i_auth_facade.dart';
 import 'package:team_inside/domain/auth/i_user_repository.dart';
@@ -86,6 +87,11 @@ void $initGetIt(
       getIt<IUserRepository>(),
       getIt<ITeamRepository>(),
       getIt<IImageFacade>(),
+    ),
+  );
+  getIt.registerFactory<UserRightsBloc>(
+    () => UserRightsBloc(
+      getIt<ITeamRepository>(),
     ),
   );
 }

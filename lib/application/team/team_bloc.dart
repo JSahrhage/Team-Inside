@@ -93,5 +93,15 @@ class TeamBloc extends Bloc<TeamEvent, TeamState> {
         );
       },
     );
+    on<NavigateToUserRights>(
+      (event, emit) async {
+        emit(
+          state.copyWith(
+            teamMemberIdToNavigateTo: event.teamMemberId,
+            shouldNavigateToUserRights: true,
+          ),
+        );
+      },
+    );
   }
 }
