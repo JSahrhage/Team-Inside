@@ -17,9 +17,7 @@ class TeamActionsWidget extends StatelessWidget {
       },
       child: BlocBuilder<TeamBloc, TeamState>(
         builder: (context, state) {
-          return ListView(
-            children: const [],
-          );
+          return ListView();
         },
       ),
     );
