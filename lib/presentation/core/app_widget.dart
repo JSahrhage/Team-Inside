@@ -35,7 +35,7 @@ class AppWidget extends StatelessWidget {
                 routerDelegate: AutoRouterDelegate(_appRouter),
                 routeInformationParser: _appRouter.defaultRouteParser(),
                 debugShowCheckedModeBanner: false,
-                title: 'Notes',
+                title: 'Team Inside',
                 theme: theme,
                 supportedLocales: AppLocalizationsSetup.supportedLocales,
                 localizationsDelegates:

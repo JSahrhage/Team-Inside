@@ -38,7 +38,11 @@ class SignInForm extends StatelessWidget {
       builder: (context, state) {
         return ListView(
           children: [
-            const SizedBox(height: 64),
+            Container(
+              height: 64,
+              decoration:
+                  BoxDecoration(border: Border.all(color: Colors.blueAccent)),
+            ),
             const SignInLogo(),
             const SizedBox(height: 32),
             SignInEmailTextFormField(
