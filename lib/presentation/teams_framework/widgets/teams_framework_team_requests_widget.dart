@@ -57,8 +57,11 @@ class TeamsFrameworkTeamRequestsWidget extends StatelessWidget {
     KtList<Team> teamRequests,
     TeamsFrameworkState state,
   ) {
-    return ListView.builder(
+    return ListView.separated(
       physics: const AlwaysScrollableScrollPhysics(),
+      separatorBuilder: (context, index) => Divider(
+        color: Theme.of(context).colorScheme.onBackground,
+      ),
       itemCount: teamRequests.size,
       itemBuilder: (context, index) {
         for (final teamRequestImageTuple in state.teamRequestURLs.iter) {

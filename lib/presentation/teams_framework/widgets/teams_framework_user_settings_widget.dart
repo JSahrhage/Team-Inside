@@ -66,8 +66,8 @@ class TeamsFrameworkUserSettingsWidget extends StatelessWidget {
               const TeamsFrameworkChangeUsernameButton(),
               const SizedBox(height: 32),
               const TeamsFrameworkDeleteUserButton(),
-              const SizedBox(height: 32),
-              const TeamsFrameworkCreateTeamButton(),
+              // const SizedBox(height: 32),
+              // const TeamsFrameworkCreateTeamButton(),
             ],
           );
         },
