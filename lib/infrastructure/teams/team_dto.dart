@@ -50,7 +50,7 @@ class TeamDTO with _$TeamDTO {
     }
     return Team(
       id: UniqueId.fromUniqueString(id),
-      teamname: Teamname(teamname),
+      teamname: TeamName(teamname),
       joinedUsers: joinedUsers
           .map((uniqueId) => UniqueId.fromUniqueString(uniqueId))
           .toImmutableList(),

@@ -21,6 +21,8 @@ WorkoutDTO _$WorkoutDTOFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$WorkoutDTO {
   String get id => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  String get dateTime => throw _privateConstructorUsedError;
   List<EvaluationEntryDTO> get evaluationEntries =>
       throw _privateConstructorUsedError;
 
@@ -35,7 +37,11 @@ abstract class $WorkoutDTOCopyWith<$Res> {
   factory $WorkoutDTOCopyWith(
           WorkoutDTO value, $Res Function(WorkoutDTO) then) =
       _$WorkoutDTOCopyWithImpl<$Res>;
-  $Res call({String id, List<EvaluationEntryDTO> evaluationEntries});
+  $Res call(
+      {String id,
+      String name,
+      String dateTime,
+      List<EvaluationEntryDTO> evaluationEntries});
 }
 
 /// @nodoc
@@ -49,12 +55,22 @@ class _$WorkoutDTOCopyWithImpl<$Res> implements $WorkoutDTOCopyWith<$Res> {
   @override
   $Res call({
     Object? id = freezed,
+    Object? name = freezed,
+    Object? dateTime = freezed,
     Object? evaluationEntries = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      dateTime: dateTime == freezed
+          ? _value.dateTime
+          : dateTime // ignore: cast_nullable_to_non_nullable
               as String,
       evaluationEntries: evaluationEntries == freezed
           ? _value.evaluationEntries
@@ -71,7 +87,11 @@ abstract class _$$_WorkoutDTOCopyWith<$Res>
           _$_WorkoutDTO value, $Res Function(_$_WorkoutDTO) then) =
       __$$_WorkoutDTOCopyWithImpl<$Res>;
   @override
-  $Res call({String id, List<EvaluationEntryDTO> evaluationEntries});
+  $Res call(
+      {String id,
+      String name,
+      String dateTime,
+      List<EvaluationEntryDTO> evaluationEntries});
 }
 
 /// @nodoc
@@ -87,12 +107,22 @@ class __$$_WorkoutDTOCopyWithImpl<$Res> extends _$WorkoutDTOCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
+    Object? name = freezed,
+    Object? dateTime = freezed,
     Object? evaluationEntries = freezed,
   }) {
     return _then(_$_WorkoutDTO(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      dateTime: dateTime == freezed
+          ? _value.dateTime
+          : dateTime // ignore: cast_nullable_to_non_nullable
               as String,
       evaluationEntries: evaluationEntries == freezed
           ? _value._evaluationEntries
@@ -107,6 +137,8 @@ class __$$_WorkoutDTOCopyWithImpl<$Res> extends _$WorkoutDTOCopyWithImpl<$Res>
 class _$_WorkoutDTO extends _WorkoutDTO {
   const _$_WorkoutDTO(
       {required this.id,
+      required this.name,
+      required this.dateTime,
       required final List<EvaluationEntryDTO> evaluationEntries})
       : _evaluationEntries = evaluationEntries,
         super._();
@@ -116,6 +148,10 @@ class _$_WorkoutDTO extends _WorkoutDTO {
 
   @override
   final String id;
+  @override
+  final String name;
+  @override
+  final String dateTime;
   final List<EvaluationEntryDTO> _evaluationEntries;
   @override
   List<EvaluationEntryDTO> get evaluationEntries {
@@ -125,7 +161,7 @@ class _$_WorkoutDTO extends _WorkoutDTO {
 
   @override
   String toString() {
-    return 'WorkoutDTO(id: $id, evaluationEntries: $evaluationEntries)';
+    return 'WorkoutDTO(id: $id, name: $name, dateTime: $dateTime, evaluationEntries: $evaluationEntries)';
   }
 
   @override
@@ -134,6 +170,8 @@ class _$_WorkoutDTO extends _WorkoutDTO {
         (other.runtimeType == runtimeType &&
             other is _$_WorkoutDTO &&
             const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.dateTime, dateTime) &&
             const DeepCollectionEquality()
                 .equals(other._evaluationEntries, _evaluationEntries));
   }
@@ -143,6 +181,8 @@ class _$_WorkoutDTO extends _WorkoutDTO {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(dateTime),
       const DeepCollectionEquality().hash(_evaluationEntries));
 
   @JsonKey(ignore: true)
@@ -159,6 +199,8 @@ class _$_WorkoutDTO extends _WorkoutDTO {
 abstract class _WorkoutDTO extends WorkoutDTO {
   const factory _WorkoutDTO(
           {required final String id,
+          required final String name,
+          required final String dateTime,
           required final List<EvaluationEntryDTO> evaluationEntries}) =
       _$_WorkoutDTO;
   const _WorkoutDTO._() : super._();
@@ -168,6 +210,10 @@ abstract class _WorkoutDTO extends WorkoutDTO {
 
   @override
   String get id => throw _privateConstructorUsedError;
+  @override
+  String get name => throw _privateConstructorUsedError;
+  @override
+  String get dateTime => throw _privateConstructorUsedError;
   @override
   List<EvaluationEntryDTO> get evaluationEntries =>
       throw _privateConstructorUsedError;

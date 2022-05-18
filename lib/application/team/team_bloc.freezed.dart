@@ -21,6 +21,7 @@ mixin _$TeamEvent {
     required TResult Function(UniqueId teamId) setTeamId,
     required TResult Function() navigateBackToFramework,
     required TResult Function() refreshWorkouts,
+    required TResult Function() refreshActions,
     required TResult Function() refreshUsers,
     required TResult Function(UniqueId teamMemberId) navigateToUserRights,
   }) =>
@@ -30,6 +31,7 @@ mixin _$TeamEvent {
     TResult Function(UniqueId teamId)? setTeamId,
     TResult Function()? navigateBackToFramework,
     TResult Function()? refreshWorkouts,
+    TResult Function()? refreshActions,
     TResult Function()? refreshUsers,
     TResult Function(UniqueId teamMemberId)? navigateToUserRights,
   }) =>
@@ -39,6 +41,7 @@ mixin _$TeamEvent {
     TResult Function(UniqueId teamId)? setTeamId,
     TResult Function()? navigateBackToFramework,
     TResult Function()? refreshWorkouts,
+    TResult Function()? refreshActions,
     TResult Function()? refreshUsers,
     TResult Function(UniqueId teamMemberId)? navigateToUserRights,
     required TResult orElse(),
@@ -50,6 +53,7 @@ mixin _$TeamEvent {
     required TResult Function(NavigateBackToFramework value)
         navigateBackToFramework,
     required TResult Function(RefreshWorkouts value) refreshWorkouts,
+    required TResult Function(RefreshActions value) refreshActions,
     required TResult Function(RefreshUsers value) refreshUsers,
     required TResult Function(NavigateToUserRights value) navigateToUserRights,
   }) =>
@@ -59,6 +63,7 @@ mixin _$TeamEvent {
     TResult Function(SetTeamId value)? setTeamId,
     TResult Function(NavigateBackToFramework value)? navigateBackToFramework,
     TResult Function(RefreshWorkouts value)? refreshWorkouts,
+    TResult Function(RefreshActions value)? refreshActions,
     TResult Function(RefreshUsers value)? refreshUsers,
     TResult Function(NavigateToUserRights value)? navigateToUserRights,
   }) =>
@@ -68,6 +73,7 @@ mixin _$TeamEvent {
     TResult Function(SetTeamId value)? setTeamId,
     TResult Function(NavigateBackToFramework value)? navigateBackToFramework,
     TResult Function(RefreshWorkouts value)? refreshWorkouts,
+    TResult Function(RefreshActions value)? refreshActions,
     TResult Function(RefreshUsers value)? refreshUsers,
     TResult Function(NavigateToUserRights value)? navigateToUserRights,
     required TResult orElse(),
@@ -157,6 +163,7 @@ class _$SetTeamId implements SetTeamId {
     required TResult Function(UniqueId teamId) setTeamId,
     required TResult Function() navigateBackToFramework,
     required TResult Function() refreshWorkouts,
+    required TResult Function() refreshActions,
     required TResult Function() refreshUsers,
     required TResult Function(UniqueId teamMemberId) navigateToUserRights,
   }) {
@@ -169,6 +176,7 @@ class _$SetTeamId implements SetTeamId {
     TResult Function(UniqueId teamId)? setTeamId,
     TResult Function()? navigateBackToFramework,
     TResult Function()? refreshWorkouts,
+    TResult Function()? refreshActions,
     TResult Function()? refreshUsers,
     TResult Function(UniqueId teamMemberId)? navigateToUserRights,
   }) {
@@ -181,6 +189,7 @@ class _$SetTeamId implements SetTeamId {
     TResult Function(UniqueId teamId)? setTeamId,
     TResult Function()? navigateBackToFramework,
     TResult Function()? refreshWorkouts,
+    TResult Function()? refreshActions,
     TResult Function()? refreshUsers,
     TResult Function(UniqueId teamMemberId)? navigateToUserRights,
     required TResult orElse(),
@@ -198,6 +207,7 @@ class _$SetTeamId implements SetTeamId {
     required TResult Function(NavigateBackToFramework value)
         navigateBackToFramework,
     required TResult Function(RefreshWorkouts value) refreshWorkouts,
+    required TResult Function(RefreshActions value) refreshActions,
     required TResult Function(RefreshUsers value) refreshUsers,
     required TResult Function(NavigateToUserRights value) navigateToUserRights,
   }) {
@@ -210,6 +220,7 @@ class _$SetTeamId implements SetTeamId {
     TResult Function(SetTeamId value)? setTeamId,
     TResult Function(NavigateBackToFramework value)? navigateBackToFramework,
     TResult Function(RefreshWorkouts value)? refreshWorkouts,
+    TResult Function(RefreshActions value)? refreshActions,
     TResult Function(RefreshUsers value)? refreshUsers,
     TResult Function(NavigateToUserRights value)? navigateToUserRights,
   }) {
@@ -222,6 +233,7 @@ class _$SetTeamId implements SetTeamId {
     TResult Function(SetTeamId value)? setTeamId,
     TResult Function(NavigateBackToFramework value)? navigateBackToFramework,
     TResult Function(RefreshWorkouts value)? refreshWorkouts,
+    TResult Function(RefreshActions value)? refreshActions,
     TResult Function(RefreshUsers value)? refreshUsers,
     TResult Function(NavigateToUserRights value)? navigateToUserRights,
     required TResult orElse(),
@@ -288,6 +300,7 @@ class _$NavigateBackToFramework implements NavigateBackToFramework {
     required TResult Function(UniqueId teamId) setTeamId,
     required TResult Function() navigateBackToFramework,
     required TResult Function() refreshWorkouts,
+    required TResult Function() refreshActions,
     required TResult Function() refreshUsers,
     required TResult Function(UniqueId teamMemberId) navigateToUserRights,
   }) {
@@ -300,6 +313,7 @@ class _$NavigateBackToFramework implements NavigateBackToFramework {
     TResult Function(UniqueId teamId)? setTeamId,
     TResult Function()? navigateBackToFramework,
     TResult Function()? refreshWorkouts,
+    TResult Function()? refreshActions,
     TResult Function()? refreshUsers,
     TResult Function(UniqueId teamMemberId)? navigateToUserRights,
   }) {
@@ -312,6 +326,7 @@ class _$NavigateBackToFramework implements NavigateBackToFramework {
     TResult Function(UniqueId teamId)? setTeamId,
     TResult Function()? navigateBackToFramework,
     TResult Function()? refreshWorkouts,
+    TResult Function()? refreshActions,
     TResult Function()? refreshUsers,
     TResult Function(UniqueId teamMemberId)? navigateToUserRights,
     required TResult orElse(),
@@ -329,6 +344,7 @@ class _$NavigateBackToFramework implements NavigateBackToFramework {
     required TResult Function(NavigateBackToFramework value)
         navigateBackToFramework,
     required TResult Function(RefreshWorkouts value) refreshWorkouts,
+    required TResult Function(RefreshActions value) refreshActions,
     required TResult Function(RefreshUsers value) refreshUsers,
     required TResult Function(NavigateToUserRights value) navigateToUserRights,
   }) {
@@ -341,6 +357,7 @@ class _$NavigateBackToFramework implements NavigateBackToFramework {
     TResult Function(SetTeamId value)? setTeamId,
     TResult Function(NavigateBackToFramework value)? navigateBackToFramework,
     TResult Function(RefreshWorkouts value)? refreshWorkouts,
+    TResult Function(RefreshActions value)? refreshActions,
     TResult Function(RefreshUsers value)? refreshUsers,
     TResult Function(NavigateToUserRights value)? navigateToUserRights,
   }) {
@@ -353,6 +370,7 @@ class _$NavigateBackToFramework implements NavigateBackToFramework {
     TResult Function(SetTeamId value)? setTeamId,
     TResult Function(NavigateBackToFramework value)? navigateBackToFramework,
     TResult Function(RefreshWorkouts value)? refreshWorkouts,
+    TResult Function(RefreshActions value)? refreshActions,
     TResult Function(RefreshUsers value)? refreshUsers,
     TResult Function(NavigateToUserRights value)? navigateToUserRights,
     required TResult orElse(),
@@ -412,6 +430,7 @@ class _$RefreshWorkouts implements RefreshWorkouts {
     required TResult Function(UniqueId teamId) setTeamId,
     required TResult Function() navigateBackToFramework,
     required TResult Function() refreshWorkouts,
+    required TResult Function() refreshActions,
     required TResult Function() refreshUsers,
     required TResult Function(UniqueId teamMemberId) navigateToUserRights,
   }) {
@@ -424,6 +443,7 @@ class _$RefreshWorkouts implements RefreshWorkouts {
     TResult Function(UniqueId teamId)? setTeamId,
     TResult Function()? navigateBackToFramework,
     TResult Function()? refreshWorkouts,
+    TResult Function()? refreshActions,
     TResult Function()? refreshUsers,
     TResult Function(UniqueId teamMemberId)? navigateToUserRights,
   }) {
@@ -436,6 +456,7 @@ class _$RefreshWorkouts implements RefreshWorkouts {
     TResult Function(UniqueId teamId)? setTeamId,
     TResult Function()? navigateBackToFramework,
     TResult Function()? refreshWorkouts,
+    TResult Function()? refreshActions,
     TResult Function()? refreshUsers,
     TResult Function(UniqueId teamMemberId)? navigateToUserRights,
     required TResult orElse(),
@@ -453,6 +474,7 @@ class _$RefreshWorkouts implements RefreshWorkouts {
     required TResult Function(NavigateBackToFramework value)
         navigateBackToFramework,
     required TResult Function(RefreshWorkouts value) refreshWorkouts,
+    required TResult Function(RefreshActions value) refreshActions,
     required TResult Function(RefreshUsers value) refreshUsers,
     required TResult Function(NavigateToUserRights value) navigateToUserRights,
   }) {
@@ -465,6 +487,7 @@ class _$RefreshWorkouts implements RefreshWorkouts {
     TResult Function(SetTeamId value)? setTeamId,
     TResult Function(NavigateBackToFramework value)? navigateBackToFramework,
     TResult Function(RefreshWorkouts value)? refreshWorkouts,
+    TResult Function(RefreshActions value)? refreshActions,
     TResult Function(RefreshUsers value)? refreshUsers,
     TResult Function(NavigateToUserRights value)? navigateToUserRights,
   }) {
@@ -477,6 +500,7 @@ class _$RefreshWorkouts implements RefreshWorkouts {
     TResult Function(SetTeamId value)? setTeamId,
     TResult Function(NavigateBackToFramework value)? navigateBackToFramework,
     TResult Function(RefreshWorkouts value)? refreshWorkouts,
+    TResult Function(RefreshActions value)? refreshActions,
     TResult Function(RefreshUsers value)? refreshUsers,
     TResult Function(NavigateToUserRights value)? navigateToUserRights,
     required TResult orElse(),
@@ -490,6 +514,135 @@ class _$RefreshWorkouts implements RefreshWorkouts {
 
 abstract class RefreshWorkouts implements TeamEvent {
   const factory RefreshWorkouts() = _$RefreshWorkouts;
+}
+
+/// @nodoc
+abstract class _$$RefreshActionsCopyWith<$Res> {
+  factory _$$RefreshActionsCopyWith(
+          _$RefreshActions value, $Res Function(_$RefreshActions) then) =
+      __$$RefreshActionsCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$RefreshActionsCopyWithImpl<$Res> extends _$TeamEventCopyWithImpl<$Res>
+    implements _$$RefreshActionsCopyWith<$Res> {
+  __$$RefreshActionsCopyWithImpl(
+      _$RefreshActions _value, $Res Function(_$RefreshActions) _then)
+      : super(_value, (v) => _then(v as _$RefreshActions));
+
+  @override
+  _$RefreshActions get _value => super._value as _$RefreshActions;
+}
+
+/// @nodoc
+
+class _$RefreshActions implements RefreshActions {
+  const _$RefreshActions();
+
+  @override
+  String toString() {
+    return 'TeamEvent.refreshActions()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$RefreshActions);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(UniqueId teamId) setTeamId,
+    required TResult Function() navigateBackToFramework,
+    required TResult Function() refreshWorkouts,
+    required TResult Function() refreshActions,
+    required TResult Function() refreshUsers,
+    required TResult Function(UniqueId teamMemberId) navigateToUserRights,
+  }) {
+    return refreshActions();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(UniqueId teamId)? setTeamId,
+    TResult Function()? navigateBackToFramework,
+    TResult Function()? refreshWorkouts,
+    TResult Function()? refreshActions,
+    TResult Function()? refreshUsers,
+    TResult Function(UniqueId teamMemberId)? navigateToUserRights,
+  }) {
+    return refreshActions?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(UniqueId teamId)? setTeamId,
+    TResult Function()? navigateBackToFramework,
+    TResult Function()? refreshWorkouts,
+    TResult Function()? refreshActions,
+    TResult Function()? refreshUsers,
+    TResult Function(UniqueId teamMemberId)? navigateToUserRights,
+    required TResult orElse(),
+  }) {
+    if (refreshActions != null) {
+      return refreshActions();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(SetTeamId value) setTeamId,
+    required TResult Function(NavigateBackToFramework value)
+        navigateBackToFramework,
+    required TResult Function(RefreshWorkouts value) refreshWorkouts,
+    required TResult Function(RefreshActions value) refreshActions,
+    required TResult Function(RefreshUsers value) refreshUsers,
+    required TResult Function(NavigateToUserRights value) navigateToUserRights,
+  }) {
+    return refreshActions(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(SetTeamId value)? setTeamId,
+    TResult Function(NavigateBackToFramework value)? navigateBackToFramework,
+    TResult Function(RefreshWorkouts value)? refreshWorkouts,
+    TResult Function(RefreshActions value)? refreshActions,
+    TResult Function(RefreshUsers value)? refreshUsers,
+    TResult Function(NavigateToUserRights value)? navigateToUserRights,
+  }) {
+    return refreshActions?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SetTeamId value)? setTeamId,
+    TResult Function(NavigateBackToFramework value)? navigateBackToFramework,
+    TResult Function(RefreshWorkouts value)? refreshWorkouts,
+    TResult Function(RefreshActions value)? refreshActions,
+    TResult Function(RefreshUsers value)? refreshUsers,
+    TResult Function(NavigateToUserRights value)? navigateToUserRights,
+    required TResult orElse(),
+  }) {
+    if (refreshActions != null) {
+      return refreshActions(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class RefreshActions implements TeamEvent {
+  const factory RefreshActions() = _$RefreshActions;
 }
 
 /// @nodoc
@@ -535,6 +688,7 @@ class _$RefreshUsers implements RefreshUsers {
     required TResult Function(UniqueId teamId) setTeamId,
     required TResult Function() navigateBackToFramework,
     required TResult Function() refreshWorkouts,
+    required TResult Function() refreshActions,
     required TResult Function() refreshUsers,
     required TResult Function(UniqueId teamMemberId) navigateToUserRights,
   }) {
@@ -547,6 +701,7 @@ class _$RefreshUsers implements RefreshUsers {
     TResult Function(UniqueId teamId)? setTeamId,
     TResult Function()? navigateBackToFramework,
     TResult Function()? refreshWorkouts,
+    TResult Function()? refreshActions,
     TResult Function()? refreshUsers,
     TResult Function(UniqueId teamMemberId)? navigateToUserRights,
   }) {
@@ -559,6 +714,7 @@ class _$RefreshUsers implements RefreshUsers {
     TResult Function(UniqueId teamId)? setTeamId,
     TResult Function()? navigateBackToFramework,
     TResult Function()? refreshWorkouts,
+    TResult Function()? refreshActions,
     TResult Function()? refreshUsers,
     TResult Function(UniqueId teamMemberId)? navigateToUserRights,
     required TResult orElse(),
@@ -576,6 +732,7 @@ class _$RefreshUsers implements RefreshUsers {
     required TResult Function(NavigateBackToFramework value)
         navigateBackToFramework,
     required TResult Function(RefreshWorkouts value) refreshWorkouts,
+    required TResult Function(RefreshActions value) refreshActions,
     required TResult Function(RefreshUsers value) refreshUsers,
     required TResult Function(NavigateToUserRights value) navigateToUserRights,
   }) {
@@ -588,6 +745,7 @@ class _$RefreshUsers implements RefreshUsers {
     TResult Function(SetTeamId value)? setTeamId,
     TResult Function(NavigateBackToFramework value)? navigateBackToFramework,
     TResult Function(RefreshWorkouts value)? refreshWorkouts,
+    TResult Function(RefreshActions value)? refreshActions,
     TResult Function(RefreshUsers value)? refreshUsers,
     TResult Function(NavigateToUserRights value)? navigateToUserRights,
   }) {
@@ -600,6 +758,7 @@ class _$RefreshUsers implements RefreshUsers {
     TResult Function(SetTeamId value)? setTeamId,
     TResult Function(NavigateBackToFramework value)? navigateBackToFramework,
     TResult Function(RefreshWorkouts value)? refreshWorkouts,
+    TResult Function(RefreshActions value)? refreshActions,
     TResult Function(RefreshUsers value)? refreshUsers,
     TResult Function(NavigateToUserRights value)? navigateToUserRights,
     required TResult orElse(),
@@ -685,6 +844,7 @@ class _$NavigateToUserRights implements NavigateToUserRights {
     required TResult Function(UniqueId teamId) setTeamId,
     required TResult Function() navigateBackToFramework,
     required TResult Function() refreshWorkouts,
+    required TResult Function() refreshActions,
     required TResult Function() refreshUsers,
     required TResult Function(UniqueId teamMemberId) navigateToUserRights,
   }) {
@@ -697,6 +857,7 @@ class _$NavigateToUserRights implements NavigateToUserRights {
     TResult Function(UniqueId teamId)? setTeamId,
     TResult Function()? navigateBackToFramework,
     TResult Function()? refreshWorkouts,
+    TResult Function()? refreshActions,
     TResult Function()? refreshUsers,
     TResult Function(UniqueId teamMemberId)? navigateToUserRights,
   }) {
@@ -709,6 +870,7 @@ class _$NavigateToUserRights implements NavigateToUserRights {
     TResult Function(UniqueId teamId)? setTeamId,
     TResult Function()? navigateBackToFramework,
     TResult Function()? refreshWorkouts,
+    TResult Function()? refreshActions,
     TResult Function()? refreshUsers,
     TResult Function(UniqueId teamMemberId)? navigateToUserRights,
     required TResult orElse(),
@@ -726,6 +888,7 @@ class _$NavigateToUserRights implements NavigateToUserRights {
     required TResult Function(NavigateBackToFramework value)
         navigateBackToFramework,
     required TResult Function(RefreshWorkouts value) refreshWorkouts,
+    required TResult Function(RefreshActions value) refreshActions,
     required TResult Function(RefreshUsers value) refreshUsers,
     required TResult Function(NavigateToUserRights value) navigateToUserRights,
   }) {
@@ -738,6 +901,7 @@ class _$NavigateToUserRights implements NavigateToUserRights {
     TResult Function(SetTeamId value)? setTeamId,
     TResult Function(NavigateBackToFramework value)? navigateBackToFramework,
     TResult Function(RefreshWorkouts value)? refreshWorkouts,
+    TResult Function(RefreshActions value)? refreshActions,
     TResult Function(RefreshUsers value)? refreshUsers,
     TResult Function(NavigateToUserRights value)? navigateToUserRights,
   }) {
@@ -750,6 +914,7 @@ class _$NavigateToUserRights implements NavigateToUserRights {
     TResult Function(SetTeamId value)? setTeamId,
     TResult Function(NavigateBackToFramework value)? navigateBackToFramework,
     TResult Function(RefreshWorkouts value)? refreshWorkouts,
+    TResult Function(RefreshActions value)? refreshActions,
     TResult Function(RefreshUsers value)? refreshUsers,
     TResult Function(NavigateToUserRights value)? navigateToUserRights,
     required TResult orElse(),
@@ -777,7 +942,11 @@ mixin _$TeamState {
   UniqueId get teamMemberIdToNavigateTo => throw _privateConstructorUsedError;
   bool get shouldNavigateBackToFramework => throw _privateConstructorUsedError;
   bool get shouldNavigateToUserRights => throw _privateConstructorUsedError;
+  bool get workoutsRefreshing => throw _privateConstructorUsedError;
+  bool get actionsRefreshing => throw _privateConstructorUsedError;
   bool get usersRefreshing => throw _privateConstructorUsedError;
+  Option<TeamMember> get optionOfCurrentTeamMember =>
+      throw _privateConstructorUsedError;
   Either<UserFailure, Unit> get usersFetchFailureOrSuccess =>
       throw _privateConstructorUsedError;
   KtList<Tuple2<User, Option<String>>> get userURLs =>
@@ -797,7 +966,10 @@ abstract class $TeamStateCopyWith<$Res> {
       UniqueId teamMemberIdToNavigateTo,
       bool shouldNavigateBackToFramework,
       bool shouldNavigateToUserRights,
+      bool workoutsRefreshing,
+      bool actionsRefreshing,
       bool usersRefreshing,
+      Option<TeamMember> optionOfCurrentTeamMember,
       Either<UserFailure, Unit> usersFetchFailureOrSuccess,
       KtList<Tuple2<User, Option<String>>> userURLs});
 }
@@ -816,7 +988,10 @@ class _$TeamStateCopyWithImpl<$Res> implements $TeamStateCopyWith<$Res> {
     Object? teamMemberIdToNavigateTo = freezed,
     Object? shouldNavigateBackToFramework = freezed,
     Object? shouldNavigateToUserRights = freezed,
+    Object? workoutsRefreshing = freezed,
+    Object? actionsRefreshing = freezed,
     Object? usersRefreshing = freezed,
+    Object? optionOfCurrentTeamMember = freezed,
     Object? usersFetchFailureOrSuccess = freezed,
     Object? userURLs = freezed,
   }) {
@@ -837,10 +1012,22 @@ class _$TeamStateCopyWithImpl<$Res> implements $TeamStateCopyWith<$Res> {
           ? _value.shouldNavigateToUserRights
           : shouldNavigateToUserRights // ignore: cast_nullable_to_non_nullable
               as bool,
+      workoutsRefreshing: workoutsRefreshing == freezed
+          ? _value.workoutsRefreshing
+          : workoutsRefreshing // ignore: cast_nullable_to_non_nullable
+              as bool,
+      actionsRefreshing: actionsRefreshing == freezed
+          ? _value.actionsRefreshing
+          : actionsRefreshing // ignore: cast_nullable_to_non_nullable
+              as bool,
       usersRefreshing: usersRefreshing == freezed
           ? _value.usersRefreshing
           : usersRefreshing // ignore: cast_nullable_to_non_nullable
               as bool,
+      optionOfCurrentTeamMember: optionOfCurrentTeamMember == freezed
+          ? _value.optionOfCurrentTeamMember
+          : optionOfCurrentTeamMember // ignore: cast_nullable_to_non_nullable
+              as Option<TeamMember>,
       usersFetchFailureOrSuccess: usersFetchFailureOrSuccess == freezed
           ? _value.usersFetchFailureOrSuccess
           : usersFetchFailureOrSuccess // ignore: cast_nullable_to_non_nullable
@@ -864,7 +1051,10 @@ abstract class _$$_TeamStateCopyWith<$Res> implements $TeamStateCopyWith<$Res> {
       UniqueId teamMemberIdToNavigateTo,
       bool shouldNavigateBackToFramework,
       bool shouldNavigateToUserRights,
+      bool workoutsRefreshing,
+      bool actionsRefreshing,
       bool usersRefreshing,
+      Option<TeamMember> optionOfCurrentTeamMember,
       Either<UserFailure, Unit> usersFetchFailureOrSuccess,
       KtList<Tuple2<User, Option<String>>> userURLs});
 }
@@ -885,7 +1075,10 @@ class __$$_TeamStateCopyWithImpl<$Res> extends _$TeamStateCopyWithImpl<$Res>
     Object? teamMemberIdToNavigateTo = freezed,
     Object? shouldNavigateBackToFramework = freezed,
     Object? shouldNavigateToUserRights = freezed,
+    Object? workoutsRefreshing = freezed,
+    Object? actionsRefreshing = freezed,
     Object? usersRefreshing = freezed,
+    Object? optionOfCurrentTeamMember = freezed,
     Object? usersFetchFailureOrSuccess = freezed,
     Object? userURLs = freezed,
   }) {
@@ -906,10 +1099,22 @@ class __$$_TeamStateCopyWithImpl<$Res> extends _$TeamStateCopyWithImpl<$Res>
           ? _value.shouldNavigateToUserRights
           : shouldNavigateToUserRights // ignore: cast_nullable_to_non_nullable
               as bool,
+      workoutsRefreshing: workoutsRefreshing == freezed
+          ? _value.workoutsRefreshing
+          : workoutsRefreshing // ignore: cast_nullable_to_non_nullable
+              as bool,
+      actionsRefreshing: actionsRefreshing == freezed
+          ? _value.actionsRefreshing
+          : actionsRefreshing // ignore: cast_nullable_to_non_nullable
+              as bool,
       usersRefreshing: usersRefreshing == freezed
           ? _value.usersRefreshing
           : usersRefreshing // ignore: cast_nullable_to_non_nullable
               as bool,
+      optionOfCurrentTeamMember: optionOfCurrentTeamMember == freezed
+          ? _value.optionOfCurrentTeamMember
+          : optionOfCurrentTeamMember // ignore: cast_nullable_to_non_nullable
+              as Option<TeamMember>,
       usersFetchFailureOrSuccess: usersFetchFailureOrSuccess == freezed
           ? _value.usersFetchFailureOrSuccess
           : usersFetchFailureOrSuccess // ignore: cast_nullable_to_non_nullable
@@ -930,7 +1135,10 @@ class _$_TeamState implements _TeamState {
       required this.teamMemberIdToNavigateTo,
       required this.shouldNavigateBackToFramework,
       required this.shouldNavigateToUserRights,
+      required this.workoutsRefreshing,
+      required this.actionsRefreshing,
       required this.usersRefreshing,
+      required this.optionOfCurrentTeamMember,
       required this.usersFetchFailureOrSuccess,
       required this.userURLs});
 
@@ -943,7 +1151,13 @@ class _$_TeamState implements _TeamState {
   @override
   final bool shouldNavigateToUserRights;
   @override
+  final bool workoutsRefreshing;
+  @override
+  final bool actionsRefreshing;
+  @override
   final bool usersRefreshing;
+  @override
+  final Option<TeamMember> optionOfCurrentTeamMember;
   @override
   final Either<UserFailure, Unit> usersFetchFailureOrSuccess;
   @override
@@ -951,7 +1165,7 @@ class _$_TeamState implements _TeamState {
 
   @override
   String toString() {
-    return 'TeamState(teamId: $teamId, teamMemberIdToNavigateTo: $teamMemberIdToNavigateTo, shouldNavigateBackToFramework: $shouldNavigateBackToFramework, shouldNavigateToUserRights: $shouldNavigateToUserRights, usersRefreshing: $usersRefreshing, usersFetchFailureOrSuccess: $usersFetchFailureOrSuccess, userURLs: $userURLs)';
+    return 'TeamState(teamId: $teamId, teamMemberIdToNavigateTo: $teamMemberIdToNavigateTo, shouldNavigateBackToFramework: $shouldNavigateBackToFramework, shouldNavigateToUserRights: $shouldNavigateToUserRights, workoutsRefreshing: $workoutsRefreshing, actionsRefreshing: $actionsRefreshing, usersRefreshing: $usersRefreshing, optionOfCurrentTeamMember: $optionOfCurrentTeamMember, usersFetchFailureOrSuccess: $usersFetchFailureOrSuccess, userURLs: $userURLs)';
   }
 
   @override
@@ -968,7 +1182,13 @@ class _$_TeamState implements _TeamState {
             const DeepCollectionEquality().equals(
                 other.shouldNavigateToUserRights, shouldNavigateToUserRights) &&
             const DeepCollectionEquality()
+                .equals(other.workoutsRefreshing, workoutsRefreshing) &&
+            const DeepCollectionEquality()
+                .equals(other.actionsRefreshing, actionsRefreshing) &&
+            const DeepCollectionEquality()
                 .equals(other.usersRefreshing, usersRefreshing) &&
+            const DeepCollectionEquality().equals(
+                other.optionOfCurrentTeamMember, optionOfCurrentTeamMember) &&
             const DeepCollectionEquality().equals(
                 other.usersFetchFailureOrSuccess, usersFetchFailureOrSuccess) &&
             const DeepCollectionEquality().equals(other.userURLs, userURLs));
@@ -981,7 +1201,10 @@ class _$_TeamState implements _TeamState {
       const DeepCollectionEquality().hash(teamMemberIdToNavigateTo),
       const DeepCollectionEquality().hash(shouldNavigateBackToFramework),
       const DeepCollectionEquality().hash(shouldNavigateToUserRights),
+      const DeepCollectionEquality().hash(workoutsRefreshing),
+      const DeepCollectionEquality().hash(actionsRefreshing),
       const DeepCollectionEquality().hash(usersRefreshing),
+      const DeepCollectionEquality().hash(optionOfCurrentTeamMember),
       const DeepCollectionEquality().hash(usersFetchFailureOrSuccess),
       const DeepCollectionEquality().hash(userURLs));
 
@@ -997,7 +1220,10 @@ abstract class _TeamState implements TeamState {
           required final UniqueId teamMemberIdToNavigateTo,
           required final bool shouldNavigateBackToFramework,
           required final bool shouldNavigateToUserRights,
+          required final bool workoutsRefreshing,
+          required final bool actionsRefreshing,
           required final bool usersRefreshing,
+          required final Option<TeamMember> optionOfCurrentTeamMember,
           required final Either<UserFailure, Unit> usersFetchFailureOrSuccess,
           required final KtList<Tuple2<User, Option<String>>> userURLs}) =
       _$_TeamState;
@@ -1011,7 +1237,14 @@ abstract class _TeamState implements TeamState {
   @override
   bool get shouldNavigateToUserRights => throw _privateConstructorUsedError;
   @override
+  bool get workoutsRefreshing => throw _privateConstructorUsedError;
+  @override
+  bool get actionsRefreshing => throw _privateConstructorUsedError;
+  @override
   bool get usersRefreshing => throw _privateConstructorUsedError;
+  @override
+  Option<TeamMember> get optionOfCurrentTeamMember =>
+      throw _privateConstructorUsedError;
   @override
   Either<UserFailure, Unit> get usersFetchFailureOrSuccess =>
       throw _privateConstructorUsedError;

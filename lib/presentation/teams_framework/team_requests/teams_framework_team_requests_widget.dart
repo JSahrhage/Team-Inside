@@ -4,7 +4,7 @@ import 'package:kt_dart/collection.dart';
 import 'package:team_inside/application/teams_framework/teams_framework_bloc.dart';
 import 'package:team_inside/domain/team/team.dart';
 import 'package:team_inside/presentation/presentation_config.dart' as config;
-import 'package:team_inside/presentation/teams_framework/team_requests/teams_framework_team_request_dialog.dart';
+import 'package:team_inside/presentation/teams_framework/team_requests/widgets/teams_framework_team_request_dialog.dart';
 import 'package:team_inside/presentation/teams_framework/widgets/teams_framework_team_card.dart';
 
 class TeamsFrameworkTeamRequestsWidget extends StatelessWidget {

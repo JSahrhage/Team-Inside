@@ -42,5 +42,8 @@
     "workout_creator": "Training Ersteller*in",
     "analyst": "Analyst*in",
     "athlete": "Athlet*in",
-    "user_rights" : "Nuter*innen Rechte"
+    "user_rights" : "Nuter*innen Rechte",
+    "leave_team": "Verlasse Team",
+    "create_workout": "Erstelle Training",
+    "analyze": "Analysiere"
 }

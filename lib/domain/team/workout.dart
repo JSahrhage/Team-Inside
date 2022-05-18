@@ -5,6 +5,7 @@ import 'package:team_inside/domain/core/failures.dart';
 import 'package:team_inside/domain/core/i_entity.dart';
 import 'package:team_inside/domain/core/unique_id_value_object.dart';
 import 'package:team_inside/domain/team/evaluation_entry.dart';
+import 'package:team_inside/domain/team/value_objects.dart';
 
 part 'workout.freezed.dart';
 
@@ -12,6 +13,8 @@ part 'workout.freezed.dart';
 class Workout with _$Workout implements IEntity {
   const factory Workout({
     required UniqueId id,
+    required WorkoutName name,
+    required DateTime dateTime,
     required KtList<EvaluationEntry> evaluationEntries,
   }) = _Workout;
 
@@ -19,6 +22,8 @@ class Workout with _$Workout implements IEntity {
 
   factory Workout.empty() => Workout(
         id: UniqueId(),
+        name: WorkoutName(''),
+        dateTime: DateTime.now(),
         evaluationEntries: emptyList(),
       );
 }

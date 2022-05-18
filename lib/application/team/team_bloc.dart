@@ -9,6 +9,7 @@ import 'package:team_inside/domain/auth/user_failure.dart';
 import 'package:team_inside/domain/core/unique_id_value_object.dart';
 import 'package:team_inside/domain/image/i_image_facade.dart';
 import 'package:team_inside/domain/team/i_team_repository.dart';
+import 'package:team_inside/domain/team/team_member.dart';
 
 part 'team_event.dart';
 part 'team_state.dart';
@@ -38,6 +39,55 @@ class TeamBloc extends Bloc<TeamEvent, TeamState> {
         emit(
           state.copyWith(
             shouldNavigateBackToFramework: true,
+          ),
+        );
+      },
+    );
+    on<RefreshWorkouts>(
+      (event, emit) async {
+        emit(
+          state.copyWith(
+            workoutsRefreshing: true,
+          ),
+        );
+        emit(
+          state.copyWith(
+            workoutsRefreshing: false,
+          ),
+        );
+      },
+    );
+    on<RefreshActions>(
+      (event, emit) async {
+        emit(
+          state.copyWith(
+            actionsRefreshing: true,
+          ),
+        );
+
+        Option<TeamMember> optionOfCurrentTeamMember = none();
+        final failureOrCurrentUser = await _userRepository.getCurrentUser();
+        await failureOrCurrentUser.fold(
+          (failure) {},
+          (currentUser) async {
+            final failureOrTeam =
+                await _teamRepository.getTeamById(state.teamId);
+            failureOrTeam.fold(
+              (failure) {},
+              (team) {
+                for (final teamMember in team.teamMembers.iter) {
+                  if (currentUser.id == teamMember.id) {
+                    optionOfCurrentTeamMember = optionOf(teamMember);
+                  }
+                }
+              },
+            );
+          },
+        );
+        emit(
+          state.copyWith(
+            actionsRefreshing: false,
+            optionOfCurrentTeamMember: optionOfCurrentTeamMember,
           ),
         );
       },
@@ -96,8 +146,8 @@ class TeamBloc extends Bloc<TeamEvent, TeamState> {
     on<NavigateToUserRights>(
       (event, emit) async {
         final teamMemberIdToNavigateTo = event.teamMemberId;
-        final currentUserOrFailure = await _userRepository.getCurrentUser();
-        await currentUserOrFailure.fold(
+        final failureOrCurrentUser = await _userRepository.getCurrentUser();
+        await failureOrCurrentUser.fold(
           (failure) {},
           (currentUser) async {
             final failureOrTeam =

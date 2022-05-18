@@ -1,29 +1,30 @@
 import 'package:dartz/dartz.dart';
-import 'package:kt_dart/kt.dart';
 import 'package:team_inside/domain/core/failures.dart';
 import 'package:team_inside/domain/core/value_objects.dart';
 import 'package:team_inside/domain/core/value_validators.dart';
 
-class Teamname extends ValueObject<String> {
+class TeamName extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
 
-  factory Teamname(String input) {
-    return Teamname._(
-      validateTeamname(input),
+  factory TeamName(String input) {
+    return TeamName._(
+      validateTeamName(input),
     );
   }
 
-  const Teamname._(this.value);
+  const TeamName._(this.value);
 }
 
-class JoinedUsers<UniqueId> extends ValueObject<KtList<UniqueId>> {
+class WorkoutName extends ValueObject<String> {
   @override
-  final Either<ValueFailure<KtList<UniqueId>>, KtList<UniqueId>> value;
+  final Either<ValueFailure<String>, String> value;
 
-  factory JoinedUsers(KtList<UniqueId> input) {
-    return JoinedUsers._(right(input));
+  factory WorkoutName(String input) {
+    return WorkoutName._(
+      validateWorkoutName(input),
+    );
   }
 
-  const JoinedUsers._(this.value);
+  const WorkoutName._(this.value);
 }

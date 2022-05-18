@@ -33,7 +33,15 @@ Either<ValueFailure<String>, String> validateUsername(String input) {
 }
 
 // TeamValidator
-Either<ValueFailure<String>, String> validateTeamname(String input) {
+Either<ValueFailure<String>, String> validateTeamName(String input) {
+  if (input.isEmpty) {
+    return left(ValueFailure.emptyValue(failedValue: input));
+  }
+  return right(input);
+}
+
+// TeamValidator
+Either<ValueFailure<String>, String> validateWorkoutName(String input) {
   if (input.isEmpty) {
     return left(ValueFailure.emptyValue(failedValue: input));
   }

@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team_inside/application/team/team_bloc.dart';
 import 'package:team_inside/presentation/routes/router.gr.dart';
+import 'package:team_inside/presentation/team/actions/team_actions_widget.dart';
 import 'package:team_inside/presentation/team/team_bottom_navigation_bar.dart';
-import 'package:team_inside/presentation/team/widgets/team_actions_widget.dart';
-import 'package:team_inside/presentation/team/widgets/team_user_management.dart';
-import 'package:team_inside/presentation/team/widgets/team_workout_overview.dart';
+import 'package:team_inside/presentation/team/user_management/team_user_management.dart';
+import 'package:team_inside/presentation/team/workout_overview/team_workout_overview.dart';
 
 class TeamForm extends StatefulWidget {
   @override

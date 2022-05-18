@@ -14,7 +14,7 @@ part 'team.freezed.dart';
 class Team with _$Team implements IEntity {
   const factory Team({
     required UniqueId id,
-    required Teamname teamname,
+    required TeamName teamname,
     required KtList<UniqueId> joinedUsers,
     required KtList<TeamMember> teamMembers,
     required KtList<Workout> workouts,
@@ -24,7 +24,7 @@ class Team with _$Team implements IEntity {
 
   factory Team.empty() => Team(
         id: UniqueId(),
-        teamname: Teamname(''),
+        teamname: TeamName(''),
         joinedUsers: emptyList(),
         teamMembers: emptyList(),
         workouts: emptyList(),

@@ -17,7 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$Team {
   UniqueId get id => throw _privateConstructorUsedError;
-  Teamname get teamname => throw _privateConstructorUsedError;
+  TeamName get teamname => throw _privateConstructorUsedError;
   KtList<UniqueId> get joinedUsers => throw _privateConstructorUsedError;
   KtList<TeamMember> get teamMembers => throw _privateConstructorUsedError;
   KtList<Workout> get workouts => throw _privateConstructorUsedError;
@@ -32,7 +32,7 @@ abstract class $TeamCopyWith<$Res> {
       _$TeamCopyWithImpl<$Res>;
   $Res call(
       {UniqueId id,
-      Teamname teamname,
+      TeamName teamname,
       KtList<UniqueId> joinedUsers,
       KtList<TeamMember> teamMembers,
       KtList<Workout> workouts});
@@ -62,7 +62,7 @@ class _$TeamCopyWithImpl<$Res> implements $TeamCopyWith<$Res> {
       teamname: teamname == freezed
           ? _value.teamname
           : teamname // ignore: cast_nullable_to_non_nullable
-              as Teamname,
+              as TeamName,
       joinedUsers: joinedUsers == freezed
           ? _value.joinedUsers
           : joinedUsers // ignore: cast_nullable_to_non_nullable
@@ -86,7 +86,7 @@ abstract class _$$_TeamCopyWith<$Res> implements $TeamCopyWith<$Res> {
   @override
   $Res call(
       {UniqueId id,
-      Teamname teamname,
+      TeamName teamname,
       KtList<UniqueId> joinedUsers,
       KtList<TeamMember> teamMembers,
       KtList<Workout> workouts});
@@ -117,7 +117,7 @@ class __$$_TeamCopyWithImpl<$Res> extends _$TeamCopyWithImpl<$Res>
       teamname: teamname == freezed
           ? _value.teamname
           : teamname // ignore: cast_nullable_to_non_nullable
-              as Teamname,
+              as TeamName,
       joinedUsers: joinedUsers == freezed
           ? _value.joinedUsers
           : joinedUsers // ignore: cast_nullable_to_non_nullable
@@ -148,7 +148,7 @@ class _$_Team extends _Team {
   @override
   final UniqueId id;
   @override
-  final Teamname teamname;
+  final TeamName teamname;
   @override
   final KtList<UniqueId> joinedUsers;
   @override
@@ -193,7 +193,7 @@ class _$_Team extends _Team {
 abstract class _Team extends Team {
   const factory _Team(
       {required final UniqueId id,
-      required final Teamname teamname,
+      required final TeamName teamname,
       required final KtList<UniqueId> joinedUsers,
       required final KtList<TeamMember> teamMembers,
       required final KtList<Workout> workouts}) = _$_Team;
@@ -202,7 +202,7 @@ abstract class _Team extends Team {
   @override
   UniqueId get id => throw _privateConstructorUsedError;
   @override
-  Teamname get teamname => throw _privateConstructorUsedError;
+  TeamName get teamname => throw _privateConstructorUsedError;
   @override
   KtList<UniqueId> get joinedUsers => throw _privateConstructorUsedError;
   @override

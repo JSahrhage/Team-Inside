@@ -42,5 +42,8 @@
     "workout_creator": "Workout creator",
     "analyst": "Analyst",
     "athlete": "Athlete",
-    "user_rights" : "User rights"
+    "user_rights" : "User rights",
+    "leave_team": "Leave team",
+    "create_workout": "Create workout",
+    "analyze": "Analyze"
 }

@@ -7,7 +7,10 @@ class TeamState with _$TeamState {
     required UniqueId teamMemberIdToNavigateTo,
     required bool shouldNavigateBackToFramework,
     required bool shouldNavigateToUserRights,
+    required bool workoutsRefreshing,
+    required bool actionsRefreshing,
     required bool usersRefreshing,
+    required Option<TeamMember> optionOfCurrentTeamMember,
     required Either<UserFailure, Unit> usersFetchFailureOrSuccess,
     required KtList<Tuple2<User, Option<String>>> userURLs,
   }) = _TeamState;
@@ -17,7 +20,10 @@ class TeamState with _$TeamState {
         teamMemberIdToNavigateTo: UniqueId(),
         shouldNavigateBackToFramework: false,
         shouldNavigateToUserRights: false,
+        workoutsRefreshing: false,
+        actionsRefreshing: false,
         usersRefreshing: false,
+        optionOfCurrentTeamMember: none(),
         usersFetchFailureOrSuccess: right(unit),
         userURLs: emptyList(),
       );

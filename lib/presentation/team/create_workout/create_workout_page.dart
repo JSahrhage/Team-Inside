@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:team_inside/application/team/team_bloc.dart';
+import 'package:team_inside/application/team/create_workout/create_workout_bloc.dart';
 import 'package:team_inside/domain/core/unique_id_value_object.dart';
 import 'package:team_inside/injection.dart';
-import 'package:team_inside/presentation/team/team_form.dart';
+import 'package:team_inside/presentation/team/create_workout/create_workout_form.dart';
 
-class TeamPage extends StatelessWidget {
-  const TeamPage({
+class CreateWorkoutPage extends StatelessWidget {
+  const CreateWorkoutPage({
     required this.teamId,
   });
 
@@ -24,20 +24,11 @@ class TeamPage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Theme.of(context).colorScheme.background,
         body: BlocProvider(
-          create: (context) => getIt<TeamBloc>()
+          create: (context) => getIt<CreateWorkoutBloc>()
             ..add(
-              TeamEvent.setTeamId(teamId),
-            )
-            ..add(
-              const TeamEvent.refreshWorkouts(),
-            )
-            ..add(
-              const TeamEvent.refreshActions(),
-            )
-            ..add(
-              const TeamEvent.refreshUsers(),
+              CreateWorkoutEvent.setTeamId(teamId),
             ),
-          child: TeamForm(),
+          child: CreateWorkoutForm(),
         ),
       ),
     );

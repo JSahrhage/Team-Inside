@@ -38,7 +38,7 @@ class TeamsFrameworkBloc
       (event, emit) async {
         final team = Team(
           id: UniqueId(),
-          teamname: Teamname("TuS Spenge Herren 2"),
+          teamname: TeamName("TuS Spenge Herren 2"),
           joinedUsers: emptyList(),
           teamMembers: emptyList(),
           workouts: emptyList(),

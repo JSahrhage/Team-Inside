@@ -6,10 +6,10 @@ import 'package:kt_dart/collection.dart';
 import 'package:team_inside/application/teams_framework/teams_framework_bloc.dart';
 import 'package:team_inside/domain/team/team.dart';
 import 'package:team_inside/presentation/routes/router.gr.dart';
+import 'package:team_inside/presentation/teams_framework/joined_teams/teams_framework_joined_teams_widget.dart';
+import 'package:team_inside/presentation/teams_framework/team_requests/teams_framework_team_requests_widget.dart';
 import 'package:team_inside/presentation/teams_framework/teams_framework_bottom_navigation_bar.dart';
-import 'package:team_inside/presentation/teams_framework/widgets/teams_framework_joined_teams_widget.dart';
-import 'package:team_inside/presentation/teams_framework/widgets/teams_framework_team_requests_widget.dart';
-import 'package:team_inside/presentation/teams_framework/widgets/teams_framework_user_settings_widget.dart';
+import 'package:team_inside/presentation/teams_framework/user_settings/teams_framework_user_settings_widget.dart';
 
 class TeamsFrameworkForm extends StatefulWidget {
   @override
