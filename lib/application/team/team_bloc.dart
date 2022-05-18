@@ -95,11 +95,32 @@ class TeamBloc extends Bloc<TeamEvent, TeamState> {
     );
     on<NavigateToUserRights>(
       (event, emit) async {
-        emit(
-          state.copyWith(
-            teamMemberIdToNavigateTo: event.teamMemberId,
-            shouldNavigateToUserRights: true,
-          ),
+        final teamMemberIdToNavigateTo = event.teamMemberId;
+        final currentUserOrFailure = await _userRepository.getCurrentUser();
+        await currentUserOrFailure.fold(
+          (failure) {},
+          (currentUser) async {
+            final failureOrTeam =
+                await _teamRepository.getTeamById(state.teamId);
+            failureOrTeam.fold(
+              (failure) {},
+              (team) {
+                if (currentUser.id == teamMemberIdToNavigateTo) {
+                  return;
+                }
+                for (final teamMember in team.teamMembers.iter) {
+                  if (teamMember.id == currentUser.id && teamMember.isAdmin) {
+                    emit(
+                      state.copyWith(
+                        teamMemberIdToNavigateTo: teamMemberIdToNavigateTo,
+                        shouldNavigateToUserRights: true,
+                      ),
+                    );
+                  }
+                }
+              },
+            );
+          },
         );
       },
     );

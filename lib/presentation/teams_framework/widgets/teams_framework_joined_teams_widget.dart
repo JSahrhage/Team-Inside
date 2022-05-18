@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kt_dart/collection.dart';
 import 'package:team_inside/application/teams_framework/teams_framework_bloc.dart';
 import 'package:team_inside/domain/team/team.dart';
-import 'package:team_inside/presentation/core/widgets/core_inkwell_card.dart';
 import 'package:team_inside/presentation/presentation_config.dart' as config;
+import 'package:team_inside/presentation/teams_framework/widgets/teams_framework_team_card.dart';
 
 class TeamsFrameworkJoinedTeamsWidget extends StatelessWidget {
   @override
@@ -65,13 +65,13 @@ class TeamsFrameworkJoinedTeamsWidget extends StatelessWidget {
       itemBuilder: (context, index) {
         for (final teamImageTuple in state.joinedTeamURLs.iter) {
           if (joinedTeams[index] == teamImageTuple.value1) {
-            return CoreInkwellCard(
-              callback: (String underlayingObjId) {
+            return TeamsFrameworkTeamCard(
+              callback: (String underlyingObjId) {
                 context.read<TeamsFrameworkBloc>().add(
-                      TeamsFrameworkEvent.navigateToTeam(underlayingObjId),
+                      TeamsFrameworkEvent.navigateToTeam(underlyingObjId),
                     );
               },
-              underlayingObjId: teamImageTuple.value1.id.getOrCrash(),
+              underlyingObjId: teamImageTuple.value1.id.getOrCrash(),
               cardTitle: teamImageTuple.value1.teamname.getOrCrash(),
               icon: Icons.group,
               imageURL: teamImageTuple.value2,

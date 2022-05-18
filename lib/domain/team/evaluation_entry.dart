@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:team_inside/domain/core/failures.dart';
-import 'package:team_inside/domain/core/i_entitiy.dart';
+import 'package:team_inside/domain/core/i_entity.dart';
 import 'package:team_inside/domain/core/unique_id_value_object.dart';
 
 part 'evaluation_entry.freezed.dart';

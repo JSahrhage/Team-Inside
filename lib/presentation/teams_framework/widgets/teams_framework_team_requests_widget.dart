@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kt_dart/collection.dart';
 import 'package:team_inside/application/teams_framework/teams_framework_bloc.dart';
 import 'package:team_inside/domain/team/team.dart';
-import 'package:team_inside/presentation/core/widgets/core_inkwell_card.dart';
 import 'package:team_inside/presentation/presentation_config.dart' as config;
-import 'package:team_inside/presentation/teams_framework/widgets/teams_framework_team_request_dialog.dart';
+import 'package:team_inside/presentation/teams_framework/team_requests/teams_framework_team_request_dialog.dart';
+import 'package:team_inside/presentation/teams_framework/widgets/teams_framework_team_card.dart';
 
 class TeamsFrameworkTeamRequestsWidget extends StatelessWidget {
   @override
@@ -66,8 +66,8 @@ class TeamsFrameworkTeamRequestsWidget extends StatelessWidget {
       itemBuilder: (context, index) {
         for (final teamRequestImageTuple in state.teamRequestURLs.iter) {
           if (teamRequests[index] == teamRequestImageTuple.value1) {
-            return CoreInkwellCard(
-              callback: (String underlayingObjId) {
+            return TeamsFrameworkTeamCard(
+              callback: (String underlyingObjId) {
                 showDialog<bool>(
                   context: context,
                   builder: (BuildContext context) {
@@ -79,13 +79,13 @@ class TeamsFrameworkTeamRequestsWidget extends StatelessWidget {
                       if (wasAccepted) {
                         context.read<TeamsFrameworkBloc>().add(
                               TeamsFrameworkEvent.acceptTeamRequest(
-                                underlayingObjId,
+                                underlyingObjId,
                               ),
                             );
                       } else {
                         context.read<TeamsFrameworkBloc>().add(
                               TeamsFrameworkEvent.declineTeamRequest(
-                                underlayingObjId,
+                                underlyingObjId,
                               ),
                             );
                       }
@@ -93,7 +93,7 @@ class TeamsFrameworkTeamRequestsWidget extends StatelessWidget {
                   },
                 );
               },
-              underlayingObjId: teamRequestImageTuple.value1.id.getOrCrash(),
+              underlyingObjId: teamRequestImageTuple.value1.id.getOrCrash(),
               cardTitle: teamRequestImageTuple.value1.teamname.getOrCrash(),
               icon: Icons.group,
               imageURL: teamRequestImageTuple.value2,

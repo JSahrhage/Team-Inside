@@ -52,14 +52,14 @@ class TeamUserManagement extends StatelessWidget {
       itemBuilder: (context, index) {
         for (final userURLTuple in state.userURLs.iter) {
           return CoreInkwellCard(
-            callback: (String underlayingObjId) {
+            callback: (String underlyingObjId) {
               context.read<TeamBloc>().add(
                     TeamEvent.navigateToUserRights(
-                      UniqueId.fromUniqueString(underlayingObjId),
+                      UniqueId.fromUniqueString(underlyingObjId),
                     ),
                   );
             },
-            underlayingObjId: userURLTuple.value1.id.getOrCrash(),
+            underlyingObjId: userURLTuple.value1.id.getOrCrash(),
             cardTitle: userURLTuple.value1.username.getOrCrash(),
             icon: Icons.person,
             imageURL: userURLTuple.value2,

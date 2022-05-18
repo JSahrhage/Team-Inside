@@ -41,5 +41,6 @@
     "admin": "Admin",
     "workout_creator": "Workout creator",
     "analyst": "Analyst",
-    "athlete": "Athlete"
+    "athlete": "Athlete",
+    "user_rights" : "User rights"
 }

@@ -8,7 +8,7 @@ class CoreInkwellCard extends StatelessWidget {
   const CoreInkwellCard({
     Key? key,
     required this.callback,
-    required this.underlayingObjId,
+    required this.underlyingObjId,
     required this.cardTitle,
     required this.icon,
     required this.imageURL,
@@ -16,7 +16,7 @@ class CoreInkwellCard extends StatelessWidget {
   }) : super(key: key);
 
   final void Function(String) callback;
-  final String underlayingObjId;
+  final String underlyingObjId;
   final String cardTitle;
   final IconData icon;
   final Option<String> imageURL;
@@ -29,7 +29,7 @@ class CoreInkwellCard extends StatelessWidget {
       child: Card(
         color: Theme.of(context).colorScheme.background,
         child: InkWell(
-          onTap: () => callback(underlayingObjId),
+          onTap: () => callback(underlyingObjId),
           child: Row(
             children: [
               const SizedBox(width: 8),
